@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {margin: 0; padding: 0; font-size: 14px;}
+    .clearfix::after, .clearfix::before {display: block; content: ''; clear: both;}
+    
+    #first {position: absolute; width: 100px; top: 0; bottom: 0; background-color: #292929;}
+    #logo {width: 100px; height: 100px;}
+    #Mainmenu {background-color: #ffcd36}
+    #Mainmenu > ul > li { height: 30px; border-bottom: 1px solid #302A24; padding-left: 5px; padding-top: 15px;}
+    #Mainmenu > ul > li:hover {text-align: center;}
+    #others {position: absolute; width: 100px; left: 0; bottom: 10px;}
+    #others > ul > li {color: grey; height: 25px;}
+    #others > ul > li:hover {padding-top: 10px; color: black; background-color: #ffcd36; width: 100px; height: 30px; transition: 1s;}
+    
+    #second {position: absolute; width: 250px; left: 100px; top: 0; bottom: 0; background-color: #e8eced;}
+    
+    #third {position: absolute; background-color: rgb(250, 250, 250); width: 75%; left: 350px; top: 0; bottom: 0; padding: 20px;}
+    #introduce {position: relative; top: -99%; left: 10px; color: #292929; z-index: 11;}
+    #map {position: relative; border: 1px solid #292929; border-radius: 5px; width: 100%; height: 100%; background-image:url("images/jnumark.png"); z-index: 10;}
+
+</style>
+<body>
+    <div id="wrapper">
+        <div id="first">
+            <div id="logo"><img src="images/jnumark.png" alt="제주대마크" style="width: 100px; height: 100px;"></div>
+            <div id="Mainmenu">
+                <ul>
+                    <li>인문대학</li>
+                    <li>자연과학대학</li>
+                    <li>사회대학</li>
+                    <li>공과대학</li>
+                    <li>학생생활관</li>
+                </ul>
+            </div>
+            <div id="others">
+                <ul>
+                    <li>A노선</li>
+                    <li>B노선</li>
+                    <li>ATM</li>
+                    <li>순환버스시간표</li>
+                    <li>야간버스시간표</li>
+                </ul>
+            </div>
+        </div>
+        <div id="second">hover이벤트 영역 및 올빼미마크</div>
+        <div id="third">
+            <div id="map">(kakaomap API)<!--지도API삽입--></div>
+            <div id="introduce"><a style="font-size: 30px;">Jeju National Univ.<!--지도 위에 표시되는 글자--></a></div>
+        </div>
+    </div>
+</body>
+</html>
