@@ -6,53 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<style>
-    * {margin: 0; padding: 0; font-size: 14px;}
+<style> /*나중에 style.css파일 만들어서 옮김*/
+    * {margin: 0; padding: 0; font-size: 14px; background-size: 100% 100%;}
     .clearfix::after, .clearfix::before {display: block; content: ''; clear: both;}
     
     #first {position: absolute; width: 100px; top: 0; bottom: 0; background-color: #292929;}
-    #logo {width: 100px; height: 100px;}
+    #logo { height: 100px;}
+    #college { height: 25px; color: grey; padding-top: 10px; padding-left: 5px;}
     #Mainmenu {background-color: #ffcd36}
-    #Mainmenu > ul > li { height: 30px; border-bottom: 1px solid #302A24; padding-left: 5px; padding-top: 15px;}
+    #Mainmenu > ul > li { height: 20px; border-bottom: 1px solid #302A24; padding-left: 5px; padding-top: 10px; font-size: 11px;}
     #Mainmenu > ul > li:hover {text-align: center;}
     #others {position: absolute; width: 100px; left: 0; bottom: 10px;}
-    #others > ul > li {color: grey; height: 25px;}
+    #others > ul > li {color: grey; height: 25px; padding-left: 5px;}
     #others > ul > li:hover {padding-top: 10px; color: black; background-color: #ffcd36; width: 100px; height: 30px; transition: 1s;}
     
     #second {position: absolute; width: 250px; left: 100px; top: 0; bottom: 0; background-color: #e8eced;}
+    #slide { height: 135px; animation-duration: 11s; animation-name: change-bg; animation-iteration-count: infinite;}
+    /*keyframe선언 후 change-bg*/
+    @keyframes change-bg { 
+        from {background-image: url("images/owl-sample.jpeg");}
+        33% {background-image: url("images/owl-sample2.jpeg");}
+        66% {background-image: url("images/owl-sample3.jpeg");}
+        to {background-image: url("images/owl-sample.jpeg");}
+    }
     
     #third {position: absolute; background-color: rgb(250, 250, 250); width: 75%; left: 350px; top: 0; bottom: 0; padding: 20px;}
     #introduce {position: relative; top: -99%; left: 10px; color: #292929; z-index: 11;}
-    #map {position: relative; border: 1px solid #292929; border-radius: 5px; width: 100%; height: 100%; background-image:url("images/jnumark.png");/*확인용이미지*/ z-index: 10;}
+    #map {position: relative; border: 1px solid #292929; border-radius: 5px; width: 100%; height: 100%; background-image:url("images/API-JJAP.PNG");/*확인용이미지*/ z-index: 10;}
 
 </style>
 <body>
     <div id="wrapper">
         <div id="first">
-            <div id="logo"><img src="images/jnumark.png" alt="제주대마크" style="width: 100px; height: 100px;"></div>
+            <div id="logo"><img src="images/jnumark.png" alt="국립제주대학교" style="width: 100px; height: 100px;"></div>
+            <div id="college">대학정보</div>
             <div id="Mainmenu">
                 <ul>
-                    <li>인문대학</li>
-                    <li>자연과학대학</li>
-                    <li>사회대학</li>
+                    <li>간호대학</li>
+                    <li>경상대학</li>
                     <li>공과대학</li>
-                    <li>학생생활관</li>
+                    <li>사범대학</li>
+                    <li>사회과학대학</li>
+                    <li>수의과대학</li>
+                    <li>생명자원과학대학</li>
+                    <li>인문대학</li>
+                    <li>약학대학</li>
+                    <li>해양과학대학</li>
+                    <li>예술디자인대학</li>
+                    <li>기타건물</li>
                 </ul>
             </div>
             <div id="others">
                 <ul>
-                    <li>A노선</li>
-                    <li>B노선</li>
+                    <li>주변식당정보</li>
                     <li>ATM</li>
-                    <li>순환버스시간표</li>
-                    <li>야간버스시간표</li>
+                    <li>순환버스</li>
+                    <li>야간버스</li>
                 </ul>
             </div>
         </div>
-        <div id="second">hover이벤트 영역 및 올빼미마크</div>
+        <div id="second">
+            <div id="slide"></div><!--임시이미지-->
+            <div id="submenu">여기 밑으로 세로메뉴유형 출력</div>
+        </div>
         <div id="third">
             <div id="map">(kakaomap API)<!--지도API삽입--></div>
             <div id="introduce"><a style="font-size: 30px;">Jeju National Univ.<!--지도 위에 표시되는 글자--></a></div>
+
         </div>
     </div>
 </body>
