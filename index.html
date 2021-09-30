@@ -22,7 +22,7 @@
     
     #second {position: absolute; width: 250px; left: 100px; top: 0; bottom: 0; background-color: #e8eced;}
     #slide { height: 135px; animation-duration: 11s; animation-name: change-bg; animation-iteration-count: infinite;}
-    /*keyframe선언 후 change-bg*/
+    /*keyframe선언 후 이름은 change-bg*/
     @keyframes change-bg { 
         from {background-image: url("images/owl-sample.jpeg");}
         33% {background-image: url("images/owl-sample2.jpeg");}
@@ -30,10 +30,11 @@
         to {background-image: url("images/owl-sample.jpeg");}
     }
     
-    #third {position: absolute; background-color: rgb(250, 250, 250); width: 75%; left: 350px; top: 0; bottom: 0; padding: 20px;}
-    #introduce {position: relative; top: -99%; left: 10px; color: #292929; z-index: 11;}
-    #map {position: relative; border: 1px solid #292929; border-radius: 5px; width: 100%; height: 100%; background-image:url("images/API-JJAP.PNG");/*확인용이미지*/ z-index: 10;}
-
+    #third {position: absolute; background-color: rgb(250, 250, 250); width: 100vw; left: 350px; top: 0; bottom: 0;}
+    #map {position: absolute; background-image: url("images/API-JJAP.PNG"); width: 100vw; top: 0; bottom: 0;}
+    #copyright {position: fixed; bottom: 0; right: 0;}
+    #copyright > a { /*font, size*/ }
+    #copyright > a > span {padding-left: 2px;}
 </style>
 <body>
     <div id="wrapper">
@@ -70,9 +71,8 @@
             <div id="submenu">여기 밑으로 세로메뉴유형 출력</div>
         </div>
         <div id="third">
-            <div id="map">(kakaomap API)<!--지도API삽입--></div>
-            <div id="introduce"><a style="font-size: 30px;">Jeju National Univ.<!--지도 위에 표시되는 글자--></a></div>
-
+            <div id="map">지도<!--지도API삽입--></div>
+            <div id="copyright"><a>Copyright 2021. Owl<br><span>All rights reserved</span></a></div>
         </div>
     </div>
 </body>
