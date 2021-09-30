@@ -12,17 +12,17 @@
     
     #wrapper {}
     #first {  position: absolute; width: 120px; top: 0; bottom: 0; background-color: #292929;}
-    #logo { height: 100px;}
-    #college { height: 25px; color: grey; padding-top: 10px; padding-left: 8px;}
+    #logo { height: 100px; background-color: white;}
+    #college { height: 25px; color: grey; padding-top: 10px; padding-left: 5px;}
     #Mainmenu {background-color: #ffcd36}
-    #Mainmenu > ul > li { height: 25px; border-bottom: 1px solid #302A24; padding-left: 8px; padding-top: 7px; font-size: 13px;}
+    #Mainmenu > ul > li { height: 25px; border-bottom: 1px solid #302A24; padding-left: 5px; padding-top: 7px; font-size: 13px;}
     #Mainmenu > ul > li:hover {text-align: center; }
     #others {position: absolute; left: 0; bottom: 10px;}
-    #others > ul > li {color: grey; height: 25px; padding-left: 8px;}  
-    #others > ul > li:hover {padding-top: 10px; color: black; background-color: #ffcd36; height: 30px; transition: 1s; width: 112px;}
+    #others > ul > li {color: grey; height: 25px; padding-left: 5px;}  
+    #others > ul > li:hover {padding-top: 10px; color: black; background-color: #ffcd36; height: 30px; transition: 1s; width: 120px;}
     
     #second { position: absolute; width: 150px; left: 120px; top: 0; bottom: 0; background-color: #e8eced;}
-    #slide {  height: 135px; animation-duration: 11s; animation-name: change-bg; animation-iteration-count: infinite;}
+    #slide {  height: 135px; animation-name: change-bg; animation-duration: 11s;  animation-iteration-count: infinite;}
     /*keyframe선언 후 이름은 change-bg*/
     @keyframes change-bg { 
         from {background-image: url("images/owl-sample.jpeg");}
@@ -40,7 +40,7 @@
 <body>
     <div id="wrapper"> <!--wrapper가 필요없다...사실상 자식요소들이 전부다 position:absolute여서 잇으나 마나다... float:left도 안먹힘.. 다음번엔 float사용해서 해봐야될듯..-->>
         <div id="first">
-            <div id="logo"><img src="images/jnumark.png" alt="국립제주대학교" style="width: 130px; height: 100px;"></div>
+            <div id="logo"><img src="//dreamy.jejunu.ac.kr/image/login/logo2.jpg" alt="국립제주대학교" style="width: 100px; height: 100px;"></div>
             <div id="college">대학정보</div>
             <div id="Mainmenu">
                 <ul>
@@ -88,5 +88,9 @@
         
         
         <div id="copyright"><a>Copyright 2021. Owl<br><span>All rights reserved</span></a></div>
+</div>
 </body>
+<script>
+
+</script>
 </html>
