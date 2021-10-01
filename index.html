@@ -6,54 +6,192 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<style>
-    * {margin: 0; padding: 0; font-size: 14px;}
+<style> /*나중에 style.css파일 만들어서 옮김*/
+    * {margin: 0; padding: 0; font-size: 14px; background-size: 100% 100%; list-style: none;}
     .clearfix::after, .clearfix::before {display: block; content: ''; clear: both;}
     
-    #first {position: absolute; width: 100px; top: 0; bottom: 0; background-color: #292929;}
-    #logo {width: 100px; height: 100px;}
-    #Mainmenu {background-color: #ffcd36}
-    #Mainmenu > ul > li { height: 30px; border-bottom: 1px solid #302A24; padding-left: 5px; padding-top: 15px;}
-    #Mainmenu > ul > li:hover {text-align: center;}
-    #others {position: absolute; width: 100px; left: 0; bottom: 10px;}
-    #others > ul > li {color: grey; height: 25px;}
-    #others > ul > li:hover {padding-top: 10px; color: black; background-color: #ffcd36; width: 100px; height: 30px; transition: 1s;}
-    
-    #second {position: absolute; width: 250px; left: 100px; top: 0; bottom: 0; background-color: #e8eced;}
-    
-    #third {position: absolute; background-color: rgb(250, 250, 250); width: 75%; left: 350px; top: 0; bottom: 0; padding: 20px;}
-    #introduce {position: relative; top: -99%; left: 10px; color: #292929; z-index: 11;}
-    #map {position: relative; border: 1px solid #292929; border-radius: 5px; width: 100%; height: 100%; background-image:url("images/jnumark.png");/*확인용이미지*/ z-index: 10;}
+    #wrapper {}
+    #first { position: absolute; width: 120px; top: 0; bottom: 0; background-color: rgb(56, 57, 57);}
+    #logo { height: 100px; background-color: white;}
+    #college { height: 25px; color: rgb(143, 154, 145); padding-top: 10px; padding-left: 5px;}
+    #Mainmenu {background-color: #fdcf46}
+    #Mainmenu > ul > li { height: 25px; border-bottom: 1px solid rgb(56, 57, 57); padding-left: 5px; padding-top: 7px; font-size: 13px;}
+    #Mainmenu > ul > li:hover {text-align: center; }
+    #Mainmenu > ul > li > ul { position: relative; top: -24.3px; left: 115px; z-index: 1; background-color: rgb(231, 231, 225); width: 170px; text-align: justify; }
+    #Mainmenu > ul > li > ul > li {border-top: 1px solid rgb(195, 197, 195); height: 21px; border-bottom: 1px solid rgb(195, 197, 195); padding-left: 10px; padding-top: 10px;}
 
+
+    /*Mainmenu세로메뉴유형*/
+
+    #others {position: absolute; left: 0; bottom: 10px;}
+    #others > ul > li {color: rgb(143, 154, 145); height: 25px; padding-left: 5px;}  
+    #others > ul > li:hover {padding-top: 10px; color: black; background-color: #fdcf46; height: 30px; transition: 1s; width: 120px;}
+
+    /*others세로메뉴유형*/
+
+    
+
+    #second { position: absolute; width: 170px; left: 120px; top: 0; bottom: 0; background-color: #e8eced;}
+    #slide { height: 135px; animation-name: change-bg; animation-duration: 11s;  animation-iteration-count: infinite;}
+    /*keyframe선언 후 이름은 change-bg*/
+    @keyframes change-bg { 
+        from {background-image: url("images/owl-sample.jpeg");}
+        33% {background-image: url("images/owl-sample2.jpeg");}
+        66% {background-image: url("images/owl-sample3.jpeg");}
+        to {background-image: url("images/owl-sample.jpeg");}
+    }
+    
+
+    #third {}
+    #map {position: absolute; left: 290px; top: 0; bottom: 0; right: 0;}
+    #copyright {position: fixed; bottom: 1px; right: 2px; z-index: 1;}
+    #copyright > a { font-size: 11px; }
+    #copyright > a > span {padding-left: 2px; font-size: 11px;}
 </style>
 <body>
-    <div id="wrapper">
+    <div id="wrapper"> <!--wrapper가 필요없다...사실상 자식요소들이 전부다 position:absolute여서 잇으나 마나다... float:left도 안먹힘.. 다음번엔 float사용해서 해봐야될듯..-->
         <div id="first">
-            <div id="logo"><img src="images/jnumark.png" alt="제주대마크" style="width: 100px; height: 100px;"></div>
+            <div id="logo"><img src="//dreamy.jejunu.ac.kr/image/login/logo2.jpg" alt="국립제주대학교" style="width: 100px; height: 100px;"></div>
+            <div id="college">대학정보</div>
             <div id="Mainmenu">
                 <ul>
-                    <li>인문대학</li>
-                    <li>자연과학대학</li>
-                    <li>사회대학</li>
-                    <li>공과대학</li>
-                    <li>학생생활관</li>
+                    <li>경상대학
+                        <ul style="display: none;">
+                            <li>경상대학 1호관</li>
+                            <li>경상대학 2호관</li>
+                            <li>경상대학 3호관</li>
+                        </ul>
+                    </li>
+                    <li>공과대학
+                        <ul style="display: none;">
+                            <li>공과대학 1호관</li>
+                            <li>공과대학 2호관</li>
+                            <li>공과대학 3호관</li>
+                            <li>공과대학 4호관</li>
+                        </ul>
+                    </li>
+                    <li>사범대학
+                        <ul style="display: none;">
+                            <li>사범대학 1호관</li>
+                            <li>사범대학 2호관</li>
+                        </ul>
+                    </li>
+                    <li>인문대학
+                        <ul style="display: none;">
+                            <li>인문대학 1호관</li>
+                            <li>인문대학 2호관</li>
+                        </ul>
+                    </li>
+                    <li>해양과학대학
+                        <ul style="display: none;">
+                            <li>해양과학대학 1호관</li>
+                            <li>해양과학대학 3호관</li>
+                            <li>해양과학대학 4호관</li>
+                        </ul>
+                    </li>
+                    <li>예술디자인대학
+                        <ul style="display: none;">
+                            <li>예술디자인대학 미술관</li>
+                            <li>예술디자인대학 음악관</li>
+                        </ul>
+                    </li>
+                    <li>기타대학
+                        <ul style="display: none;">
+                            <li>간호대학</li>
+                            <li>사회과학대학</li>
+                            <li>수의과대학</li>
+                            <li>생명자원과학대학</li>
+                            <li>약학대학</li>
+                            <li>법학전문대학원</li>
+                            <li>의학전문대학원</li>
+                        </ul>
+                    </li>
+                    <li>학생생활관
+                        <ul style="display: none;">
+                            <li>학생생활관 1호관</li>
+                            <li>학생생활관 2호관</li>
+                            <li>학생생활관 3호관</li>
+                            <li>학생생활관 4호관</li>
+                            <li>학생생활관 5호관</li>
+                            <li>학생생활관 6호관</li>
+                        </ul>
+                    </li>
+                    <li>기타건물
+                        <ul style="top: -289px;">
+                            <li onclick="panTo1()">교양강의동</li>
+                            <li onclick="panTo()">대학본관</li>
+                            <li>문화교류관(박물관)</li>
+                            <li>아라뮤즈홀</li>
+                            <li>운동장</li>
+                            <li>언어교육원</li>
+                            <li>정보화본부</li>
+                            <li>체육관</li>
+                            <li>학생회관</li>
+                            <li>평생교육원</li>
+                            <li>아라컨벤션홀</li>
+                            <li>중앙디지털도서관</li>
+                            <li>수의과대학 부설병원</li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <div id="others">
                 <ul>
-                    <li>A노선</li>
-                    <li>B노선</li>
+                    <li>주변식당정보</li>
                     <li>ATM</li>
-                    <li>순환버스시간표</li>
-                    <li>야간버스시간표</li>
+                    <li>순환버스</li>
+                    <li>야간버스</li>
                 </ul>
             </div>
         </div>
-        <div id="second">hover이벤트 영역 및 올빼미마크</div>
-        <div id="third">
-            <div id="map">(kakaomap API)<!--지도API삽입--></div>
-            <div id="introduce"><a style="font-size: 30px;">Jeju National Univ.<!--지도 위에 표시되는 글자--></a></div>
+        <div id="second">
+            <div id="slide"></div><!--임시이미지-->
+            <div id="submenu"></div>
         </div>
-    </div>
+        <div id="map"><!--지도API삽입--></div>
+
+        
+        
+
+
+
+
+
+
+
+        
+        
+        
+        <div id="copyright"><a>Copyright 2021. Owl<br><span>All rights reserved</span></a></div>
+</div>
 </body>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8cbc68a03b7f95264d7b3a4693745f96"></script>
+<script>
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+        center: new kakao.maps.LatLng(33.45594, 126.56203), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };
+
+// 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+var map = new kakao.maps.Map(mapContainer, mapOption); 
+
+function panTo() { //대학본관
+    // 이동할 위도 경도 위치를 생성합니다 
+    var moveLatLon = new kakao.maps.LatLng(33.45594, 126.56203);
+    
+    // 지도 중심을 부드럽게 이동시킵니다
+    // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
+    map.panTo(moveLatLon);            
+}
+function panTo1() { //교양강의동
+    var moveLatLon = new kakao.maps.LatLng(33.45572, 126.56447);
+    map.panTo(moveLatLon);            
+}  
+</script>
 </html>
