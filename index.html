@@ -118,7 +118,7 @@
                     </li>
                     <li>기타건물
                         <ul style="top: -289px;">
-                            <li>교양강의동</li>
+                            <li onclick="panTo1()">교양강의동</li>
                             <li onclick="panTo()">대학본관</li>
                             <li>문화교류관(박물관)</li>
                             <li>아라뮤즈홀</li>
@@ -188,6 +188,10 @@ function panTo() {
     // 지도 중심을 부드럽게 이동시킵니다
     // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
     map.panTo(moveLatLon);            
-}        
+}
+function panTo1() {
+    var moveLatLon = new kakao.maps.LatLng(33.45572, 126.56447);
+    map.panTo(moveLatLon);            
+}  
 </script>
 </html>
