@@ -182,42 +182,36 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 var map = new kakao.maps.Map(mapContainer, mapOption);
 
 function panTo() { //대학본관
-    while(panTo() != null) {
-        // 이동할 위도 경도 위치를 생성합니다 
-        var moveLatLon = new kakao.maps.LatLng(33.45594, 126.56203);
-        
-        // 지도 중심을 부드럽게 이동시킵니다
-        // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
-        map.panTo(moveLatLon);
-        
-        // 마커가 표시될 위치입니다 
-        var markerPosition  = new kakao.maps.LatLng(33.45594, 126.56203);
-        
-        // 마커를 생성합니다
-        marker = new kakao.maps.Marker({
-            position: markerPosition
-        });
-        // 마커가 지도 위에 표시되도록 설정합니다
-        marker.setMap(map);
-    }
-    //다른 마커 삭제
-    marker1.setMap(map);
+
+    // 이동할 위도 경도 위치를 생성합니다 
+    var moveLatLon = new kakao.maps.LatLng(33.45594, 126.56203);
+    
+    // 지도 중심을 부드럽게 이동시킵니다
+    // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
+    map.panTo(moveLatLon);
+    
+    // 마커가 표시될 위치입니다 
+    var markerPosition  = new kakao.maps.LatLng(33.45594, 126.56203);
+    
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+        position: markerPosition
+    });
+    // 마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map); 
 }
 function panTo1() { //교양강의동
-    while(panTo1() != null) {
-        var moveLatLon1 = new kakao.maps.LatLng(33.45572, 126.56447);
-        map.panTo(moveLatLon1);
-        
-        
-        var markerPosition1  = new kakao.maps.LatLng(33.45572, 126.56447);
-        marker1 = new kakao.maps.Marker({
-            position: markerPosition1
-        });
-        marker1.setMap(map); 
-    }
+
+    var moveLatLon1 = new kakao.maps.LatLng(33.45572, 126.56447);
+    map.panTo(moveLatLon1);
     
-    //다른 마커 삭제
-    marker.setMap(map);
+    
+    var markerPosition1  = new kakao.maps.LatLng(33.45572, 126.56447);
+    var marker1 = new kakao.maps.Marker({
+        position: markerPosition1
+    });
+
+    marker1.setMap(map); 
 }  
 </script>
 </html>
