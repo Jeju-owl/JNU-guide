@@ -43,7 +43,7 @@
     
 
     #third {}
-    #map {position: absolute; background-image: url("images/API-JJAP.PNG"); left: 290px; top: 0; bottom: 0; right: 0;}
+    #map {position: absolute; left: 290px; top: 0; bottom: 0; right: 0;}
     #copyright {position: fixed; bottom: 1px; right: 2px; z-index: 1;}
     #copyright > a { font-size: 11px; }
     #copyright > a > span {padding-left: 2px; font-size: 11px;}
@@ -154,10 +154,7 @@
             <div id="submenu"></div>
         </div>
         <div id="map"><!--지도API삽입--></div>
-        
-        <!-- kakao map api Javascript key : 8cbc68a03b7f95264d7b3a4693745f96 -->
-        
-        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8cbc68a03b7f95264d7b3a4693745f96"></script>
+
         
         
 
@@ -174,7 +171,15 @@
         <div id="copyright"><a>Copyright 2021. Owl<br><span>All rights reserved</span></a></div>
 </div>
 </body>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8cbc68a03b7f95264d7b3a4693745f96"></script>
 <script>
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };
 
+// 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+var map = new kakao.maps.Map(mapContainer, mapOption); 
 </script>
 </html>
