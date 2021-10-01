@@ -183,7 +183,6 @@ var map = new kakao.maps.Map(mapContainer, mapOption);
 
 function panTo() { //대학본관
 
-    // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
     marker1.setMap(null);
 
     // 이동할 위도 경도 위치를 생성합니다 
@@ -199,17 +198,7 @@ function panTo() { //대학본관
     // 마커를 생성합니다
     var marker = new kakao.maps.Marker({
         position: markerPosition
-<<<<<<< HEAD
     }); 
-=======
-    });
-
-    // 마커가 지도 위에 표시되도록 설정합니다
-    marker.setMap(map);
-
-
-
->>>>>>> 075af9d06ef4fff58a640b9db62b090eeb5b5dfb
 }
 function panTo1() { //교양강의동
 
