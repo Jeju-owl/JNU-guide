@@ -201,13 +201,12 @@ function panTo() { //대학본관
     // 마커가 지도 위에 표시되도록 설정합니다
     marker.setMap(map);
 
-    
-    if(markerPosition != moveLatLon ) {
-        marker.setMap(null);
-    }
+
 
 }
 function panTo1() { //교양강의동
+
+    marker.setMap(null);
 
     var moveLatLon1 = new kakao.maps.LatLng(33.45572, 126.56447);
     map.panTo(moveLatLon1);
@@ -218,10 +217,6 @@ function panTo1() { //교양강의동
         position: markerPosition1
     });
     marker1.setMap(map);
-
-    if(markerPosition1 != moveLatLon1 ) {
-        marker1.setMap(null);
-    }
     
 }  
 </script>
