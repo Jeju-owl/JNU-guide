@@ -118,8 +118,8 @@
                     </li>
                     <li>기타건물
                         <ul style="top: -289px;">
-                            <li onclick="panTo1()">교양강의동</li>
                             <li onclick="panTo()">대학본관</li>
+                            <li onclick="panTo1()">교양강의동</li>
                             <li>문화교류관(박물관)</li>
                             <li>아라뮤즈홀</li>
                             <li>운동장</li>
@@ -154,19 +154,6 @@
             <div id="submenu"></div>
         </div>
         <div id="map"><!--지도API삽입--></div>
-
-        
-        
-
-
-
-
-
-
-
-        
-        
-        
         <div id="copyright"><a>Copyright 2021. Owl<br><span>All rights reserved</span></a></div>
 </div>
 </body>
@@ -186,8 +173,7 @@ function panTo() { //대학본관
     // 이동할 위도 경도 위치를 생성합니다 
     var moveLatLon = new kakao.maps.LatLng(33.45594, 126.56203);
     
-    // 지도 중심을 부드럽게 이동시킵니다
-    // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
+    // 지도 중심을 부드럽게 이동시킵니다. 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
     map.panTo(moveLatLon);
     
     // 마커가 표시될 위치입니다 
@@ -197,20 +183,18 @@ function panTo() { //대학본관
     var marker = new kakao.maps.Marker({
         position: markerPosition
     });
+
     // 마커가 지도 위에 표시되도록 설정합니다
     marker.setMap(map); 
 }
 function panTo1() { //교양강의동
-
     var moveLatLon1 = new kakao.maps.LatLng(33.45572, 126.56447);
     map.panTo(moveLatLon1);
-    
     
     var markerPosition1  = new kakao.maps.LatLng(33.45572, 126.56447);
     var marker1 = new kakao.maps.Marker({
         position: markerPosition1
     });
-
     marker1.setMap(map); 
 }  
 </script>
