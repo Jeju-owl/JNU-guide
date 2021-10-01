@@ -174,14 +174,14 @@
 <script>
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
-        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+        center: new kakao.maps.LatLng(33.45594, 126.56203), // 지도의 중심좌표
         level: 3 // 지도의 확대 레벨
     };
 
 // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
 var map = new kakao.maps.Map(mapContainer, mapOption); 
 
-function panTo() {
+function panTo() { //대학본관
     // 이동할 위도 경도 위치를 생성합니다 
     var moveLatLon = new kakao.maps.LatLng(33.45594, 126.56203);
     
@@ -189,7 +189,7 @@ function panTo() {
     // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
     map.panTo(moveLatLon);            
 }
-function panTo1() {
+function panTo1() { //교양강의동
     var moveLatLon = new kakao.maps.LatLng(33.45572, 126.56447);
     map.panTo(moveLatLon);            
 }  
