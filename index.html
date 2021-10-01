@@ -209,8 +209,8 @@ function panTo() { //대학본관
 }
 function panTo1() { //교양강의동
 
-    var moveLatLon = new kakao.maps.LatLng(33.45572, 126.56447);
-    map.panTo(moveLatLon);
+    var moveLatLon1 = new kakao.maps.LatLng(33.45572, 126.56447);
+    map.panTo(moveLatLon1);
     
     
     var markerPosition1  = new kakao.maps.LatLng(33.45572, 126.56447);
@@ -219,7 +219,7 @@ function panTo1() { //교양강의동
     });
     marker1.setMap(map);
 
-    if(markerPosition != moveLatLon ) {
+    if(markerPosition1 != moveLatLon1 ) {
         marker1.setMap(null);
     }
     
