@@ -57,63 +57,62 @@
                 <ul>
                     <li>경상대학
                         <ul style="display: none;">
-                            <li>경상대학 1호관</li>
-                            <li>경상대학 2호관</li>
-                            <li>경상대학 3호관</li>
+                            <li onclick="panTo(33.45408,126.5616)">경상대학 1호관</li>
+                            <li onclick="panTo(33.45383,126.56273)">경상대학 2호관</li>
                         </ul>
                     </li>
                     <li>공과대학
                         <ul style="display: none;">
-                            <li>공과대학 1호관</li>
-                            <li>공과대학 2호관</li>
-                            <li>공과대학 3호관</li>
-                            <li>공과대학 4호관</li>
+                            <li onclick="panTo(33.45712,126.5656)">공과대학 1호관</li>
+                            <li onclick="panTo(33.4577,126.56609)">공과대학 2호관</li>
+                            <li onclick="panTo(33.45644,126.56561)">공과대학 3호관</li>
+                            <li onclick="panTo(33.45481,126.56527)">공과대학 4호관</li>
                         </ul>
                     </li>
                     <li>사범대학
                         <ul style="display: none;">
-                            <li>사범대학 1호관</li>
-                            <li>사범대학 2호관</li>
+                            <li onclick="panTo(33.45495,126.56311)">사범대학 1호관</li>
+                            <li onclick="panTo(33.45531,126.56367)">사범대학 2호관</li>
                         </ul>
                     </li>
                     <li>인문대학
                         <ul style="display: none;">
-                            <li>인문대학 1호관</li>
-                            <li>인문대학 2호관</li>
+                            <li onclick="panTo(33.45348,126.55839)">인문대학 1호관</li>
+                            <li onclick="panTo(33.45273,126.55851)">인문대학 2호관</li>
                         </ul>
                     </li>
                     <li>해양과학대학
                         <ul style="display: none;">
-                            <li>해양과학대학 1호관</li>
-                            <li>해양과학대학 3호관</li>
-                            <li>해양과학대학 4호관</li>
+                            <li onclick="panTo(33.45702,126.56378)">해양과학대학 1호관</li>
+                            <li onclick="panTo(33.45726,126.56453)">해양과학대학 3호관</li>
+                            <li onclick="panTo(33.45485,126.56639)">해양과학대학 4호관</li>
                         </ul>
                     </li>
                     <li>예술디자인대학
                         <ul style="display: none;">
-                            <li>예술디자인대학 미술관</li>
-                            <li>예술디자인대학 음악관</li>
+                            <li onclick="panTo(33.45295,126.56174)">예술디자인대학 미술관</li>
+                            <li onclick="panTo(33.45233,126.56279)">예술디자인대학 음악관</li>
                         </ul>
                     </li>
                     <li>기타대학
                         <ul style="display: none;">
-                            <li>간호대학</li>
-                            <li>사회과학대학</li>
-                            <li>수의과대학</li>
-                            <li>생명자원과학대학</li>
-                            <li>약학대학</li>
-                            <li>법학전문대학원</li>
-                            <li>의학전문대학원</li>
+                            <li onclick="panTo(33.45606,126.5644)">간호대학</li>
+                            <li onclick="panTo(33.45486,126.56162)">사회과학대학</li>
+                            <li onclick="panTo(33.45205,126.55864)">수의과대학</li>
+                            <li onclick="panTo(33.45825,126.56277)">생명자원과학대학</li>
+                            <li onclick="panTo(33.45742,126.5601)">약학대학</li>
+                            <li onclick="panTo(33.45353,126.56037)">법학전문대학원</li>
+                            <li onclick="panTo(33.45288,126.56387)">의학전문대학원</li>
                         </ul>
                     </li>
                     <li>학생생활관
                         <ul style="display: none;">
-                            <li>학생생활관 1호관</li>
-                            <li>학생생활관 2호관</li>
-                            <li>학생생활관 3호관</li>
-                            <li>학생생활관 4호관</li>
-                            <li>학생생활관 5호관</li>
-                            <li>학생생활관 6호관</li>
+                            <li onclick="panTo(33.45121,126.55693)">학생생활관 1호관</li>
+                            <li onclick="panTo(33.45031,126.55704)">학생생활관 2호관</li>
+                            <li onclick="panTo(33.45168,126.55648)">학생생활관 3호관</li>
+                            <li onclick="panTo(33.45059,126.55806)">학생생활관 4호관</li>
+                            <li onclick="panTo(33.45226,126.5566)">학생생활관 5호관</li>
+                            <li onclick="panTo(33.4536,126.55662)">학생생활관 6호관</li>
                         </ul>
                     </li>
                     <li>기타건물
@@ -131,12 +130,12 @@
                             <li onclick="panTo(33.455,126.56063)">학생회관</li>
                             <li onclick="panTo(33.45231,126.56017)">평생교육원</li>
                             <li onclick="panTo(33.45229,126.55972)">아라컨벤션홀</li>
+                            <!-- <li></li>
                             <li></li>
                             <li></li>
                             <li></li>
                             <li></li>
-                            <li></li>
-                            <li></li>
+                            <li></li> -->
                         </ul>
                     </li>
                 </ul>
@@ -168,8 +167,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 
     var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
     
-    //markers배열 선언
-    var markers = [];
+    var markers = []; //markers배열 선언
 
     //Marker(x,y)함수 선언
     function Marker(x,y) {
@@ -190,99 +188,13 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         }
     }
 
-function panTo(a,b) { 
-
-    // 이동할 위도 경도 위치를 생성합니다 
-    var moveLatLon = new kakao.maps.LatLng(a,b);
-    
-    // 지도 중심을 부드럽게 이동시킵니다. 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
-    map.panTo(moveLatLon);
-    Marker(a,b);
-
-}
-// function panTo1() { //교양강의동
-  
-//     var moveLatLon = new kakao.maps.LatLng(33.45572, 126.56447);
-//     map.panTo(moveLatLon);
-//     Marker(33.45572, 126.56447);
-
-// }
-// function panTo2() { //문화교류관(박물관)
-    
-//     var moveLatLon = new kakao.maps.LatLng(33.45885,126.56186);
-//     map.panTo(moveLatLon);
-//     Marker(33.45885,126.56186);
-
-// }
-// function panTo3() { //아라뮤즈홀
-    
-//     var moveLatLon = new kakao.maps.LatLng(33.45359,126.55946);
-//     map.panTo(moveLatLon);
-//     Marker(33.45359,126.55946);
-
-// }
-// function panTo4() { //운동장
-    
-//     var moveLatLon = new kakao.maps.LatLng(33.45542,126.55947);
-//     map.panTo(moveLatLon);
-//     Marker(33.45542,126.55947);
-
-// }
-// function panTo5() { //언어교육원
-    
-//     var moveLatLon = new kakao.maps.LatLng(33.45407,126.56028);
-//     map.panTo(moveLatLon);
-//     Marker(33.45572, 126.56447);
-
-// }
-// function panTo6() { //정보화본부
-    
-//     var moveLatLon = new kakao.maps.LatLng(33.4545,126.56355);
-//     map.panTo(moveLatLon);
-//     Marker(33.45572, 126.56447);
-
-// }
-// function panTo7() { //체육관
-    
-//     var moveLatLon = new kakao.maps.LatLng(33.45603,126.56051);
-//     map.panTo(moveLatLon);
-//     Marker(33.45572, 126.56447);
-
-// }
-// function panTo8() { //학생회관
-    
-//     var moveLatLon = new kakao.maps.LatLng(33.455,126.56063);
-//     map.panTo(moveLatLon);
-//     Marker(33.45572, 126.56447);
-
-// }
-// function panTo9() { //평생교육원
-    
-//     var moveLatLon = new kakao.maps.LatLng(33.45231,126.56017);
-//     map.panTo(moveLatLon);
-//     Marker(33.45572, 126.56447);
-
-// }
-// function panTo10() { //아라컨벤션홀
-    
-//     var moveLatLon = new kakao.maps.LatLng(33.45229,126.55972);
-//     map.panTo(moveLatLon);
-//     Marker(33.45572, 126.56447);
-
-// }
-// function panTo11() { //중앙디지털도서관
-    
-//     var moveLatLon = new kakao.maps.LatLng(33.45222,126.56082);
-//     map.panTo(moveLatLon);
-//     Marker(33.45572, 126.56447);
-
-// }
-/*function panTo12() { //수의과대학 부설병원
-    
-    var moveLatLon = new kakao.maps.LatLng(,);
-    map.panTo(moveLatLon);
-    Marker(,);
-
-}*/
+    function panTo(a,b) { 
+        // 이동할 위도 경도 위치를 생성합니다 
+        var moveLatLon = new kakao.maps.LatLng(a,b);
+        // 지도 중심을 부드럽게 이동시킵니다. 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
+        map.panTo(moveLatLon);
+        //Marker()함수 실행
+        Marker(a,b);
+    }
 </script>
 </html>
