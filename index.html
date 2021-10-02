@@ -166,19 +166,22 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     };
 
     var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-
+    var marker = [];
     function Marker(x,y) {
 
         // 마커가 표시될 위치입니다 
         var markerPosition  = new kakao.maps.LatLng(x, y); 
 
         // 마커를 생성합니다
-        var marker = {
+        var marker = new kakao.maps.Marker({
             position: markerPosition
-        }
+        });
         // 마커가 지도 위에 표시되도록 설정합니다
         marker.setMap(map);
-
+        marker.push(marker);
+        for (var i = 0; i < markers.length-1; i++) {
+        markers[i].setMap(null);
+        }   
     }
 
 function panTo() { //대학본관
