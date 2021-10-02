@@ -172,6 +172,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
     
     var markers = []; //markers배열 선언
+    var lines = [];
 
     //Marker(x,y)함수 선언
     function Marker(x,y) {
@@ -223,10 +224,13 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 
         // 지도에 선을 표시합니다 
         polyline.setMap(map);
+        lines.push(polyline);
     }
 
     function lineX() {
-        polyline.setMap(null);
+        for (var i = 0; i < markers.length; i++) {
+            lines[i].setMap(null);
+        }
     }
 </script>
 </html>
