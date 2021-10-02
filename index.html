@@ -172,7 +172,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
     
     var markers = []; //markers배열 선언
-    var lines = [];
+    var lines = []; //lines배열 선언
 
     //Marker(x,y)함수 선언
     function Marker(x,y) {
@@ -203,7 +203,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         Marker(a,b);
     }
 
-    //형이 작업할 곳
+    //형이 작업할 곳 (순환버스노선)
     function InnerBus() {
 
         // 선을 구성하는 좌표 배열입니다. 이 좌표들을 이어서 선을 표시합니다
@@ -227,6 +227,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         lines.push(polyline);
     }
 
+    //순환버스노선 지우는 함수
     function lineX() {
         for (var i = 0; i < lines.length; i++) {
             lines[i].setMap(null);
