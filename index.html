@@ -148,7 +148,7 @@
                 <ul>
                     <li>주변식당정보</li>
                     <li>ATM</li>
-                    <li onmouseover="InnerBus()" onmouseout="lineX()">순환버스</li>
+                    <li onmouseover="InnerBus(), panTo(33.45594, 126.56203)" onmouseout="lineX()">순환버스</li>
                     <li>야간버스</li>
                 </ul>
             </div>
@@ -226,6 +226,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         polyline.setMap(map);
         lines.push(polyline);
         map.setLevel(4);
+
     }
 
     //순환버스노선 지우는 함수
@@ -233,6 +234,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         for (var i = 0; i < lines.length; i++) {
             lines[i].setMap(null);
         }
+        map.setLevel(3);
     }
 </script>
 </html>
