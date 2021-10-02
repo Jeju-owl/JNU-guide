@@ -182,6 +182,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 
 function panTo() { //대학본관
 
+    marker.setMap(null); 
     // 이동할 위도 경도 위치를 생성합니다 
     var moveLatLon = new kakao.maps.LatLng(33.45594, 126.56203);
     
@@ -192,6 +193,7 @@ function panTo() { //대학본관
 
 }
 function panTo1() { //교양강의동
+    marker.setMap(null); 
     var moveLatLon1 = new kakao.maps.LatLng(33.45572, 126.56447);
     map.panTo(moveLatLon1);
     Marker(33.45572, 126.56447);
