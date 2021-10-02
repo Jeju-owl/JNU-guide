@@ -118,19 +118,20 @@
                     </li>
                     <li>기타건물
                         <ul style="top: -289px;">
-                            <li onclick="panTo()">대학본관</li>
-                            <li onclick="panTo1()">교양강의동</li>
-                            <li onclick="panTo2()">문화교류관(박물관)</li>
-                            <li onclick="panTo3()">아라뮤즈홀</li>
-                            <li onclick="panTo4()">운동장</li>
-                            <li onclick="panTo5()">언어교육원</li>
-                            <li onclick="panTo6()">정보화본부</li>
-                            <li onclick="panTo7()">체육관</li>
-                            <li onclick="panTo8()">학생회관</li>
-                            <li onclick="panTo9()">평생교육원</li>
-                            <li onclick="panTo10()">아라컨벤션홀</li>
-                            <li onclick="panTo11()">중앙디지털도서관</li>
-                            <li>수의과대학 부설병원</li>
+                            <li onclick="panTo(33.45594, 126.56203)">대학본관</li>
+                            <li onclick="panTo(33.45572,126.56447)">교양강의동</li>
+                            <li onclick="panTo(33.45265,126.56086)">중앙도서관</li>
+                            <li onclick="panTo(33.45222,126.56082)">중앙디지털도서관</li>
+                            <li onclick="panTo(33.45885,126.56186)">문화교류관(박물관)</li>
+                            <li onclick="panTo(33.45359,126.55946)">아라뮤즈홀</li>
+                            <li onclick="panTo(33.45542,126.55947)">운동장</li>
+                            <li onclick="panTo(33.45407,126.56028)">언어교육원</li>
+                            <li onclick="panTo(33.4545,126.56355)">정보화본부</li>
+                            <li onclick="panTo(33.45603,126.56051)">체육관</li>
+                            <li onclick="panTo(33.455,126.56063)">학생회관</li>
+                            <li onclick="panTo(33.45231,126.56017)">평생교육원</li>
+                            <li onclick="panTo(33.45229,126.55972)">아라컨벤션홀</li>
+                            <li></li>
                             <li></li>
                             <li></li>
                             <li></li>
@@ -189,44 +190,44 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         }
     }
 
-function panTo() { //대학본관
+function panTo(a,b) { 
 
     // 이동할 위도 경도 위치를 생성합니다 
-    var moveLatLon = new kakao.maps.LatLng(33.45594, 126.56203);
+    var moveLatLon = new kakao.maps.LatLng(a,b);
     
     // 지도 중심을 부드럽게 이동시킵니다. 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
     map.panTo(moveLatLon);
-    Marker(33.45594, 126.56203);
+    Marker(a,b);
 
 }
-function panTo1() { //교양강의동
+// function panTo1() { //교양강의동
   
-    var moveLatLon = new kakao.maps.LatLng(33.45572, 126.56447);
-    map.panTo(moveLatLon);
-    Marker(33.45572, 126.56447);
+//     var moveLatLon = new kakao.maps.LatLng(33.45572, 126.56447);
+//     map.panTo(moveLatLon);
+//     Marker(33.45572, 126.56447);
 
-}
-function panTo2() { //문화교류관(박물관)
+// }
+// function panTo2() { //문화교류관(박물관)
     
-    var moveLatLon = new kakao.maps.LatLng(33.45885,126.56186);
-    map.panTo(moveLatLon);
-    Marker(33.45572, 126.56447);
+//     var moveLatLon = new kakao.maps.LatLng(33.45885,126.56186);
+//     map.panTo(moveLatLon);
+//     Marker(33.45885,126.56186);
 
-}
-function panTo3() { //아라뮤즈홀
+// }
+// function panTo3() { //아라뮤즈홀
     
-    var moveLatLon = new kakao.maps.LatLng(33.45359,126.55946);
-    map.panTo(moveLatLon);
-    Marker(33.45572, 126.56447);
+//     var moveLatLon = new kakao.maps.LatLng(33.45359,126.55946);
+//     map.panTo(moveLatLon);
+//     Marker(33.45359,126.55946);
 
-}
-function panTo4() { //운동장
+// }
+// function panTo4() { //운동장
     
-    var moveLatLon = new kakao.maps.LatLng(33.45542,126.55947);
-    map.panTo(moveLatLon);
-    Marker(33.45572, 126.56447);
+//     var moveLatLon = new kakao.maps.LatLng(33.45542,126.55947);
+//     map.panTo(moveLatLon);
+//     Marker(33.45542,126.55947);
 
-}
+// }
 // function panTo5() { //언어교육원
     
 //     var moveLatLon = new kakao.maps.LatLng(33.45407,126.56028);
