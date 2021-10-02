@@ -53,7 +53,7 @@
     #third {}
     #map {position: absolute; left: 290px; top: 0; bottom: 0; right: 0;}
     
-    #copyright {position: fixed; bottom: 1px; right: 2px;}
+    #copyright {position: fixed; bottom: 1px; right: 2px; z-index: 1;}
     #copyright > a { font-size: 11px; }
     #copyright > a > span {padding-left: 2px; font-size: 11px;} /*왜 a태그 안 span 태그는 안먹는가??*/
 </style>
@@ -224,7 +224,9 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 
         // 지도에 선을 표시합니다 
         polyline.setMap(map);
+        //lines배열에 push
         lines.push(polyline);
+        //지도 확대 레벨 4
         map.setLevel(4);
 
     }
@@ -234,6 +236,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         for (var i = 0; i < lines.length; i++) {
             lines[i].setMap(null);
         }
+        //지도 확대 레벨 3
         map.setLevel(3);
     }
 </script>
