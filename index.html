@@ -228,6 +228,10 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         lines.push(polyline);
         //지도 확대 레벨 4
         map.setLevel(4);
+        //for문을 통해 이전 마커들 다 삭제
+        for (var i = 0; i < markers.length-1; i++) {
+            markers[i].setMap(null);
+        }
 
     }
 
@@ -238,6 +242,16 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         }
         //지도 확대 레벨 3
         map.setLevel(3);
+        //for문을 통해 이전 마커들 다 삭제
+        for (var i = 0; i < markers.length-1; i++) {
+            markers[i].setMap(null);
+        }
     }
 </script>
 </html>
+
+
+
+<!--절대 쓰면 안되는거(경범추천) 
+    1. 무지성 margin XXXXXXXXXXXXXXXX
+    2. line-height - 글자 사이사이 -->
