@@ -191,7 +191,8 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
             markers[i].setMap(null);
         }
     }
-
+    polyline.setMap(null);
+    
     function panTo(a,b) { 
         // 이동할 위도 경도 위치를 생성합니다 
         var moveLatLon = new kakao.maps.LatLng(a,b);
