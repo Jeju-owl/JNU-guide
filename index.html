@@ -148,7 +148,7 @@
                 <ul>
                     <li>주변식당정보</li>
                     <li>ATM</li>
-                    <li onmouseover="InnerBus()">순환버스</li>
+                    <li onmouseover="InnerBus()" onmouseout="">순환버스</li>
                     <li>야간버스</li>
                 </ul>
             </div>
@@ -191,7 +191,6 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
             markers[i].setMap(null);
         }
     }
-    polyline.setMap(null);
     
     function panTo(a,b) { 
         // 이동할 위도 경도 위치를 생성합니다 
@@ -224,6 +223,10 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 
         // 지도에 선을 표시합니다 
         polyline.setMap(map);
+    }
+
+    function lineX() {
+        polyline.setMap(null);
     }
 </script>
 </html>
