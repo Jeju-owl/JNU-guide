@@ -120,16 +120,16 @@
                         <ul style="top: -289px;">
                             <li onclick="panTo()">대학본관</li>
                             <li onclick="panTo1()">교양강의동</li>
-                            <li>문화교류관(박물관)</li>
-                            <li>아라뮤즈홀</li>
-                            <li>운동장</li>
-                            <li>언어교육원</li>
-                            <li>정보화본부</li>
-                            <li>체육관</li>
-                            <li>학생회관</li>
-                            <li>평생교육원</li>
-                            <li>아라컨벤션홀</li>
-                            <li>중앙디지털도서관</li>
+                            <li onclick="panTo2()">문화교류관(박물관)</li>
+                            <li onclick="panTo3()">아라뮤즈홀</li>
+                            <li onclick="panTo4()">운동장</li>
+                            <li onclick="panTo5()">언어교육원</li>
+                            <li onclick="panTo6()">정보화본부</li>
+                            <li onclick="panTo7()">체육관</li>
+                            <li onclick="panTo8()">학생회관</li>
+                            <li onclick="panTo9()">평생교육원</li>
+                            <li onclick="panTo10()">아라컨벤션홀</li>
+                            <li onclick="panTo11()">중앙디지털도서관</li>
                             <li>수의과대학 부설병원</li>
                             <li></li>
                             <li></li>
@@ -191,7 +191,6 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 
 function panTo() { //대학본관
 
-    
     // 이동할 위도 경도 위치를 생성합니다 
     var moveLatLon = new kakao.maps.LatLng(33.45594, 126.56203);
     
@@ -199,14 +198,90 @@ function panTo() { //대학본관
     map.panTo(moveLatLon);
     Marker(33.45594, 126.56203);
 
-
 }
 function panTo1() { //교양강의동
-    
+  
     var moveLatLon = new kakao.maps.LatLng(33.45572, 126.56447);
     map.panTo(moveLatLon);
     Marker(33.45572, 126.56447);
 
 }
+function panTo2() { //문화교류관(박물관)
+    
+    var moveLatLon = new kakao.maps.LatLng(33.45885,126.56186);
+    map.panTo(moveLatLon);
+    Marker(33.45572, 126.56447);
+
+}
+function panTo3() { //아라뮤즈홀
+    
+    var moveLatLon = new kakao.maps.LatLng(33.45359,126.55946);
+    map.panTo(moveLatLon);
+    Marker(33.45572, 126.56447);
+
+}
+function panTo4() { //운동장
+    
+    var moveLatLon = new kakao.maps.LatLng(33.45542,126.55947);
+    map.panTo(moveLatLon);
+    Marker(33.45572, 126.56447);
+
+}
+function panTo5() { //언어교육원
+    
+    var moveLatLon = new kakao.maps.LatLng(33.45407,126.56028);
+    map.panTo(moveLatLon);
+    Marker(33.45572, 126.56447);
+
+}
+function panTo6() { //정보화본부
+    
+    var moveLatLon = new kakao.maps.LatLng(33.4545,126.56355;
+    map.panTo(moveLatLon);
+    Marker(33.45572, 126.56447);
+
+}
+function panTo7() { //체육관
+    
+    var moveLatLon = new kakao.maps.LatLng(33.45603,126.56051);
+    map.panTo(moveLatLon);
+    Marker(33.45572, 126.56447);
+
+}
+function panTo8() { //학생회관
+    
+    var moveLatLon = new kakao.maps.LatLng(33.455,126.56063);
+    map.panTo(moveLatLon);
+    Marker(33.45572, 126.56447);
+
+}
+function panTo9() { //평생교육원
+    
+    var moveLatLon = new kakao.maps.LatLng(33.45231,126.56017);
+    map.panTo(moveLatLon);
+    Marker(33.45572, 126.56447);
+
+}
+function panTo10() { //아라컨벤션홀
+    
+    var moveLatLon = new kakao.maps.LatLng(33.45229,126.55972);
+    map.panTo(moveLatLon);
+    Marker(33.45572, 126.56447);
+
+}
+function panTo11() { //중앙디지털도서관
+    
+    var moveLatLon = new kakao.maps.LatLng(33.45222,126.56082);
+    map.panTo(moveLatLon);
+    Marker(33.45572, 126.56447);
+
+}
+/*function panTo12() { //수의과대학 부설병원
+    
+    var moveLatLon = new kakao.maps.LatLng(,);
+    map.panTo(moveLatLon);
+    Marker(,);
+
+}*/
 </script>
 </html>
