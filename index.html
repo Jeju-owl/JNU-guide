@@ -178,7 +178,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         // 마커가 지도 위에 표시되도록 설정합니다
         marker.setMap(map);
         markers.push(marker);
-        for (var i = 0; i < marker.length-1; i++) {
+        for (var i = 0; i < markers.length; i++) {
             markers[i].setMap(null);
         }
     }
