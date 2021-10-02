@@ -166,7 +166,11 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     };
 
     var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+    
+    //markers배열 선언
     var markers = [];
+
+    //Marker(x,y)함수 선언
     function Marker(x,y) {
         // 마커가 표시될 위치입니다 
         var markerPosition  = new kakao.maps.LatLng(x, y); 
@@ -177,7 +181,9 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         });
         // 마커가 지도 위에 표시되도록 설정합니다
         marker.setMap(map);
+        //markers배열에 marker푸쉬
         markers.push(marker);
+        //for문을 통해 이전 마커들 다 삭제
         for (var i = 0; i < markers.length-1; i++) {
             markers[i].setMap(null);
         }
