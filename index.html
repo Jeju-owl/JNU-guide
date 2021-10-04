@@ -169,6 +169,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     };
 
     var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+    map.setZoomable(false); //지도 확대 축소 기능 끄기
   
     var markers = []; //markers배열 선언
     var lines = []; //lines배열 선언
