@@ -258,9 +258,11 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         //지도 확대 레벨 4
         map.setLevel(4);
 
-        markers[0].setMap(null);
+        //for문을 통해 버스마커 이외 마커들 전부 삭제
+        for (var i = 0; i < markers.length-1; i++) {
+            markers[i].setMap(null);
+        }
         
-
     }
 
     //순환버스노선 지우는 함수
