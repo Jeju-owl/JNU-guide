@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>제주대 지킴이</title>
 </head>
-<style> /*나중에 style.css파일 만들어서 옮김*/
+<style> /*나중에 styles.css파일 만들어서 옮김*/
     * {margin: 0; padding: 0; font-size: 14px; background-size: 100% 100%; list-style: none;}
     .clearfix::after, .clearfix::before {display: block; content: ''; clear: both;}
     
     #wrapper {}
+    
+    /*1. first 시작*/
     #first { position: absolute; width: 120px; top: 0; bottom: 0; background-color: rgb(56, 57, 57);}
     #logo { height: 100px; background-color: white;}
     #college { height: 25px; color: rgb(143, 154, 145); padding-top: 10px; padding-left: 5px;}
@@ -23,6 +25,9 @@
 
     /*Mainmenu세로메뉴유형*/
 
+
+
+
     #others {position: absolute; left: 0; bottom: 10px;}
     #others > ul > li {color: rgb(143, 154, 145); height: 25px; padding-left: 5px;}  
     #others > ul > li:hover {padding-top: 10px; color: black; background-color: #fdcf46; height: 30px; transition: 1s; width: 120px;}
@@ -31,22 +36,26 @@
 
     
 
+
+
+    /*2. second 시작*/
     #second { position: absolute; width: 170px; left: 120px; top: 0; bottom: 0; background-color: #e8eced;}
     #slide { height: 135px; animation-name: change-bg; animation-duration: 11s;  animation-iteration-count: infinite;}
     /*keyframe선언 후 이름은 change-bg*/
     @keyframes change-bg { 
-        from {background-image: url("images/owl-sample.jpeg");}
+        from {background-image: url("images/owl-sample.jpeg");}/*0%*/
         33% {background-image: url("images/owl-sample2.jpeg");}
         66% {background-image: url("images/owl-sample3.jpeg");}
-        to {background-image: url("images/owl-sample.jpeg");}
+        to {background-image: url("images/owl-sample.jpeg");}/*100%*/
     }
-    
 
+    /*3. third 시작*/
     #third {}
     #map {position: absolute; left: 290px; top: 0; bottom: 0; right: 0;}
+    
     #copyright {position: fixed; bottom: 1px; right: 2px; z-index: 1;}
     #copyright > a { font-size: 11px; }
-    #copyright > a > span {padding-left: 2px; font-size: 11px;}
+    #copyright > a > span {padding-left: 2px; font-size: 11px;} /*왜 a태그 안 span 태그는 안먹는가??*/
 </style>
 <body>
     <div id="wrapper"> <!--wrapper가 필요없다...사실상 자식요소들이 전부다 position:absolute여서 잇으나 마나다... float:left도 안먹힘.. 다음번엔 float사용해서 해봐야될듯..-->
@@ -57,85 +66,80 @@
                 <ul>
                     <li>경상대학
                         <ul style="display: none;">
-                            <li>경상대학 1호관</li>
-                            <li>경상대학 2호관</li>
-                            <li>경상대학 3호관</li>
+                            <li onclick="Moving(33.45408,126.5616)">경상대학 1호관</li>
+                            <li onclick="Moving(33.45383,126.56273)">경상대학 2호관</li>
                         </ul>
                     </li>
                     <li>공과대학
                         <ul style="display: none;">
-                            <li>공과대학 1호관</li>
-                            <li>공과대학 2호관</li>
-                            <li>공과대학 3호관</li>
-                            <li>공과대학 4호관</li>
+                            <li onclick="Moving(33.45712,126.5656)">공과대학 1호관</li>
+                            <li onclick="Moving(33.4577,126.56609)">공과대학 2호관</li>
+                            <li onclick="Moving(33.45644,126.56561)">공과대학 3호관</li>
+                            <li onclick="Moving(33.45481,126.56527)">공과대학 4호관</li>
                         </ul>
                     </li>
                     <li>사범대학
                         <ul style="display: none;">
-                            <li>사범대학 1호관</li>
-                            <li>사범대학 2호관</li>
+                            <li onclick="Moving(33.45495,126.56311)">사범대학 1호관</li>
+                            <li onclick="Moving(33.45531,126.56367)">사범대학 2호관</li>
                         </ul>
                     </li>
                     <li>인문대학
                         <ul style="display: none;">
-                            <li>인문대학 1호관</li>
-                            <li>인문대학 2호관</li>
+                            <li onclick="Moving(33.45348,126.55839)">인문대학 1호관</li>
+                            <li onclick="Moving(33.45273,126.55851)">인문대학 2호관</li>
                         </ul>
                     </li>
                     <li>해양과학대학
                         <ul style="display: none;">
-                            <li>해양과학대학 1호관</li>
-                            <li>해양과학대학 3호관</li>
-                            <li>해양과학대학 4호관</li>
+                            <li onclick="Moving(33.45702,126.56378)">해양과학대학 1호관</li>
+                            <li onclick="Moving(33.45726,126.56453)">해양과학대학 3호관</li>
+                            <li onclick="Moving(33.45485,126.56639)">해양과학대학 4호관</li>
                         </ul>
                     </li>
                     <li>예술디자인대학
                         <ul style="display: none;">
-                            <li>예술디자인대학 미술관</li>
-                            <li>예술디자인대학 음악관</li>
+                            <li onclick="Moving(33.45295,126.56174)">예술디자인대학 미술관</li>
+                            <li onclick="Moving(33.45233,126.56279)">예술디자인대학 음악관</li>
                         </ul>
                     </li>
                     <li>기타대학
                         <ul style="display: none;">
-                            <li>간호대학</li>
-                            <li>사회과학대학</li>
-                            <li>수의과대학</li>
-                            <li>생명자원과학대학</li>
-                            <li>약학대학</li>
-                            <li>법학전문대학원</li>
-                            <li>의학전문대학원</li>
+                            <li onclick="Moving(33.45606,126.5644)">간호대학</li>
+                            <li onclick="Moving(33.45486,126.56162)">사회과학대학</li>
+                            <li onclick="Moving(33.45205,126.55864)">수의과대학</li>
+                            <li onclick="Moving(33.45825,126.56277)">생명자원과학대학</li>
+                            <li onclick="Moving(33.45742,126.5601)">약학대학</li>
+                            <li onclick="Moving(33.45353,126.56037)">법학전문대학원</li>
+                            <li onclick="Moving(33.45288,126.56387)">의학전문대학원</li>
                         </ul>
                     </li>
                     <li>학생생활관
                         <ul style="display: none;">
-                            <li>학생생활관 1호관</li>
-                            <li>학생생활관 2호관</li>
-                            <li>학생생활관 3호관</li>
-                            <li>학생생활관 4호관</li>
-                            <li>학생생활관 5호관</li>
-                            <li>학생생활관 6호관</li>
+                            <li onclick="Moving(33.45121,126.55693)">학생생활관 1호관</li>
+                            <li onclick="Moving(33.45031,126.55704)">학생생활관 2호관</li>
+                            <li onclick="Moving(33.45168,126.55648)">학생생활관 3호관</li>
+                            <li onclick="Moving(33.45059,126.55806)">학생생활관 4호관</li>
+                            <li onclick="Moving(33.45226,126.5566)">학생생활관 5호관</li>
+                            <li onclick="Moving(33.4536,126.55662)">학생생활관 6호관</li>
                         </ul>
                     </li>
                     <li>기타건물
                         <ul style="top: -289px;">
-                            <li onclick="panTo()">대학본관</li>
-                            <li onclick="panTo1()">교양강의동</li>
-                            <li>문화교류관(박물관)</li>
-                            <li>아라뮤즈홀</li>
-                            <li>운동장</li>
-                            <li>언어교육원</li>
-                            <li>정보화본부</li>
-                            <li>체육관</li>
-                            <li>학생회관</li>
-                            <li>평생교육원</li>
-                            <li>아라컨벤션홀</li>
-                            <li>중앙디지털도서관</li>
-                            <li>수의과대학 부설병원</li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <li onclick="Moving(33.45594, 126.56203)">대학본관</li>
+                            <li onclick="Moving(33.45572,126.56447)">교양강의동</li>
+                            <li onclick="Moving(33.45265,126.56086)">중앙도서관</li>
+                            <li onclick="Moving(33.45222,126.56082)">중앙디지털도서관</li>
+                            <li onclick="Moving(33.45885,126.56186)">문화교류관(박물관)</li>
+                            <li onclick="Moving(33.45359,126.55946)">아라뮤즈홀</li>
+                            <li onclick="Moving(33.45542,126.55947)">운동장</li>
+                            <li onclick="Moving(33.45407,126.56028)">언어교육원</li>
+                            <li onclick="Moving(33.4545,126.56355)">정보화본부</li>
+                            <li onclick="Moving(33.45603,126.56051)">체육관</li>
+                            <li onclick="Moving(33.455,126.56063)">학생회관</li>
+                            <li onclick="Moving(33.45231,126.56017)">평생교육원</li>
+                            <li onclick="Moving(33.45229,126.55972)">아라컨벤션홀</li>
+                            <!--<li onclick="Moving(위도,경도)">건물명</li>--->
                         </ul>
                     </li>
                 </ul>
@@ -144,7 +148,7 @@
                 <ul>
                     <li>주변식당정보</li>
                     <li>ATM</li>
-                    <li>순환버스</li>
+                    <li onmouseover="InnerBus(), Moving1(33.45594, 126.56203)" onmouseout="lineX()">순환버스</li>
                     <li>야간버스</li>
                 </ul>
             </div>
@@ -153,12 +157,11 @@
             <div id="slide"></div><!--임시이미지-->
             <div id="submenu"></div>
         </div>
-        <div id="map"><!--지도API삽입--></div>
+        <div id="map"><!--지도API삽입--></div> 
         <div id="copyright"><a>Copyright 2021. Owl<br><span>All rights reserved</span></a></div>
 </div>
-</body>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8cbc68a03b7f95264d7b3a4693745f96"></script>
-<script>
+<script> //나중에 scripts파일 만들어서 옮기기
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
         center: new kakao.maps.LatLng(33.45594, 126.56203), // 지도의 중심좌표
@@ -166,9 +169,9 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     };
 
     var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-    
-    //markers배열 선언
-    var markers = [];
+  
+    var markers = []; //markers배열 선언
+    var lines = []; //lines배열 선언
 
     //Marker(x,y)함수 선언
     function Marker(x,y) {
@@ -188,25 +191,95 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
             markers[i].setMap(null);
         }
     }
-
-function panTo() { //대학본관
-
     
-    // 이동할 위도 경도 위치를 생성합니다 
-    var moveLatLon = new kakao.maps.LatLng(33.45594, 126.56203);
-    
-    // 지도 중심을 부드럽게 이동시킵니다. 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
-    map.panTo(moveLatLon);
-    Marker(33.45594, 126.56203);
+    function Moving(a,b) { //
+        // 이동할 위도 경도 위치를 생성합니다 
+        var moveLatLon = new kakao.maps.LatLng(a,b);
+        // 지도 중심을 부드럽게 이동시킵니다. 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
+        map.panTo(moveLatLon);
+        
+        //Marker()함수 실행
+        Marker(a,b);
+    }
+    function Moving1(a,b) { //순환버스 전용 좌표이동기
+        var moveLatLon = new kakao.maps.LatLng(a,b);
+        map.panTo(moveLatLon);
+    } 
+
+    //형이 작업할 곳 (순환버스노선)
+    function InnerBus() {
+
+        // 선을 구성하는 좌표 배열입니다. 이 좌표들을 이어서 선을 표시합니다
+        var linePath = [
+            new kakao.maps.LatLng(33.459811596777094, 126.5616883626409),// 정문
+            new kakao.maps.LatLng(33.4593320832366, 126.56121748964206),// 정문 입구
+            new kakao.maps.LatLng(33.457574108740026 , 126.56125861391408),//약학대학(동)
+            new kakao.maps.LatLng(33.4574885153456 , 126.56127517942882),//약학대학 코너
+            new kakao.maps.LatLng(33.45750449977659 , 126.56324887523927),//해양대 가기전 코너
+            new kakao.maps.LatLng(33.45567909431768 , 126.56334407550594),//교양강의동 가기전 코너
+            new kakao.maps.LatLng(33.45565382612047 , 126.56384973634236),//교양강의동
+            new kakao.maps.LatLng(33.455357740265946 , 126.56425994709586),//교양강의동 직후
+            new kakao.maps.LatLng(33.45532201704179 , 126.56435692982966),//교양강의동 직후2
+            new kakao.maps.LatLng(33.45533983914204 , 126.56622569720398),//해양과학대학4호관(북)
+            new kakao.maps.LatLng(33.45533983914204 , 126.5666505633917),//해양과학대학4호관 직후
+            new kakao.maps.LatLng(33.455291756416464 , 126.5666505633917),//해양과학대학4호관(남)
+            new kakao.maps.LatLng(33.45524081772233 , 126.56434120188857),//공대4호관 가기전 코너
+            new kakao.maps.LatLng(33.45313788974245 , 126.56435709566983),//의전원 가기전 코너
+            new kakao.maps.LatLng(33.45307004641888 , 126.55919199731045),//인문대학(동)
+            new kakao.maps.LatLng(33.451584762275985 , 126.5592210229973),//학생생활관 가기전 코너
+            new kakao.maps.LatLng(33.45156111931676 , 126.5576454562605),//학생생활관 직후 코너
+            new kakao.maps.LatLng(33.45380543105225 , 126.55745659027355),//인문대학(서)
+            new kakao.maps.LatLng(33.45421657291757 , 126.55771264258135),//인문대학(서) 직후 코너
+            new kakao.maps.LatLng(33.45423725506173 , 126.55972388503928),//학생회관 전 커브
+            new kakao.maps.LatLng(33.45475372820234 , 126.56108190050288),//학생회관 직후 커브
+            new kakao.maps.LatLng(33.45929540114984 , 126.56104288138894),//정문(서)
+
+            new kakao.maps.LatLng(33.45956435218062 , 126.56061126488895),//정문(서) 직후 한바퀴 1
+            new kakao.maps.LatLng(33.45977148768391 , 126.56054568066665),//정문(서) 직후 한바퀴 2
+            new kakao.maps.LatLng(33.46009647714365 , 126.56066236350922),//정문(서) 직후 한바퀴 3
+            new kakao.maps.LatLng(33.46020668609564 , 126.56123190779037),//정문(서) 직후 한바퀴 4
+            new kakao.maps.LatLng(33.460135701018096 , 126.56155496333737),//정문(서) 직후 한바퀴 5
+            new kakao.maps.LatLng(33.459811596777094 , 126.5616883626409),//정문
 
 
-}
-function panTo1() { //교양강의동
-    
-    var moveLatLon1 = new kakao.maps.LatLng(33.45572, 126.56447);
-    map.panTo(moveLatLon1);
-    Marker(33.45572, 126.56447);
+        ];
 
-}  
+        // 지도에 표시할 선을 생성합니다
+        var polyline = new kakao.maps.Polyline({
+            path: linePath, // 선을 구성하는 좌표배열 입니다
+            strokeWeight: 5, // 선의 두께 입니다
+            strokeColor: '#F6D160', // 선의 색깔입니다
+            strokeOpacity: 0.7, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+            strokeStyle: 'solid' // 선의 스타일입니다
+        });
+
+        // 지도에 선을 표시합니다 
+        polyline.setMap(map);
+        //lines배열에 push
+        lines.push(polyline);
+        //지도 확대 레벨 4
+        map.setLevel(4);
+
+        //for문을 통해 버스마커 이외 마커들 전부 삭제
+        for (var i = 0; i < markers.length; i++) {
+            markers[i].setMap(null);
+        }
+        
+    }
+
+    //순환버스노선 지우는 함수
+    function lineX() {
+        for (var i = 0; i < lines.length; i++) {
+            lines[i].setMap(null);
+        }
+        //지도 확대 레벨 3
+        map.setLevel(3);
+        
+    }
 </script>
+<script src="scripts/bus.js"></script>
+<!--절대 쓰면 안되는거(경범추천) 
+    1. 무지성 margin XXXXXXXXXXXXXXXX
+    2. line-height - 글자 사이사이 -->
+</body>
 </html>
