@@ -159,9 +159,9 @@
 <script> //webstoryboy is god
     $("#Mainmenu > ul>li").hover(
         function(){
-            $(this).find(".submenu").stop().slideDown(300); //안에 숫자 1000당 1초 기본값은 400
+            $(this).find(".submenu").stop().show(200); //안에 숫자 1000당 1초 기본값은 400
         },function(){
-            $(this).find(".submenu").stop().slideUp(300);
+            $(this).find(".submenu").stop().hide();
     });
 </script>
 <script> //나중에 scripts파일 만들어서 옮기기
