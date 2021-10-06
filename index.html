@@ -50,22 +50,9 @@
     #copyright {position: fixed; bottom: 1px; right: 2px; z-index: 1;}
     #copyright > a { font-size: 11px; }
     #copyright > a > span {padding-left: 2px; font-size: 11px;} /*왜 a태그 안 span 태그는 안먹는가??*/
-
-    /*.wrap {position: absolute;left: 3px;bottom: 5px;width: 288px;height: 132px;margin-left: -144px;text-align: left;overflow: hidden;font-size: 12px;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;line-height: 1.5;}
-    .wrap * {padding: 0;margin: 0;}
-    .wrap .info {width: 286px;height: 120px;border-radius: 5px;border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}
-    .wrap .info:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}
-    .info .title {padding: 5px 0 0 10px;height: 30px;background: #eee;border-bottom: 1px solid #ddd;font-size: 18px;font-weight: bold;}
-    .info .close {position: absolute;top: 10px;right: 10px;color: #888;width: 17px;height: 17px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');}
-    .info .close:hover {cursor: pointer;}
-    .info .body {position: relative;overflow: hidden;}
-    .info .desc {position: relative;margin: 13px 0 0 90px;height: 75px;}
-    .desc .ellipsis {overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
-    .desc .jibun {font-size: 11px;color: #888;margin-top: -2px;}
-    .info .img {position: absolute;top: 6px;left: 5px;width: 73px;height: 71px;border: 1px solid #ddd;color: #888;overflow: hidden;}
-    .info:after {content: '';position: absolute;margin-left: -12px;left: 50%;bottom: 0;width: 22px;height: 12px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
-    .info .link {color: #5085BB;}*/
-    .wrap {position: absolute;left: -177px;bottom: 5px;width: 360px; height: 312px; text-align: left;overflow: hidden;font-size: 10px;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;}
+    
+    /*버스노선시간표 스타일시트*/
+    .wrap {position: absolute;left: -176px;bottom: 5px;width: 360px; height: 312px; text-align: left;overflow: hidden;font-size: 10px;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;}
     .wrap * {padding: 0;margin: 0;}
     .wrap .head {width: 360px;height: 300px;border-radius: 5px; border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}
     .wrap .head:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}
@@ -335,70 +322,70 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
                         '</thead>'+
                         '<tbody>'+
                             '<tr>'+
-                                '<td>2회</td>'+
+                                '<td>1회</td>'+
                                 '<td>08:05</td>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
+                                '<td>12회</td>'+
+                                '<td>13:45</td>'+
                             '</tr>'+
                             '<tr>'+
                                 '<td>2회</td>'+
-                                '<td>08:05</td>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
+                                '<td>08:25</td>'+
+                                '<td>13회</td>'+
+                                '<td>14:30</td>'+
                             '</tr>'+
                             '<tr>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
+                                '<td>3회</td>'+
+                                '<td>08:45</td>'+
+                                '<td>14회</td>'+
+                                '<td>15:05</td>'+
                             '</tr>'+
                             '<tr>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
+                                '<td>4회</td>'+
+                                '<td>09:30</td>'+
+                                '<td>15회</td>'+
+                                '<td>15:25</td>'+
                             '</tr>'+
                             '<tr>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
+                                '<td>5회</td>'+
+                                '<td>10:05</td>'+
+                                '<td>16회</td>'+
+                                '<td>15:45</td>'+
                             '</tr>'+
                             '<tr>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
+                                '<td>6회</td>'+
+                                '<td>10:25</td>'+
+                                '<td>17회</td>'+
+                                '<td>16:30</td>'+
                             '</tr>'+
                             '<tr>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
+                                '<td>7회</td>'+
+                                '<td>10:45</td>'+
+                                '<td>18회</td>'+
+                                '<td>17:00</td>'+
                             '</tr>'+
                             '<tr>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
+                                '<td>8회</td>'+
+                                '<td>11:20</td>'+
+                                '<td>19회</td>'+
+                                '<td>17:20</td>'+
                             '</tr>'+
                             '<tr>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
+                                '<td>9회</td>'+
+                                '<td>12:40</td>'+
+                                '<td>20회</td>'+
+                                '<td>17:40</td>'+
                             '</tr>'+
                             '<tr>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
+                                '<td>10회</td>'+
+                                '<td>13:05</td>'+
+                                '<td>21회</td>'+
+                                '<td>18:00</td>'+
                             '</tr>'+
                             '<tr>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
+                                '<td>11회</td>'+
+                                '<td>13:25</td>'+
+                                '<td>22회</td>'+
+                                '<td>18:20</td>'+
                             '</tr>'+
                         '</tbody>'+
                     '</table>'+
@@ -417,70 +404,70 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
                         '</thead>'+
                         '<tbody>'+
                             '<tr>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
+                                '<td>1회</td>'+
+                                '<td>08:10</td>'+
+                                '<td>12회</td>'+
+                                '<td>13:50</td>'+
                             '</tr>'+
                             '<tr>'+
                                 '<td>2회</td>'+
-                                '<td>08:05</td>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
+                                '<td>08:30</td>'+
+                                '<td>13회</td>'+
+                                '<td>14:40</td>'+
                             '</tr>'+
                             '<tr>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
+                                '<td>3회</td>'+
+                                '<td>08:50</td>'+
+                                '<td>14회</td>'+
+                                '<td>15:10</td>'+
                             '</tr>'+
                             '<tr>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
+                                '<td>4회</td>'+
+                                '<td>09:40</td>'+
+                                '<td>15회</td>'+
+                                '<td>15:30</td>'+
                             '</tr>'+
                             '<tr>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
+                                '<td>5회</td>'+
+                                '<td>10:10</td>'+
+                                '<td>16회</td>'+
+                                '<td>15:50</td>'+
                             '</tr>'+
                             '<tr>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
+                                '<td>6회</td>'+
+                                '<td>10:30</td>'+
+                                '<td>17회</td>'+
+                                '<td>16:40</td>'+
                             '</tr>'+
                             '<tr>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
+                                '<td>7회</td>'+
+                                '<td>10:50</td>'+
+                                '<td>18회</td>'+
+                                '<td>17:10</td>'+
                             '</tr>'+
                             '<tr>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
+                                '<td>8회</td>'+
+                                '<td>11:30</td>'+
+                                '<td>19회</td>'+
+                                '<td>17:30</td>'+
                             '</tr>'+
                             '<tr>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
+                                '<td>9회</td>'+
+                                '<td>12:50</td>'+
+                                '<td>20회</td>'+
+                                '<td>17:50</td>'+
                             '</tr>'+
                             '<tr>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
+                                '<td>10회</td>'+
+                                '<td>13:10</td>'+
+                                '<td>21회</td>'+
+                                '<td>18:10</td>'+
                             '</tr>'+
                             '<tr>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
-                                '<td>2회</td>'+
-                                '<td>08:05</td>'+
+                                '<td>11회</td>'+
+                                '<td>13:30</td>'+
+                                '<td>22회</td>'+
+                                '<td>18:30</td>'+
                             '</tr>'+
                         '</tbody>'+
                     '</table>'+
