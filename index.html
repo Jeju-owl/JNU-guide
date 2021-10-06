@@ -320,13 +320,13 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 
     // 마커 위에 커스텀오버레이를 표시합니다
     // 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
-    var overlay = new kakao.maps.CustomOverlay({
+    var overlay = new kakao.maps.CustomOverlay({ //정문커스텀오버레이
         content: content,
         map: map,
         position: busmarker.getPosition()       
     });
     overlay.setMap(null);
-    var overlay1 = new kakao.maps.CustomOverlay({
+    var overlay1 = new kakao.maps.CustomOverlay({ //약학대학커스텀오버레이
         content: content,
         map: map,
         position: busmarker1.getPosition()       
@@ -337,7 +337,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     kakao.maps.event.addListener(busmarker, 'click', function() {
         overlay.setMap(map);
         overlays.push(overlay);
-        for (var i = 0; i < overlays.length-1; i++) {
+        for (var i = 0; i < overlays.length; i++) {
             overlays[i].setMap(null);
         }
     });
@@ -347,15 +347,10 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         overlay.setMap(null);     
     }
 
-    var overlay1 = new kakao.maps.CustomOverlay({    //약학대학
-        content: content,
-        map: map,
-        position: busmarker1.getPosition()       
-    });
     kakao.maps.event.addListener(busmarker1, 'click', function() {
         overlay1.setMap(map);
         overlays.push(overlay1);
-        for (var i = 0; i < overlays.length-1; i++) {
+        for (var i = 0; i < overlays.length; i++) {
             overlays[i].setMap(null);
         }
     });
