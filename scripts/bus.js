@@ -1,3 +1,5 @@
+    //---------------------버스마커부분------------------------------
+    
     var imageSrc = 'https://github.com/Jeju-owl/JNU-guide/blob/feature-3/images/busimage.png?raw=true', // 마커이미지의 주소입니다, remove.bg사이트에서 png 바깥배경 없앳음 
     imageSize = new kakao.maps.Size(25, 20), // 교내순환버스마커 이미지의 크기입니다
     imageOption = {offset: new kakao.maps.Point(10, 10)}; // 교내순환버스마커 이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
@@ -98,3 +100,39 @@
         map: map
     });
     busmarker12.setMap(map);
+
+    //---------------------버스정류장별 시간표 오버레이------------------------------
+    
+    // 마커 위에 커스텀오버레이를 표시합니다
+    // 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
+    var overlay = new kakao.maps.CustomOverlay({ //정문커스텀오버레이
+        content: content,
+        map: map,
+        position: busmarker.getPosition()       
+    });
+    overlay.setMap(null);
+    var overlay1 = new kakao.maps.CustomOverlay({ //약학대학커스텀오버레이
+        content: content,
+        map: map,
+        position: busmarker1.getPosition()       
+    });
+    overlay1.setMap(null);
+
+    // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
+    kakao.maps.event.addListener(busmarker, 'click', function() {
+        overlay.setMap(map);
+        overlay1.setMap(null);
+    });
+
+    // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다 
+    function closeOverlay() {
+        overlay.setMap(null); 
+    }
+
+    kakao.maps.event.addListener(busmarker1, 'click', function() {
+        overlay.setMap(null);
+        overlay1.setMap(map);
+    });
+    function closeOverlay() {
+        overlay1.setMap(null);
+    }

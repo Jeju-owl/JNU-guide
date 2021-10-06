@@ -51,7 +51,7 @@
     #copyright > a { font-size: 11px; }
     #copyright > a > span {padding-left: 2px; font-size: 11px;} /*왜 a태그 안 span 태그는 안먹는가??*/
     
-    /*버스노선시간표 스타일시트*/
+    /*버스노선시간표 스타일시트 모바일 버전까지 화면 적용 완료*/
     .wrap {position: absolute;left: -170px;bottom: 5px;width: 360px; height: 312px; text-align: left;overflow: hidden;font-size: 10px;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;}
     .wrap * {padding: 0;margin: 0;}
     .wrap .head {width: 360px;height: 300px;border-radius: 5px; border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}
@@ -194,7 +194,6 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
   
     var markers = []; //markers배열 선언
     var lines = []; //lines배열 선언
-    var overlays = [];
 
     //Marker(x,y)함수 선언
     function Marker(x,y) {
@@ -300,7 +299,6 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         
     }
 </script>
-<script src="scripts/bus.js"></script>
 <script>
     var content ='<div class="wrap">'+
         '<div class="head">'+
@@ -475,42 +473,8 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
             '</div>'+
         '</div>'+  
     '</div>';
-
-    // 마커 위에 커스텀오버레이를 표시합니다
-    // 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
-    var overlay = new kakao.maps.CustomOverlay({ //정문커스텀오버레이
-        content: content,
-        map: map,
-        position: busmarker.getPosition()       
-    });
-    overlay.setMap(null);
-    var overlay1 = new kakao.maps.CustomOverlay({ //약학대학커스텀오버레이
-        content: content,
-        map: map,
-        position: busmarker1.getPosition()       
-    });
-    overlay1.setMap(null);
-
-    // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
-    kakao.maps.event.addListener(busmarker, 'click', function() {
-        overlay.setMap(map);
-        overlay1.setMap(null);
-    });
-
-    // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다 
-    function closeOverlay() {
-        overlay.setMap(null); 
-    }
-
-    kakao.maps.event.addListener(busmarker1, 'click', function() {
-        overlay.setMap(null);
-        overlay1.setMap(map);
-    });
-    function closeOverlay() {
-        overlay1.setMap(null);
-    }
-
 </script>
+<script src="scripts/bus.js"></script>
 <!--절대 쓰면 안되는거(경범추천) 
     1. 무지성 margin XXXXXXXXXXXXXXXX
     2. line-height - 글자 사이사이 -->
