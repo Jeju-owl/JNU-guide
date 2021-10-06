@@ -325,11 +325,13 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         map: map,
         position: busmarker.getPosition()       
     });
+    overlay.setMap(null);
     var overlay1 = new kakao.maps.CustomOverlay({
         content: content,
         map: map,
         position: busmarker1.getPosition()       
     });
+    overlay1.setMap(null);
 
     // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
     kakao.maps.event.addListener(busmarker, 'click', function() {
