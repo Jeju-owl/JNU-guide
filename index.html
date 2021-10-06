@@ -335,7 +335,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     kakao.maps.event.addListener(busmarker, 'click', function() {
         overlay.setMap(map);
         overlays.push(overlay);
-        for (var i = 0; i < overlays.length; i++) {
+        for (var i = 0; i < overlays.length-1; i++) {
             overlays[i].setMap(null);
         }
     });
@@ -353,7 +353,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     kakao.maps.event.addListener(busmarker1, 'click', function() {
         overlay1.setMap(map);
         overlays.push(overlay1);
-        for (var i = 0; i < overlays.length; i++) {
+        for (var i = 0; i < overlays.length-1; i++) {
             overlays[i].setMap(null);
         }
     });
