@@ -159,7 +159,6 @@
             <div id="others" style="position: absolute; left: 0; bottom: 10px;">
                 <ul>
                     <li>주변식당정보</li>
-                    <li>ATM</li>
                     <li onmouseover="InnerBus(), Moving1(33.45594, 126.56203)" onmouseout="lineX()">순환버스</li>
                     <li>야간버스</li>
                 </ul>
@@ -190,8 +189,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     };
 
     var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-    //경로 파악을 위해 잠시 지도 줌기능 킴
-    //map.setZoomable(false); //지도 확대 축소 기능 끄기
+    map.setZoomable(false); //지도 확대 축소 기능 끄기
   
     var markers = []; //markers배열 선언
     var lines = []; //lines배열 선언
@@ -311,8 +309,8 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     }
 </script>
 <script src="scripts/bus.js"></script>
-<!--절대 쓰면 안되는거(경범추천) 
-    1. 무지성 margin XXXXXXXXXXXXXXXX
+<!-- 주의사항(경범추천) 
+    1. margin 과 padding은 생각하면서 쓰자 
     2. line-height - 글자 사이사이 -->
 </body>
 </html>
