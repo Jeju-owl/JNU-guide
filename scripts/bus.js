@@ -120,8 +120,10 @@
 
     // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
     kakao.maps.event.addListener(busmarker, 'click', function() {
-        overlay.setMap(map);
-        overlay1.setMap(null);
+        for(var i=0; i < 11; i++) {
+            overlay+i.setMap(null);
+        }
+        overlay.setMap(map)
     });
 
     // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다 
@@ -130,9 +132,11 @@
     }
 
     kakao.maps.event.addListener(busmarker1, 'click', function() {
-        overlay.setMap(null);
-        overlay1.setMap(map);
+        for(var i=0; i < 11; i++) {
+            overlay+i.setMap(null);
+        }
+        overlay1.setMap(map)
     });
-    function closeOverlay() {
+    function closeOverlay1() {
         overlay1.setMap(null);
     }
