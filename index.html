@@ -190,7 +190,8 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     };
 
     var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-    map.setZoomable(false); //지도 확대 축소 기능 끄기
+    //경로 파악을 위해 잠시 지도 줌기능 킴
+    //map.setZoomable(false); //지도 확대 축소 기능 끄기
   
     var markers = []; //markers배열 선언
     var lines = []; //lines배열 선언
@@ -250,7 +251,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
             new kakao.maps.LatLng(33.45307004641888 , 126.55919199731045),//인문대학(동)
             new kakao.maps.LatLng(33.451584762275985 , 126.5592210229973),//학생생활관 가기전 코너
             // new kakao.maps.LatLng(33.45156111931676 , 126.5576454562605),//학생생활관 직후 코너
-            new kakao.maps.LatLng(33.45157934284787 , 126.5576454562605),//학생생활관 직후 코너
+            new kakao.maps.LatLng(33.45158611432318 , 126.55770179594977),//학생생활관 직후 코너
             // new kakao.maps.LatLng(33.45380543105225 , 126.55745659027355),//인문대학(서)
             new kakao.maps.LatLng(33.4540018326901 , 126.55754163933506),//인문대학(서)
             new kakao.maps.LatLng(33.45421657291757 , 126.55771264258135),//인문대학(서) 직후 코너
