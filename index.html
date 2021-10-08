@@ -109,17 +109,17 @@
     #wrapper {}
     
     /*1. first 시작*/
-    #first { position: absolute; width: 100vw; top: 0;  height: 60px; background-color: rgb(56, 57, 57);}
+    #first { position: absolute; width: 100vw; top: 0;  height: 75px; background-color: rgb(56, 57, 57);}
     #logo { display: none;}
     #college {display: none;}
     #Mainmenu {float: left; width: 75vw; background-color: #fdcf46}
-    #Mainmenu > ul > li { float: left; width: 25vw; height: 20px; border-bottom: 1px solid rgb(56, 57, 57); padding: 2px 1px 2px 1px;  font-size: 1rem;}
+    #Mainmenu > ul > li { float: left; width: 25vw; height: 25px;  padding-left: 10px; padding-top: 2px; border-right: 1px solid rgb(56, 57, 57); border-bottom: 1px solid rgb(56, 57, 57); font-size: 1rem;}/**/
     #Mainmenu > ul > li:hover {text-align: center; font-weight: 900; background-color: rgb(231, 231, 225);}
-    #Mainmenu > ul > li > ul.submenu {display: none; position: absolute; left: 0; top: 60px; z-index: 2; width: 100vw; height: 60px;} /*ul에 submenu클래스 연동*/
-    #Mainmenu > ul > li > ul > li {float: left; width: 25vw; height: 20px; border-right: 1px solid rgb(195, 197, 195); border-bottom: 1px solid rgb(195, 197, 195); padding-left: 2px; background-color: rgb(231, 231, 225);}
+    #Mainmenu > ul > li > ul.submenu {display: none; position: absolute; left: 0; top: 75px; z-index: 2; width: 100vw; height: 60px;} /*ul에 submenu클래스 연동*/
+    #Mainmenu > ul > li > ul > li {float: left; width: 25vw; height: 25px; border-right: 1px solid rgb(195, 197, 195); border-bottom: 1px solid rgb(195, 197, 195); padding-top: 2px; background-color: rgb(231, 231, 225);}
     #Mainmenu > ul > li > ul > li > a {font-size: 0.8rem;}
-    #others {float: left; width: 25vw; height: 60px; background-color: rgb(56, 57, 57);} /*Mainmenu에 제이쿼리적용이후 이 코드 한줄이 안먹는중이다 이유는 모르겟음*/
-    #others > ul > li {color: rgb(143, 154, 145); height: 20px; text-align: center;}
+    #others {float: left; width: 25vw; height: 75px; background-color: rgb(56, 57, 57);} /*Mainmenu에 제이쿼리적용이후 이 코드 한줄이 안먹는중이다 이유는 모르겟음*/
+    #others > ul > li {color: rgb(143, 154, 145); height: 25px; text-align: center; padding-top: 2px;}
     #others > ul > li:hover {font-weight: 900; color: #fdcf46;}
 
     /*others세로메뉴유형*/
@@ -206,8 +206,8 @@
                     </li>
                     <li><a href="#none">예술디자인대학</a>
                         <ul class="submenu">
-                            <li onclick="Moving(33.45295,126.56174)"><a href="#none">예술디자인대학 미술관</a></li>
-                            <li onclick="Moving(33.45233,126.56279)"><a href="#none">예술디자인대학 음악관</a></li>
+                            <li onclick="Moving(33.45295,126.56174)"><a href="#none">미술관</a></li>
+                            <li onclick="Moving(33.45233,126.56279)"><a href="#none">음악관</a></li>
                         </ul>
                     </li>
                     <li><a href="#none">기타대학</a>
