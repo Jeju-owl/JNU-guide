@@ -42,5 +42,5 @@
     #copyright {position: fixed; bottom: 1px; right: 2px; z-index: 1;}
     #copyright > a { font-size: 11px; }
     #copyright > a > span {padding-left: 2px; font-size: 11px;} /*왜 a태그 안 span 태그는 안먹는가??*/
-    #level3button {position: fixed; bottom: 38px; right: 15px; width: 35px; height: 35px; background-color: aqua; border-radius: 50%;}
+    #level3button {position: fixed; bottom: 38px; right: 15px; width: 35px; height: 35px; background-color: aqua; border-radius: 50%; z-index: 1;}
 }
