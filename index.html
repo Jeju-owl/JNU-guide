@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/mobile.css">
 </head>
 <style> /*나중에 styles.css파일 만들어서 옮김*/
+    /*768~2560*/
     @media screen and (min-width : 768px) and (max-width : 2560px){
         * {margin: 0; padding: 0; font-size: 14px; background-size: 100% 100%; background-repeat: no-repeat; list-style: none;}
         a {color: black; text-decoration: none;}
@@ -55,6 +56,7 @@
         #copyright > a > span {padding-left: 2px; font-size: 0.7rem;} /*왜 a태그 안 span 태그는 안먹는가??*/
         #level3button { position: fixed; bottom: 38px; right: 15px; width: 40px; height: 40px; background-color: aqua; border-radius: 50%;}
     }
+    /*598~767*/
     @media screen and (min-width : 598px) and (max-width : 767px){
         * {margin: 0; padding: 0; font-size: 14px; background-size: 100% 100%; background-repeat: no-repeat; list-style: none;}
         a {color: black; text-decoration: none;}
@@ -62,7 +64,6 @@
         
         #wrapper {}
         
-        /*1. first 시작*/
         #first { position: absolute; width: 120px; top: 0; bottom: 0; background-color: rgb(56, 57, 57);}
         #logo { height: 100px; background-color: white;}
         #college { height: 25px; color: rgb(143, 154, 145); padding-top: 10px; padding-left: 5px;}
@@ -75,16 +76,8 @@
         #others > ul > li {color: rgb(143, 154, 145); height: 25px; padding-left: 5px;}  
         #others > ul > li:hover {padding-top: 10px; color: black; background-color: #fdcf46; height: 30px; transition: 1s; width: 120px;}
 
-        /*others세로메뉴유형*/
-
-        
-
-
-
-        /*2. second 시작*/
         #second { display: none;}
         #slide { display: none;}
-        /*keyframe선언 후 이름은 change-bg*/
         @keyframes change-bg { 
             from {background-image: url("images/owl-sample.jpeg");}/*0%*/
             33% {background-image: url("images/owl-sample2.jpeg");}
@@ -92,7 +85,6 @@
             to {background-image: url("images/owl-sample.jpeg");}/*100%*/
         }
 
-        /*3. third 시작*/
         #third {}
         #map {position: absolute; left: 120px; top: 0; bottom: 0; right: 0;}
         
@@ -101,6 +93,7 @@
         #copyright > a > span {padding-left: 2px; font-size: 0.7rem;} /*왜 a태그 안 span 태그는 안먹는가??*/
         #level3button { position: fixed; bottom: 38px; right: 15px; width: 40px; height: 40px; background-color: aqua; border-radius: 50%;}
     }
+    /*0~597*/
     @media screen and (max-width : 597px) {
     * {margin: 0; padding: 0; font-size: 13px; background-size: 100% 100%; background-repeat: no-repeat; list-style: none; box-sizing: border-box;}
     a {color: black; text-decoration: none;}
@@ -135,7 +128,7 @@
 
     /*3. third 시작*/
     #third {}
-    #map {position: absolute; left: 0; top: 60px; bottom: 0; right: 0;}
+    #map {position: absolute; left: 0; top: 75px; bottom: 0; right: 0;}
     
     #copyright {position: fixed; bottom: 1px; right: 2px; z-index: 1;}
     #copyright > a { font-size: 0.7rem; }
