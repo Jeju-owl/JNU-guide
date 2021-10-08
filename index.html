@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>제주대 지킴이</title>
+    <link rel="stylesheet" href="css/mobile.css">
 </head>
 <style> /*나중에 styles.css파일 만들어서 옮김*/
     * {margin: 0; padding: 0; font-size: 14px; background-size: 100% 100%; background-repeat: no-repeat; list-style: none;}
@@ -18,7 +19,7 @@
     #logo { height: 100px; background-color: white;}
     #college { height: 25px; color: rgb(143, 154, 145); padding-top: 10px; padding-left: 5px;}
     #Mainmenu {background-color: #fdcf46}
-    #Mainmenu > ul > li { height: 25px; border-bottom: 1px solid rgb(56, 57, 57); padding-left: 5px; padding-top: 7px; font-size: 13px;}
+    #Mainmenu > ul > li { height: 25px; border-bottom: 1px solid rgb(56, 57, 57); padding-left: 5px; padding-top: 7px; font-size: 1rem;}
     #Mainmenu > ul > li:hover {text-align: center; }
     #Mainmenu > ul > li > ul.submenu {display: none;/*hover할 때 보이도록 미리셋팅*/ position: relative; top: -25px; left: 115px; z-index: 1; background-color: rgb(231, 231, 225); width: 170px; text-align: justify;} /*ul에 submenu클래스 연동*/
     #Mainmenu > ul > li > ul > li {border-top: 1px solid rgb(195, 197, 195); height: 21px; border-bottom: 1px solid rgb(195, 197, 195); padding-left: 10px; padding-top: 10px;} */
@@ -48,15 +49,16 @@
     #map {position: absolute; left: 290px; top: 0; bottom: 0; right: 0;}
     
     #copyright {position: fixed; bottom: 1px; right: 2px; z-index: 1;}
-    #copyright > a { font-size: 11px; }
-    #copyright > a > span {padding-left: 2px; font-size: 11px;} /*왜 a태그 안 span 태그는 안먹는가??*/
+    #copyright > a { font-size: 0.9rem; }
+    #copyright > a > span {padding-left: 2px; font-size: 0.9rem;} /*왜 a태그 안 span 태그는 안먹는가??*/
+    #level3button {position: fixed; bottom: 38px; right: 15px; width: 35px; height: 35px; background-color: aqua; border-radius: 50%;}
     
     /*버스노선시간표 스타일시트 모바일 버전까지 화면 적용 완료*/
-    .wrap {position: absolute;left: -170px;bottom: 5px;width: 360px; height: 312px; text-align: left;overflow: hidden;font-size: 10px;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;}
+    .wrap {position: absolute;left: -170px;bottom: 5px;width: 360px; height: 312px; text-align: left;overflow: hidden;font-size: 0.9rem;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;}
     .wrap * {padding: 0;margin: 0;}
     .wrap .head {width: 360px;height: 300px;border-radius: 5px; border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}
     .wrap .head:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}
-    .head .title {padding: 5px 0 0 5px;height: 25px;background: #eee;border-bottom: 1px solid #ddd;font-size: 15px;font-weight: bold;}
+    .head .title {padding: 5px 0 0 5px;height: 25px;background: #eee;border-bottom: 1px solid #ddd;font-size: 1.1rem; font-weight: bold;}
     .head .close {position: absolute;top: 8px;right: 10px;color: #888;width: 17px;height: 17px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');}
     .head .close:hover {cursor: pointer;}
     .head:after {content: '';position: absolute;margin-left: -12px;left: 48%;bottom: 0;width: 22px;height: 12px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
@@ -170,6 +172,7 @@
         </div>
         <div id="map"><!--지도API삽입--></div> 
         <div id="copyright"><a>Copyright 2021. Owl<br><span>All rights reserved</span></a></div>
+        <div id="level3button"></div>
 </div>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8cbc68a03b7f95264d7b3a4693745f96"></script> <!--카카오맵API호출-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> <!--제이쿼리연동-->
