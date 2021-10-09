@@ -10,37 +10,37 @@ var ATMmarkerImage = new kakao.maps.MarkerImage(imageSrc1, imageSize1, imageOpti
         map: map
     });
     ATMmarker.setMap(map);
-    ATMmarkerPosition = new kakao.maps.LatLng(33.45942039684082, 126.5613326772457); //정문 농협은행
+    ATMmarkerPosition1 = new kakao.maps.LatLng(33.45942039684082, 126.5613326772457); //정문 농협은행
     var ATMmarker1 = new kakao.maps.Marker({
-        position: ATMmarkerPosition,
+        position: ATMmarkerPosition1,
         image: ATMmarkerImage,
         map: map
     });
     ATMmarker1.setMap(map);
-    ATMmarkerPosition = new kakao.maps.LatLng(33.45581863503511, 126.56136963794465); //본관
+    ATMmarkerPosition2 = new kakao.maps.LatLng(33.45581863503511, 126.56136963794465); //본관
     var ATMmarker2 = new kakao.maps.Marker({
-        position: ATMmarkerPosition,
+        position: ATMmarkerPosition2,
         image: ATMmarkerImage,
         map: map
     });
     ATMmarker2.setMap(map);
-    ATMmarkerPosition = new kakao.maps.LatLng(33.452813988176864, 126.5607152235069); //중앙도서관
+    ATMmarkerPosition3 = new kakao.maps.LatLng(33.452813988176864, 126.5607152235069); //중앙도서관
     var ATMmarker3 = new kakao.maps.Marker({
-        position: ATMmarkerPosition,
+        position: ATMmarkerPosition3,
         image: ATMmarkerImage,
         map: map
     });
     ATMmarker3.setMap(map);
-    ATMmarkerPosition = new kakao.maps.LatLng(33.45492583565361, 126.5606723070996); //학생회관
+    ATMmarkerPosition4 = new kakao.maps.LatLng(33.45492583565361, 126.5606723070996); //학생회관
     var ATMmarker4 = new kakao.maps.Marker({
-        position: ATMmarkerPosition,
+        position: ATMmarkerPosition4,
         image: ATMmarkerImage,
         map: map
     });
     ATMmarker4.setMap(map);
-    ATMmarkerPosition = new kakao.maps.LatLng(33.45103031220647, 126.55670166961119); //학생생활관
+    ATMmarkerPosition5 = new kakao.maps.LatLng(33.45103031220647, 126.55670166961119); //학생생활관
     var ATMmarker5 = new kakao.maps.Marker({
-        position: ATMmarkerPosition,
+        position: ATMmarkerPosition5,
         image: ATMmarkerImage,
         map: map
     });
@@ -59,12 +59,63 @@ var ATMmarkerImage = new kakao.maps.MarkerImage(imageSrc1, imageSize1, imageOpti
             '</dl>' +
         '</div>' +
     '</div>' ;
-    
     var markercontent1 =
     '<div class="ATM">' +
         '<div id="ATMempty"></div>' +
         '<div id="ATMtop">' +
-            '<a><img src="images/NHbank.jpg"><span><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeATMOverlay()" title="닫기"></span></a>' +
+            '<a><img src="images/NHbank.jpg"><span><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeATMOverlay1()" title="닫기"></span></a>' +
+        '</div>' +
+        '<div id="ATMbottom">' +
+            '<dl>' +
+                '<dt><a>운영시간</a><span>(연중무휴)</span></dt>' +
+                '<dd>06 : 00 ~ 24 : 00</dd>' +
+            '</dl>' +
+        '</div>' +
+    '</div>' ;
+    var markercontent2 =
+    '<div class="ATM">' +
+        '<div id="ATMempty"></div>' +
+        '<div id="ATMtop">' +
+            '<a><img src="images/NHbank.jpg"><span><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeATMOverlay2()" title="닫기"></span></a>' +
+        '</div>' +
+        '<div id="ATMbottom">' +
+            '<dl>' +
+                '<dt><a>운영시간</a><span>(연중무휴)</span></dt>' +
+                '<dd>06 : 00 ~ 24 : 00</dd>' +
+            '</dl>' +
+        '</div>' +
+    '</div>' ;
+    var markercontent3 =
+    '<div class="ATM">' +
+        '<div id="ATMempty"></div>' +
+        '<div id="ATMtop">' +
+            '<a><img src="images/NHbank.jpg"><span><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeATMOverlay3()" title="닫기"></span></a>' +
+        '</div>' +
+        '<div id="ATMbottom">' +
+            '<dl>' +
+                '<dt><a>운영시간</a><span>(연중무휴)</span></dt>' +
+                '<dd>06 : 00 ~ 24 : 00</dd>' +
+            '</dl>' +
+        '</div>' +
+    '</div>' ;
+    var markercontent4 =
+    '<div class="ATM">' +
+        '<div id="ATMempty"></div>' +
+        '<div id="ATMtop">' +
+            '<a><img src="images/NHbank.jpg"><span><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeATMOverlay4()" title="닫기"></span></a>' +
+        '</div>' +
+        '<div id="ATMbottom">' +
+            '<dl>' +
+                '<dt><a>운영시간</a><span>(연중무휴)</span></dt>' +
+                '<dd>06 : 00 ~ 24 : 00</dd>' +
+            '</dl>' +
+        '</div>' +
+    '</div>' ;
+    var markercontent5 =
+    '<div class="ATM">' +
+        '<div id="ATMempty"></div>' +
+        '<div id="ATMtop">' +
+            '<a><img src="images/NHbank.jpg"><span><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeATMOverlay5()" title="닫기"></span></a>' +
         '</div>' +
         '<div id="ATMbottom">' +
             '<dl>' +
@@ -91,28 +142,28 @@ var ATMmarkerImage = new kakao.maps.MarkerImage(imageSrc1, imageSize1, imageOpti
     ATMoverlay1.setMap(null);
     
     var ATMoverlay2 = new kakao.maps.CustomOverlay({ //본관
-        content: markercontent1,
+        content: markercontent2,
         map: map,
         position: ATMmarker2.getPosition()       
     });
     ATMoverlay2.setMap(null);
     
     var ATMoverlay3 = new kakao.maps.CustomOverlay({ //중앙도서관
-        content: markercontent1,
+        content: markercontent3,
         map: map,
         position: ATMmarker3.getPosition()       
     });
     ATMoverlay3.setMap(null);
     
     var ATMoverlay4 = new kakao.maps.CustomOverlay({ //학생회관
-        content: markercontent1,
+        content: markercontent4,
         map: map,
         position: ATMmarker4.getPosition()       
     });
     ATMoverlay4.setMap(null);
     
     var ATMoverlay5 = new kakao.maps.CustomOverlay({ //학생생활관
-        content: markercontent1,
+        content: markercontent5,
         map: map,
         position: ATMmarker5.getPosition()       
     });
