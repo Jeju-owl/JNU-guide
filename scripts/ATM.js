@@ -170,7 +170,7 @@ var ATMmarkerImage = new kakao.maps.MarkerImage(imageSrc1, imageSize1, imageOpti
     ATMoverlay5.setMap(null);
 
     // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
-    kakao.maps.event.addListener(ATMoverlay, 'click', function() {
+    kakao.maps.event.addListener(ATMmarker, 'click', function() {
         ATMoverlay.setMap(map);
         ATMoverlay1.setMap(null);
         ATMoverlay2.setMap(null);
@@ -184,7 +184,7 @@ var ATMmarkerImage = new kakao.maps.MarkerImage(imageSrc1, imageSize1, imageOpti
         ATMoverlay.setMap(null); 
     }
 
-    kakao.maps.event.addListener(ATMoverlay1, 'click', function() {
+    kakao.maps.event.addListener(ATMmarker1, 'click', function() {
         ATMoverlay.setMap(null);
         ATMoverlay1.setMap(map);
         ATMoverlay2.setMap(null);
@@ -195,7 +195,7 @@ var ATMmarkerImage = new kakao.maps.MarkerImage(imageSrc1, imageSize1, imageOpti
     function closeATMOverlay1() {
         ATMoverlay1.setMap(null); 
     }
-    kakao.maps.event.addListener(ATMoverlay2, 'click', function() {
+    kakao.maps.event.addListener(ATMmarker2, 'click', function() {
         ATMoverlay.setMap(null);
         ATMoverlay1.setMap(null);
         ATMoverlay2.setMap(map);
@@ -206,7 +206,7 @@ var ATMmarkerImage = new kakao.maps.MarkerImage(imageSrc1, imageSize1, imageOpti
     function closeATMOverlay2() {
         ATMoverlay2.setMap(null); 
     }
-    kakao.maps.event.addListener(ATMoverlay3, 'click', function() {
+    kakao.maps.event.addListener(ATMmarker3, 'click', function() {
         ATMoverlay.setMap(null);
         ATMoverlay1.setMap(null);
         ATMoverlay2.setMap(null);
@@ -217,7 +217,7 @@ var ATMmarkerImage = new kakao.maps.MarkerImage(imageSrc1, imageSize1, imageOpti
     function closeATMOverlay3() {
         ATMoverlay3.setMap(null); 
     }
-    kakao.maps.event.addListener(ATMoverlay4, 'click', function() {
+    kakao.maps.event.addListener(ATMmarker4, 'click', function() {
         ATMoverlay.setMap(null);
         ATMoverlay1.setMap(null);
         ATMoverlay2.setMap(null);
@@ -228,7 +228,7 @@ var ATMmarkerImage = new kakao.maps.MarkerImage(imageSrc1, imageSize1, imageOpti
     function closeATMOverlay4() {
         ATMoverlay4.setMap(null); 
     }
-    kakao.maps.event.addListener(ATMoverlay5, 'click', function() {
+    kakao.maps.event.addListener(ATMmarker5, 'click', function() {
         ATMoverlay.setMap(null);
         ATMoverlay1.setMap(null);
         ATMoverlay2.setMap(null);
