@@ -185,7 +185,7 @@
 
 
     /*버스노선시간표 스타일시트 모바일 버전까지 화면 적용 완료*/
-    .wrap {position: absolute;left: -170px;bottom: 5px;width: 355px; height: 312px; text-align: left;overflow: hidden;font-size: 0.9rem;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;}
+    /* .wrap {position: absolute;left: -170px;bottom: 5px;width: 355px; height: 312px; text-align: left;overflow: hidden;font-size: 0.9rem;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;}
     .wrap * {padding: 0;margin: 0;}
     .wrap .head {width: 355px;height: 300px;border-radius: 5px; border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}
     .wrap .head:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}
@@ -200,7 +200,7 @@
     .Bbus { float: left; width: 150px; height: 265px;}
     table {border-collapse: collapse;}
     th {border: 1px solid gray;}
-    td {border: 1px solid gray; text-align: center;}
+    td {border: 1px solid gray; text-align: center;} */
 </style>
 <body>
     <div id="wrapper"> <!--wrapper가 필요없다...사실상 자식요소들이 전부다 position:absolute여서 잇으나 마나다... float:left도 안먹힘.. 다음번엔 float사용해서 해봐야될듯..-->
@@ -303,7 +303,7 @@
         </div>
         <div id="map"><!--지도API삽입--></div> 
         <div id="copyright"><a>Copyright 2021. Owl<br><span>All rights reserved</span></a></div>
-        <div id="level3button" onclick="levelchange()"><img src="images/zoomreset.png"></div>
+        <div id="level3button" onclick="levelchange(), Moving1(33.45594, 126.56203)"><img src="images/zoomreset.png"></div>
 </div>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8cbc68a03b7f95264d7b3a4693745f96"></script> <!--카카오맵API호출-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> <!--제이쿼리연동-->
@@ -356,10 +356,12 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         //Marker()함수 실행
         Marker(a,b);
     }
-    function Moving1(a,b) { //순환버스 전용 좌표이동기
+    
+    function Moving1(a,b) { //지도 초점을 a,b로 이동
         var moveLatLon = new kakao.maps.LatLng(a,b);
         map.panTo(moveLatLon);
     }
+    
     function levelchange() {
         map.setLevel(4);
     } 
