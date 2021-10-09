@@ -54,7 +54,8 @@
         #copyright {position: fixed; bottom: 1px; right: 2px; z-index: 1;}
         #copyright > a { font-size: 0.7rem;}
         #copyright > a > span {padding-left: 2px; font-size: 0.7rem;} /*왜 a태그 안 span 태그는 안먹는가??*/
-        #level3button { position: fixed; bottom: 38px; right: 15px; width: 40px; height: 40px; background-color: aqua; border-radius: 50%;}
+        #level3button { position: fixed; bottom: 38px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black;}
+        #level3button > img {width: 35px; height: 35px; position: relative; left: 7px; top: 7px}
     }
     /*598~767*/
     @media screen and (min-width : 598px) and (max-width : 767px){
@@ -91,7 +92,8 @@
         #copyright {position: fixed; bottom: 1px; right: 2px; z-index: 1;}
         #copyright > a { font-size: 0.7rem;}
         #copyright > a > span {padding-left: 2px; font-size: 0.7rem;} /*왜 a태그 안 span 태그는 안먹는가??*/
-        #level3button { position: fixed; bottom: 38px; right: 15px; width: 40px; height: 40px; background-color: aqua; border-radius: 50%;}
+        #level3button { position: fixed; bottom: 38px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black;}
+        #level3button > img {width: 35px; height: 35px; position: relative; left: 7px; top: 7px}
     }
     /*0~597*/
     @media screen and (max-width : 597px) {
@@ -133,7 +135,8 @@
         #copyright {position: fixed; bottom: 1px; right: 2px; z-index: 1;}
         #copyright > a { font-size: 0.7rem; }
         #copyright > a > span {padding-left: 2px; font-size: 0.7rem;} /*왜 a태그 안 span 태그는 안먹는가??*/
-        #level3button {position: fixed; bottom: 38px; right: 15px; width: 40px; height: 40px; background-color: aqua; border-radius: 50%; z-index: 1;}
+        #level3button {position: fixed; bottom: 38px; right: 15px; width: 50px; height: 50px; border-radius: 50%; z-index: 1; border: 2px solid black;}
+        #level3button > img {width: 35px; height: 35px; position: relative; left: 7px; top: 7px}
     }
     
 
@@ -258,7 +261,7 @@
         </div>
         <div id="map"><!--지도API삽입--></div> 
         <div id="copyright"><a>Copyright 2021. Owl<br><span>All rights reserved</span></a></div>
-        <div id="level3button"></div>
+        <div id="level3button" onclick="levelchange"><img src="images/zoomout.png"></div>
 </div>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8cbc68a03b7f95264d7b3a4693745f96"></script> <!--카카오맵API호출-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> <!--제이쿼리연동-->
@@ -314,6 +317,13 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     function Moving1(a,b) { //순환버스 전용 좌표이동기
         var moveLatLon = new kakao.maps.LatLng(a,b);
         map.panTo(moveLatLon);
+    }
+    function levelchange() {
+        // 현재 지도의 레벨을 얻어옵니다
+        var level = map.getLevel(); 
+        
+        // 지도를 1레벨 올립니다 (지도가 축소됩니다)
+        map.setLevel(level + 1);
     } 
 
     //형이 작업할 곳 (순환버스노선)
@@ -367,7 +377,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         // 지도에 표시할 선을 생성합니다
         var polyline = new kakao.maps.Polyline({
             path: linePath, // 선을 구성하는 좌표배열 입니다
-            strokeWeight: 5, // 선의 두께 입니다
+            strokeWeight: 3, // 선의 두께 입니다
             strokeColor: '#F6D160', // 선의 색깔입니다
             strokeOpacity: 0.7, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
             strokeStyle: 'solid' // 선의 스타일입니다
