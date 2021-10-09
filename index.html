@@ -150,16 +150,16 @@
 
 
     /*버스노선시간표 스타일시트 모바일 버전까지 화면 적용 완료*/
-    .wrap {position: absolute;left: -170px;bottom: 5px;width: 360px; height: 312px; text-align: left;overflow: hidden;font-size: 0.9rem;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;}
+    .wrap {position: absolute;left: -170px;bottom: 5px;width: 350px; height: 312px; text-align: left;overflow: hidden;font-size: 0.9rem;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;}
     .wrap * {padding: 0;margin: 0;}
-    .wrap .head {width: 360px;height: 300px;border-radius: 5px; border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}
+    .wrap .head {width: 350px;height: 300px;border-radius: 5px; border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}
     .wrap .head:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}
     .head .title {padding: 5px 0 0 5px;height: 25px;background: #eee;border-bottom: 1px solid #ddd;font-size: 1.1rem; font-weight: bold;}
-    .head .close {position: absolute;top: 8px;right: 10px;color: #888;width: 17px;height: 17px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');}
+    .head .close {position: absolute;top: 5px;right: 10px;color: #888;width: 17px;height: 17px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');}
     .head .close:hover {cursor: pointer;}
     .head:after {content: '';position: absolute;margin-left: -12px;left: 48%;bottom: 0;width: 22px;height: 12px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
-    .body { width: 360px; height: 265px;}
-    .leftside { float: left; width: 5px; height: 265px;}
+    .body { width: 350px; height: 265px;}
+    .leftside { float: left; width: 10px; height: 265px;}
     .rightside {float: left; width: 27px; height: 265px;}
     .Abus { float: left; width: 150px; height: 265px;}
     .Bbus { float: left; width: 150px; height: 265px;}
@@ -268,7 +268,7 @@
         </div>
         <div id="map"><!--지도API삽입--></div> 
         <div id="copyright"><a>Copyright 2021. Owl<br><span>All rights reserved</span></a></div>
-        <div id="level3button" onclick="levelchange()"><img src="images/zoomout.png"></div>
+        <div id="level3button" onclick="levelchange()"><img src="images/zoomreset.png"></div>
 </div>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8cbc68a03b7f95264d7b3a4693745f96"></script> <!--카카오맵API호출-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> <!--제이쿼리연동-->
@@ -284,11 +284,11 @@
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
         center: new kakao.maps.LatLng(33.45594, 126.56203), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
+        level: 4 // 지도의 확대 레벨
     };
 
     var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-    map.setZoomable(false); //지도 확대 축소 기능 끄기
+    /*map.setZoomable(false); //지도 확대 축소 기능 끄기*/
   
     var markers = []; //markers배열 선언
     var lines = []; //lines배열 선언
@@ -326,11 +326,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         map.panTo(moveLatLon);
     }
     function levelchange() {
-        // 현재 지도의 레벨을 얻어옵니다
-        var level = map.getLevel(); 
-        
-        // 지도를 1레벨 올립니다 (지도가 축소됩니다)
-        map.setLevel(level + 1);
+        map.setLevel(4);
     } 
 
     //형이 작업할 곳 (순환버스노선)
@@ -397,10 +393,10 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         //지도 확대 레벨 4
         map.setLevel(4);
 
-        //for문을 통해 버스마커 이외 마커들 전부 삭제
-        for (var i = 0; i < markers.length; i++) {
-            markers[i].setMap(null);
-        }
+        // //for문을 통해 버스마커 이외 마커들 전부 삭제
+        // for (var i = 0; i < markers.length; i++) {
+        //     markers[i].setMap(null);
+        // }
         
     }
 
