@@ -56,6 +56,24 @@
         #copyright > a > span {padding-left: 2px; font-size: 0.7rem;} /*왜 a태그 안 span 태그는 안먹는가??*/
         #level3button { position: fixed; bottom: 38px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black; z-index: 1; background-color: white}
         #level3button > img {width: 35px; height: 35px; position: relative; left: 7px; top: 7px}
+    
+    
+        .wrap {position: absolute;left: -170px;bottom: 5px;width: 360px; height: 312px; text-align: left;overflow: hidden;font-size: 0.9rem;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;}
+        .wrap * {padding: 0;margin: 0;}
+        .wrap .head {width: 360px;height: 300px;border-radius: 5px; border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}
+        .wrap .head:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}
+        .head .title {padding: 5px 0 0 5px;height: 25px;background: #eee;border-bottom: 1px solid #ddd;font-size: 1.1rem; font-weight: bold;}
+        .head .close {position: absolute;top: 5px;right: 10px;color: #888;width: 17px;height: 17px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');}
+        .head .close:hover {cursor: pointer;}
+        .head:after {content: '';position: absolute;margin-left: -12px;left: 49%;bottom: 0;width: 22px;height: 12px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
+        .body { width: 360px; height: 265px;}
+        .leftside { float: left; width: 5px; height: 265px;}
+        .rightside {float: left; width: 27px; height: 265px;}
+        .Abus { float: left; width: 150px; height: 265px;}
+        .Bbus { float: left; width: 150px; height: 265px;}
+        table {border-collapse: collapse;}
+        th {border: 1px solid gray;}
+        td {border: 1px solid gray; text-align: center;}
     }
     /*598~767*/
     @media screen and (min-width : 598px) and (max-width : 767px){
@@ -95,6 +113,23 @@
         #copyright > a > span {padding-left: 2px; font-size: 0.7rem;} /*왜 a태그 안 span 태그는 안먹는가??*/
         #level3button { position: fixed; bottom: 38px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black; z-index: 1; background-color: white}
         #level3button > img {width: 35px; height: 35px; position: relative; left: 7px; top: 7px}
+    
+        .wrap {position: absolute;left: -170px;bottom: 5px;width: 360px; height: 312px; text-align: left;overflow: hidden;font-size: 0.9rem;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;}
+        .wrap * {padding: 0;margin: 0;}
+        .wrap .head {width: 360px;height: 300px;border-radius: 5px; border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}
+        .wrap .head:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}
+        .head .title {padding: 5px 0 0 5px;height: 25px;background: #eee;border-bottom: 1px solid #ddd;font-size: 1.1rem; font-weight: bold;}
+        .head .close {position: absolute;top: 5px;right: 10px;color: #888;width: 17px;height: 17px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');}
+        .head .close:hover {cursor: pointer;}
+        .head:after {content: '';position: absolute;margin-left: -12px;left: 49%;bottom: 0;width: 22px;height: 12px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
+        .body { width: 360px; height: 265px;}
+        .leftside { float: left; width: 5px; height: 265px;}
+        .rightside {float: left; width: 27px; height: 265px;}
+        .Abus { float: left; width: 150px; height: 265px;}
+        .Bbus { float: left; width: 150px; height: 265px;}
+        table {border-collapse: collapse;}
+        th {border: 1px solid gray;}
+        td {border: 1px solid gray; text-align: center;}
     }
     /*0~597*/
     @media screen and (max-width : 597px) {
@@ -139,11 +174,11 @@
         #level3button {position: fixed; bottom: 38px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black; z-index: 1; background-color: white;}
         #level3button > img {width: 35px; height: 35px; position: relative; left: 7px; top: 7px}
 
-        .wrap {position: absolute;left: -170px;bottom: 5px;width: 360px; height: 312px; text-align: left;overflow: hidden;font-size: 0.9rem;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;}
+        /*.wrap {position: absolute;left: -170px;bottom: 5px;width: 360px; height: 312px; text-align: left;overflow: hidden;font-size: 0.9rem;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;}
         .head .title {padding: 3px 0 1px 10px;height: 25px;background: #eee;border-bottom: 1px solid #ddd;font-size: 1.1rem; font-weight: bold;}
         .head .close {position: absolute;top: 4px;right: 10px;color: #888;width: 17px;height: 17px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');}
         .leftside { float: left; width: 45px; height: 265px;}
-        .rightside {float: left; width: 23px; height: 265px;}
+        .rightside {float: left; width: 23px; height: 265px;}*/
     }
     
 
