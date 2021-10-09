@@ -10,7 +10,7 @@ var ATMmarkerImage = new kakao.maps.MarkerImage(imageSrc1, imageSize1, imageOpti
         map: map
     });
     ATMmarker.setMap(map);
-    ATMmarkerPosition = new kakao.maps.LatLng(33.45950192943561, 126.56144252096406); //정문 농협은행
+    ATMmarkerPosition = new kakao.maps.LatLng(33.45942039684082, 126.5613326772457); //정문 농협은행
     var ATMmarker = new kakao.maps.Marker({
         position: ATMmarkerPosition,
         image: ATMmarkerImage,

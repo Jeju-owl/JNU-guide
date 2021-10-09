@@ -5,7 +5,7 @@
     imageOption = {offset: new kakao.maps.Point(11, 10)}; // 교내순환버스마커 이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
 
     var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption), // 교내순환버스마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
-        markerPosition = new kakao.maps.LatLng(33.45970316902739, 126.56162167986024); // 마커가 표시될 위치입니다(정문)
+        markerPosition = new kakao.maps.LatLng(33.45965343928493, 126.56158159312466); // 마커가 표시될 위치입니다(정문)
 
     // 교내순환버스마커를 생성합니다(정문)
     var busmarker = new kakao.maps.Marker({
