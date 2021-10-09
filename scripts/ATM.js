@@ -1,6 +1,6 @@
 var imageSrc1 = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-5/images/ATM.png',
-    imageSize1 = new kakao.maps.Size(28, 20),
-    imageOption1 = {offset: new kakao.maps.Point(11, 10)};
+    imageSize1 = new kakao.maps.Size(20, 20),
+    imageOption1 = {offset: new kakao.maps.Point(9, 10)};
 var ATMmarkerImage = new kakao.maps.MarkerImage(imageSrc1, imageSize1, imageOption1),
 
     ATMmarkerPosition = new kakao.maps.LatLng(33.45990676686699, 126.56183040828569); //정문 제주은행
