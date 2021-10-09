@@ -54,7 +54,7 @@
         #copyright {position: fixed; bottom: 1px; right: 2px; z-index: 1;}
         #copyright > a { font-size: 0.7rem;}
         #copyright > a > span {padding-left: 2px; font-size: 0.7rem;} /*왜 a태그 안 span 태그는 안먹는가??*/
-        #level3button { position: fixed; bottom: 38px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black;}
+        #level3button { position: fixed; bottom: 38px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black; z-index: 1; background-color: white}
         #level3button > img {width: 35px; height: 35px; position: relative; left: 7px; top: 7px}
     }
     /*598~767*/
@@ -92,7 +92,7 @@
         #copyright {position: fixed; bottom: 1px; right: 2px; z-index: 1;}
         #copyright > a { font-size: 0.7rem;}
         #copyright > a > span {padding-left: 2px; font-size: 0.7rem;} /*왜 a태그 안 span 태그는 안먹는가??*/
-        #level3button { position: fixed; bottom: 38px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black;}
+        #level3button { position: fixed; bottom: 38px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black; z-index: 1; background-color: white}
         #level3button > img {width: 35px; height: 35px; position: relative; left: 7px; top: 7px}
     }
     /*0~597*/
@@ -111,7 +111,7 @@
         #Mainmenu > ul > li { float: left; width: 25vw; height: 25px;  padding-left: 10px; padding-top: 2px; border-right: 1px solid rgb(56, 57, 57); border-bottom: 1px solid rgb(56, 57, 57); font-size: 1rem;}/**/
         #Mainmenu > ul > li:hover {text-align: center; font-weight: 900; background-color: rgb(231, 231, 225);}
         #Mainmenu > ul > li > ul.submenu {display: none; position: absolute; left: 0; top: 75px; z-index: 2; width: 100vw; height: 60px;} /*ul에 submenu클래스 연동*/
-        #Mainmenu > ul > li > ul > li {float: left; width: 25vw; height: 25px; border-right: 1px solid rgb(195, 197, 195); border-bottom: 1px solid rgb(195, 197, 195); padding-top: 2px; background-color: rgb(231, 231, 225);}
+        #Mainmenu > ul > li > ul > li {float: left; width: 25vw; height: 25px; border-right: 1px solid rgb(195, 197, 195); border-bottom: 1px solid rgb(195, 197, 195); padding-top: 2px; background-color: white}
         #Mainmenu > ul > li > ul > li > a {font-size: 0.8rem;}
         #others {float: left; width: 25vw; height: 75px; background-color: rgb(56, 57, 57);} /*Mainmenu에 제이쿼리적용이후 이 코드 한줄이 안먹는중이다 이유는 모르겟음*/
         #others > ul > li {color: rgb(143, 154, 145); height: 25px; text-align: center; padding-top: 2px;}
@@ -135,7 +135,7 @@
         #copyright {position: fixed; bottom: 1px; right: 2px; z-index: 1;}
         #copyright > a { font-size: 0.7rem; }
         #copyright > a > span {padding-left: 2px; font-size: 0.7rem;} /*왜 a태그 안 span 태그는 안먹는가??*/
-        #level3button {position: fixed; bottom: 38px; right: 15px; width: 50px; height: 50px; border-radius: 50%; z-index: 1; border: 2px solid black;}
+        #level3button {position: fixed; bottom: 38px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black; z-index: 1; background-color: white;}
         #level3button > img {width: 35px; height: 35px; position: relative; left: 7px; top: 7px}
     }
     
@@ -261,7 +261,7 @@
         </div>
         <div id="map"><!--지도API삽입--></div> 
         <div id="copyright"><a>Copyright 2021. Owl<br><span>All rights reserved</span></a></div>
-        <div id="level3button" onclick="levelchange"><img src="images/zoomout.png"></div>
+        <div id="level3button" onclick="levelchange()"><img src="images/zoomout.png"></div>
 </div>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8cbc68a03b7f95264d7b3a4693745f96"></script> <!--카카오맵API호출-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> <!--제이쿼리연동-->
