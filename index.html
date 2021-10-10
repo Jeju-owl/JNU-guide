@@ -407,11 +407,45 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     var lines = []; //lines배열 선언
 
     //geolocation JQuery를 이용하여 실시간(watchPosition)으로 위도 및 경도 값을 받아옴
-    navigator.geolocation.watchPosition(function(pos) {
-        latitude = pos.coords.latitude;
-        longitude = pos.coords.longitude;
-        userMarker(latitude,longitude);
-    });
+    var options = {
+        // 가능한 경우, 높은 정확도의 위치(예를 들어, GPS 등) 를 읽어오려면 true로 설정
+        // 그러나 이 기능은 배터리 지속 시간에 영향을 미친다. 
+        enableHighAccuracy: false, // 대략적인 값이라도 상관 없음: 기본값
+        
+        // 위치 정보가 충분히 캐시되었으면, 이 프로퍼티를 설정하자, 
+        // 위치 정보를 강제로 재확인하기 위해 사용하기도 하는 이 값의 기본 값은 0이다.
+        maximumAge: 30000,     // 5분이 지나기 전까지는 수정되지 않아도 됨
+        
+        // 위치 정보를 받기 위해 얼마나 오랫동안 대기할 것인가?
+        // 기본값은 Infinity이므로 getCurrentPosition()은 무한정 대기한다.
+        timeout: 15000    // 15초 이상 기다리지 않는다.
+    }
+ 
+    if(navigator.geolocation) // geolocation 을 지원한다면 위치를 요청한다. 
+        navigator.geolocation.watchPosition(success, error, options);
+    else
+        elt.innerHTML = "해당 기기에서는 GPS기능이 지원되지 않습니다.";
+    
+    // geolocation 요청이 실패하면 이 함수를 호출한다.
+    function error(e) {
+        // 오류 객체에는 수치 코드와 텍스트 메시지가 존재한다.
+        // 코드 값은 다음과 같다.
+        // 1: 사용자가 위치 정보를 공유 권한을 제공하지 않음.
+        // 2: 브라우저가 위치를 가져올 수 없음.
+        // 3: 타임아웃이 발생됨.
+        alert("error "+e.code +": " + e.message);
+    }
+    
+    
+    // geolocation 요청이 성공하면 이 함수가 호출된다.
+    function success(pos) {
+        navigator.geolocation.watchPosition(function(pos) {
+             latitude = pos.coords.latitude;
+             longitude = pos.coords.longitude;
+            userMarker(latitude,longitude);
+        });
+        elt.innerHTML = msg;     // 모든 위치 정보를 출력한다.
+    }    
 
     //Marker(x,y)함수 선언
     function Marker(x,y) {
@@ -554,11 +588,12 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 </script>
 <script src="scripts/overlay.js"></script>
 <!-- 
-    주의사항(경범추천) 
+    메모장 (경범) 
     1. margin 과 padding은 생각하면서 쓰자 
     2. line-height - 글자 사이사이
-    3.
-    주의사항(승덕추천)
+    3. QR코드 화, 주변식당정보, 주차장
+    4.
+    메모장 (승덕)
     1.
     2.
     3.
