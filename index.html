@@ -398,8 +398,8 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     var lines = []; //lines배열 선언
 
     navigator.geolocation.watchPosition(function(pos) {
-        var latitude = pos.coords.latitude;
-        var longitude = pos.coords.longitude;
+        latitude = pos.coords.latitude;
+        longitude = pos.coords.longitude;
         userMarker(latitude,longitude);
     });
 
