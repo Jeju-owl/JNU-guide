@@ -363,8 +363,8 @@
         </div>
 </div>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8cbc68a03b7f95264d7b3a4693745f96"></script> <!--카카오맵API호출-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> <!--제이쿼리연동-->
-<script src="http://code.jquery.com/jquery-1.11.0.js"></script> <!--제이쿼리연동-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> <!--webstoryboy제이쿼리연동-->
+<script src="http://code.jquery.com/jquery-1.11.0.js"></script> <!--geolocation제이쿼리연동-->
 <script> //webstoryboy is god
     $("#Mainmenu > ul >li").hover(
         function(){
@@ -397,10 +397,11 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     var usermarkers = []; //usermarkers배열 선언
     var lines = []; //lines배열 선언
 
+    //geolocation JQuery를 이용하여 실시간(watchPosition)으로 위도 및 경도 값을 받아옴
     navigator.geolocation.watchPosition(function(pos) {
         latitude = pos.coords.latitude;
         longitude = pos.coords.longitude;
-        Marker(latitude,longitude);
+        userMarker(latitude,longitude);
     });
 
     //Marker(x,y)함수 선언
@@ -422,18 +423,18 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         }
     }
     function userMarker(x,y) {
-        // 마커가 표시될 위치입니다 
+        // 사용자의 위치가 마커로 표시될 위치입니다 
         var markerPosition  = new kakao.maps.LatLng(x, y); 
 
-        // 마커를 생성합니다
+        // 사용자 위치 마커를 생성합니다
         var usermarker = new kakao.maps.Marker({
             position: markerPosition
         });
-        // 마커가 지도 위에 표시되도록 설정합니다
+        // 사용자 위치 마커가 지도 위에 표시되도록 설정합니다
         usermarker.setMap(map);
         //markers배열에 marker푸쉬
         usermarkers.push(usermarker);
-        //for문을 통해 이전 마커들 다 삭제
+        //for문을 통해 사용자 이전 위치 마커들 다 삭제
         for (var i = 0; i < usermarkers.length-1; i++) {
             usermarkers[i].setMap(null);
         }
@@ -458,12 +459,13 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         map.setLevel(4);
     }
 
+    //me클래스를 클릭했을 때 함수가 발생한다. 그로인해 함수안에 있는 2개의 다른 함수가 실행된다.
     $('.me').click(function(){
         levelchange();
         Moving1(latitude, longitude);
     });
 
-    //형이 작업할 곳 (순환버스노선)
+    // 교내순환버스노선
     function InnerBus() {
 
         // 선을 구성하는 좌표 배열입니다. 이 좌표들을 이어서 선을 표시합니다
@@ -508,7 +510,6 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
             new kakao.maps.LatLng(33.460135701018096 , 126.56155496333737),//정문(서) 직후 한바퀴 5
             new kakao.maps.LatLng(33.459811596777094 , 126.5616883626409),//정문
 
-
         ];
 
         // 지도에 표시할 선을 생성합니다
@@ -530,8 +531,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         // //for문을 통해 버스마커 이외 마커들 전부 삭제
         // for (var i = 0; i < markers.length; i++) {
         //     markers[i].setMap(null);
-        // }
-        
+        // }     
     }
 
     //순환버스노선 지우는 함수
@@ -541,12 +541,18 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         }
         //지도 확대 레벨 4
         map.setLevel(4);
-        
     }
 </script>
 <script src="scripts/overlay.js"></script>
-<!-- 주의사항(경범추천) 
+<!-- 
+    주의사항(경범추천) 
     1. margin 과 padding은 생각하면서 쓰자 
-    2. line-height - 글자 사이사이 -->
+    2. line-height - 글자 사이사이
+    3.
+    주의사항(승덕추천)
+    1.
+    2.
+    3.
+-->
 </body>
 </html>
