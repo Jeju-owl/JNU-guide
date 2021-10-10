@@ -506,6 +506,9 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     $('.me').click(function(){
         levelchange();
         Moving1(latitude, longitude);
+        if(latitude==null) {
+            alert("error "+e.code +": " + e.message);
+        }
     });
 
     // 교내순환버스노선
