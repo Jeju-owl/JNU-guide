@@ -56,6 +56,8 @@
         #copyright > a > span {padding-left: 2px; font-size: 0.7rem;} /*왜 a태그 안 span 태그는 안먹는가??*/
         #level3button { position: fixed; bottom: 38px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black; z-index: 1; background-color: white}
         #level3button > img {width: 35px; height: 35px; position: relative; left: 8px; top: 8px}
+        .findme { position: fixed; bottom: 95px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black; z-index: 1; background-color: white}
+        .findme > img {width: 35px; height: 35px; position: relative; left: 8px; top: 8px}
     
         /*버스노선시간표 스타일시트 모바일 버전까지 화면 적용 완료*/
         .wrap {position: absolute;left: -170px;bottom: 5px;width: 360px; height: 312px; text-align: left;overflow: hidden;font-size: 0.9rem;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;}
@@ -131,6 +133,8 @@
         #copyright > a > span {padding-left: 2px; font-size: 0.7rem;} /*왜 a태그 안 span 태그는 안먹는가??*/
         #level3button { position: fixed; bottom: 38px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black; z-index: 1; background-color: white}
         #level3button > img {width: 35px; height: 35px; position: relative; left: 8px; top: 8px}
+        .findme { position: fixed; bottom: 95px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black; z-index: 1; background-color: white}
+        .findme > img {width: 35px; height: 35px; position: relative; left: 8px; top: 8px}
     
         .wrap {position: absolute;left: -170px;bottom: 5px;width: 360px; height: 312px; text-align: left;overflow: hidden;font-size: 0.9rem;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;}
         .wrap * {padding: 0;margin: 0;}
@@ -209,6 +213,8 @@
         #copyright > a > span {padding-left: 2px; font-size: 0.7rem;} /*왜 a태그 안 span 태그는 안먹는가??*/
         #level3button {position: fixed; bottom: 38px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black; z-index: 1; background-color: white;}
         #level3button > img {width: 35px; height: 35px; position: relative; left: 5.5px; top: 6px}
+        .findme { position: fixed; bottom: 95px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black; z-index: 1; background-color: white}
+        .findme > img {width: 35px; height: 35px; position: relative; left: 8px; top: 8px}
 
         .wrap {position: absolute;left: -170px;bottom: 5px;width: 355px; height: 312px; text-align: left;overflow: hidden;font-size: 0.9rem;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;}
         .wrap * {padding: 0;margin: 0;}
@@ -349,6 +355,7 @@
         <div id="map"><!--지도API삽입--></div> 
         <div id="copyright"><a>Copyright 2021. Owl<br><span>All rights reserved</span></a></div>
         <div id="level3button" onclick="levelchange(), Moving1(33.45594, 126.56203)"><img src="images/zoomreset.png"></div>
+        <div class="findme"><img src="images/location.png"></div>
         <div id="nightbuswrap">
             <div id="nightbushead"></div>
             <div id="nightbusbody"></div>
@@ -449,7 +456,11 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     
     function levelchange() {
         map.setLevel(4);
-    } 
+    }
+
+    $('.findme').click(function(){
+        levelchange(),Moving1(latitude, longitude);
+    });
 
     //형이 작업할 곳 (순환버스노선)
     function InnerBus() {
