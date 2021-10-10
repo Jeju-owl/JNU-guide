@@ -400,7 +400,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     navigator.geolocation.watchPosition(function(pos) {
         latitude = pos.coords.latitude;
         longitude = pos.coords.longitude;
-        userMarker(latitude,longitude);
+        Marker(latitude,longitude);
     });
 
     //Marker(x,y)함수 선언
