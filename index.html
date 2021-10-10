@@ -355,7 +355,7 @@
         <div id="map"><!--지도API삽입--></div> 
         <div id="copyright"><a>Copyright 2021. Owl<br><span>All rights reserved</span></a></div>
         <div id="level3button" onclick="levelchange(), Moving1(33.45594, 126.56203)"><img src="images/zoomreset.png"></div>
-        <div id="findme"><img src="images/location.png" class="me"></div>
+        <div id="findme"><img src="images/location.png" class="me" title="내 위치"></div>
         <div id="nightbuswrap">
             <div id="nightbushead"></div>
             <div id="nightbusbody"></div>
@@ -459,7 +459,13 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     }
 
     $('.me').click(function(){
-        levelchange(),Moving1(latitude, longitude);
+        navigator.geolocation.watchPosition(function(pos) {
+        var latitude = pos.coords.latitude;
+        var longitude = pos.coords.longitude;
+        userMarker(latitude,longitude);
+        });
+        levelchange();
+        Moving1(latitude, longitude);
     });
 
     //형이 작업할 곳 (순환버스노선)
