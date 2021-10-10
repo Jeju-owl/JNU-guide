@@ -459,13 +459,8 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     }
 
     $('.me').click(function(){
-        navigator.geolocation.getCurrentPosition(function(pos) {
-            var latitude = pos.coords.latitude;
-            var longitude = pos.coords.longitude;
-            userMarker(latitude,longitude);
-            levelchange();
-            Moving1(latitude, longitude);
-        })
+        levelchange();
+        Moving1(latitude, longitude);
     });
 
     //형이 작업할 곳 (순환버스노선)
