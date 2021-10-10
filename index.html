@@ -387,7 +387,14 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     /*map.setZoomable(false); //지도 확대 축소 기능 끄기*/
     
     var markers = []; //markers배열 선언
+    var usermarkers = []; //usermarkers배열 선언
     var lines = []; //lines배열 선언
+
+    navigator.geolocation.watchPosition(function(pos) {
+        var latitude = pos.coords.latitude;
+        var longitude = pos.coords.longitude;
+        userMarker(latitude,longitude);
+    });
 
     //Marker(x,y)함수 선언
     function Marker(x,y) {
@@ -407,15 +414,24 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
             markers[i].setMap(null);
         }
     }
+    function userMarker(x,y) {
+        // 마커가 표시될 위치입니다 
+        var markerPosition  = new kakao.maps.LatLng(x, y); 
 
-    navigator.geolocation.watchPosition(function(pos) {
-        var latitude = pos.coords.latitude;
-        var longitude = pos.coords.longitude;
-        Marker(latitude,longitude);
-    });
-    
-    
-    
+        // 마커를 생성합니다
+        var usermarker = new kakao.maps.Marker({
+            position: markerPosition
+        });
+        // 마커가 지도 위에 표시되도록 설정합니다
+        usermarker.setMap(map);
+        //markers배열에 marker푸쉬
+        usermarkers.push(usermarker);
+        //for문을 통해 이전 마커들 다 삭제
+        for (var i = 0; i < usermarkers.length-1; i++) {
+            usermarkers[i].setMap(null);
+        }
+    }
+
     function Moving(a,b) { //
         // 이동할 위도 경도 위치를 생성합니다 
         var moveLatLon = new kakao.maps.LatLng(a,b);
