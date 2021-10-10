@@ -424,7 +424,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     if(navigator.geolocation) // geolocation 을 지원한다면 위치를 요청한다. 
         navigator.geolocation.watchPosition(success, error, options);
     else
-        elt.innerHTML = "해당 기기에서는 GPS기능이 지원되지 않습니다.";
+        console.log('Geolocation is not supported for this Browser/OS.');
     
     // geolocation 요청이 실패하면 이 함수를 호출한다.
     function error(e) {
@@ -444,7 +444,6 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
              longitude = pos.coords.longitude;
             userMarker(latitude,longitude);
         });
-        elt.innerHTML = msg;     // 모든 위치 정보를 출력한다.
     }    
 
     //Marker(x,y)함수 선언
@@ -506,9 +505,6 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     $('.me').click(function(){
         levelchange();
         Moving1(latitude, longitude);
-        if(latitude==null) {
-            alert("error "+e.code +": " + e.message);
-        }
     });
 
     // 교내순환버스노선
