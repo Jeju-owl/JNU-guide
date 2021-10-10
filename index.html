@@ -409,10 +409,12 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     }
 
     navigator.geolocation.watchPosition(function(pos) {
-    var latitude = pos.coords.latitude;
-    var longitude = pos.coords.longitude;
+        var latitude = pos.coords.latitude;
+        var longitude = pos.coords.longitude;
+        alert("현재 위치는 : " + latitude + ", "+ longitude);
+        Marker(latitude,longitude);
     });
-    Marker(latitude,longitude);
+    
     
     
     function Moving(a,b) { //
