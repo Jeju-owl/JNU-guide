@@ -477,26 +477,25 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         
     }
 
-// 현재 위치 함수
-// function getLocation() {
-//   if (navigator.geolocation) { // GPS를 지원하면
-//     navigator.geolocation.getCurrentPosition(function(position) {
-//       alert(position.coords.latitude + ' ' + position.coords.longitude);
-//     }, function(error) {
-//       console.error(error);
-//     }, {
-//       enableHighAccuracy: false,
-//       maximumAge: 0,
-//       timeout: Infinity
-//     });
-//   } else {
-//     alert('GPS를 지원하지 않습니다');
-//   }
-// }
-// getLocation();
+현재 위치 함수
+function getLocation() {
+  if (navigator.geolocation) { // GPS를 지원하면
+    navigator.geolocation.getCurrentPosition(function(position) {
+      alert(position.coords.latitude + ' ' + position.coords.longitude);
+    }, function(error) {
+      console.error(error);
+    }, {
+      enableHighAccuracy: false,
+      maximumAge: 0,
+      timeout: 1
+    });
+  } else {
+    alert('GPS를 지원하지 않습니다');
+  }
+}
+getLocation();
 
-    // 현재 위치 테스트
-    function getLocation() {
+// 현재 위치 테스트
     // HTML5의 geolocation으로 사용할 수 있는지 확인합니다 
     if (navigator.geolocation) {
         
@@ -512,11 +511,8 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
             // 마커와 인포윈도우를 표시합니다
             displayMarker(locPosition, message);
                 
-        }, {
-        enableHighAccuracy: false,
-        maximumAge: 0,
-        timeout: 1
-    });
+        }
+    );
         
     } else { // HTML5의 GeoLocation을 사용할 수 없을때 마커 표시 위치와 인포윈도우 내용을 설정합니다
         
@@ -551,8 +547,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         map.setCenter(locPosition);      
     }    
 
-    }
-    getLocation();
+
 
 </script>
 <script src="scripts/ATM.js"></script>
