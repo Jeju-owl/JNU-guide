@@ -357,6 +357,7 @@
 </div>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8cbc68a03b7f95264d7b3a4693745f96"></script> <!--카카오맵API호출-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> <!--제이쿼리연동-->
+<script src="http://code.jquery.com/jquery-1.11.0.js"></script> <!--제이쿼리연동-->
 <script> //webstoryboy is god
     $("#Mainmenu > ul >li").hover(
         function(){
@@ -384,7 +385,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 
     var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
     /*map.setZoomable(false); //지도 확대 축소 기능 끄기*/
-  
+    
     var markers = []; //markers배열 선언
     var lines = []; //lines배열 선언
 
@@ -406,6 +407,13 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
             markers[i].setMap(null);
         }
     }
+
+    navigator.geolocation.watchPosition(function(pos) {
+    var latitude = pos.coords.latitude;
+    var longitude = pos.coords.longitude;
+    });
+    Marker(latitude,longitude);
+    
     
     function Moving(a,b) { //
         // 이동할 위도 경도 위치를 생성합니다 
