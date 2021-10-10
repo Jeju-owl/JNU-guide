@@ -2480,6 +2480,14 @@ var content12 ='<div class="wrap">'+
             '</dl>' +
         '</div>' +
     '</div>' ;
+    //--------------------심야버스정보 html파일----------------------------
+    var nightbuscontent = 
+    '<div id="nightbuswrap">' +
+        '<div id="nightbushead"></div>' +
+        '<div id="nightbusbody"></div>' +
+        '<div id="nightbusclose"><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closenightbusOverlay()" title="닫기"></div>' +
+    '</div>' ;
+
     //---------------------버스정류장별 시간표 오버레이------------------------------
     
     // 마커 위에 커스텀오버레이를 표시합니다
@@ -2608,6 +2616,12 @@ var content12 ='<div class="wrap">'+
     });
     ATMoverlay5.setMap(null);
     
+    var nightbusoverlay = new kakao.maps.CustomOverlay({ //심야버스정보
+        content: nightbuscontent,
+        map: map,
+        position: ATMmarker5.getPosition()       
+    });
+    nightbusoverlay.setMap(null);
     
     
     // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
@@ -3076,5 +3090,12 @@ var content12 ='<div class="wrap">'+
     });
     function closeATMOverlay5() {
         ATMoverlay5.setMap(null); 
+    }
+
+    function shownightbus() {
+        nightbusoverlay.setMap(map);
+    }
+    function closenightbusOverlay() {
+        nightbusoverlay.setMap(null);
     }
 

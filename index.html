@@ -229,6 +229,11 @@
         #ATMbottom > dl > dt > a {font-weight: bold;}
         #ATMbottom > dl > dt > span {padding-left: 5px; font-size: 0.8rem;}
         #ATMbottom > dl > dd { padding-left: 5px;}
+        /*심야버스 커스텀오버레이*/
+        #nightbuswrap {margin: 0; padding: 0; position: fixed; top: 0; bottom: 0; right: 0; left: 0; z-index: 7;}
+        #nightbushead { position: absolute; top: 0; right: 0; left: 0; height: 250px; background-image: url(https://camo.githubusercontent.com/c9b4e788967fff5f53cc9d885434e0f4014e9abe38b45e17f199578040c9530d/68747470733a2f2f6c69622e6a656a756e752e61632e6b722f70797869732d6170692f6174746163686d656e74732f42554c4c4554494e2f61336230653665652d326531612d343566632d386439622d643164636333356161363465); background-size: 100vw 250px; z-index: 5;}
+        #nightbusbody { position: absolute; top: 250px; right: 0; left: 0; bottom: 30px; margin-top: -20px; background-image: url(https://user-images.githubusercontent.com/81807434/136660104-30a9d12f-a072-4a83-9377-2e4a6ca165aa.png); background-size: 100vw 100%; z-index: 4;}
+        #nightbusclose {position: absolute; top: 15px; right: 15px; z-index: 6;}
     }
   
 </style>
@@ -323,7 +328,7 @@
                 <ul>
                     <li>주변식당정보</li>
                     <li onmouseover="InnerBus(), Moving1(33.45594, 126.56203)" onmouseout="lineX()">순환버스</li>
-                    <li>야간버스</li>
+                    <li onclick="shownightbus()">야간버스</li>
                 </ul>
             </div>
         </div>
