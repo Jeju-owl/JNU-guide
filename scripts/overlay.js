@@ -1,11 +1,11 @@
     //---------------------버스마커부분------------------------------
     
     var imageSrc = 'https://github.com/Jeju-owl/JNU-guide/blob/feature-3/images/busimage.png?raw=true', // 마커이미지의 주소입니다, remove.bg사이트에서 png 바깥배경 없앳음 
-    imageSize = new kakao.maps.Size(25, 20), // 교내순환버스마커 이미지의 크기입니다
-    imageOption = {offset: new kakao.maps.Point(10, 10)}; // 교내순환버스마커 이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+    imageSize = new kakao.maps.Size(28, 20), // 교내순환버스마커 이미지의 크기입니다
+    imageOption = {offset: new kakao.maps.Point(11, 10)}; // 교내순환버스마커 이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
 
     var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption), // 교내순환버스마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
-        markerPosition = new kakao.maps.LatLng(33.459811596777094, 126.5616883626409); // 마커가 표시될 위치입니다(정문)
+        markerPosition = new kakao.maps.LatLng(33.45965343928493, 126.56158159312466); // 마커가 표시될 위치입니다(정문)
 
     // 교내순환버스마커를 생성합니다(정문)
     var busmarker = new kakao.maps.Marker({
@@ -100,6 +100,56 @@
         map: map
     });
     busmarker12.setMap(map);
+    
+    //ATM마커부분
+
+    var imageSrc1 = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-5/images/ATM.png',
+    imageSize1 = new kakao.maps.Size(20, 20),
+    imageOption1 = {offset: new kakao.maps.Point(9, 10)};
+    var ATMmarkerImage = new kakao.maps.MarkerImage(imageSrc1, imageSize1, imageOption1),
+
+    ATMmarkerPosition = new kakao.maps.LatLng(33.45990676686699, 126.56183040828569); //정문 제주은행
+    var ATMmarker = new kakao.maps.Marker({
+        position: ATMmarkerPosition,
+        image: ATMmarkerImage,
+        map: map
+    });
+    ATMmarker.setMap(map);
+    ATMmarkerPosition1 = new kakao.maps.LatLng(33.45942039684082, 126.5613326772457); //정문 농협은행
+    var ATMmarker1 = new kakao.maps.Marker({
+        position: ATMmarkerPosition1,
+        image: ATMmarkerImage,
+        map: map
+    });
+    ATMmarker1.setMap(map);
+    ATMmarkerPosition2 = new kakao.maps.LatLng(33.45581863503511, 126.56136963794465); //본관
+    var ATMmarker2 = new kakao.maps.Marker({
+        position: ATMmarkerPosition2,
+        image: ATMmarkerImage,
+        map: map
+    });
+    ATMmarker2.setMap(map);
+    ATMmarkerPosition3 = new kakao.maps.LatLng(33.452813988176864, 126.5607152235069); //중앙도서관
+    var ATMmarker3 = new kakao.maps.Marker({
+        position: ATMmarkerPosition3,
+        image: ATMmarkerImage,
+        map: map
+    });
+    ATMmarker3.setMap(map);
+    ATMmarkerPosition4 = new kakao.maps.LatLng(33.45492583565361, 126.5606723070996); //학생회관
+    var ATMmarker4 = new kakao.maps.Marker({
+        position: ATMmarkerPosition4,
+        image: ATMmarkerImage,
+        map: map
+    });
+    ATMmarker4.setMap(map);
+    ATMmarkerPosition5 = new kakao.maps.LatLng(33.45103031220647, 126.55670166961119); //학생생활관
+    var ATMmarker5 = new kakao.maps.Marker({
+        position: ATMmarkerPosition5,
+        image: ATMmarkerImage,
+        map: map
+    });
+    ATMmarker5.setMap(map);
     //--------------------정류장별 html파일---------------------------- 
     var content ='<div class="wrap">'+
     '<div class="head">'+
@@ -110,7 +160,7 @@
             '<div class="leftside"></div>'+
             '<div class="Abus">'+
                 '<table>'+
-                    '<caption>A노선</caption>'+
+                    '<caption>A노선 (반시계방향)</caption>'+
                     '<thead>'+
                         '<tr>'+
                             '<th>횟수</th>'+
@@ -192,7 +242,7 @@
             '<div class="rightside"></div>'+
             '<div class="Bbus">'+
                 '<table>'+
-                    '<caption>B노선</caption>'+
+                    '<caption>B노선 (시계방향)</caption>'+
                     '<thead>'+
                         '<tr>'+
                             '<th>횟수</th>'+
@@ -283,7 +333,7 @@ var content1 ='<div class="wrap">'+
         '<div class="leftside"></div>'+
         '<div class="Abus">'+
             '<table>'+
-                '<caption>A노선</caption>'+
+                '<caption>A노선 (반시계방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -365,7 +415,7 @@ var content1 ='<div class="wrap">'+
         '<div class="rightside"></div>'+
         '<div class="Bbus">'+
             '<table>'+
-                '<caption>B노선</caption>'+
+                '<caption>B노선 (시계방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -456,7 +506,7 @@ var content2 ='<div class="wrap">'+
         '<div class="leftside"></div>'+
         '<div class="Abus">'+
             '<table>'+
-                '<caption>A노선</caption>'+
+                '<caption>A노선 (반시계방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -538,7 +588,7 @@ var content2 ='<div class="wrap">'+
         '<div class="rightside"></div>'+
         '<div class="Bbus">'+
             '<table>'+
-                '<caption>B노선</caption>'+
+                '<caption>B노선 (시계방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -629,7 +679,7 @@ var content3 ='<div class="wrap">'+
         '<div class="leftside"></div>'+
         '<div class="Abus">'+
             '<table>'+
-                '<caption>A노선</caption>'+
+                '<caption>A노선 (반시계방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -711,7 +761,7 @@ var content3 ='<div class="wrap">'+
         '<div class="rightside"></div>'+
         '<div class="Bbus">'+
             '<table>'+
-                '<caption>B노선</caption>'+
+                '<caption>B노선 (시계방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -802,7 +852,7 @@ var content4 ='<div class="wrap">'+
         '<div class="leftside"></div>'+
         '<div class="Abus">'+
             '<table>'+
-                '<caption>A노선</caption>'+
+                '<caption>A노선 (반시계방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -884,7 +934,7 @@ var content4 ='<div class="wrap">'+
         '<div class="rightside"></div>'+
         '<div class="Bbus">'+
             '<table>'+
-                '<caption>B노선</caption>'+
+                '<caption>B노선 (시계방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -975,7 +1025,7 @@ var content5 ='<div class="wrap">'+
         '<div class="leftside"></div>'+
         '<div class="Abus">'+
             '<table>'+
-                '<caption>A노선</caption>'+
+                '<caption>A노선 (반시계방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -1057,7 +1107,7 @@ var content5 ='<div class="wrap">'+
         '<div class="rightside"></div>'+
         '<div class="Bbus">'+
             '<table>'+
-                '<caption>B노선</caption>'+
+                '<caption>B노선 (시계방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -1148,7 +1198,7 @@ var content6 ='<div class="wrap">'+
         '<div class="leftside"></div>'+
         '<div class="Abus">'+
             '<table>'+
-                '<caption>A노선</caption>'+
+                '<caption>A노선 (반시계방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -1230,7 +1280,7 @@ var content6 ='<div class="wrap">'+
         '<div class="rightside"></div>'+
         '<div class="Bbus">'+
             '<table>'+
-                '<caption>B노선</caption>'+
+                '<caption>B노선 (시계방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -1321,7 +1371,7 @@ var content7 ='<div class="wrap">'+
         '<div class="leftside"></div>'+
         '<div class="Abus">'+
             '<table>'+
-                '<caption>A노선</caption>'+
+                '<caption>A노선 (반시계방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -1403,7 +1453,7 @@ var content7 ='<div class="wrap">'+
         '<div class="rightside"></div>'+
         '<div class="Bbus">'+
             '<table>'+
-                '<caption>B노선</caption>'+
+                '<caption>B노선 (시계방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -1494,7 +1544,7 @@ var content8 ='<div class="wrap">'+
         '<div class="leftside"></div>'+
         '<div class="Abus">'+
             '<table>'+
-                '<caption>A노선</caption>'+
+                '<caption>A노선 (반시계방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -1576,7 +1626,7 @@ var content8 ='<div class="wrap">'+
         '<div class="rightside"></div>'+
         '<div class="Bbus">'+
             '<table>'+
-                '<caption>B노선</caption>'+
+                '<caption>B노선 (시계방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -1667,7 +1717,7 @@ var content9 ='<div class="wrap">'+
         '<div class="leftside"></div>'+
         '<div class="Abus">'+
             '<table>'+
-                '<caption>A노선</caption>'+
+                '<caption>A노선 (반시계방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -1749,7 +1799,7 @@ var content9 ='<div class="wrap">'+
         '<div class="rightside"></div>'+
         '<div class="Bbus">'+
             '<table>'+
-                '<caption>B노선</caption>'+
+                '<caption>B노선 (시계방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -1840,7 +1890,7 @@ var content10 ='<div class="wrap">'+
         '<div class="leftside"></div>'+
         '<div class="Abus">'+
             '<table>'+
-                '<caption>A노선</caption>'+
+                '<caption>A노선 (반시계방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -1922,7 +1972,7 @@ var content10 ='<div class="wrap">'+
         '<div class="rightside"></div>'+
         '<div class="Bbus">'+
             '<table>'+
-                '<caption>B노선</caption>'+
+                '<caption>B노선 (시계방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -2013,7 +2063,7 @@ var content11 ='<div class="wrap">'+
         '<div class="leftside"></div>'+
         '<div class="Abus">'+
             '<table>'+
-                '<caption>A노선</caption>'+
+                '<caption>A노선 (반시계방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -2095,7 +2145,7 @@ var content11 ='<div class="wrap">'+
         '<div class="rightside"></div>'+
         '<div class="Bbus">'+
             '<table>'+
-                '<caption>B노선</caption>'+
+                '<caption>B노선 (시계방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -2186,7 +2236,7 @@ var content12 ='<div class="wrap">'+
         '<div class="leftside"></div>'+
         '<div class="Abus">'+
             '<table>'+
-                '<caption>A노선</caption>'+
+                '<caption>A노선 (반시계방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -2268,7 +2318,7 @@ var content12 ='<div class="wrap">'+
         '<div class="rightside"></div>'+
         '<div class="Bbus">'+
             '<table>'+
-                '<caption>B노선</caption>'+
+                '<caption>B노선 (시계방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -2350,6 +2400,87 @@ var content12 ='<div class="wrap">'+
     '</div>'+
 '</div>'+  
 '</div>';
+
+//--------------------정류장별 html파일----------------------------
+    var markercontent = 
+    '<div class="ATM">' +
+        '<div id="ATMempty"></div>' +
+        '<div id="ATMtop">' +
+            '<a><img src="images/Jejubank.png"><span><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeATMOverlay()" title="닫기"></span></a>' +
+        '</div>' +
+        '<div id="ATMbottom">' +
+            '<dl>' +
+                '<dt><a>운영시간</a><span>(연중무휴)</span></dt>' +
+                '<dd>06 : 00 ~ 24 : 00</dd>' +
+            '</dl>' +
+        '</div>' +
+    '</div>' ;
+    var markercontent1 =
+    '<div class="ATM">' +
+        '<div id="ATMempty"></div>' +
+        '<div id="ATMtop">' +
+            '<a><img src="images/NHbank.jpg"><span><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeATMOverlay1()" title="닫기"></span></a>' +
+        '</div>' +
+        '<div id="ATMbottom">' +
+            '<dl>' +
+                '<dt><a>운영시간</a><span>(연중무휴)</span></dt>' +
+                '<dd>06 : 00 ~ 24 : 00</dd>' +
+            '</dl>' +
+        '</div>' +
+    '</div>' ;
+    var markercontent2 =
+    '<div class="ATM">' +
+        '<div id="ATMempty"></div>' +
+        '<div id="ATMtop">' +
+            '<a><img src="images/NHbank.jpg"><span><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeATMOverlay2()" title="닫기"></span></a>' +
+        '</div>' +
+        '<div id="ATMbottom">' +
+            '<dl>' +
+                '<dt><a>운영시간</a><span>(연중무휴)</span></dt>' +
+                '<dd>06 : 00 ~ 24 : 00</dd>' +
+            '</dl>' +
+        '</div>' +
+    '</div>' ;
+    var markercontent3 =
+    '<div class="ATM">' +
+        '<div id="ATMempty"></div>' +
+        '<div id="ATMtop">' +
+            '<a><img src="images/NHbank.jpg"><span><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeATMOverlay3()" title="닫기"></span></a>' +
+        '</div>' +
+        '<div id="ATMbottom">' +
+            '<dl>' +
+                '<dt><a>운영시간</a><span>(연중무휴)</span></dt>' +
+                '<dd>06 : 00 ~ 24 : 00</dd>' +
+            '</dl>' +
+        '</div>' +
+    '</div>' ;
+    var markercontent4 =
+    '<div class="ATM">' +
+        '<div id="ATMempty"></div>' +
+        '<div id="ATMtop">' +
+            '<a><img src="images/NHbank.jpg"><span><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeATMOverlay4()" title="닫기"></span></a>' +
+        '</div>' +
+        '<div id="ATMbottom">' +
+            '<dl>' +
+                '<dt><a>운영시간</a><span>(연중무휴)</span></dt>' +
+                '<dd>06 : 00 ~ 24 : 00</dd>' +
+            '</dl>' +
+        '</div>' +
+    '</div>' ;
+    var markercontent5 =
+    '<div class="ATM">' +
+        '<div id="ATMempty"></div>' +
+        '<div id="ATMtop">' +
+            '<a><img src="images/NHbank.jpg"><span><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeATMOverlay5()" title="닫기"></span></a>' +
+        '</div>' +
+        '<div id="ATMbottom">' +
+            '<dl>' +
+                '<dt><a>운영시간</a><span>(연중무휴)</span></dt>' +
+                '<dd>06 : 00 ~ 24 : 00</dd>' +
+            '</dl>' +
+        '</div>' +
+    '</div>' ;
+
     //---------------------버스정류장별 시간표 오버레이------------------------------
     
     // 마커 위에 커스텀오버레이를 표시합니다
@@ -2433,7 +2564,51 @@ var content12 ='<div class="wrap">'+
     });
     overlay12.setMap(null);
 
-
+    //-------------ATM기 오버레이---------------------------
+    // 마커 위에 커스텀오버레이를 표시합니다
+    // 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
+    var ATMoverlay = new kakao.maps.CustomOverlay({ //정문 제주은행
+        content: markercontent,
+        map: map,
+        position: ATMmarker.getPosition()       
+    });
+    ATMoverlay.setMap(null);
+    
+    var ATMoverlay1 = new kakao.maps.CustomOverlay({ //정문 농협은행
+        content: markercontent1,
+        map: map,
+        position: ATMmarker1.getPosition()       
+    });
+    ATMoverlay1.setMap(null);
+    
+    var ATMoverlay2 = new kakao.maps.CustomOverlay({ //본관
+        content: markercontent2,
+        map: map,
+        position: ATMmarker2.getPosition()       
+    });
+    ATMoverlay2.setMap(null);
+    
+    var ATMoverlay3 = new kakao.maps.CustomOverlay({ //중앙도서관
+        content: markercontent3,
+        map: map,
+        position: ATMmarker3.getPosition()       
+    });
+    ATMoverlay3.setMap(null);
+    
+    var ATMoverlay4 = new kakao.maps.CustomOverlay({ //학생회관
+        content: markercontent4,
+        map: map,
+        position: ATMmarker4.getPosition()       
+    });
+    ATMoverlay4.setMap(null);
+    
+    var ATMoverlay5 = new kakao.maps.CustomOverlay({ //학생생활관
+        content: markercontent5,
+        map: map,
+        position: ATMmarker5.getPosition()       
+    });
+    ATMoverlay5.setMap(null);
+       
     // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
     kakao.maps.event.addListener(busmarker, 'click', function() {
         overlay.setMap(map);
@@ -2449,6 +2624,12 @@ var content12 ='<div class="wrap">'+
         overlay10.setMap(null);
         overlay11.setMap(null);
         overlay12.setMap(null);
+        ATMoverlay.setMap(null);
+        ATMoverlay1.setMap(null);
+        ATMoverlay2.setMap(null);
+        ATMoverlay3.setMap(null);
+        ATMoverlay4.setMap(null);
+        ATMoverlay5.setMap(null);
     });
 
     // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다 
@@ -2470,6 +2651,12 @@ var content12 ='<div class="wrap">'+
         overlay10.setMap(null);
         overlay11.setMap(null);
         overlay12.setMap(null);
+        ATMoverlay.setMap(null);
+        ATMoverlay1.setMap(null);
+        ATMoverlay2.setMap(null);
+        ATMoverlay3.setMap(null);
+        ATMoverlay4.setMap(null);
+        ATMoverlay5.setMap(null);
     });
     function closeOverlay1() {
         overlay1.setMap(null);
@@ -2488,6 +2675,12 @@ var content12 ='<div class="wrap">'+
         overlay10.setMap(null);
         overlay11.setMap(null);
         overlay12.setMap(null);
+        ATMoverlay.setMap(null);
+        ATMoverlay1.setMap(null);
+        ATMoverlay2.setMap(null);
+        ATMoverlay3.setMap(null);
+        ATMoverlay4.setMap(null);
+        ATMoverlay5.setMap(null);
     });
     function closeOverlay2() {
         overlay2.setMap(null);
@@ -2506,6 +2699,12 @@ var content12 ='<div class="wrap">'+
         overlay10.setMap(null);
         overlay11.setMap(null);
         overlay12.setMap(null);
+        ATMoverlay.setMap(null);
+        ATMoverlay1.setMap(null);
+        ATMoverlay2.setMap(null);
+        ATMoverlay3.setMap(null);
+        ATMoverlay4.setMap(null);
+        ATMoverlay5.setMap(null);
     });
     function closeOverlay3() {
         overlay3.setMap(null);
@@ -2524,6 +2723,12 @@ var content12 ='<div class="wrap">'+
         overlay10.setMap(null);
         overlay11.setMap(null);
         overlay12.setMap(null);
+        ATMoverlay.setMap(null);
+        ATMoverlay1.setMap(null);
+        ATMoverlay2.setMap(null);
+        ATMoverlay3.setMap(null);
+        ATMoverlay4.setMap(null);
+        ATMoverlay5.setMap(null);
     });
     function closeOverlay4() {
         overlay4.setMap(null);
@@ -2542,6 +2747,12 @@ var content12 ='<div class="wrap">'+
         overlay10.setMap(null);
         overlay11.setMap(null);
         overlay12.setMap(null);
+        ATMoverlay.setMap(null);
+        ATMoverlay1.setMap(null);
+        ATMoverlay2.setMap(null);
+        ATMoverlay3.setMap(null);
+        ATMoverlay4.setMap(null);
+        ATMoverlay5.setMap(null);
     });
     function closeOverlay5() {
         overlay5.setMap(null);
@@ -2560,6 +2771,12 @@ var content12 ='<div class="wrap">'+
         overlay10.setMap(null);
         overlay11.setMap(null);
         overlay12.setMap(null);
+        ATMoverlay.setMap(null);
+        ATMoverlay1.setMap(null);
+        ATMoverlay2.setMap(null);
+        ATMoverlay3.setMap(null);
+        ATMoverlay4.setMap(null);
+        ATMoverlay5.setMap(null);
     });
     function closeOverlay6() {
         overlay6.setMap(null);
@@ -2578,6 +2795,12 @@ var content12 ='<div class="wrap">'+
         overlay10.setMap(null);
         overlay11.setMap(null);
         overlay12.setMap(null);
+        ATMoverlay.setMap(null);
+        ATMoverlay1.setMap(null);
+        ATMoverlay2.setMap(null);
+        ATMoverlay3.setMap(null);
+        ATMoverlay4.setMap(null);
+        ATMoverlay5.setMap(null);
     });
     function closeOverlay7() {
         overlay7.setMap(null);
@@ -2596,6 +2819,12 @@ var content12 ='<div class="wrap">'+
         overlay10.setMap(null);
         overlay11.setMap(null);
         overlay12.setMap(null);
+        ATMoverlay.setMap(null);
+        ATMoverlay1.setMap(null);
+        ATMoverlay2.setMap(null);
+        ATMoverlay3.setMap(null);
+        ATMoverlay4.setMap(null);
+        ATMoverlay5.setMap(null);
     });
     function closeOverlay8() {
         overlay8.setMap(null);
@@ -2614,6 +2843,12 @@ var content12 ='<div class="wrap">'+
         overlay10.setMap(null);
         overlay11.setMap(null);
         overlay12.setMap(null);
+        ATMoverlay.setMap(null);
+        ATMoverlay1.setMap(null);
+        ATMoverlay2.setMap(null);
+        ATMoverlay3.setMap(null);
+        ATMoverlay4.setMap(null);
+        ATMoverlay5.setMap(null);
     });
     function closeOverlay9() {
         overlay9.setMap(null);
@@ -2632,6 +2867,12 @@ var content12 ='<div class="wrap">'+
         overlay10.setMap(map);
         overlay11.setMap(null);
         overlay12.setMap(null);
+        ATMoverlay.setMap(null);
+        ATMoverlay1.setMap(null);
+        ATMoverlay2.setMap(null);
+        ATMoverlay3.setMap(null);
+        ATMoverlay4.setMap(null);
+        ATMoverlay5.setMap(null);
     });
     function closeOverlay10() {
         overlay10.setMap(null);
@@ -2650,6 +2891,12 @@ var content12 ='<div class="wrap">'+
         overlay10.setMap(null);
         overlay11.setMap(map);
         overlay12.setMap(null);
+        ATMoverlay.setMap(null);
+        ATMoverlay1.setMap(null);
+        ATMoverlay2.setMap(null);
+        ATMoverlay3.setMap(null);
+        ATMoverlay4.setMap(null);
+        ATMoverlay5.setMap(null);
     });
     function closeOverlay11() {
         overlay11.setMap(null);
@@ -2668,7 +2915,164 @@ var content12 ='<div class="wrap">'+
         overlay10.setMap(null);
         overlay11.setMap(null);
         overlay12.setMap(map);
+        ATMoverlay.setMap(null);
+        ATMoverlay1.setMap(null);
+        ATMoverlay2.setMap(null);
+        ATMoverlay3.setMap(null);
+        ATMoverlay4.setMap(null);
+        ATMoverlay5.setMap(null);
     });
     function closeOverlay12() {
         overlay12.setMap(null);
+        ATMoverlay.setMap(null);
+        ATMoverlay1.setMap(null);
+        ATMoverlay2.setMap(null);
+        ATMoverlay3.setMap(null);
+        ATMoverlay4.setMap(null);
+        ATMoverlay5.setMap(null);
+    }
+    kakao.maps.event.addListener(ATMmarker, 'click', function() {
+        overlay.setMap(null);
+        overlay1.setMap(null);
+        overlay2.setMap(null);
+        overlay3.setMap(null);
+        overlay4.setMap(null);
+        overlay5.setMap(null);
+        overlay6.setMap(null);
+        overlay7.setMap(null);
+        overlay8.setMap(null);
+        overlay9.setMap(null);
+        overlay10.setMap(null);
+        overlay11.setMap(null);
+        overlay12.setMap(null);
+        ATMoverlay.setMap(map);
+        ATMoverlay1.setMap(null);
+        ATMoverlay2.setMap(null);
+        ATMoverlay3.setMap(null);
+        ATMoverlay4.setMap(null);
+        ATMoverlay5.setMap(null);
+    });
+    function closeATMOverlay() {
+        ATMoverlay.setMap(null); 
+    }
+
+    kakao.maps.event.addListener(ATMmarker1, 'click', function() {
+        overlay.setMap(null);
+        overlay1.setMap(null);
+        overlay2.setMap(null);
+        overlay3.setMap(null);
+        overlay4.setMap(null);
+        overlay5.setMap(null);
+        overlay6.setMap(null);
+        overlay7.setMap(null);
+        overlay8.setMap(null);
+        overlay9.setMap(null);
+        overlay10.setMap(null);
+        overlay11.setMap(null);
+        overlay12.setMap(null);
+        ATMoverlay.setMap(null);
+        ATMoverlay1.setMap(map);
+        ATMoverlay2.setMap(null);
+        ATMoverlay3.setMap(null);
+        ATMoverlay4.setMap(null);
+        ATMoverlay5.setMap(null);
+    });
+    function closeATMOverlay1() {
+        ATMoverlay1.setMap(null); 
+    }
+    kakao.maps.event.addListener(ATMmarker2, 'click', function() {
+        overlay.setMap(null);
+        overlay1.setMap(null);
+        overlay2.setMap(null);
+        overlay3.setMap(null);
+        overlay4.setMap(null);
+        overlay5.setMap(null);
+        overlay6.setMap(null);
+        overlay7.setMap(null);
+        overlay8.setMap(null);
+        overlay9.setMap(null);
+        overlay10.setMap(null);
+        overlay11.setMap(null);
+        overlay12.setMap(null);
+        ATMoverlay.setMap(null);
+        ATMoverlay1.setMap(null);
+        ATMoverlay2.setMap(map);
+        ATMoverlay3.setMap(null);
+        ATMoverlay4.setMap(null);
+        ATMoverlay5.setMap(null);
+    });
+    function closeATMOverlay2() {
+        ATMoverlay2.setMap(null); 
+    }
+    kakao.maps.event.addListener(ATMmarker3, 'click', function() {
+        overlay.setMap(null);
+        overlay1.setMap(null);
+        overlay2.setMap(null);
+        overlay3.setMap(null);
+        overlay4.setMap(null);
+        overlay5.setMap(null);
+        overlay6.setMap(null);
+        overlay7.setMap(null);
+        overlay8.setMap(null);
+        overlay9.setMap(null);
+        overlay10.setMap(null);
+        overlay11.setMap(null);
+        overlay12.setMap(null);
+        ATMoverlay.setMap(null);
+        ATMoverlay1.setMap(null);
+        ATMoverlay2.setMap(null);
+        ATMoverlay3.setMap(map);
+        ATMoverlay4.setMap(null);
+        ATMoverlay5.setMap(null);
+    });
+    function closeATMOverlay3() {
+        ATMoverlay3.setMap(null); 
+    }
+    kakao.maps.event.addListener(ATMmarker4, 'click', function() {
+        overlay.setMap(null);
+        overlay1.setMap(null);
+        overlay2.setMap(null);
+        overlay3.setMap(null);
+        overlay4.setMap(null);
+        overlay5.setMap(null);
+        overlay6.setMap(null);
+        overlay7.setMap(null);
+        overlay8.setMap(null);
+        overlay9.setMap(null);
+        overlay10.setMap(null);
+        overlay11.setMap(null);
+        overlay12.setMap(null);
+        ATMoverlay.setMap(null);
+        ATMoverlay1.setMap(null);
+        ATMoverlay2.setMap(null);
+        ATMoverlay3.setMap(null);
+        ATMoverlay4.setMap(map);
+        ATMoverlay5.setMap(null);
+    });
+    function closeATMOverlay4() {
+        ATMoverlay4.setMap(null); 
+    }
+    kakao.maps.event.addListener(ATMmarker5, 'click', function() {
+        overlay.setMap(null);
+        overlay1.setMap(null);
+        overlay2.setMap(null);
+        overlay3.setMap(null);
+        overlay4.setMap(null);
+        overlay5.setMap(null);
+        overlay6.setMap(null);
+        overlay7.setMap(null);
+        overlay8.setMap(null);
+        overlay9.setMap(null);
+        overlay10.setMap(null);
+        overlay11.setMap(null);
+        overlay12.setMap(null);
+        ATMoverlay.setMap(null);
+        ATMoverlay1.setMap(null);
+        ATMoverlay2.setMap(null);
+        ATMoverlay3.setMap(null);
+        ATMoverlay4.setMap(null);
+        ATMoverlay5.setMap(map);
+    });
+    function closeATMOverlay5() {
+        ATMoverlay5.setMap(null); 
     }
