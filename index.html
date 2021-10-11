@@ -433,7 +433,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         // 1: 사용자가 위치 정보를 공유 권한을 제공하지 않음.
         // 2: 브라우저가 위치를 가져올 수 없음.
         // 3: 타임아웃이 발생됨.
-        alert("error "+e.code +": " + e.message);
+        alert("error "+e.code +": " + e.message); //------------------------------------------->> 사용자가 GPS수신을 안햇을경우 경고창을 모바일버전에서도  띄울수 있게 div를 만들 예정
     }
     
     
