@@ -160,7 +160,7 @@
             '<div class="leftside"></div>'+
             '<div class="Abus">'+
                 '<table>'+
-                    '<caption>A노선 (반시계방향)</caption>'+
+                    '<caption>A노선 (<span style="font-weight: bold; color: red;">반시계</span>방향)</caption>'+
                     '<thead>'+
                         '<tr>'+
                             '<th>횟수</th>'+
@@ -242,7 +242,7 @@
             '<div class="rightside"></div>'+
             '<div class="Bbus">'+
                 '<table>'+
-                    '<caption>B노선 (시계방향)</caption>'+
+                    '<caption>B노선 (<span style="font-weight: bold; color: blue;">시계</span>방향)</caption>'+
                     '<thead>'+
                         '<tr>'+
                             '<th>횟수</th>'+
@@ -333,7 +333,7 @@ var content1 ='<div class="wrap">'+
         '<div class="leftside"></div>'+
         '<div class="Abus">'+
             '<table>'+
-                '<caption>A노선 (반시계방향)</caption>'+
+                '<caption>A노선 (<span style="font-weight: bold; color: red;">반시계</span>방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -415,7 +415,7 @@ var content1 ='<div class="wrap">'+
         '<div class="rightside"></div>'+
         '<div class="Bbus">'+
             '<table>'+
-                '<caption>B노선 (시계방향)</caption>'+
+                '<caption>B노선 (<span style="font-weight: bold; color: blue;">시계</span>방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -506,7 +506,7 @@ var content2 ='<div class="wrap">'+
         '<div class="leftside"></div>'+
         '<div class="Abus">'+
             '<table>'+
-                '<caption>A노선 (반시계방향)</caption>'+
+                '<caption>A노선 (<span style="font-weight: bold; color: red;">반시계</span>방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -588,7 +588,7 @@ var content2 ='<div class="wrap">'+
         '<div class="rightside"></div>'+
         '<div class="Bbus">'+
             '<table>'+
-                '<caption>B노선 (시계방향)</caption>'+
+                '<caption>B노선 (<span style="font-weight: bold; color: blue;">시계</span>방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -679,7 +679,7 @@ var content3 ='<div class="wrap">'+
         '<div class="leftside"></div>'+
         '<div class="Abus">'+
             '<table>'+
-                '<caption>A노선 (반시계방향)</caption>'+
+                '<caption>A노선 (<span style="font-weight: bold; color: red;">반시계</span>방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -761,7 +761,7 @@ var content3 ='<div class="wrap">'+
         '<div class="rightside"></div>'+
         '<div class="Bbus">'+
             '<table>'+
-                '<caption>B노선 (시계방향)</caption>'+
+                '<caption>B노선 (<span style="font-weight: bold; color: blue;">시계</span>방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -852,7 +852,7 @@ var content4 ='<div class="wrap">'+
         '<div class="leftside"></div>'+
         '<div class="Abus">'+
             '<table>'+
-                '<caption>A노선 (반시계방향)</caption>'+
+                '<caption>A노선 (<span style="font-weight: bold; color: red;">반시계</span>방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -934,7 +934,7 @@ var content4 ='<div class="wrap">'+
         '<div class="rightside"></div>'+
         '<div class="Bbus">'+
             '<table>'+
-                '<caption>B노선 (시계방향)</caption>'+
+                '<caption>B노선 (<span style="font-weight: bold; color: blue;">시계</span>방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -1025,7 +1025,7 @@ var content5 ='<div class="wrap">'+
         '<div class="leftside"></div>'+
         '<div class="Abus">'+
             '<table>'+
-                '<caption>A노선 (반시계방향)</caption>'+
+                '<caption>A노선 (<span style="font-weight: bold; color: red;">반시계</span>방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -1107,7 +1107,7 @@ var content5 ='<div class="wrap">'+
         '<div class="rightside"></div>'+
         '<div class="Bbus">'+
             '<table>'+
-                '<caption>B노선 (시계방향)</caption>'+
+                '<caption>B노선 (<span style="font-weight: bold; color: blue;">시계</span>방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -1198,7 +1198,7 @@ var content6 ='<div class="wrap">'+
         '<div class="leftside"></div>'+
         '<div class="Abus">'+
             '<table>'+
-                '<caption>A노선 (반시계방향)</caption>'+
+                '<caption>A노선 (<span style="font-weight: bold; color: red;">반시계</span>방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -1280,7 +1280,7 @@ var content6 ='<div class="wrap">'+
         '<div class="rightside"></div>'+
         '<div class="Bbus">'+
             '<table>'+
-                '<caption>B노선 (시계방향)</caption>'+
+                '<caption>B노선 (<span style="font-weight: bold; color: blue;">시계</span>방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -1371,7 +1371,7 @@ var content7 ='<div class="wrap">'+
         '<div class="leftside"></div>'+
         '<div class="Abus">'+
             '<table>'+
-                '<caption>A노선 (반시계방향)</caption>'+
+                '<caption>A노선 (<span style="font-weight: bold; color: red;">반시계</span>방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -1453,7 +1453,7 @@ var content7 ='<div class="wrap">'+
         '<div class="rightside"></div>'+
         '<div class="Bbus">'+
             '<table>'+
-                '<caption>B노선 (시계방향)</caption>'+
+                '<caption>B노선 (<span style="font-weight: bold; color: blue;">시계</span>방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -1544,7 +1544,7 @@ var content8 ='<div class="wrap">'+
         '<div class="leftside"></div>'+
         '<div class="Abus">'+
             '<table>'+
-                '<caption>A노선 (반시계방향)</caption>'+
+                '<caption>A노선 (<span style="font-weight: bold; color: red;">반시계</span>방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -1626,7 +1626,7 @@ var content8 ='<div class="wrap">'+
         '<div class="rightside"></div>'+
         '<div class="Bbus">'+
             '<table>'+
-                '<caption>B노선 (시계방향)</caption>'+
+                '<caption>B노선 (<span style="font-weight: bold; color: blue;">시계</span>방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -1717,7 +1717,7 @@ var content9 ='<div class="wrap">'+
         '<div class="leftside"></div>'+
         '<div class="Abus">'+
             '<table>'+
-                '<caption>A노선 (반시계방향)</caption>'+
+                '<caption>A노선 (<span style="font-weight: bold; color: red;">반시계</span>방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -1799,7 +1799,7 @@ var content9 ='<div class="wrap">'+
         '<div class="rightside"></div>'+
         '<div class="Bbus">'+
             '<table>'+
-                '<caption>B노선 (시계방향)</caption>'+
+                '<caption>B노선 (<span style="font-weight: bold; color: blue;">시계</span>방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -1890,7 +1890,7 @@ var content10 ='<div class="wrap">'+
         '<div class="leftside"></div>'+
         '<div class="Abus">'+
             '<table>'+
-                '<caption>A노선 (반시계방향)</caption>'+
+                '<caption>A노선 (<span style="font-weight: bold; color: red;">반시계</span>방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -1972,7 +1972,7 @@ var content10 ='<div class="wrap">'+
         '<div class="rightside"></div>'+
         '<div class="Bbus">'+
             '<table>'+
-                '<caption>B노선 (시계방향)</caption>'+
+                '<caption>B노선 (<span style="font-weight: bold; color: blue;">시계</span>방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -2063,7 +2063,7 @@ var content11 ='<div class="wrap">'+
         '<div class="leftside"></div>'+
         '<div class="Abus">'+
             '<table>'+
-                '<caption>A노선 (반시계방향)</caption>'+
+                '<caption>A노선 (<span style="font-weight: bold; color: red;">반시계</span>방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -2145,7 +2145,7 @@ var content11 ='<div class="wrap">'+
         '<div class="rightside"></div>'+
         '<div class="Bbus">'+
             '<table>'+
-                '<caption>B노선 (시계방향)</caption>'+
+                '<caption>B노선 (<span style="font-weight: bold; color: blue;">시계</span>방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -2236,7 +2236,7 @@ var content12 ='<div class="wrap">'+
         '<div class="leftside"></div>'+
         '<div class="Abus">'+
             '<table>'+
-                '<caption>A노선 (반시계방향)</caption>'+
+                '<caption>A노선 (<span style="font-weight: bold; color: red;">반시계</span>방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
@@ -2318,7 +2318,7 @@ var content12 ='<div class="wrap">'+
         '<div class="rightside"></div>'+
         '<div class="Bbus">'+
             '<table>'+
-                '<caption>B노선 (시계방향)</caption>'+
+                '<caption>B노선 (<span style="font-weight: bold; color: blue;">시계</span>방향)</caption>'+
                 '<thead>'+
                     '<tr>'+
                         '<th>횟수</th>'+
