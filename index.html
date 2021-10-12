@@ -8,22 +8,22 @@
     <link rel="stylesheet" href="css/mobile.css">
 </head>
 <style> /*나중에 styles.css파일 만들어서 옮김*/
+    /*768~2560*/
     @font-face {
-        font-family: 'twayair';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
-        font-weight: normal;
+        font-family: 'Pretendard-Regular';
+        src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+        font-weight: 400;
         font-style: normal;
     }
-    /*768~2560*/
     @media screen and (min-width : 768px) and (max-width : 2560px){
-        * {margin: 0; padding: 0; font-size: 14px; background-size: 100% 100%; background-repeat: no-repeat; list-style: none; font-family: 'twayair';}
+        * {margin: 0; padding: 0; font-size: 14px; background-size: 100% 100%; background-repeat: no-repeat; list-style: none;}
         a {color: black; text-decoration: none;}
         .clearfix::after, .clearfix::before {display: block; content: ''; clear: both;}
         
         #wrapper {}
         
         /*1. first 시작*/
-        #first { position: absolute; width: 120px; top: 0; bottom: 0; background-color: rgb(56, 57, 57);}
+        #first { position: absolute; width: 120px; top: 0; bottom: 0; background-color: rgb(56, 57, 57); font-family: 'Pretendard-Regular';}
         #logo { height: 100px; background-color: white;}
         #college { height: 25px; color: rgb(143, 154, 145); padding-top: 10px; padding-left: 5px;}
         #Mainmenu {background-color: #fdcf46}
@@ -106,13 +106,13 @@
     }
     /*598~767*/
     @media screen and (min-width : 598px) and (max-width : 767px){
-        * {margin: 0; padding: 0; font-size: 14px; background-size: 100% 100%; background-repeat: no-repeat; list-style: none; font-family: 'twayair';}
+        * {margin: 0; padding: 0; font-size: 14px; background-size: 100% 100%; background-repeat: no-repeat; list-style: none;}
         a {color: black; text-decoration: none;}
         .clearfix::after, .clearfix::before {display: block; content: ''; clear: both;}
         
         #wrapper {}
         
-        #first { position: absolute; width: 120px; top: 0; bottom: 0; background-color: rgb(56, 57, 57);}
+        #first { position: absolute; width: 120px; top: 0; bottom: 0; background-color: rgb(56, 57, 57); font-family: 'Pretendard-Regular';}
         #logo { height: 100px; background-color: white;}
         #college { height: 25px; color: rgb(143, 154, 145); padding-top: 10px; padding-left: 5px;}
         #Mainmenu {background-color: #fdcf46}
@@ -168,7 +168,7 @@
         .ATM::after {border-top: 15px solid #eee; border-bottom: 15px solid transparent;border-left: 15px solid transparent;border-right: 15px solid transparent; content: "";position: absolute; left: 75px; top:100px;}
         #ATMempty {width: 180px; height: 10px; background-color: #eee; border-top-left-radius: 10px; border-top-right-radius: 10px;}
         #ATMtop { width: 180px; height: 50px; background-color: #eee;}
-        #ATMtop > a {padding-left: 10px;}
+        #ATMtop > a {padding-left: 10px;}z
         #ATMtop > a > span > img {position: relative; top: -8px; left: 8px;}
         #ATMtop > a > span > img:hover {cursor: pointer;}
         #ATMbottom {margin-top: -10px; width: 180px; height: 50px; background-color: #eee; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;}
@@ -185,14 +185,14 @@
     }
     /*0~597*/
     @media screen and (max-width : 597px) {
-        * {margin: 0; padding: 0; font-size: 13px; background-size: 100% 100%; background-repeat: no-repeat; list-style: none; box-sizing: border-box; font-family: 'twayair';}
+        * {margin: 0; padding: 0; font-size: 13px; background-size: 100% 100%; background-repeat: no-repeat; list-style: none; box-sizing: border-box;}
         a {color: black; text-decoration: none;}
         .clearfix::after, .clearfix::before {display: block; content: ''; clear: both;}
         
         #wrapper {}
         
         /*1. first 시작*/   
-        #first { position: absolute; width: 100vw; top: 0;  height: 81px; background-color: rgb(56, 57, 57);}
+        #first { position: absolute; width: 100vw; top: 0;  height: 81px; background-color: rgb(56, 57, 57); font-family: 'Pretendard-Regular';}
         #logo { display: none;}
         #college {display: none;}
         #Mainmenu {float: left; width: 75vw; background-color: #fdcf46}
