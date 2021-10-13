@@ -411,7 +411,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
     /*map.setZoomable(false); //지도 확대 축소 기능 끄기*/
     
-    var markers = []; //markers배열 선언
+    var buildingmarkers = []; //markers배열 선언
     var usermarkers = []; //usermarkers배열 선언
     var lines = []; //lines배열 선언
 
@@ -455,55 +455,38 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         });
     }    
 
-    //Marker(x,y)함수 선언
-    function Marker(x,y) {
-        // 마커가 표시될 위치입니다 
-        var markerPosition  = new kakao.maps.LatLng(x, y); 
+        var buildingimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-6/images/buildinglocation.png', // 건물마커이미지의 주소입니다, remove.bg사이트에서 png 바깥배경 없앳음 
+            buildingimageSize = new kakao.maps.Size(40, 40), // 건물마커 이미지의 크기입니다
+            buildingimageOption = {offset: new kakao.maps.Point(20, 40)}; // 건물마커 이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
 
-        // 마커를 생성합니다
-        var marker = new kakao.maps.Marker({
-            position: markerPosition
-        });
-        // 마커가 지도 위에 표시되도록 설정합니다
-        marker.setMap(map);
-        //markers배열에 marker푸쉬
-        markers.push(marker);
-        //for문을 통해 이전 마커들 다 삭제
-        for (var i = 0; i < markers.length-1; i++) {
-            markers[i].setMap(null);
+        function buildingMarker(x,y) {
+            // 건물 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+            var buildingmarkerImage = new kakao.maps.MarkerImage(buildingimageSrc, buildingimageSize, buildingimageOption)
+            // 건물 마커로 표시될 위치입니다 
+            var buildingmarkerPosition  = new kakao.maps.LatLng(x, y); 
+            
+            // 건물 마커를 생성합니다
+            var buildingmarker = new kakao.maps.Marker({
+                position: buildingmarkerPosition,
+                image: buildingmarkerImage
+            });
+            // 빌딩 마커가 지도 위에 표시되도록 설정합니다
+            buildingmarker.setMap(map);
+            //buildingmarkers배열에 빌딩마커푸쉬
+            buildingmarkers.push(buildingmarker);
+            //for문을 통해 사용자 이전 건물 마커들 다 삭제
+            for (var i = 0; i < buildingmarkers.length-1; i++) {
+                buildingmarkers[i].setMap(null);
+            }
         }
-    }
-    // function userMarker(x,y) {
-    //     // 사용자의 위치가 마커로 표시될 위치입니다 
-    //     var markerPosition  = new kakao.maps.LatLng(x, y); 
-
-    //     // 사용자 위치 마커를 생성합니다
-    //     var usermarker = new kakao.maps.Marker({
-    //         position: markerPosition
-    //     });
-    //     // 사용자 위치 마커가 지도 위에 표시되도록 설정합니다
-    //     usermarker.setMap(map);
-    //     //markers배열에 marker푸쉬
-    //     usermarkers.push(usermarker);
-    //     //for문을 통해 사용자 이전 위치 마커들 다 삭제
-    //     for (var i = 0; i < usermarkers.length-1; i++) {
-    //         usermarkers[i].setMap(null);
-    //     }
-    // }
-    var userimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-6/images/user.png', // 유저마커이미지의 주소입니다, remove.bg사이트에서 png 바깥배경 없앳음 
-        userimageSize = new kakao.maps.Size(35, 20), // 유저마커 이미지의 크기입니다
-        userimageOption = {offset: new kakao.maps.Point(14, 10)}; // 유저마커 이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
 
     function userMarker(x,y) {
-        // 유저마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
-        var usermarkerImage = new kakao.maps.MarkerImage(userimageSrc, userimageSize, userimageOption)
         // 사용자의 위치가 마커로 표시될 위치입니다 
-        var usermarkerPosition  = new kakao.maps.LatLng(x, y); 
-        
+        var markerPosition  = new kakao.maps.LatLng(x, y); 
+
         // 사용자 위치 마커를 생성합니다
         var usermarker = new kakao.maps.Marker({
-            position: usermarkerPosition,
-            image: usermarkerImage
+            position: markerPosition
         });
         // 사용자 위치 마커가 지도 위에 표시되도록 설정합니다
         usermarker.setMap(map);
@@ -514,6 +497,30 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
             usermarkers[i].setMap(null);
         }
     }
+    // var userimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-6/images/user.png', // 유저마커이미지의 주소입니다, remove.bg사이트에서 png 바깥배경 없앳음 
+    //     userimageSize = new kakao.maps.Size(35, 20), // 유저마커 이미지의 크기입니다
+    //     userimageOption = {offset: new kakao.maps.Point(14, 10)}; // 유저마커 이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+
+    // function userMarker(x,y) {
+    //     // 유저마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+    //     var usermarkerImage = new kakao.maps.MarkerImage(userimageSrc, userimageSize, userimageOption)
+    //     // 사용자의 위치가 마커로 표시될 위치입니다 
+    //     var usermarkerPosition  = new kakao.maps.LatLng(x, y); 
+        
+    //     // 사용자 위치 마커를 생성합니다
+    //     var usermarker = new kakao.maps.Marker({
+    //         position: usermarkerPosition,
+    //         image: usermarkerImage
+    //     });
+    //     // 사용자 위치 마커가 지도 위에 표시되도록 설정합니다
+    //     usermarker.setMap(map);
+    //     //markers배열에 marker푸쉬
+    //     usermarkers.push(usermarker);
+    //     //for문을 통해 사용자 이전 위치 마커들 다 삭제
+    //     for (var i = 0; i < usermarkers.length-1; i++) {
+    //         usermarkers[i].setMap(null);
+    //     }
+    // }
 
     function Moving(a,b) { //
         // 이동할 위도 경도 위치를 생성합니다 
@@ -522,7 +529,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         map.panTo(moveLatLon);
         
         //Marker()함수 실행
-        Marker(a,b);
+        buildingMarker(a,b);
     }
     
     function Moving1(a,b) { //지도 초점을 a,b로 이동
