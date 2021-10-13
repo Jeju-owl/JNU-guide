@@ -537,18 +537,12 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
             new kakao.maps.LatLng(33.45313788974245 , 126.56435709566983),//의전원 가기전 코너
             new kakao.maps.LatLng(33.45307004641888 , 126.55919199731045),//인문대학(동)
             new kakao.maps.LatLng(33.451584762275985 , 126.5592210229973),//학생생활관 가기전 코너
-            // new kakao.maps.LatLng(33.45156111931676 , 126.5576454562605),//학생생활관 직후 코너
             new kakao.maps.LatLng(33.45158611432318 , 126.55770179594977),//학생생활관 직후 코너
-            // new kakao.maps.LatLng(33.45380543105225 , 126.55745659027355),//인문대학(서)
             new kakao.maps.LatLng(33.4540018326901 , 126.55754163933506),//인문대학(서)
             new kakao.maps.LatLng(33.45421657291757 , 126.55771264258135),//인문대학(서) 직후 코너
-            // new kakao.maps.LatLng(33.45423725506173 , 126.55972388503928),//학생회관 전 커브
             new kakao.maps.LatLng(33.454171288541936 , 126.55955481359935),//학생회관 전 커브
-            // new kakao.maps.LatLng(33.45475372820234 , 126.56108190050288),//학생회관 직후 커브
             new kakao.maps.LatLng(33.454693090169386 , 126.56114405258496),//학생회관 직후 커브
-            // new kakao.maps.LatLng(33.456248170907365 , 126.56109319414946),//본관 가기전 체육관
             new kakao.maps.LatLng(33.45618549782216 , 126.56121720519054),//본관 가기전 체육관
-            // new kakao.maps.LatLng(33.456287142941015 , 126.56319313096851),//본관 직후 커브
             new kakao.maps.LatLng(33.45621952410338 , 126.56319347002534),//본관 직후 커브
             new kakao.maps.LatLng(33.45741398134404 , 126.56314714457915),//해양대 1호 직후
             new kakao.maps.LatLng(33.457386430436266 , 126.56109014810953),//해양대 후 정문 가기전
@@ -584,6 +578,38 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         //     markers[i].setMap(null);
         // }     
     }
+    // A노선 구분
+    function RouteA() {
+
+        // 선을 구성하는 좌표 배열입니다. 이 좌표들을 이어서 선을 표시합니다
+        var linePath = [
+            new kakao.maps.LatLng(33.456778080097976, 126.56306966217845),// 미래융합대학 맞은편
+            new kakao.maps.LatLng(33.456358909664424, 126.56309058784622),// 미래융합대학 맞은편에서 아래로 쭉
+            new kakao.maps.LatLng(33.456358909664424 , 126.5625528246715),//왼쪽으로 쭉
+            new kakao.maps.LatLng(33.45638644766194 , 126.56259028938537),// 삼각형 1
+            new kakao.maps.LatLng(33.45630982247317 , 126.56259028938537),// 삼각형 2
+            new kakao.maps.LatLng(33.45632985196544 , 126.56252065872181),// 삼각형 3
+
+
+        ];
+
+        // 지도에 표시할 선을 생성합니다
+        var polyline = new kakao.maps.Polyline({
+            path: linePath, // 선을 구성하는 좌표배열 입니다
+            strokeWeight: 3, // 선의 두께 입니다
+            strokeColor: '#FF0000', // 빨간색
+            strokeOpacity: 0.7, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+            strokeStyle: 'solid' // 선의 스타일입니다
+        });
+
+        // 지도에 선을 표시합니다 
+        polyline.setMap(map);
+        //lines배열에 push
+        lines.push(polyline);
+        //지도 확대 레벨 4
+        map.setLevel(4);
+    
+        }
 
     //순환버스노선 지우는 함수
     function lineX() {
