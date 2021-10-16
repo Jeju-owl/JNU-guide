@@ -5,272 +5,271 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>제대로 놀아보자~!</title>
-    <link rel="stylesheet" href="css/mobile.css">
+    <style> /*나중에 styles.css파일 만들어서 옮김*/
+        /*768~2560*/
+        @font-face {
+            font-family: 'Pretendard-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @media screen and (min-width : 768px) and (max-width : 2560px){
+            * {margin: 0; padding: 0; font-size: 14px; background-size: 100% 100%; background-repeat: no-repeat; list-style: none;}
+            a {color: black; text-decoration: none;}
+            .clearfix::after, .clearfix::before {display: block; content: ''; clear: both;}
+            
+            #wrapper {}
+            
+            /*1. first 시작*/
+            #first { position: absolute; width: 120px; top: 0; bottom: 0; background-color: rgb(56, 57, 57); font-family: 'Pretendard-Regular';}
+            #logo { height: 100px; background-color: white;}
+            #college { height: 25px; color: rgb(143, 154, 145); padding-top: 10px; padding-left: 5px;}
+            #Mainmenu {background-color: #fdcf46}
+            #Mainmenu > ul > li { height: 25px; border-bottom: 1px solid rgb(56, 57, 57); padding-left: 5px; padding-top: 7px; font-size: 1rem;}
+            #Mainmenu > ul > li:hover {text-align: center; cursor: pointer;}
+            #Mainmenu > ul > li > ul.submenu {display: none;/*hover할 때 보이도록 미리셋팅*/ position: relative; top: -25px; left: 115px; z-index: 2; background-color: rgb(231, 231, 225); width: 170px; text-align: justify;} /*ul에 submenu클래스 연동*/
+            #Mainmenu > ul > li > ul > li:hover {background-color: rgb(143, 154, 145);}
+            #Mainmenu > ul > li > ul > li {border-top: 1px solid rgb(195, 197, 195); height: 21px; border-bottom: 1px solid rgb(195, 197, 195); padding-left: 10px; padding-top: 10px;}
+            #guitar > ul > li {position: relative; top: -265px; background-color: rgb(231, 231, 225);}
+            #others {position: absolute; left: 0; bottom: 10px;}
+            #others > ul > li {color: rgb(143, 154, 145); height: 25px; padding-left: 5px;}  
+            #others > ul > li:hover {padding-top: 10px; color: black; background-color: #fdcf46; height: 30px; transition: 1s; width: 120px; cursor: pointer;}
+    
+            /*others세로메뉴유형*/
+    
+            
+    
+    
+    
+            /*2. second 시작*/
+            #second { position: absolute; width: 170px; left: 120px; top: 0; bottom: 0; background-color: #e8eced;}
+            #slide { height: 135px; animation-name: change-bg; animation-duration: 11s;  animation-iteration-count: infinite;}
+            /*keyframe선언 후 이름은 change-bg*/
+            @keyframes change-bg { 
+                from {background-image: url("images/owl-sample.jpeg");}/*0%*/
+                33% {background-image: url("images/owl-sample2.jpeg");}
+                66% {background-image: url("images/owl-sample3.jpeg");}
+                to {background-image: url("images/owl-sample.jpeg");}/*100%*/
+            }
+    
+            /*3. third 시작*/
+            #third {}
+            #map {position: absolute; left: 290px; top: 0; bottom: 0; right: 0;}
+            
+            #copyright {position: fixed; bottom: 1px; right: 2px; z-index: 1;}
+            #copyright > a { font-size: 0.7rem;}
+            #copyright > a > span {padding-left: 2px; font-size: 0.7rem;} /*왜 a태그 안 span 태그는 안먹는가??*/
+            #level3button { position: fixed; bottom: 38px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black; z-index: 1; background-color: white}
+            #level3button > img {width: 35px; height: 35px; position: relative; left: 8px; top: 8px}
+            #level3button > img:hover {cursor: pointer;}
+            #findme { position: fixed; bottom: 95px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black; z-index: 1; background-color: white}
+            #findme > img {width: 35px; height: 35px; position: relative; left: 8px; top: 8px}
+            #findme > img:hover {cursor: pointer;}
+        
+            /*버스노선시간표 스타일시트 모바일 버전까지 화면 적용 완료*/
+            .wrap {position: absolute;left: -170px;bottom: 5px;width: 360px; height: 312px; text-align: left;overflow: hidden;font-size: 0.9rem;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;}
+            .wrap * {padding: 0;margin: 0;}
+            .wrap .head {width: 360px;height: 300px;border-radius: 5px; border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}
+            .wrap .head:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}
+            .head .title {padding: 5px 0 0 5px;height: 25px;background: #eee;border-bottom: 1px solid #ddd;font-size: 1.1rem; font-weight: bold;}
+            .head .close {position: absolute;top: 5px;right: 10px;color: #888;width: 17px;height: 17px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');}
+            .head .close:hover {cursor: pointer;}
+            .head:after {content: '';position: absolute;margin-left: -12px;left: 49%;bottom: 0;width: 22px;height: 12px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
+            .body { width: 360px; height: 265px;}
+            .leftside { float: left; width: 5px; height: 265px;}
+            .rightside {float: left; width: 27px; height: 265px;}
+            .Abus { float: left; width: 150px; height: 265px;}
+            .Bbus { float: left; width: 150px; height: 265px;}
+            table {border-collapse: collapse;}
+            th {border: 1px solid gray;}
+            td {border: 1px solid gray; text-align: center;}
+            /*ATM마커별 커스텀오버레이*/
+            .ATM {position: absolute; left: -90px; top: -120px;/*left: -170px; bottom: 5px;*/ width: 180px; height: 100px; border: 1px solid #fff; border-radius: 10px;}
+            .ATM::after {border-top: 15px solid #eee; border-bottom: 15px solid transparent;border-left: 15px solid transparent;border-right: 15px solid transparent; content: "";position: absolute; left: 75px; top:100px;}
+            #ATMempty {width: 180px; height: 10px; background-color: #eee; border-top-left-radius: 10px; border-top-right-radius: 10px;}
+            #ATMtop { width: 180px; height: 50px; background-color: #eee;}
+            #ATMtop > a {padding-left: 10px;}
+            #ATMtop > a > span > img {position: relative; top: -8px; left: 8px;}
+            #ATMtop > a > span > img:hover {cursor: pointer;}
+            #ATMbottom {margin-top: -10px; width: 180px; height: 50px; background-color: #eee; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;}
+            #ATMbottom > dl {padding-left: 10px;}
+            #ATMbottom > dl > dt > a {font-weight: bold;}
+            #ATMbottom > dl > dt > span {padding-left: 5px; font-size: 0.8rem;}
+            #ATMbottom > dl > dd { padding-left: 5px;}
+            /*심야버스 커스텀오버레이*/ 
+            #nightbuswrap { display: none; margin: 0; padding: 0; position: absolute; width: 567px; height: 700px; top: 30px; right: 12%; z-index: 7; border: 1px solid gray; background-color: white;}
+            #nightbushead { position: absolute; top: 0; right: 0; left: 0; height: 250px; background-image: url(https://camo.githubusercontent.com/c9b4e788967fff5f53cc9d885434e0f4014e9abe38b45e17f199578040c9530d/68747470733a2f2f6c69622e6a656a756e752e61632e6b722f70797869732d6170692f6174746163686d656e74732f42554c4c4554494e2f61336230653665652d326531612d343566632d386439622d643164636333356161363465); background-size: 567px 250px; z-index: 5;}
+            #nightbusbody { position: absolute; top: 250px; right: 0; left: 0; bottom: 30px; margin-top: -20px; background-image: url(https://user-images.githubusercontent.com/81807434/136660104-30a9d12f-a072-4a83-9377-2e4a6ca165aa.png); background-size: 567px 100%; z-index: 4;}
+            #nightbusclose {position: absolute; top: 15px; right: 15px; z-index: 6;}
+            #nightbusclose > img:hover {cursor: pointer;}
+        }
+        /*598~767*/
+        @media screen and (min-width : 598px) and (max-width : 767px){
+            * {margin: 0; padding: 0; font-size: 14px; background-size: 100% 100%; background-repeat: no-repeat; list-style: none;}
+            a {color: black; text-decoration: none;}
+            .clearfix::after, .clearfix::before {display: block; content: ''; clear: both;}
+            
+            #wrapper {}
+            
+            #first { position: absolute; width: 120px; top: 0; bottom: 0; background-color: rgb(56, 57, 57); font-family: 'Pretendard-Regular';}
+            #logo { height: 100px; background-color: white;}
+            #college { height: 25px; color: rgb(143, 154, 145); padding-top: 10px; padding-left: 5px;}
+            #Mainmenu {background-color: #fdcf46}
+            #Mainmenu > ul > li { height: 25px; border-bottom: 1px solid rgb(56, 57, 57); padding-left: 5px; padding-top: 7px; font-size: 1rem;}
+            #Mainmenu > ul > li:hover {text-align: center; cursor: pointer;}
+            #Mainmenu > ul > li > ul.submenu {display: none;/*hover할 때 보이도록 미리셋팅*/ position: relative; top: -25px; left: 115px; z-index: 2; background-color: rgb(231, 231, 225); width: 170px; text-align: justify;} /*ul에 submenu클래스 연동*/
+            #Mainmenu > ul > li > ul > li:hover {background-color: rgb(143, 154, 145);}
+            #Mainmenu > ul > li > ul > li {border-top: 1px solid rgb(195, 197, 195); height: 21px; border-bottom: 1px solid rgb(195, 197, 195); padding-left: 10px; padding-top: 10px;}
+            #guitar > ul > li {position: relative; top: -263px; background-color: rgb(231, 231, 225);}
+            #others {position: absolute; left: 0; bottom: 10px;}
+            #others > ul > li {color: rgb(143, 154, 145); height: 25px; padding-left: 5px;}  
+            #others > ul > li:hover {padding-top: 10px; color: black; background-color: #fdcf46; height: 30px; transition: 1s; width: 120px; cursor: pointer;}
+    
+            #second { display: none;}
+            #slide { display: none;}
+            @keyframes change-bg { 
+                from {background-image: url("images/owl-sample.jpeg");}/*0%*/
+                33% {background-image: url("images/owl-sample2.jpeg");}
+                66% {background-image: url("images/owl-sample3.jpeg");}
+                to {background-image: url("images/owl-sample.jpeg");}/*100%*/
+            }
+    
+            #third {}
+            #map {position: absolute; left: 120px; top: 0; bottom: 0; right: 0;}
+            
+            #copyright {position: fixed; bottom: 1px; right: 2px; z-index: 1;}
+            #copyright > a { font-size: 0.7rem;}
+            #copyright > a > span {padding-left: 2px; font-size: 0.7rem;} /*왜 a태그 안 span 태그는 안먹는가??*/
+            #level3button { position: fixed; bottom: 38px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black; z-index: 1; background-color: white}
+            #level3button > img {width: 35px; height: 35px; position: relative; left: 8px; top: 8px}
+            #level3button > img:hover {cursor: pointer;}
+            #findme { position: fixed; bottom: 95px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black; z-index: 1; background-color: white}
+            #findme > img {width: 35px; height: 35px; position: relative; left: 8px; top: 8px}
+            #findme > img:hover {cursor: pointer;}
+        
+            .wrap {position: absolute;left: -170px;bottom: 5px;width: 360px; height: 312px; text-align: left;overflow: hidden;font-size: 0.9rem;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;}
+            .wrap * {padding: 0;margin: 0;}
+            .wrap .head {width: 360px;height: 300px;border-radius: 5px; border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}
+            .wrap .head:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}
+            .head .title {padding: 5px 0 0 5px;height: 25px;background: #eee;border-bottom: 1px solid #ddd;font-size: 1.1rem; font-weight: bold;}
+            .head .close {position: absolute;top: 5px;right: 10px;color: #888;width: 17px;height: 17px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');}
+            .head .close:hover {cursor: pointer;}
+            .head:after {content: '';position: absolute;margin-left: -12px;left: 49%;bottom: 0;width: 22px;height: 12px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
+            .body { width: 360px; height: 265px;}
+            .leftside { float: left; width: 5px; height: 265px;}
+            .rightside {float: left; width: 27px; height: 265px;}
+            .Abus { float: left; width: 150px; height: 265px;}
+            .Bbus { float: left; width: 150px; height: 265px;}
+            table {border-collapse: collapse;}
+            th {border: 1px solid gray;}
+            td {border: 1px solid gray; text-align: center;}
+            /*ATM마커별 커스텀오버레이*/
+            .ATM {position: absolute; left: -90px; top: -120px;/*left: -170px; bottom: 5px;*/ width: 180px; height: 100px; border: 1px solid #fff; border-radius: 10px;}
+            .ATM::after {border-top: 15px solid #eee; border-bottom: 15px solid transparent;border-left: 15px solid transparent;border-right: 15px solid transparent; content: "";position: absolute; left: 75px; top:100px;}
+            #ATMempty {width: 180px; height: 10px; background-color: #eee; border-top-left-radius: 10px; border-top-right-radius: 10px;}
+            #ATMtop { width: 180px; height: 50px; background-color: #eee;}
+            #ATMtop > a {padding-left: 10px;}z
+            #ATMtop > a > span > img {position: relative; top: -8px; left: 8px;}
+            #ATMtop > a > span > img:hover {cursor: pointer;}
+            #ATMbottom {margin-top: -10px; width: 180px; height: 50px; background-color: #eee; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;}
+            #ATMbottom > dl {padding-left: 10px;}
+            #ATMbottom > dl > dt > a {font-weight: bold;}
+            #ATMbottom > dl > dt > span {padding-left: 5px; font-size: 0.8rem;}
+            #ATMbottom > dl > dd { padding-left: 5px;}
+            /*심야버스 커스텀오버레이*/
+            #nightbuswrap { display: none; margin: 0; padding: 0; position: absolute; width: 567px; height: 700px; top: 30px; right: 5%; z-index: 7; border: 1px solid gray; background-color: white;}        
+            #nightbushead { position: absolute; top: 0; right: 0; left: 0; height: 250px; background-image: url(https://camo.githubusercontent.com/c9b4e788967fff5f53cc9d885434e0f4014e9abe38b45e17f199578040c9530d/68747470733a2f2f6c69622e6a656a756e752e61632e6b722f70797869732d6170692f6174746163686d656e74732f42554c4c4554494e2f61336230653665652d326531612d343566632d386439622d643164636333356161363465); background-size: 567px 250px; z-index: 5;}
+            #nightbusbody { position: absolute; top: 250px; right: 0; left: 0; bottom: 30px; margin-top: -20px; background-image: url(https://user-images.githubusercontent.com/81807434/136660104-30a9d12f-a072-4a83-9377-2e4a6ca165aa.png); background-size: 567px 100%; z-index: 4;}
+            #nightbusclose {position: absolute; top: 15px; right: 15px; z-index: 6;}
+            #nightbusclose > img:hover {cursor: pointer;}
+        }
+        /*0~597*/
+        @media screen and (max-width : 597px) {
+            * {margin: 0; padding: 0; font-size: 13px; background-size: 100% 100%; background-repeat: no-repeat; list-style: none; box-sizing: border-box;}
+            a {color: black; text-decoration: none;}
+            .clearfix::after, .clearfix::before {display: block; content: ''; clear: both;}
+            
+            #wrapper {}
+            
+            /*1. first 시작*/   
+            #first { position: absolute; width: 100vw; top: 0;  height: 81px; background-color: rgb(56, 57, 57); font-family: 'Pretendard-Regular';}
+            #logo { display: none;}
+            #college {display: none;}
+            #Mainmenu {float: left; width: 75vw; background-color: #fdcf46}
+            #Mainmenu > ul > li { float: left; width: 25vw; height: 27px;  padding-left: 10px; padding-top: 6px; border-right: 1px solid rgb(56, 57, 57); border-bottom: 1px solid rgb(56, 57, 57); font-size: 1rem;}/**/
+            #Mainmenu > ul > li:hover {padding-left: 0; text-align: center; font-weight: 900; background-color: rgb(231, 231, 225); cursor: pointer;}
+            #Mainmenu > ul > li > ul.submenu {display: none; position: absolute; left: 0; top: 81px; z-index: 2; width: 100vw; height: 81px;} /*ul에 submenu클래스 연동*/
+            #Mainmenu > ul > li > ul > li:hover {background-color: rgb(143, 154, 145);}
+            #Mainmenu > ul > li > ul > li {float: left; width: 25vw; height: 27px; border-right: 1px solid rgb(195, 197, 195); border-bottom: 1px solid rgb(195, 197, 195); padding-top: 4px; background-color: rgb(231, 231, 225);}
+            #Mainmenu > ul > li > ul > li > a {font-size: 0.8rem;}
+            #others {float: left; width: 25vw; height: 81px; background-color: rgb(56, 57, 57);}
+            #others > ul > li {color: rgb(143, 154, 145); height: 27px; text-align: center; padding-top: 6px;}
+            #others > ul > li:hover {font-weight: 900; color: #fdcf46; cursor: pointer;}
+    
+            /*others세로메뉴유형*/
+    
+            
+    
+    
+    
+            /*2. second 시작*/
+            #second { display: none;}
+            #slide { display: none;}
+    
+    
+            /*3. third 시작*/
+            #third {}
+            #map {position: absolute; left: 0; top: 81px; bottom: 0; right: 0;}
+            
+            #copyright {position: fixed; bottom: 1px; right: 2px; z-index: 1;}
+            #copyright > a { font-size: 0.7rem; }
+            #copyright > a > span {padding-left: 2px; font-size: 0.7rem;} /*왜 a태그 안 span 태그는 안먹는가??*/
+            #level3button {position: fixed; bottom: 38px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black; z-index: 1; background-color: white;}
+            #level3button > img {width: 35px; height: 35px; position: relative; left: 5.5px; top: 6px}
+            #level3button > img:hover {cursor: pointer;}
+            #findme { position: fixed; bottom: 95px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black; z-index: 1; background-color: white}
+            #findme > img {width: 35px; height: 35px; position: relative; left: 5.5px; top: 6px}
+            #findme > img:hover {cursor: pointer;}
+    
+            .wrap {position: absolute;left: -170px;bottom: 5px;width: 355px; height: 312px; text-align: left;overflow: hidden;font-size: 0.9rem;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;}
+            .wrap * {padding: 0;margin: 0;}
+            .wrap .head {width: 355px;height: 300px;border-radius: 5px; border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}
+            .wrap .head:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}
+            .head .title {padding: 5px 0 0 5px;height: 25px;background: #eee;border-bottom: 1px solid #ddd;font-size: 1.1rem; font-weight: bold;}
+            .head .close {position: absolute;top: 5px;right: 10px;color: #888;width: 17px;height: 17px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');}
+            .head .close:hover {cursor: pointer;}
+            .head:after {content: '';position: absolute;margin-left: -12px;left: 49%;bottom: 0;width: 22px;height: 12px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
+            .body { width: 355px; height: 265px;}
+            .leftside { float: left; width: 10px; height: 265px;}
+            .rightside {float: left; width: 25px; height: 265px;}
+            .Abus { float: left; width: 150px; height: 265px;}
+            .Bbus { float: left; width: 150px; height: 265px;}
+            table {border-collapse: collapse;}
+            th {border: 1px solid gray;}
+            td {border: 1px solid gray; text-align: center;}
+            /*ATM마커별 커스텀오버레이*/
+            .ATM {position: absolute; left: -90px; top: -120px; width: 180px; height: 100px; border: 1px solid #fff; border-radius: 10px;}
+            .ATM::after {border-top: 15px solid #eee; border-bottom: 15px solid transparent;border-left: 15px solid transparent;border-right: 15px solid transparent; content: "";position: absolute; left: 75px; top:100px;}
+            #ATMempty {width: 180px; height: 10px; background-color: #eee; border-top-left-radius: 10px; border-top-right-radius: 10px;}
+            #ATMtop { width: 180px; height: 50px; background-color: #eee;}
+            #ATMtop > a {padding-left: 10px;}
+            #ATMtop > a > span > img {position: relative; top: -8px; left: 8px;}
+            #ATMtop > a > span > img:hover {cursor: pointer;}
+            #ATMbottom {margin-top: -10px; width: 180px; height: 50px; background-color: #eee; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;}
+            #ATMbottom > dl {padding-left: 10px;}
+            #ATMbottom > dl > dt > a {font-weight: bold;}
+            #ATMbottom > dl > dt > span {padding-left: 5px; font-size: 0.8rem;}
+            #ATMbottom > dl > dd { padding-left: 5px;}
+            /*심야버스 커스텀오버레이*/
+            #nightbuswrap {display: none; margin: 0; padding: 0; position: fixed; top: 0; bottom: 0; right: 0; left: 0; z-index: 7;}
+            #nightbushead { position: absolute; top: 0; right: 0; left: 0; height: 250px; background-image: url(https://camo.githubusercontent.com/c9b4e788967fff5f53cc9d885434e0f4014e9abe38b45e17f199578040c9530d/68747470733a2f2f6c69622e6a656a756e752e61632e6b722f70797869732d6170692f6174746163686d656e74732f42554c4c4554494e2f61336230653665652d326531612d343566632d386439622d643164636333356161363465); background-size: 100vw 250px; z-index: 5;}
+            #nightbusbody { position: absolute; top: 250px; right: 0; left: 0; bottom: 30px; margin-top: -20px; background-image: url(https://user-images.githubusercontent.com/81807434/136660104-30a9d12f-a072-4a83-9377-2e4a6ca165aa.png); background-size: 100vw 100%; z-index: 4;}
+            #nightbusclose {position: absolute; top: 15px; right: 15px; z-index: 6;}
+            #nightbusclose > img:hover {cursor: pointer;}
+        }
+      
+    </style>
 </head>
-<style> /*나중에 styles.css파일 만들어서 옮김*/
-    /*768~2560*/
-    @font-face {
-        font-family: 'Pretendard-Regular';
-        src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-        font-weight: 400;
-        font-style: normal;
-    }
-    @media screen and (min-width : 768px) and (max-width : 2560px){
-        * {margin: 0; padding: 0; font-size: 14px; background-size: 100% 100%; background-repeat: no-repeat; list-style: none;}
-        a {color: black; text-decoration: none;}
-        .clearfix::after, .clearfix::before {display: block; content: ''; clear: both;}
-        
-        #wrapper {}
-        
-        /*1. first 시작*/
-        #first { position: absolute; width: 120px; top: 0; bottom: 0; background-color: rgb(56, 57, 57); font-family: 'Pretendard-Regular';}
-        #logo { height: 100px; background-color: white;}
-        #college { height: 25px; color: rgb(143, 154, 145); padding-top: 10px; padding-left: 5px;}
-        #Mainmenu {background-color: #fdcf46}
-        #Mainmenu > ul > li { height: 25px; border-bottom: 1px solid rgb(56, 57, 57); padding-left: 5px; padding-top: 7px; font-size: 1rem;}
-        #Mainmenu > ul > li:hover {text-align: center; cursor: pointer;}
-        #Mainmenu > ul > li > ul.submenu {display: none;/*hover할 때 보이도록 미리셋팅*/ position: relative; top: -25px; left: 115px; z-index: 2; background-color: rgb(231, 231, 225); width: 170px; text-align: justify;} /*ul에 submenu클래스 연동*/
-        #Mainmenu > ul > li > ul > li:hover {background-color: rgb(143, 154, 145);}
-        #Mainmenu > ul > li > ul > li {border-top: 1px solid rgb(195, 197, 195); height: 21px; border-bottom: 1px solid rgb(195, 197, 195); padding-left: 10px; padding-top: 10px;}
-        #guitar > ul > li {position: relative; top: -265px; background-color: rgb(231, 231, 225);}
-        #others {position: absolute; left: 0; bottom: 10px;}
-        #others > ul > li {color: rgb(143, 154, 145); height: 25px; padding-left: 5px;}  
-        #others > ul > li:hover {padding-top: 10px; color: black; background-color: #fdcf46; height: 30px; transition: 1s; width: 120px; cursor: pointer;}
-
-        /*others세로메뉴유형*/
-
-        
-
-
-
-        /*2. second 시작*/
-        #second { position: absolute; width: 170px; left: 120px; top: 0; bottom: 0; background-color: #e8eced;}
-        #slide { height: 135px; animation-name: change-bg; animation-duration: 11s;  animation-iteration-count: infinite;}
-        /*keyframe선언 후 이름은 change-bg*/
-        @keyframes change-bg { 
-            from {background-image: url("images/owl-sample.jpeg");}/*0%*/
-            33% {background-image: url("images/owl-sample2.jpeg");}
-            66% {background-image: url("images/owl-sample3.jpeg");}
-            to {background-image: url("images/owl-sample.jpeg");}/*100%*/
-        }
-
-        /*3. third 시작*/
-        #third {}
-        #map {position: absolute; left: 290px; top: 0; bottom: 0; right: 0;}
-        
-        #copyright {position: fixed; bottom: 1px; right: 2px; z-index: 1;}
-        #copyright > a { font-size: 0.7rem;}
-        #copyright > a > span {padding-left: 2px; font-size: 0.7rem;} /*왜 a태그 안 span 태그는 안먹는가??*/
-        #level3button { position: fixed; bottom: 38px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black; z-index: 1; background-color: white}
-        #level3button > img {width: 35px; height: 35px; position: relative; left: 8px; top: 8px}
-        #level3button > img:hover {cursor: pointer;}
-        #findme { position: fixed; bottom: 95px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black; z-index: 1; background-color: white}
-        #findme > img {width: 35px; height: 35px; position: relative; left: 8px; top: 8px}
-        #findme > img:hover {cursor: pointer;}
-    
-        /*버스노선시간표 스타일시트 모바일 버전까지 화면 적용 완료*/
-        .wrap {position: absolute;left: -170px;bottom: 5px;width: 360px; height: 312px; text-align: left;overflow: hidden;font-size: 0.9rem;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;}
-        .wrap * {padding: 0;margin: 0;}
-        .wrap .head {width: 360px;height: 300px;border-radius: 5px; border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}
-        .wrap .head:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}
-        .head .title {padding: 5px 0 0 5px;height: 25px;background: #eee;border-bottom: 1px solid #ddd;font-size: 1.1rem; font-weight: bold;}
-        .head .close {position: absolute;top: 5px;right: 10px;color: #888;width: 17px;height: 17px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');}
-        .head .close:hover {cursor: pointer;}
-        .head:after {content: '';position: absolute;margin-left: -12px;left: 49%;bottom: 0;width: 22px;height: 12px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
-        .body { width: 360px; height: 265px;}
-        .leftside { float: left; width: 5px; height: 265px;}
-        .rightside {float: left; width: 27px; height: 265px;}
-        .Abus { float: left; width: 150px; height: 265px;}
-        .Bbus { float: left; width: 150px; height: 265px;}
-        table {border-collapse: collapse;}
-        th {border: 1px solid gray;}
-        td {border: 1px solid gray; text-align: center;}
-        /*ATM마커별 커스텀오버레이*/
-        .ATM {position: absolute; left: -90px; top: -120px;/*left: -170px; bottom: 5px;*/ width: 180px; height: 100px; border: 1px solid #fff; border-radius: 10px;}
-        .ATM::after {border-top: 15px solid #eee; border-bottom: 15px solid transparent;border-left: 15px solid transparent;border-right: 15px solid transparent; content: "";position: absolute; left: 75px; top:100px;}
-        #ATMempty {width: 180px; height: 10px; background-color: #eee; border-top-left-radius: 10px; border-top-right-radius: 10px;}
-        #ATMtop { width: 180px; height: 50px; background-color: #eee;}
-        #ATMtop > a {padding-left: 10px;}
-        #ATMtop > a > span > img {position: relative; top: -8px; left: 8px;}
-        #ATMtop > a > span > img:hover {cursor: pointer;}
-        #ATMbottom {margin-top: -10px; width: 180px; height: 50px; background-color: #eee; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;}
-        #ATMbottom > dl {padding-left: 10px;}
-        #ATMbottom > dl > dt > a {font-weight: bold;}
-        #ATMbottom > dl > dt > span {padding-left: 5px; font-size: 0.8rem;}
-        #ATMbottom > dl > dd { padding-left: 5px;}
-        /*심야버스 커스텀오버레이*/ 
-        #nightbuswrap { display: none; margin: 0; padding: 0; position: absolute; width: 567px; height: 700px; top: 30px; right: 12%; z-index: 7; border: 1px solid gray; background-color: white;}
-        #nightbushead { position: absolute; top: 0; right: 0; left: 0; height: 250px; background-image: url(https://camo.githubusercontent.com/c9b4e788967fff5f53cc9d885434e0f4014e9abe38b45e17f199578040c9530d/68747470733a2f2f6c69622e6a656a756e752e61632e6b722f70797869732d6170692f6174746163686d656e74732f42554c4c4554494e2f61336230653665652d326531612d343566632d386439622d643164636333356161363465); background-size: 567px 250px; z-index: 5;}
-        #nightbusbody { position: absolute; top: 250px; right: 0; left: 0; bottom: 30px; margin-top: -20px; background-image: url(https://user-images.githubusercontent.com/81807434/136660104-30a9d12f-a072-4a83-9377-2e4a6ca165aa.png); background-size: 567px 100%; z-index: 4;}
-        #nightbusclose {position: absolute; top: 15px; right: 15px; z-index: 6;}
-        #nightbusclose > img:hover {cursor: pointer;}
-    }
-    /*598~767*/
-    @media screen and (min-width : 598px) and (max-width : 767px){
-        * {margin: 0; padding: 0; font-size: 14px; background-size: 100% 100%; background-repeat: no-repeat; list-style: none;}
-        a {color: black; text-decoration: none;}
-        .clearfix::after, .clearfix::before {display: block; content: ''; clear: both;}
-        
-        #wrapper {}
-        
-        #first { position: absolute; width: 120px; top: 0; bottom: 0; background-color: rgb(56, 57, 57); font-family: 'Pretendard-Regular';}
-        #logo { height: 100px; background-color: white;}
-        #college { height: 25px; color: rgb(143, 154, 145); padding-top: 10px; padding-left: 5px;}
-        #Mainmenu {background-color: #fdcf46}
-        #Mainmenu > ul > li { height: 25px; border-bottom: 1px solid rgb(56, 57, 57); padding-left: 5px; padding-top: 7px; font-size: 1rem;}
-        #Mainmenu > ul > li:hover {text-align: center; cursor: pointer;}
-        #Mainmenu > ul > li > ul.submenu {display: none;/*hover할 때 보이도록 미리셋팅*/ position: relative; top: -25px; left: 115px; z-index: 2; background-color: rgb(231, 231, 225); width: 170px; text-align: justify;} /*ul에 submenu클래스 연동*/
-        #Mainmenu > ul > li > ul > li:hover {background-color: rgb(143, 154, 145);}
-        #Mainmenu > ul > li > ul > li {border-top: 1px solid rgb(195, 197, 195); height: 21px; border-bottom: 1px solid rgb(195, 197, 195); padding-left: 10px; padding-top: 10px;}
-        #guitar > ul > li {position: relative; top: -263px; background-color: rgb(231, 231, 225);}
-        #others {position: absolute; left: 0; bottom: 10px;}
-        #others > ul > li {color: rgb(143, 154, 145); height: 25px; padding-left: 5px;}  
-        #others > ul > li:hover {padding-top: 10px; color: black; background-color: #fdcf46; height: 30px; transition: 1s; width: 120px; cursor: pointer;}
-
-        #second { display: none;}
-        #slide { display: none;}
-        @keyframes change-bg { 
-            from {background-image: url("images/owl-sample.jpeg");}/*0%*/
-            33% {background-image: url("images/owl-sample2.jpeg");}
-            66% {background-image: url("images/owl-sample3.jpeg");}
-            to {background-image: url("images/owl-sample.jpeg");}/*100%*/
-        }
-
-        #third {}
-        #map {position: absolute; left: 120px; top: 0; bottom: 0; right: 0;}
-        
-        #copyright {position: fixed; bottom: 1px; right: 2px; z-index: 1;}
-        #copyright > a { font-size: 0.7rem;}
-        #copyright > a > span {padding-left: 2px; font-size: 0.7rem;} /*왜 a태그 안 span 태그는 안먹는가??*/
-        #level3button { position: fixed; bottom: 38px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black; z-index: 1; background-color: white}
-        #level3button > img {width: 35px; height: 35px; position: relative; left: 8px; top: 8px}
-        #level3button > img:hover {cursor: pointer;}
-        #findme { position: fixed; bottom: 95px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black; z-index: 1; background-color: white}
-        #findme > img {width: 35px; height: 35px; position: relative; left: 8px; top: 8px}
-        #findme > img:hover {cursor: pointer;}
-    
-        .wrap {position: absolute;left: -170px;bottom: 5px;width: 360px; height: 312px; text-align: left;overflow: hidden;font-size: 0.9rem;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;}
-        .wrap * {padding: 0;margin: 0;}
-        .wrap .head {width: 360px;height: 300px;border-radius: 5px; border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}
-        .wrap .head:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}
-        .head .title {padding: 5px 0 0 5px;height: 25px;background: #eee;border-bottom: 1px solid #ddd;font-size: 1.1rem; font-weight: bold;}
-        .head .close {position: absolute;top: 5px;right: 10px;color: #888;width: 17px;height: 17px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');}
-        .head .close:hover {cursor: pointer;}
-        .head:after {content: '';position: absolute;margin-left: -12px;left: 49%;bottom: 0;width: 22px;height: 12px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
-        .body { width: 360px; height: 265px;}
-        .leftside { float: left; width: 5px; height: 265px;}
-        .rightside {float: left; width: 27px; height: 265px;}
-        .Abus { float: left; width: 150px; height: 265px;}
-        .Bbus { float: left; width: 150px; height: 265px;}
-        table {border-collapse: collapse;}
-        th {border: 1px solid gray;}
-        td {border: 1px solid gray; text-align: center;}
-        /*ATM마커별 커스텀오버레이*/
-        .ATM {position: absolute; left: -90px; top: -120px;/*left: -170px; bottom: 5px;*/ width: 180px; height: 100px; border: 1px solid #fff; border-radius: 10px;}
-        .ATM::after {border-top: 15px solid #eee; border-bottom: 15px solid transparent;border-left: 15px solid transparent;border-right: 15px solid transparent; content: "";position: absolute; left: 75px; top:100px;}
-        #ATMempty {width: 180px; height: 10px; background-color: #eee; border-top-left-radius: 10px; border-top-right-radius: 10px;}
-        #ATMtop { width: 180px; height: 50px; background-color: #eee;}
-        #ATMtop > a {padding-left: 10px;}z
-        #ATMtop > a > span > img {position: relative; top: -8px; left: 8px;}
-        #ATMtop > a > span > img:hover {cursor: pointer;}
-        #ATMbottom {margin-top: -10px; width: 180px; height: 50px; background-color: #eee; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;}
-        #ATMbottom > dl {padding-left: 10px;}
-        #ATMbottom > dl > dt > a {font-weight: bold;}
-        #ATMbottom > dl > dt > span {padding-left: 5px; font-size: 0.8rem;}
-        #ATMbottom > dl > dd { padding-left: 5px;}
-        /*심야버스 커스텀오버레이*/
-        #nightbuswrap { display: none; margin: 0; padding: 0; position: absolute; width: 567px; height: 700px; top: 30px; right: 5%; z-index: 7; border: 1px solid gray; background-color: white;}        
-        #nightbushead { position: absolute; top: 0; right: 0; left: 0; height: 250px; background-image: url(https://camo.githubusercontent.com/c9b4e788967fff5f53cc9d885434e0f4014e9abe38b45e17f199578040c9530d/68747470733a2f2f6c69622e6a656a756e752e61632e6b722f70797869732d6170692f6174746163686d656e74732f42554c4c4554494e2f61336230653665652d326531612d343566632d386439622d643164636333356161363465); background-size: 567px 250px; z-index: 5;}
-        #nightbusbody { position: absolute; top: 250px; right: 0; left: 0; bottom: 30px; margin-top: -20px; background-image: url(https://user-images.githubusercontent.com/81807434/136660104-30a9d12f-a072-4a83-9377-2e4a6ca165aa.png); background-size: 567px 100%; z-index: 4;}
-        #nightbusclose {position: absolute; top: 15px; right: 15px; z-index: 6;}
-        #nightbusclose > img:hover {cursor: pointer;}
-    }
-    /*0~597*/
-    @media screen and (max-width : 597px) {
-        * {margin: 0; padding: 0; font-size: 13px; background-size: 100% 100%; background-repeat: no-repeat; list-style: none; box-sizing: border-box;}
-        a {color: black; text-decoration: none;}
-        .clearfix::after, .clearfix::before {display: block; content: ''; clear: both;}
-        
-        #wrapper {}
-        
-        /*1. first 시작*/   
-        #first { position: absolute; width: 100vw; top: 0;  height: 81px; background-color: rgb(56, 57, 57); font-family: 'Pretendard-Regular';}
-        #logo { display: none;}
-        #college {display: none;}
-        #Mainmenu {float: left; width: 75vw; background-color: #fdcf46}
-        #Mainmenu > ul > li { float: left; width: 25vw; height: 27px;  padding-left: 10px; padding-top: 6px; border-right: 1px solid rgb(56, 57, 57); border-bottom: 1px solid rgb(56, 57, 57); font-size: 1rem;}/**/
-        #Mainmenu > ul > li:hover {padding-left: 0; text-align: center; font-weight: 900; background-color: rgb(231, 231, 225); cursor: pointer;}
-        #Mainmenu > ul > li > ul.submenu {display: none; position: absolute; left: 0; top: 81px; z-index: 2; width: 100vw; height: 81px;} /*ul에 submenu클래스 연동*/
-        #Mainmenu > ul > li > ul > li:hover {background-color: rgb(143, 154, 145);}
-        #Mainmenu > ul > li > ul > li {float: left; width: 25vw; height: 27px; border-right: 1px solid rgb(195, 197, 195); border-bottom: 1px solid rgb(195, 197, 195); padding-top: 4px; background-color: rgb(231, 231, 225);}
-        #Mainmenu > ul > li > ul > li > a {font-size: 0.8rem;}
-        #others {float: left; width: 25vw; height: 81px; background-color: rgb(56, 57, 57);}
-        #others > ul > li {color: rgb(143, 154, 145); height: 27px; text-align: center; padding-top: 6px;}
-        #others > ul > li:hover {font-weight: 900; color: #fdcf46; cursor: pointer;}
-
-        /*others세로메뉴유형*/
-
-        
-
-
-
-        /*2. second 시작*/
-        #second { display: none;}
-        #slide { display: none;}
-
-
-        /*3. third 시작*/
-        #third {}
-        #map {position: absolute; left: 0; top: 81px; bottom: 0; right: 0;}
-        
-        #copyright {position: fixed; bottom: 1px; right: 2px; z-index: 1;}
-        #copyright > a { font-size: 0.7rem; }
-        #copyright > a > span {padding-left: 2px; font-size: 0.7rem;} /*왜 a태그 안 span 태그는 안먹는가??*/
-        #level3button {position: fixed; bottom: 38px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black; z-index: 1; background-color: white;}
-        #level3button > img {width: 35px; height: 35px; position: relative; left: 5.5px; top: 6px}
-        #level3button > img:hover {cursor: pointer;}
-        #findme { position: fixed; bottom: 95px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black; z-index: 1; background-color: white}
-        #findme > img {width: 35px; height: 35px; position: relative; left: 5.5px; top: 6px}
-        #findme > img:hover {cursor: pointer;}
-
-        .wrap {position: absolute;left: -170px;bottom: 5px;width: 355px; height: 312px; text-align: left;overflow: hidden;font-size: 0.9rem;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;}
-        .wrap * {padding: 0;margin: 0;}
-        .wrap .head {width: 355px;height: 300px;border-radius: 5px; border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}
-        .wrap .head:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}
-        .head .title {padding: 5px 0 0 5px;height: 25px;background: #eee;border-bottom: 1px solid #ddd;font-size: 1.1rem; font-weight: bold;}
-        .head .close {position: absolute;top: 5px;right: 10px;color: #888;width: 17px;height: 17px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');}
-        .head .close:hover {cursor: pointer;}
-        .head:after {content: '';position: absolute;margin-left: -12px;left: 49%;bottom: 0;width: 22px;height: 12px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
-        .body { width: 355px; height: 265px;}
-        .leftside { float: left; width: 10px; height: 265px;}
-        .rightside {float: left; width: 25px; height: 265px;}
-        .Abus { float: left; width: 150px; height: 265px;}
-        .Bbus { float: left; width: 150px; height: 265px;}
-        table {border-collapse: collapse;}
-        th {border: 1px solid gray;}
-        td {border: 1px solid gray; text-align: center;}
-        /*ATM마커별 커스텀오버레이*/
-        .ATM {position: absolute; left: -90px; top: -120px; width: 180px; height: 100px; border: 1px solid #fff; border-radius: 10px;}
-        .ATM::after {border-top: 15px solid #eee; border-bottom: 15px solid transparent;border-left: 15px solid transparent;border-right: 15px solid transparent; content: "";position: absolute; left: 75px; top:100px;}
-        #ATMempty {width: 180px; height: 10px; background-color: #eee; border-top-left-radius: 10px; border-top-right-radius: 10px;}
-        #ATMtop { width: 180px; height: 50px; background-color: #eee;}
-        #ATMtop > a {padding-left: 10px;}
-        #ATMtop > a > span > img {position: relative; top: -8px; left: 8px;}
-        #ATMtop > a > span > img:hover {cursor: pointer;}
-        #ATMbottom {margin-top: -10px; width: 180px; height: 50px; background-color: #eee; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;}
-        #ATMbottom > dl {padding-left: 10px;}
-        #ATMbottom > dl > dt > a {font-weight: bold;}
-        #ATMbottom > dl > dt > span {padding-left: 5px; font-size: 0.8rem;}
-        #ATMbottom > dl > dd { padding-left: 5px;}
-        /*심야버스 커스텀오버레이*/
-        #nightbuswrap {display: none; margin: 0; padding: 0; position: fixed; top: 0; bottom: 0; right: 0; left: 0; z-index: 7;}
-        #nightbushead { position: absolute; top: 0; right: 0; left: 0; height: 250px; background-image: url(https://camo.githubusercontent.com/c9b4e788967fff5f53cc9d885434e0f4014e9abe38b45e17f199578040c9530d/68747470733a2f2f6c69622e6a656a756e752e61632e6b722f70797869732d6170692f6174746163686d656e74732f42554c4c4554494e2f61336230653665652d326531612d343566632d386439622d643164636333356161363465); background-size: 100vw 250px; z-index: 5;}
-        #nightbusbody { position: absolute; top: 250px; right: 0; left: 0; bottom: 30px; margin-top: -20px; background-image: url(https://user-images.githubusercontent.com/81807434/136660104-30a9d12f-a072-4a83-9377-2e4a6ca165aa.png); background-size: 100vw 100%; z-index: 4;}
-        #nightbusclose {position: absolute; top: 15px; right: 15px; z-index: 6;}
-        #nightbusclose > img:hover {cursor: pointer;}
-    }
-  
-</style>
 <body>
     <div id="wrapper"> <!--wrapper가 필요없다...사실상 자식요소들이 전부다 position:absolute여서 잇으나 마나다... float:left도 안먹힘.. 다음번엔 float사용해서 해봐야될듯..-->
         <div id="first">
