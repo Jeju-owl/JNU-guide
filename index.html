@@ -27,10 +27,11 @@
             #Mainmenu {background-color: #fdcf46}
             #Mainmenu > ul > li { height: 25px; border-bottom: 1px solid rgb(56, 57, 57); padding-left: 5px; padding-top: 7px; font-size: 1rem;}
             #Mainmenu > ul > li:hover {text-align: center; cursor: pointer;}
-            #Mainmenu > ul > li > ul.submenu {display: none;/*hover할 때 보이도록 미리셋팅*/ position: relative; top: -25px; left: 115px; z-index: 2; background-color: rgb(231, 231, 225); width: 170px; text-align: justify;} /*ul에 submenu클래스 연동*/
+            #Mainmenu > ul > li > ul.submenu {display: none;/*hover할 때 보이도록 미리셋팅*/ position: relative; top: -25px; left: 115px; z-index: 2; width: 170px; text-align: justify;} /*ul에 submenu클래스 연동*/
             #Mainmenu > ul > li > ul > li:hover {background-color: rgb(143, 154, 145);}
             #Mainmenu > ul > li > ul > li {border-top: 1px solid rgb(195, 197, 195); height: 21px; border-bottom: 1px solid rgb(195, 197, 195); padding-left: 10px; padding-top: 10px;}
-            #guitar > ul > li {position: relative; top: -265px; background-color: rgb(231, 231, 225);}
+            #guitar > ul > li {background-color: rgb(231, 231, 225);}
+            #guitar2 > ul > li {position: relative; top: -265px; background-color: rgb(231, 231, 225);}
             #others {position: absolute; left: 0; bottom: 10px;}
             #others > ul > li {color: rgb(143, 154, 145); height: 25px; padding-left: 5px;}  
             #others > ul > li:hover {padding-top: 10px; color: black; background-color: #fdcf46; height: 30px; transition: 1s; width: 120px; cursor: pointer;}
@@ -117,10 +118,11 @@
             #Mainmenu {background-color: #fdcf46}
             #Mainmenu > ul > li { height: 25px; border-bottom: 1px solid rgb(56, 57, 57); padding-left: 5px; padding-top: 7px; font-size: 1rem;}
             #Mainmenu > ul > li:hover {text-align: center; cursor: pointer;}
-            #Mainmenu > ul > li > ul.submenu {display: none;/*hover할 때 보이도록 미리셋팅*/ position: relative; top: -25px; left: 115px; z-index: 2; background-color: rgb(231, 231, 225); width: 170px; text-align: justify;} /*ul에 submenu클래스 연동*/
+            #Mainmenu > ul > li > ul.submenu {display: none;/*hover할 때 보이도록 미리셋팅*/ position: relative; top: -25px; left: 115px; z-index: 2; width: 170px; text-align: justify;} /*ul에 submenu클래스 연동*/
             #Mainmenu > ul > li > ul > li:hover {background-color: rgb(143, 154, 145);}
             #Mainmenu > ul > li > ul > li {border-top: 1px solid rgb(195, 197, 195); height: 21px; border-bottom: 1px solid rgb(195, 197, 195); padding-left: 10px; padding-top: 10px;}
-            #guitar > ul > li {position: relative; top: -263px; background-color: rgb(231, 231, 225);}
+            #guitar > ul > li {background-color: rgb(231, 231, 225);}
+            #guitar2 > ul > li {position: relative; top: -263px; background-color: rgb(231, 231, 225);}
             #others {position: absolute; left: 0; bottom: 10px;}
             #others > ul > li {color: rgb(143, 154, 145); height: 25px; padding-left: 5px;}  
             #others > ul > li:hover {padding-top: 10px; color: black; background-color: #fdcf46; height: 30px; transition: 1s; width: 120px; cursor: pointer;}
@@ -277,13 +279,13 @@
             <div id="college">대학정보</div>
             <div id="Mainmenu">
                 <ul>
-                    <li><a>경상대학</a> <!--href="#"->페이지 최상단으로, href="#none"->아무이벤트발생X-->
+                    <li id="guitar"><a>경상대학</a> <!--href="#"->페이지 최상단으로, href="#none"->아무이벤트발생X-->
                         <ul class="submenu">
                             <li onclick="Moving(33.45408,126.5616)"><a>경상대학 1호관</a></li>
                             <li onclick="Moving(33.45383,126.56273)"><a>경상대학 2호관</a></li>
                         </ul>
                     </li>
-                    <li><a>공과대학</a>
+                    <li id="guitar"><a>공과대학</a>
                         <ul class="submenu">
                             <li onclick="Moving(33.457079581318155,126.56548292194468)"><a>공과대학 1호관</a></li>
                             <li onclick="Moving(33.457532276126734,126.56602385594834)"><a>공과대학 2호관</a></li>
@@ -291,32 +293,32 @@
                             <li onclick="Moving(33.454722569301694,126.5650321731981)"><a>공과대학 4호관</a></li>
                         </ul>
                     </li>
-                    <li><a>사범대학</a>
+                    <li id="guitar"><a>사범대학</a>
                         <ul class="submenu">
                             <li onclick="Moving(33.45495,126.56311)"><a>사범대학 1호관</a></li>
                             <li onclick="Moving(33.455327703574156,126.56341037283636)"><a>사범대학 2호관</a></li>
                         </ul>
                     </li>
-                    <li><a>인문대학</a>
+                    <li id="guitar"><a>인문대학</a>
                         <ul class="submenu">
                             <li onclick="Moving(33.45348,126.55839)"><a>인문대학 1호관</a></li>
                             <li onclick="Moving(33.45273,126.55851)"><a>인문대학 2호관</a></li>
                         </ul>
                     </li>
-                    <li><a>해양과학대학</a>
+                    <li id="guitar"><a>해양과학대학</a>
                         <ul class="submenu">
                             <li onclick="Moving(33.45702,126.56378)"><a>해양과학대학 1호관</a></li>
                             <li onclick="Moving(33.45726,126.56453)"><a>해양과학대학 3호관</a></li>
                             <li onclick="Moving(33.45487442554771,126.56655876010579)"><a>해양과학대학 4호관</a></li>
                         </ul>
                     </li>
-                    <li><a>예술디자인대학</a>
+                    <li id="guitar"><a>예술디자인대학</a>
                         <ul class="submenu">
                             <li onclick="Moving(33.45295,126.56174)"><a>미술관</a></li>
                             <li onclick="Moving(33.45233,126.56279)"><a>음악관</a></li>
                         </ul>
                     </li>
-                    <li><a>학생생활관</a>
+                    <li id="guitar"><a>학생생활관</a>
                         <ul class="submenu">
                             <li onclick="Moving(33.45107380062495,126.55688698033272)"><a>학생생활관 1호관</a></li>
                             <li onclick="Moving(33.45031,126.55704)"><a>학생생활관 2호관</a></li>
@@ -326,7 +328,7 @@
                             <li onclick="Moving(33.4536,126.55662)"><a>학생생활관 6호관</a></li>
                         </ul>
                     </li>
-                    <li><a>기타대학</a>
+                    <li id="guitar"><a>기타대학</a>
                         <ul class="submenu">
                             <li onclick="Moving(33.45606,126.5644)"><a>간호대학</a></li>
                             <li onclick="Moving(33.45486,126.56162)"><a>사회과학대학</a></li>
@@ -337,7 +339,7 @@
                             <li onclick="Moving(33.452871509617744,126.56360015056718)"><a>의학전문대학원</a></li>
                         </ul>
                     </li>
-                    <li id="guitar"><a>기타건물</a>
+                    <li id="guitar2"><a>기타건물</a>
                         <ul class="submenu">
                             <li onclick="Moving(33.45594, 126.56203)"><a>대학본관</a></li>
                             <li onclick="Moving(33.45572,126.56447)"><a>교양강의동</a></li>
@@ -385,7 +387,7 @@
 <script> //webstoryboy is god
     $("#Mainmenu > ul >li").hover(
         function(){
-            $(this).find(".submenu").stop().show(200); //안에 숫자 1000당 1초 기본값은 400
+            $(this).find(".submenu").stop().show(); //안에 숫자 1000당 1초 기본값은 400
         },
         function(){
             $(this).find(".submenu").stop().hide();
@@ -542,7 +544,6 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 
     //me클래스를 클릭했을 때 함수가 발생한다. 그로인해 함수안에 있는 2개의 다른 함수가 실행된다.
     $('.me').click(function(){
-        levelchange();
         Moving1(latitude, longitude);
     });
 
