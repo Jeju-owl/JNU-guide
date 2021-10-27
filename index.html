@@ -362,7 +362,7 @@
             <div id="others">
                 <ul>
                     <li>주변식당정보</li>
-                    <li onmouseover="InnerBus(),RouteA(), Moving1(33.45594, 126.56203)" onmouseout="lineX()">순환버스</li>
+                    <li onmouseover="InnerBus(),RouteA(),RouteB(), Moving1(33.45594, 126.56203)" onmouseout="lineX()">순환버스</li>
                     <li class="nightbuslayer">야간버스</li>
                 </ul>
             </div>
@@ -614,13 +614,11 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 
         // 선을 구성하는 좌표 배열입니다. 이 좌표들을 이어서 선을 표시합니다
         var linePath = [
-            new kakao.maps.LatLng(33.45729187894573, 126.56306996217845),// 해양과학대 맞은편
-            new kakao.maps.LatLng(33.456358909664424, 126.56306966217845),// 미래융합대학 맞은편에서 아래로 쭉
-            new kakao.maps.LatLng(33.456358909664424 , 126.56134286085532),//왼쪽으로 쭉
-            new kakao.maps.LatLng(33.45659946598068 , 126.56163729940678),//방향 표시
-            
-            // 노선 작업 잠시 중단(기존의 노선과 평행이 아니어서 보기 불편한점이 있다. 또한 노선 모양 어떤식으로 할지 논의가 필요)
-            // 중간고사 공부하다가 심심하면 와서 해야지 ㅎㅎ
+            new kakao.maps.LatLng(33.45724671443268, 126.56301353038177),// 해양과학대 맞은편
+            new kakao.maps.LatLng(33.456372442907245, 126.5630932090048),// 미래융합대학 맞은편에서 아래로 쭉
+            new kakao.maps.LatLng(33.4563663665266 , 126.56137225809748),//왼쪽으로 쭉
+            new kakao.maps.LatLng(33.4565475203015 , 126.56160798137758 ),//방향 표시
+        
 
         ];
 
@@ -629,7 +627,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
             path: linePath, // 선을 구성하는 좌표배열 입니다
             strokeWeight: 3, // 선의 두께 입니다
             strokeColor: '#FF0000', // 빨간색
-            strokeOpacity: 0.7, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+            strokeOpacity: 0.5, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
             strokeStyle: 'solid' // 선의 스타일입니다
         });
 
@@ -640,6 +638,37 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         //지도 확대 레벨 4
         map.setLevel(4);
     
+        }
+
+        // B노선 구분
+        function RouteB() {
+
+        // 선을 구성하는 좌표 배열입니다. 이 좌표들을 이어서 선을 표시합니다
+        var linePath = [
+            new kakao.maps.LatLng(33.45736543607612, 126.56344318511718),
+            new kakao.maps.LatLng(33.455715574328956, 126.56346220924692),
+            new kakao.maps.LatLng(33.455717126217664 , 126.5639031996965),
+            new kakao.maps.LatLng(33.45586929808748 , 126.56359051180304 ),
+
+
+        ];
+
+        // 지도에 표시할 선을 생성합니다
+        var polyline = new kakao.maps.Polyline({
+            path: linePath, // 선을 구성하는 좌표배열 입니다
+            strokeWeight: 3, // 선의 두께 입니다
+            strokeColor: '#0000FF', // 파란색
+            strokeOpacity: 0.5, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+            strokeStyle: 'solid' // 선의 스타일입니다
+        });
+
+        // 지도에 선을 표시합니다 
+        polyline.setMap(map);
+        //lines배열에 push
+        lines.push(polyline);
+        //지도 확대 레벨 4
+        map.setLevel(4);
+
         }
 
     //순환버스노선 지우는 함수
