@@ -28,11 +28,12 @@
             #Mainmenu > ul > li { height: 25px; border-bottom: 1px solid rgb(56, 57, 57); padding-left: 5px; padding-top: 7px; font-size: 1rem;}
             #Mainmenu > ul > li:hover {text-align: center; cursor: pointer;}
             #Mainmenu > ul > li > ul.submenu {display: none;/*hover할 때 보이도록 미리셋팅*/ position: relative; top: -25px; left: 115px; z-index: 2; width: 170px; text-align: justify; background-color: rgb(231, 231, 225); border-top: #888 1px solid; border-right: #888 1px solid; border-bottom: #888 1px solid;} /*ul에 submenu클래스 연동*/
-            #Mainmenu > ul > li > ul.othermenu { position: relative; left: 115px; top: -289px; width: 170px;  z-index: 2; text-align: justify; background-color: rgb(231, 231, 225); border-top: #888 1px solid; border-right: #888 1px solid; border-bottom: #888 1px solid;}
+            #Mainmenu > ul > li > ul.othermenu {display: none; position: relative; left: 115px; top: -289px; width: 170px;  z-index: 2; text-align: justify; background-color: rgb(231, 231, 225); border-top: #888 1px solid; border-right: #888 1px solid; border-bottom: #888 1px solid;}
             #Mainmenu > ul > li > ul > li:hover {background-color: rgb(143, 154, 145);}
             #Mainmenu > ul > li > ul > li {border-top: 1px solid rgb(195, 197, 195); height: 21px; border-bottom: 1px solid rgb(195, 197, 195); padding-left: 10px; padding-top: 10px;}
             #others {position: absolute; left: 0; bottom: 10px;}
-            #others > ul > li {color: rgb(143, 154, 145); height: 25px; padding-left: 5px;}  
+            #others > ul > li {height: 25px; padding-left: 5px;}
+            #others > ul > li>a {color: rgb(143, 154, 145);}
             #others > ul > li:hover {padding-top: 10px; color: black; background-color: #fdcf46; height: 30px; transition: 1s; width: 120px; cursor: pointer;}
     
             /*others세로메뉴유형*/
@@ -122,7 +123,7 @@
             #Mainmenu > ul > li { height: 25px; border-bottom: 1px solid rgb(56, 57, 57); padding-left: 5px; padding-top: 7px; font-size: 1rem;}
             #Mainmenu > ul > li:hover {text-align: center; cursor: pointer;}
             #Mainmenu > ul > li > ul.submenu {display: none;/*hover할 때 보이도록 미리셋팅*/ position: relative; top: -25px; left: 115px; z-index: 2; width: 170px; text-align: justify; background-color: rgb(231, 231, 225); border-top: #888 1px solid; border-right: #888 1px solid; border-bottom: #888 1px solid;} /*ul에 submenu클래스 연동*/
-            #Mainmenu > ul > li > ul.othermenu { position: relative; left: 115px; top: -289px; width: 170px;  z-index: 2; text-align: justify; background-color: rgb(231, 231, 225); border-top: #888 1px solid; border-right: #888 1px solid; border-bottom: #888 1px solid;}
+            #Mainmenu > ul > li > ul.othermenu {display: none; position: relative; left: 115px; top: -289px; width: 170px;  z-index: 2; text-align: justify; background-color: rgb(231, 231, 225); border-top: #888 1px solid; border-right: #888 1px solid; border-bottom: #888 1px solid;}
             #Mainmenu > ul > li > ul > li:hover {background-color: rgb(143, 154, 145);}
             #Mainmenu > ul > li > ul > li {border-top: 1px solid rgb(195, 197, 195); height: 21px; border-bottom: 1px solid rgb(195, 197, 195); padding-left: 10px; padding-top: 10px;}
             #others {position: absolute; left: 0; bottom: 10px;}
@@ -212,7 +213,8 @@
             #Mainmenu > ul > li > ul > li {float: left; width: 25vw; height: 27px; border-right: 1px solid rgb(195, 197, 195); border-bottom: 1px solid rgb(195, 197, 195); padding-top: 4px; background-color: rgb(231, 231, 225);}
             #Mainmenu > ul > li > ul > li > a {font-size: 0.8rem;}
             #others {float: left; width: 25vw; height: 81px; background-color: rgb(56, 57, 57);}
-            #others > ul > li {color: rgb(143, 154, 145); height: 27px; text-align: center; padding-top: 6px;}
+            #others > ul > li {height: 27px; text-align: center; padding-top: 6px;}
+            #others > ul > li >a {color: rgb(143, 154, 145);}
             #others > ul > li:hover {font-weight: 900; color: #fdcf46; cursor: pointer;}
     
             /*others세로메뉴유형*/
@@ -290,81 +292,81 @@
             <div id="college">대학정보</div>
             <div id="Mainmenu">
                 <ul>
-                    <li><a href="none">경상대학</a> <!--href="#"->페이지 최상단으로, href="#none"->아무이벤트발생X-->
+                    <li><a href="javascript:seemenu()">경상대학</a> <!--href="#"->페이지 최상단으로, href="#none"->아무이벤트발생X-->
                         <ul class="submenu">
                             <li onclick="Moving(33.45408,126.5616)"><a href="javascript:Moving(33.45408,126.5616)">경상대학 1호관</a></li>
-                            <li onclick="Moving(33.45383,126.56273)"><a href="none">경상대학 2호관</a></li>
+                            <li onclick="Moving(33.45383,126.56273)"><a href="javascript:Moving(33.45383,126.56273)">경상대학 2호관</a></li>
                         </ul>
                     </li>
-                    <li><a href="none">공과대학</a>
+                    <li><a href="#none">공과대학</a>
                         <ul class="submenu">
-                            <li onclick="Moving(33.457079581318155,126.56548292194468)"><a>공과대학 1호관</a></li>
-                            <li onclick="Moving(33.457532276126734,126.56602385594834)"><a>공과대학 2호관</a></li>
-                            <li onclick="Moving(33.456447972482756,126.56534355350085)"><a>공과대학 3호관</a></li>
-                            <li onclick="Moving(33.454722569301694,126.5650321731981)"><a>공과대학 4호관</a></li>
+                            <li onclick="Moving(33.457079581318155,126.56548292194468)"><a href="javascript:Moving(33.457079581318155,126.56548292194468)">공과대학 1호관</a></li>
+                            <li onclick="Moving(33.457532276126734,126.56602385594834)"><a href="javascript:Moving(33.457079581318155,126.56548292194468)">공과대학 2호관</a></li>
+                            <li onclick="Moving(33.456447972482756,126.56534355350085)"><a href="javascript:Moving(33.457079581318155,126.56548292194468)">공과대학 3호관</a></li>
+                            <li onclick="Moving(33.454722569301694,126.5650321731981)"><a href="javascript:Moving(33.457079581318155,126.56548292194468)">공과대학 4호관</a></li>
                         </ul>
                     </li>
-                    <li><a>사범대학</a>
+                    <li><a href="#none">사범대학</a>
                         <ul class="submenu">
-                            <li onclick="Moving(33.45495,126.56311)"><a>사범대학 1호관</a></li>
-                            <li onclick="Moving(33.455327703574156,126.56341037283636)"><a>사범대학 2호관</a></li>
+                            <li onclick="Moving(33.45495,126.56311)"><a href="javascript:Moving(33.45495,126.56311)">사범대학 1호관</a></li>
+                            <li onclick="Moving(33.455327703574156,126.56341037283636)"><a href="javascript:Moving(33.455327703574156,126.56341037283636)">사범대학 2호관</a></li>
                         </ul>
                     </li>
-                    <li><a>인문대학</a>
+                    <li><a href="#none">인문대학</a>
                         <ul class="submenu">
-                            <li onclick="Moving(33.45348,126.55839)"><a>인문대학 1호관</a></li>
-                            <li onclick="Moving(33.45273,126.55851)"><a>인문대학 2호관</a></li>
+                            <li onclick="Moving(33.45348,126.55839)"><a href="javascript:Moving(33.45348,126.55839)">인문대학 1호관</a></li>
+                            <li onclick="Moving(33.45273,126.55851)"><a href="javascript:Moving(33.45273,126.55851)">인문대학 2호관</a></li>
                         </ul>
                     </li>
-                    <li><a>해양과학대학</a>
+                    <li><a href="#none">해양과학대학</a>
                         <ul class="submenu">
-                            <li onclick="Moving(33.45702,126.56378)"><a>해양과학대학 1호관</a></li>
-                            <li onclick="Moving(33.45726,126.56453)"><a>해양과학대학 3호관</a></li>
-                            <li onclick="Moving(33.45487442554771,126.56655876010579)"><a>해양과학대학 4호관</a></li>
+                            <li onclick="Moving(33.45702,126.56378)"><a href="javascript:Moving(33.45702,126.56378)">해양과학대학 1호관</a></li>
+                            <li onclick="Moving(33.45726,126.56453)"><a href="javascript:Moving(33.45726,126.56453)">해양과학대학 3호관</a></li>
+                            <li onclick="Moving(33.45487442554771,126.56655876010579)"><a href="javascript:Moving(33.45487442554771,126.56655876010579)">해양과학대학 4호관</a></li>
                         </ul>
                     </li>
-                    <li><a>예술디자인대학</a>
+                    <li><a href="#none">예술디자인대학</a>
                         <ul class="submenu">
-                            <li onclick="Moving(33.45295,126.56174)"><a>미술관</a></li>
-                            <li onclick="Moving(33.45233,126.56279)"><a>음악관</a></li>
+                            <li onclick="Moving(33.45295,126.56174)"><a href="javascript:Moving(33.45295,126.56174)">미술관</a></li>
+                            <li onclick="Moving(33.45233,126.56279)"><a href="javascript:Moving(33.45233,126.56279)">음악관</a></li>
                         </ul>
                     </li>
-                    <li><a>학생생활관</a>
+                    <li><a href="#none">학생생활관</a>
                         <ul class="submenu">
-                            <li onclick="Moving(33.45107380062495,126.55688698033272)"><a>학생생활관 1호관</a></li>
-                            <li onclick="Moving(33.45031,126.55704)"><a>학생생활관 2호관</a></li>
-                            <li onclick="Moving(33.45168,126.55648)"><a>학생생활관 3호관</a></li>
-                            <li onclick="Moving(33.450617783436414,126.55795139727991)"><a>학생생활관 4호관</a></li>
-                            <li onclick="Moving(33.45226,126.5566)"><a>학생생활관 5호관</a></li>
-                            <li onclick="Moving(33.4536,126.55662)"><a>학생생활관 6호관</a></li>
+                            <li onclick="Moving(33.45107380062495,126.55688698033272)"><a href="javascript:Moving(33.45107380062495,126.55688698033272)">학생생활관 1호관</a></li>
+                            <li onclick="Moving(33.45031,126.55704)"><a href="javascript:Moving(33.45031,126.55704)">학생생활관 2호관</a></li>
+                            <li onclick="Moving(33.45168,126.55648)"><a href="javascript:Moving(33.45168,126.55648)">학생생활관 3호관</a></li>
+                            <li onclick="Moving(33.450617783436414,126.55795139727991)"><a href="javascript:Moving(33.450617783436414,126.55795139727991)">학생생활관 4호관</a></li>
+                            <li onclick="Moving(33.45226,126.5566)"><a href="javascript:Moving(33.45226,126.5566)">학생생활관 5호관</a></li>
+                            <li onclick="Moving(33.4536,126.55662)"><a href="javascript:Moving(33.4536,126.55662)">학생생활관 6호관</a></li>
                         </ul>
                     </li>
-                    <li><a>기타대학</a>
+                    <li><a href="#none">기타대학</a>
                         <ul class="submenu">
-                            <li onclick="Moving(33.45606,126.5644)"><a>간호대학</a></li>
-                            <li onclick="Moving(33.45486,126.56162)"><a>사회과학대학</a></li>
-                            <li onclick="Moving(33.45205,126.55864)"><a>수의과대학</a></li>
-                            <li onclick="Moving(33.45825,126.56277)"><a>생명자원과학대학</a></li>
-                            <li onclick="Moving(33.45742,126.5601)"><a>약학대학</a></li>
-                            <li onclick="Moving(33.45353,126.56037)"><a>법학전문대학원</a></li>
-                            <li onclick="Moving(33.452871509617744,126.56360015056718)"><a>의학전문대학원</a></li>
+                            <li onclick="Moving(33.45606,126.5644)"><a href="javascript:Moving(33.45606,126.5644)">간호대학</a></li>
+                            <li onclick="Moving(33.45486,126.56162)"><a href="javascript:Moving(33.45486,126.56162)">사회과학대학</a></li>
+                            <li onclick="Moving(33.45205,126.55864)"><a href="javascript:Moving(33.45205,126.55864)">수의과대학</a></li>
+                            <li onclick="Moving(33.45825,126.56277)"><a href="javascript:Moving(33.45825,126.56277)">생명자원과학대학</a></li>
+                            <li onclick="Moving(33.45742,126.5601)"><a href="javascript:Moving(33.45742,126.5601)">약학대학</a></li>
+                            <li onclick="Moving(33.45353,126.56037)"><a href="javascript:Moving(33.45353,126.56037)">법학전문대학원</a></li>
+                            <li onclick="Moving(33.452871509617744,126.56360015056718)"><a href="javascript:Moving(33.452871509617744,126.56360015056718)">의학전문대학원</a></li>
                         </ul>
                     </li>
-                    <li><a>기타건물</a>
+                    <li><a href="#none">기타건물</a>
                         <ul class="othermenu">
-                            <li onclick="Moving(33.45594, 126.56203)"><a>대학본관</a></li>
-                            <li onclick="Moving(33.45572,126.56447)"><a>교양강의동</a></li>
-                            <li onclick="Moving(33.45261002990801,126.56104161085385)"><a>중앙도서관</a></li>
-                            <li onclick="Moving(33.452140710737865,126.5609041524228)"><a>중앙디지털도서관</a></li>
-                            <li onclick="Moving(33.45885,126.56186)"><a>문화교류관(박물관)</a></li>
-                            <li onclick="Moving(33.45359,126.55946)"><a>아라뮤즈홀</a></li>
-                            <li onclick="Moving(33.45542,126.55947)"><a>운동장</a></li>
-                            <li onclick="Moving(33.45407,126.56028)"><a>언어교육원</a></li>
-                            <li onclick="Moving(33.4545,126.56355)"><a>정보화본부</a></li>
-                            <li onclick="Moving(33.45603,126.56051)"><a>체육관</a></li>
-                            <li onclick="Moving(33.45501044728738,126.56037878035586)"><a>학생회관</a></li>
-                            <li onclick="Moving(33.45231,126.56017)"><a>평생교육원</a></li>
-                            <li onclick="Moving(33.45229,126.55972)"><a>아라컨벤션홀</a></li>
+                            <li onclick="Moving(33.45594, 126.56203)"><a href="javascript:Moving(33.45594, 126.56203)">대학본관</a></li>
+                            <li onclick="Moving(33.45572,126.56447)"><a href="javascript:Moving(33.45572,126.56447)">교양강의동</a></li>
+                            <li onclick="Moving(33.45261002990801,126.56104161085385)"><a href="javascript:Moving(33.45261002990801,126.56104161085385)">중앙도서관</a></li>
+                            <li onclick="Moving(33.452140710737865,126.5609041524228)"><a href="javascript:Moving(33.452140710737865,126.5609041524228)">중앙디지털도서관</a></li>
+                            <li onclick="Moving(33.45885,126.56186)"><a href="javascript:Moving(33.45885,126.56186)">문화교류관(박물관)</a></li>
+                            <li onclick="Moving(33.45359,126.55946)"><a href="javascript:Moving(33.45359,126.55946)">아라뮤즈홀</a></li>
+                            <li onclick="Moving(33.45542,126.55947)"><a href="javascript:Moving(33.45542,126.55947)">운동장</a></li>
+                            <li onclick="Moving(33.45407,126.56028)"><a href="javascript:Moving(33.45407,126.56028)">언어교육원</a></li>
+                            <li onclick="Moving(33.4545,126.56355)"><a href="javascript:Moving(33.4545,126.56355)">정보화본부</a></li>
+                            <li onclick="Moving(33.45603,126.56051)"><a href="javascript:Moving(33.45603,126.56051)">체육관</a></li>
+                            <li onclick="Moving(33.45501044728738,126.56037878035586)"><a href="javascript:Moving(33.45501044728738,126.56037878035586)">학생회관</a></li>
+                            <li onclick="Moving(33.45231,126.56017)"><a href="javascript:Moving(33.45231,126.56017)">평생교육원</a></li>
+                            <li onclick="Moving(33.45229,126.55972)"><a href="javascript:Moving(33.45229,126.55972)">아라컨벤션홀</a></li>
                             <!--<li onclick="Moving(위도,경도)">건물명</li>--->
                         </ul>
                     </li>
@@ -372,9 +374,9 @@
             </div>
             <div id="others">
                 <ul>
-                    <li>주변식당정보</li>
-                    <li onmouseover="InnerBus(),RouteA(),RouteB(), Moving1(33.45594, 126.56203)" onmouseout="lineX()">순환버스</li>
-                    <li class="nightbuslayer">야간버스</li>
+                    <li><a href="#none">주변식당정보</a></li>
+                    <li onmouseover="InnerBus(),RouteA(),RouteB(), Moving1(33.45594, 126.56203)" onmouseout="lineX()"><a href="InnerBus(),RouteA(),RouteB(), Moving1(33.45594, 126.56203)">순환버스</a></li>
+                    <li class="nightbuslayer"><a href="#none">야간버스</a></li>
                 </ul>
             </div>
         </div>
@@ -421,6 +423,26 @@
         function(){
             $('#nightbuswrap').css('display','none');
         }
+    );
+    $("#Mainmenu > ul >li").click(
+        function(){
+            $(this).find(".submenu").stop().show(); //안에 숫자 1000당 1초 기본값은 400
+        }
+    );
+    $("#Mainmenu > ul >li > ul > li:last-child").focusout(
+        function(){
+            $("#Mainmenu > ul >li").find(".submenu").stop().hide(); //안에 숫자 1000당 1초 기본값은 400
+        },
+    );
+    $("#Mainmenu > ul >li:last-child").click(
+        function(){
+            $(this).find(".othermenu").stop().show(); //안에 숫자 1000당 1초 기본값은 400
+        }
+    );
+    $("#Mainmenu > ul >li > ul > li:last-child").focusout(
+        function(){
+            $("#Mainmenu > ul >li").find(".othermenu").stop().hide(); //안에 숫자 1000당 1초 기본값은 400
+        },
     );
 </script>
 <script> //나중에 scripts파일 만들어서 옮기기
