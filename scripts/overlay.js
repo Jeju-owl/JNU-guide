@@ -2435,58 +2435,6 @@ var content12 ='<div class="wrap">'+
             '</dl>' +
         '</div>' +
     '</div>' ;
-    // var markercontent2 =
-    // '<div class="ATM">' +
-    //     '<div id="ATMempty"></div>' +
-    //     '<div id="ATMtop">' +
-    //         '<a><img src="images/NHbank.jpg"><span><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeATMOverlay2()" title="닫기"></span></a>' +
-    //     '</div>' +
-    //     '<div id="ATMbottom">' +
-    //         '<dl>' +
-    //             '<dt><a>운영시간</a><span>(연중무휴)</span></dt>' +
-    //             '<dd>06 : 00 ~ 24 : 00</dd>' +
-    //         '</dl>' +
-    //     '</div>' +
-    // '</div>' ;
-    // var markercontent3 =
-    // '<div class="ATM">' +
-    //     '<div id="ATMempty"></div>' +
-    //     '<div id="ATMtop">' +
-    //         '<a><img src="images/NHbank.jpg"><span><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeATMOverlay3()" title="닫기"></span></a>' +
-    //     '</div>' +
-    //     '<div id="ATMbottom">' +
-    //         '<dl>' +
-    //             '<dt><a>운영시간</a><span>(연중무휴)</span></dt>' +
-    //             '<dd>06 : 00 ~ 24 : 00</dd>' +
-    //         '</dl>' +
-    //     '</div>' +
-    // '</div>' ;
-    // var markercontent4 =
-    // '<div class="ATM">' +
-    //     '<div id="ATMempty"></div>' +
-    //     '<div id="ATMtop">' +
-    //         '<a><img src="images/NHbank.jpg"><span><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeATMOverlay4()" title="닫기"></span></a>' +
-    //     '</div>' +
-    //     '<div id="ATMbottom">' +
-    //         '<dl>' +
-    //             '<dt><a>운영시간</a><span>(연중무휴)</span></dt>' +
-    //             '<dd>06 : 00 ~ 24 : 00</dd>' +
-    //         '</dl>' +
-    //     '</div>' +
-    // '</div>' ;
-    // var markercontent5 =
-    // '<div class="ATM">' +
-    //     '<div id="ATMempty"></div>' +
-    //     '<div id="ATMtop">' +
-    //         '<a><img src="images/NHbank.jpg"><span><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeATMOverlay5()" title="닫기"></span></a>' +
-    //     '</div>' +
-    //     '<div id="ATMbottom">' +
-    //         '<dl>' +
-    //             '<dt><a>운영시간</a><span>(연중무휴)</span></dt>' +
-    //             '<dd>06 : 00 ~ 24 : 00</dd>' +
-    //         '</dl>' +
-    //     '</div>' +
-    // '</div>' ;
 
     //---------------------버스정류장별 시간표 오버레이------------------------------
     
