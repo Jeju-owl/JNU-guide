@@ -2426,7 +2426,7 @@ var content12 ='<div class="wrap">'+
     '<div class="ATM">' +
         '<div id="ATMempty"></div>' +
         '<div id="ATMtop">' +
-            '<a><img src="images/NHbank.jpg"><span><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeATMOverlay1()" title="닫기"></span></a>' +
+            '<a><img src="images/NHbank.jpg"><span><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeATMOverlay()" title="닫기"></span></a>' +
         '</div>' +
         '<div id="ATMbottom">' +
             '<dl>' +
@@ -2948,9 +2948,6 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
     });
-    function closeATMOverlay1() {
-        ATMoverlay1.setMap(null); 
-    }
     kakao.maps.event.addListener(ATMmarker2, 'click', function() {
         overlay.setMap(null);
         overlay1.setMap(null);
@@ -2973,9 +2970,6 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
     });
-    function closeATMOverlay2() {
-        ATMoverlay2.setMap(null); 
-    }
     kakao.maps.event.addListener(ATMmarker3, 'click', function() {
         overlay.setMap(null);
         overlay1.setMap(null);
@@ -2998,9 +2992,6 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
     });
-    function closeATMOverlay3() {
-        ATMoverlay3.setMap(null); 
-    }
     kakao.maps.event.addListener(ATMmarker4, 'click', function() {
         overlay.setMap(null);
         overlay1.setMap(null);
@@ -3023,9 +3014,6 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
     });
-    function closeATMOverlay4() {
-        ATMoverlay4.setMap(null); 
-    }
     kakao.maps.event.addListener(ATMmarker5, 'click', function() {
         overlay.setMap(null);
         overlay1.setMap(null);
@@ -3048,9 +3036,6 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(map);
         ATMoverlay6.setMap(null);
     });
-    function closeATMOverlay5() {
-        ATMoverlay5.setMap(null); 
-    }
     kakao.maps.event.addListener(ATMmarker6, 'click', function() {
         overlay.setMap(null);
         overlay1.setMap(null);
@@ -3073,6 +3058,12 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(map);
     });
-    function closeATMOverlay5() {
-        ATMoverlay6.setMap(null); 
+    function closeATMOverlay() {
+        ATMoverlay.setMap(null);
+        ATMoverlay1.setMap(null);
+        ATMoverlay2.setMap(null);
+        ATMoverlay3.setMap(null);
+        ATMoverlay4.setMap(null);
+        ATMoverlay5.setMap(null);
+        ATMoverlay6.setMap(null);
     }
