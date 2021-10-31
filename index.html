@@ -419,6 +419,11 @@
             $('#nightbuswrap').css('display','block');
         }
     );
+    $('.nightbuslayer').focusout(
+        function(){
+            $('#nightbuswrap').css('display','none');
+        }
+    );
     $('.nightbusX').click(
         function(){
             $('#nightbuswrap').css('display','none');
