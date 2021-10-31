@@ -150,6 +150,13 @@
         map: map
     });
     ATMmarker5.setMap(map);
+    ATMmarkerPosition6 = new kakao.maps.LatLng(33.4573112632239, 126.56406194105139); //해양과학대학3호관
+    var ATMmarker6 = new kakao.maps.Marker({
+        position: ATMmarkerPosition6,
+        image: ATMmarkerImage,
+        map: map
+    });
+    ATMmarker5.setMap(map);
     //--------------------정류장별 html파일---------------------------- 
     var content ='<div class="wrap">'+
     '<div class="head">'+
@@ -2428,58 +2435,58 @@ var content12 ='<div class="wrap">'+
             '</dl>' +
         '</div>' +
     '</div>' ;
-    var markercontent2 =
-    '<div class="ATM">' +
-        '<div id="ATMempty"></div>' +
-        '<div id="ATMtop">' +
-            '<a><img src="images/NHbank.jpg"><span><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeATMOverlay2()" title="닫기"></span></a>' +
-        '</div>' +
-        '<div id="ATMbottom">' +
-            '<dl>' +
-                '<dt><a>운영시간</a><span>(연중무휴)</span></dt>' +
-                '<dd>06 : 00 ~ 24 : 00</dd>' +
-            '</dl>' +
-        '</div>' +
-    '</div>' ;
-    var markercontent3 =
-    '<div class="ATM">' +
-        '<div id="ATMempty"></div>' +
-        '<div id="ATMtop">' +
-            '<a><img src="images/NHbank.jpg"><span><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeATMOverlay3()" title="닫기"></span></a>' +
-        '</div>' +
-        '<div id="ATMbottom">' +
-            '<dl>' +
-                '<dt><a>운영시간</a><span>(연중무휴)</span></dt>' +
-                '<dd>06 : 00 ~ 24 : 00</dd>' +
-            '</dl>' +
-        '</div>' +
-    '</div>' ;
-    var markercontent4 =
-    '<div class="ATM">' +
-        '<div id="ATMempty"></div>' +
-        '<div id="ATMtop">' +
-            '<a><img src="images/NHbank.jpg"><span><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeATMOverlay4()" title="닫기"></span></a>' +
-        '</div>' +
-        '<div id="ATMbottom">' +
-            '<dl>' +
-                '<dt><a>운영시간</a><span>(연중무휴)</span></dt>' +
-                '<dd>06 : 00 ~ 24 : 00</dd>' +
-            '</dl>' +
-        '</div>' +
-    '</div>' ;
-    var markercontent5 =
-    '<div class="ATM">' +
-        '<div id="ATMempty"></div>' +
-        '<div id="ATMtop">' +
-            '<a><img src="images/NHbank.jpg"><span><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeATMOverlay5()" title="닫기"></span></a>' +
-        '</div>' +
-        '<div id="ATMbottom">' +
-            '<dl>' +
-                '<dt><a>운영시간</a><span>(연중무휴)</span></dt>' +
-                '<dd>06 : 00 ~ 24 : 00</dd>' +
-            '</dl>' +
-        '</div>' +
-    '</div>' ;
+    // var markercontent2 =
+    // '<div class="ATM">' +
+    //     '<div id="ATMempty"></div>' +
+    //     '<div id="ATMtop">' +
+    //         '<a><img src="images/NHbank.jpg"><span><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeATMOverlay2()" title="닫기"></span></a>' +
+    //     '</div>' +
+    //     '<div id="ATMbottom">' +
+    //         '<dl>' +
+    //             '<dt><a>운영시간</a><span>(연중무휴)</span></dt>' +
+    //             '<dd>06 : 00 ~ 24 : 00</dd>' +
+    //         '</dl>' +
+    //     '</div>' +
+    // '</div>' ;
+    // var markercontent3 =
+    // '<div class="ATM">' +
+    //     '<div id="ATMempty"></div>' +
+    //     '<div id="ATMtop">' +
+    //         '<a><img src="images/NHbank.jpg"><span><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeATMOverlay3()" title="닫기"></span></a>' +
+    //     '</div>' +
+    //     '<div id="ATMbottom">' +
+    //         '<dl>' +
+    //             '<dt><a>운영시간</a><span>(연중무휴)</span></dt>' +
+    //             '<dd>06 : 00 ~ 24 : 00</dd>' +
+    //         '</dl>' +
+    //     '</div>' +
+    // '</div>' ;
+    // var markercontent4 =
+    // '<div class="ATM">' +
+    //     '<div id="ATMempty"></div>' +
+    //     '<div id="ATMtop">' +
+    //         '<a><img src="images/NHbank.jpg"><span><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeATMOverlay4()" title="닫기"></span></a>' +
+    //     '</div>' +
+    //     '<div id="ATMbottom">' +
+    //         '<dl>' +
+    //             '<dt><a>운영시간</a><span>(연중무휴)</span></dt>' +
+    //             '<dd>06 : 00 ~ 24 : 00</dd>' +
+    //         '</dl>' +
+    //     '</div>' +
+    // '</div>' ;
+    // var markercontent5 =
+    // '<div class="ATM">' +
+    //     '<div id="ATMempty"></div>' +
+    //     '<div id="ATMtop">' +
+    //         '<a><img src="images/NHbank.jpg"><span><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeATMOverlay5()" title="닫기"></span></a>' +
+    //     '</div>' +
+    //     '<div id="ATMbottom">' +
+    //         '<dl>' +
+    //             '<dt><a>운영시간</a><span>(연중무휴)</span></dt>' +
+    //             '<dd>06 : 00 ~ 24 : 00</dd>' +
+    //         '</dl>' +
+    //     '</div>' +
+    // '</div>' ;
 
     //---------------------버스정류장별 시간표 오버레이------------------------------
     
@@ -2582,32 +2589,39 @@ var content12 ='<div class="wrap">'+
     ATMoverlay1.setMap(null);
     
     var ATMoverlay2 = new kakao.maps.CustomOverlay({ //본관
-        content: markercontent2,
+        content: markercontent1,
         map: map,
         position: ATMmarker2.getPosition()       
     });
     ATMoverlay2.setMap(null);
     
     var ATMoverlay3 = new kakao.maps.CustomOverlay({ //중앙도서관
-        content: markercontent3,
+        content: markercontent1,
         map: map,
         position: ATMmarker3.getPosition()       
     });
     ATMoverlay3.setMap(null);
     
     var ATMoverlay4 = new kakao.maps.CustomOverlay({ //학생회관
-        content: markercontent4,
+        content: markercontent1,
         map: map,
         position: ATMmarker4.getPosition()       
     });
     ATMoverlay4.setMap(null);
     
     var ATMoverlay5 = new kakao.maps.CustomOverlay({ //학생생활관
-        content: markercontent5,
+        content: markercontent1,
         map: map,
         position: ATMmarker5.getPosition()       
     });
     ATMoverlay5.setMap(null);
+
+    var ATMoverlay6 = new kakao.maps.CustomOverlay({ //해양과학대학3호관
+        content: markercontent1,
+        map: map,
+        position: ATMmarker6.getPosition()       
+    });
+    ATMoverlay6.setMap(null);
        
     // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
     kakao.maps.event.addListener(busmarker, 'click', function() {
@@ -2630,6 +2644,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay3.setMap(null);
         ATMoverlay4.setMap(null);
         ATMoverlay5.setMap(null);
+        ATMoverlay6.setMap(null);
     });
 
     // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다 
@@ -2657,6 +2672,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay3.setMap(null);
         ATMoverlay4.setMap(null);
         ATMoverlay5.setMap(null);
+        ATMoverlay6.setMap(null);
     });
     function closeOverlay1() {
         overlay1.setMap(null);
@@ -2681,6 +2697,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay3.setMap(null);
         ATMoverlay4.setMap(null);
         ATMoverlay5.setMap(null);
+        ATMoverlay6.setMap(null);
     });
     function closeOverlay2() {
         overlay2.setMap(null);
@@ -2705,6 +2722,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay3.setMap(null);
         ATMoverlay4.setMap(null);
         ATMoverlay5.setMap(null);
+        ATMoverlay6.setMap(null);
     });
     function closeOverlay3() {
         overlay3.setMap(null);
@@ -2729,6 +2747,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay3.setMap(null);
         ATMoverlay4.setMap(null);
         ATMoverlay5.setMap(null);
+        ATMoverlay6.setMap(null);
     });
     function closeOverlay4() {
         overlay4.setMap(null);
@@ -2753,6 +2772,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay3.setMap(null);
         ATMoverlay4.setMap(null);
         ATMoverlay5.setMap(null);
+        ATMoverlay6.setMap(null);
     });
     function closeOverlay5() {
         overlay5.setMap(null);
@@ -2777,6 +2797,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay3.setMap(null);
         ATMoverlay4.setMap(null);
         ATMoverlay5.setMap(null);
+        ATMoverlay6.setMap(null);
     });
     function closeOverlay6() {
         overlay6.setMap(null);
@@ -2801,6 +2822,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay3.setMap(null);
         ATMoverlay4.setMap(null);
         ATMoverlay5.setMap(null);
+        ATMoverlay6.setMap(null);
     });
     function closeOverlay7() {
         overlay7.setMap(null);
@@ -2825,6 +2847,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay3.setMap(null);
         ATMoverlay4.setMap(null);
         ATMoverlay5.setMap(null);
+        ATMoverlay6.setMap(null);
     });
     function closeOverlay8() {
         overlay8.setMap(null);
@@ -2849,6 +2872,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay3.setMap(null);
         ATMoverlay4.setMap(null);
         ATMoverlay5.setMap(null);
+        ATMoverlay6.setMap(null);
     });
     function closeOverlay9() {
         overlay9.setMap(null);
@@ -2873,6 +2897,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay3.setMap(null);
         ATMoverlay4.setMap(null);
         ATMoverlay5.setMap(null);
+        ATMoverlay6.setMap(null);
     });
     function closeOverlay10() {
         overlay10.setMap(null);
@@ -2897,6 +2922,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay3.setMap(null);
         ATMoverlay4.setMap(null);
         ATMoverlay5.setMap(null);
+        ATMoverlay6.setMap(null);
     });
     function closeOverlay11() {
         overlay11.setMap(null);
@@ -2921,15 +2947,10 @@ var content12 ='<div class="wrap">'+
         ATMoverlay3.setMap(null);
         ATMoverlay4.setMap(null);
         ATMoverlay5.setMap(null);
+        ATMoverlay6.setMap(null);
     });
     function closeOverlay12() {
         overlay12.setMap(null);
-        ATMoverlay.setMap(null);
-        ATMoverlay1.setMap(null);
-        ATMoverlay2.setMap(null);
-        ATMoverlay3.setMap(null);
-        ATMoverlay4.setMap(null);
-        ATMoverlay5.setMap(null);
     }
     kakao.maps.event.addListener(ATMmarker, 'click', function() {
         overlay.setMap(null);
@@ -2951,6 +2972,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay3.setMap(null);
         ATMoverlay4.setMap(null);
         ATMoverlay5.setMap(null);
+        ATMoverlay6.setMap(null);
     });
     function closeATMOverlay() {
         ATMoverlay.setMap(null); 
@@ -2976,6 +2998,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay3.setMap(null);
         ATMoverlay4.setMap(null);
         ATMoverlay5.setMap(null);
+        ATMoverlay6.setMap(null);
     });
     function closeATMOverlay1() {
         ATMoverlay1.setMap(null); 
@@ -3000,6 +3023,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay3.setMap(null);
         ATMoverlay4.setMap(null);
         ATMoverlay5.setMap(null);
+        ATMoverlay6.setMap(null);
     });
     function closeATMOverlay2() {
         ATMoverlay2.setMap(null); 
@@ -3024,6 +3048,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay3.setMap(map);
         ATMoverlay4.setMap(null);
         ATMoverlay5.setMap(null);
+        ATMoverlay6.setMap(null);
     });
     function closeATMOverlay3() {
         ATMoverlay3.setMap(null); 
@@ -3048,6 +3073,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay3.setMap(null);
         ATMoverlay4.setMap(map);
         ATMoverlay5.setMap(null);
+        ATMoverlay6.setMap(null);
     });
     function closeATMOverlay4() {
         ATMoverlay4.setMap(null); 
@@ -3072,7 +3098,33 @@ var content12 ='<div class="wrap">'+
         ATMoverlay3.setMap(null);
         ATMoverlay4.setMap(null);
         ATMoverlay5.setMap(map);
+        ATMoverlay6.setMap(null);
     });
     function closeATMOverlay5() {
         ATMoverlay5.setMap(null); 
+    }
+    kakao.maps.event.addListener(ATMmarker6, 'click', function() {
+        overlay.setMap(null);
+        overlay1.setMap(null);
+        overlay2.setMap(null);
+        overlay3.setMap(null);
+        overlay4.setMap(null);
+        overlay5.setMap(null);
+        overlay6.setMap(null);
+        overlay7.setMap(null);
+        overlay8.setMap(null);
+        overlay9.setMap(null);
+        overlay10.setMap(null);
+        overlay11.setMap(null);
+        overlay12.setMap(null);
+        ATMoverlay.setMap(null);
+        ATMoverlay1.setMap(null);
+        ATMoverlay2.setMap(null);
+        ATMoverlay3.setMap(null);
+        ATMoverlay4.setMap(null);
+        ATMoverlay5.setMap(null);
+        ATMoverlay6.setMap(map);
+    });
+    function closeATMOverlay5() {
+        ATMoverlay6.setMap(null); 
     }
