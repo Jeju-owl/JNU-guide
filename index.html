@@ -290,13 +290,13 @@
             <div id="college">대학정보</div>
             <div id="Mainmenu">
                 <ul>
-                    <li><a>경상대학</a> <!--href="#"->페이지 최상단으로, href="#none"->아무이벤트발생X-->
+                    <li><a href="none">경상대학</a> <!--href="#"->페이지 최상단으로, href="#none"->아무이벤트발생X-->
                         <ul class="submenu">
-                            <li onclick="Moving(33.45408,126.5616)"><a>경상대학 1호관</a></li>
-                            <li onclick="Moving(33.45383,126.56273)"><a>경상대학 2호관</a></li>
+                            <li onclick="Moving(33.45408,126.5616)"><a href="javascript:Moving(33.45408,126.5616)">경상대학 1호관</a></li>
+                            <li onclick="Moving(33.45383,126.56273)"><a href="none">경상대학 2호관</a></li>
                         </ul>
                     </li>
-                    <li><a>공과대학</a>
+                    <li><a href="none">공과대학</a>
                         <ul class="submenu">
                             <li onclick="Moving(33.457079581318155,126.56548292194468)"><a>공과대학 1호관</a></li>
                             <li onclick="Moving(33.457532276126734,126.56602385594834)"><a>공과대학 2호관</a></li>
@@ -384,7 +384,7 @@
         </div>
         <div id="map"><!--지도API삽입--></div> 
         <div id="copyright"><a>Copyright 2021. Owl<br><span>All rights reserved</span></a></div>
-        <div id="level3button" onclick="levelchange(), Moving1(33.45594, 126.56203)"><img src="images/zoomreset.png"></div>
+        <div id="level3button" onclick="levelchange(), Moving1(33.45594, 126.56203)"><img src="images/zoomreset.png" title="원래대로"></div>
         <div id="findme"><img src="images/location.png" class="me" title="내 위치"></div>
         <div id="nightbuswrap">
             <div id="nightbushead"></div>
