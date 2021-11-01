@@ -36,8 +36,9 @@
             #others {position: absolute; left: 0; bottom: 10px;}
             #others > ul > li {height: 25px; padding-left: 5px;}
             #others > ul > li>a {color: rgb(143, 154, 145);}
-            #others > ul > li:hover {padding-top: 10px; color: black; background-color: #fdcf46; height: 30px; transition: 1s; width: 120px; cursor: pointer;}
-    
+            #others > ul > li:hover {padding-top: 10px; background-color: #fdcf46; height: 30px; transition: 1s; width: 120px; cursor: pointer;}
+            #others > ul > li>a:hover {color: black; transition: 1s;}
+
             /*others세로메뉴유형*/
     
             
@@ -109,6 +110,11 @@
             #nightbusbody { position: absolute; top: 250px; right: 0; left: 0; bottom: 30px; margin-top: -20px; background-image: url(https://user-images.githubusercontent.com/81807434/136660104-30a9d12f-a072-4a83-9377-2e4a6ca165aa.png); background-size: 560px 100%; z-index: 4;}
             #nightbusclose {position: absolute; top: 15px; right: 15px; z-index: 6;}
             #nightbusclose > img:hover {cursor: pointer;}
+            /*AB노선 구분표*/
+            #ABwrap {display: none; z-index: 7; position: absolute; top: 30px; right: 70px; width: 80px; height: 50px; background-color: rgb(255, 255, 137); line-height: 25px; border-radius: 10px; font-size: 14px; font-weight: bold; border: 1px solid #888;}
+            #ABwrap p {padding-left: 8px;}
+            #ABwrap p a {color: red; font-weight: bold;}
+            #ABwrap p:last-child a {color: blue;}
         }
         /*598~767*/
         @media screen and (min-width : 598px) and (max-width : 767px){
@@ -131,9 +137,11 @@
             #Mainmenu > ul > li > ul > li:hover {background-color: rgb(143, 154, 145);}
             #Mainmenu > ul > li > ul > li {border-top: 1px solid rgb(195, 197, 195); height: 21px; border-bottom: 1px solid rgb(195, 197, 195); padding-left: 10px; padding-top: 10px;}
             #others {position: absolute; left: 0; bottom: 10px;}
-            #others > ul > li {color: rgb(143, 154, 145); height: 25px; padding-left: 5px;}  
-            #others > ul > li:hover {padding-top: 10px; color: black; background-color: #fdcf46; height: 30px; transition: 1s; width: 120px; cursor: pointer;}
-    
+            #others > ul > li { height: 25px; padding-left: 5px;}
+            #others > ul > li>a {color: rgb(143, 154, 145);}
+            #others > ul > li:hover { padding-top: 10px; background-color: #fdcf46; height: 30px; transition: 1s; width: 120px; cursor: pointer;}
+            #others > ul > li>a:hover {color: black;transition: 1s;}
+
             #second { display: none;}
             #slide { display: none;}
             @keyframes change-bg { 
@@ -195,6 +203,11 @@
             #nightbusbody { position: absolute; top: 250px; right: 0; left: 0; bottom: 30px; margin-top: -20px; background-image: url(https://user-images.githubusercontent.com/81807434/136660104-30a9d12f-a072-4a83-9377-2e4a6ca165aa.png); background-size: 560px 100%; z-index: 4;}
             #nightbusclose {position: absolute; top: 15px; right: 15px; z-index: 6;}
             #nightbusclose > img:hover {cursor: pointer;}
+            /*AB노선 구분표*/
+            #ABwrap {display: none; z-index: 7; position: absolute; top: 30px; right: 70px; width: 80px; height: 50px; background-color: rgb(255, 255, 137); line-height: 25px; border-radius: 10px; font-size: 14px; font-weight: bold; border: 1px solid #888;}
+            #ABwrap p {padding-left: 8px;}
+            #ABwrap p a {color: red; font-weight: bold;}
+            #ABwrap p:last-child a {color: blue;}
         }
         /*0~597*/
         @media screen and (max-width : 597px) {
@@ -221,7 +234,7 @@
             #others {float: left; width: 25vw; height: 81px; background-color: rgb(56, 57, 57);}
             #others > ul > li {height: 27px; text-align: center; padding-top: 6px;}
             #others > ul > li >a {color: rgb(143, 154, 145);}
-            #others > ul > li:hover {font-weight: 900; color: #fdcf46; cursor: pointer;}
+            #others > ul > li>a:hover {font-weight: 900; color: #fdcf46; cursor: pointer;}
     
             /*others세로메뉴유형*/
     
@@ -287,6 +300,11 @@
             #nightbusbody { position: absolute; top: 250px; right: 0; left: 0; bottom: 30px; margin-top: -20px; background-image: url(https://user-images.githubusercontent.com/81807434/136660104-30a9d12f-a072-4a83-9377-2e4a6ca165aa.png); background-size: 100vw 100%; z-index: 4;}
             #nightbusclose {position: absolute; top: 15px; right: 15px; z-index: 6;}
             #nightbusclose > img:hover {cursor: pointer;}
+            /*AB노선 구분표*/
+            #ABwrap {display: none; z-index: 7; position: absolute; top: 120px; right: 50px; width: 80px; height: 50px; background-color: rgb(255, 255, 137); line-height: 25px; border-radius: 10px; font-size: 14px; font-weight: bold; border: 1px solid #888;}
+            #ABwrap p {padding-left: 8px;}
+            #ABwrap p a {color: red; font-weight: bold;}
+            #ABwrap p:last-child a {color: blue;}
         }
       
     </style>
@@ -403,6 +421,10 @@
             <div id="nightbusbody"></div>
             <div id="nightbusclose"><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" class="nightbusX" title="닫기"></div>
         </div>
+        <div id="ABwrap">
+            <p><a>---</a> A노선</p>
+            <p><a>---</a> B노선</p>
+        </div>
 </div>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8cbc68a03b7f95264d7b3a4693745f96"></script> <!--카카오맵API호출-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> <!--webstoryboy제이쿼리연동-->
@@ -458,6 +480,24 @@
         function(){
             $("#Mainmenu > ul >li").find(".othermenu").stop().hide(); //안에 숫자 1000당 1초 기본값은 400
         },
+    );
+    $("#others>ul>li:nth-child(2)").hover(
+        function AB() {
+            $('#ABwrap').css('display','block');
+        },
+        function AB() {
+            $('#ABwrap').css('display','none');
+        }
+    );
+    $("#others>ul>li:nth-child(2)").focusin(
+        function AB() {
+            $('#ABwrap').css('display','block');
+        }, 
+    );
+    $("#others>ul>li:nth-child(2)").focusout(
+        function AB() {
+            $('#ABwrap').css('display','none');
+        }, 
     );
 </script>
 <script> //나중에 scripts파일 만들어서 옮기기
