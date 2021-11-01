@@ -17,7 +17,9 @@
             * {margin: 0; padding: 0; font-size: 14px; background-size: 100% 100%; background-repeat: no-repeat; list-style: none;}
             a {color: black; text-decoration: none;}
             .clearfix::after, .clearfix::before {display: block; content: ''; clear: both;}
-            
+            #skip a {z-index: 3; position: absolute; left: 0px; top:-35px; border: 1px solid #fff; color: #fff; background: #333; line-height: 25px; width: 130px; font-size: 13px; text-align: center;}
+            #skip a:focus {top: 0;}
+                        
             #wrapper {}
             
             /*1. first 시작*/
@@ -113,6 +115,8 @@
             * {margin: 0; padding: 0; font-size: 14px; background-size: 100% 100%; background-repeat: no-repeat; list-style: none;}
             a {color: black; text-decoration: none;}
             .clearfix::after, .clearfix::before {display: block; content: ''; clear: both;}
+            #skip a {z-index: 3; position: absolute; left: 0px; top:-35px; border: 1px solid #fff; color: #fff; background: #333; line-height: 25px; width: 130px; font-size: 13px; text-align: center;}
+            #skip a:focus {top: 0;}
             
             #wrapper {}
             
@@ -197,6 +201,8 @@
             * {margin: 0; padding: 0; font-size: 13px; background-size: 100% 100%; background-repeat: no-repeat; list-style: none; box-sizing: border-box;}
             a {color: black; text-decoration: none;}
             .clearfix::after, .clearfix::before {display: block; content: ''; clear: both;}
+            #skip a {z-index: 3; position: absolute; left: 0px; top:-35px; border: 1px solid #fff; color: #fff; background: #333; line-height: 25px; width: 130px; font-size: 13px; text-align: center;}
+            #skip a:focus {top: 0;}
             
             #wrapper {}
             
@@ -286,6 +292,10 @@
     </style>
 </head>
 <body>
+    <div id="skip">
+        <a rel="bookmark" href="#college">대학정보 바로가기</a>
+        <a rel="bookmark" href="#others">기타메뉴 바로가기</a>
+    </div>
     <div id="wrapper"> <!--wrapper가 필요없다...사실상 자식요소들이 전부다 position:absolute여서 잇으나 마나다... float:left도 안먹힘.. 다음번엔 float사용해서 해봐야될듯..-->
         <div id="first">
             <div id="logo"><img src="//dreamy.jejunu.ac.kr/image/login/logo2.jpg" alt="국립제주대학교" style="width: 100px; height: 100px;"></div>
