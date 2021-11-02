@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>제대로 놀아보자~!</title>
     <style> /*나중에 styles.css파일 만들어서 옮김*/
-        /*768~2560*/
+        /*------------------------------------------------------------768~2560------------------------------------------------------------*/
         @font-face {
             font-family: 'Pretendard-Regular';
             src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
@@ -38,7 +38,10 @@
             #others > ul > li>a {color: rgb(143, 154, 145);}
             #others > ul > li:hover {padding-top: 10px; background-color: #fdcf46; height: 30px; transition: 1s; width: 120px; cursor: pointer;}
             #others > ul > li>a:hover {color: black; transition: 1s;}
-
+            #restaurant {display: none; position: absolute; left: 120px; bottom: -10px; width: 170px;  z-index: 2; text-align: justify; background-color: rgb(231, 231, 225); border-top: #888 1px solid; border-right: #888 1px solid; border-bottom: #888 1px solid;}
+            #restaurant > li {border-top: 1px solid rgb(195, 197, 195); height: 21px; border-bottom: 1px solid rgb(195, 197, 195); padding-left: 10px; padding-top: 10px;}
+            #restaurant > li:hover {cursor: pointer; background-color: rgb(143, 154, 145);}
+            
             /*2. second 시작*/
             #second { display: none;/*position: absolute; width: 170px; left: 120px; top: 0; bottom: 0; background-color: #e8eced;*/}
             #slide { display: none;/*height: 135px; animation-name: change-bg; animation-duration: 11s;  animation-iteration-count: infinite;*/}
@@ -110,7 +113,7 @@
             #ABwrap p a {color: red; font-weight: bold;}
             #ABwrap p:last-child a {color: blue;}
         }
-        /*598~767*/
+        /*------------------------------------------------------------598~767------------------------------------------------------------*/
         @media screen and (min-width : 598px) and (max-width : 767px){
             * {margin: 0; padding: 0; font-size: 14px; background-size: 100% 100%; background-repeat: no-repeat; list-style: none;}
             a {color: black; text-decoration: none;}
@@ -135,6 +138,9 @@
             #others > ul > li>a {color: rgb(143, 154, 145);}
             #others > ul > li:hover { padding-top: 10px; background-color: #fdcf46; height: 30px; transition: 1s; width: 120px; cursor: pointer;}
             #others > ul > li>a:hover {color: black;transition: 1s;}
+            #restaurant {display: none; position: absolute; left: 120px; bottom: -10px; width: 170px;  z-index: 2; text-align: justify; background-color: rgb(231, 231, 225); border-top: #888 1px solid; border-right: #888 1px solid; border-bottom: #888 1px solid;}
+            #restaurant > li {border-top: 1px solid rgb(195, 197, 195); height: 21px; border-bottom: 1px solid rgb(195, 197, 195); padding-left: 10px; padding-top: 10px;}
+            #restaurant > li:hover {cursor: pointer; background-color: rgb(143, 154, 145);}
 
             #second { display: none;}
             #slide { display: none;}
@@ -203,7 +209,7 @@
             #ABwrap p a {color: red; font-weight: bold;}
             #ABwrap p:last-child a {color: blue;}
         }
-        /*0~597*/
+        /*------------------------------------------------------------0~597------------------------------------------------------------*/
         @media screen and (max-width : 597px) {
             * {margin: 0; padding: 0; font-size: 13px; background-size: 100% 100%; background-repeat: no-repeat; list-style: none; box-sizing: border-box;}
             a {color: black; text-decoration: none;}
@@ -229,6 +235,10 @@
             #others > ul > li {height: 27px; text-align: center; padding-top: 6px;}
             #others > ul > li >a {color: rgb(143, 154, 145);}
             #others > ul > li>a:hover {font-weight: 900; color: #fdcf46; cursor: pointer;}
+            #restaurant {display: none; position: absolute; left: 0px; top: 81px; z-index: 2; text-align: justify; background-color: rgb(231, 231, 225); border-bottom: 1px solid rgb(195, 197, 195);}
+            #restaurant > li {float: left; width: 25vw; height: 27px; padding-top: 4px; text-align: center; border-right: 1px solid rgb(195, 197, 195);}
+            #restaurant > li >a {font-size: 0.8rem; font-family: 'Pretendard-Regular'; font-weight: bold;}
+            #restaurant > li:hover {cursor: pointer; background-color: rgb(143, 154, 145);}
     
             /*2. second 시작*/
             #second { display: none;}
@@ -390,7 +400,14 @@
             </div>
             <div id="others">
                 <ul>
-                    <li><a href="#none">주변식당정보</a></li>
+                    <li><a href="#none">주변식당정보</a>
+                        <ul id="restaurant">
+                            <li><a>제주대 입구</a></li>
+                            <li><a>제주대 정문</a></li>
+                            <li><a>제주대 후문1</a></li>
+                            <li><a>제주대 후문2</a></li>
+                        </ul>
+                    </li>
                     <li onmouseover="InnerBus(),RouteA(),RouteB(), Moving1(33.45594, 126.56203)" onmouseout="lineX()"><a href="#none" onfocus="InnerBus(),RouteA(),RouteB(), Moving1(33.45594, 126.56203)" onblur="lineX()">순환버스</a></li>
                     <li class="nightbuslayer"><a href="#none">야간버스</a></li>
                 </ul>
@@ -469,7 +486,7 @@
             $("#Mainmenu > ul >li").find(".othermenu").stop().hide(); //안에 숫자 1000당 1초 기본값은 400
         },
     );
-    $("#others>ul>li:nth-child(2)").hover(
+    $("#others>ul>li:nth-last-child(2)").hover(
         function AB() {
             $('#ABwrap').css('display','block');
         },
@@ -477,15 +494,33 @@
             $('#ABwrap').css('display','none');
         }
     );
-    $("#others>ul>li:nth-child(2)").focusin(
+    $("#others>ul>li:nth-last-child(2)").focusin(
         function AB() {
             $('#ABwrap').css('display','block');
         }, 
     );
-    $("#others>ul>li:nth-child(2)").focusout(
+    $("#others>ul>li:nth-last-child(2)").focusout(
         function AB() {
             $('#ABwrap').css('display','none');
         }, 
+    );
+    $("#others>ul>li:first-child").hover(
+        function () {
+            $('#restaurant').css('display','block');
+        },
+        function () {
+            $('#restaurant').css('display','none');
+        },
+    );
+    $("#others> ul > li:first-child > a").click(
+        function () {
+            $('#restaurant').css('display','block');
+        }
+    );
+    $("#others> ul > li:first-child > a").focusout(
+        function () {
+            $('#restaurant').css('display','none');
+        }
     );
 </script>
 <script> //나중에 scripts파일 만들어서 옮기기
