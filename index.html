@@ -402,10 +402,10 @@
                 <ul>
                     <li><a href="#none">주변식당정보</a>
                         <ul id="restaurant">
-                            <li><a>제주대 입구</a></li>
-                            <li><a>제주대 정문</a></li>
-                            <li><a>제주대 후문1</a></li>
-                            <li><a>제주대 후문2</a></li>
+                            <li><a href="#none">제주대 입구</a></li>
+                            <li><a href="#none">제주대 정문</a></li>
+                            <li><a href="#none">제주대 후문1</a></li>
+                            <li><a href="#none">제주대 후문2</a></li>
                         </ul>
                     </li>
                     <li onmouseover="InnerBus(),RouteA(),RouteB(), Moving1(33.45594, 126.56203)" onmouseout="lineX()"><a href="#none" onfocus="InnerBus(),RouteA(),RouteB(), Moving1(33.45594, 126.56203)" onblur="lineX()">순환버스</a></li>
@@ -517,7 +517,7 @@
             $('#restaurant').css('display','block');
         }
     );
-    $("#others> ul > li:first-child > a").focusout(
+    $("#restaurant > li:last-child").focusout(
         function () {
             $('#restaurant').css('display','none');
         }
