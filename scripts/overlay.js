@@ -3126,56 +3126,56 @@ var content12 ='<div class="wrap">'+
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
     }
-    // 지도가 확대 또는 축소되면 마지막 파라미터로 넘어온 함수를 호출하도록 이벤트를 등록합니다
+    // 지도의 확대 축소 레벨이 바뀔때마다 실행되는 이벤트리스터입니다.
     kakao.maps.event.addListener(map, 'zoom_changed', function() {        
         
         // 지도의 현재 레벨을 얻어옵니다
         var level = map.getLevel();
         
         if (level >= 5) {
-            overlay.setMap(null);
-            overlay1.setMap(null);
-            overlay2.setMap(null);
-            overlay3.setMap(null);
-            overlay4.setMap(null);
-            overlay5.setMap(null);
-            overlay6.setMap(null);
-            overlay7.setMap(null);
-            overlay8.setMap(null);
-            overlay9.setMap(null);
-            overlay10.setMap(null);
-            overlay11.setMap(null);
-            overlay12.setMap(null);
-            ATMoverlay.setMap(null);
-            ATMoverlay1.setMap(null);
-            ATMoverlay2.setMap(null);
-            ATMoverlay3.setMap(null);
-            ATMoverlay4.setMap(null);
-            ATMoverlay5.setMap(null);
-            ATMoverlay6.setMap(null);
-            ATMoverlay7.setMap(null);
+            busmarker.setMap(null);
+            busmarker1.setMap(null);
+            busmarker2.setMap(null);
+            busmarker3.setMap(null);
+            busmarker4.setMap(null);
+            busmarker5.setMap(null);
+            busmarker6.setMap(null);
+            busmarker7.setMap(null);
+            busmarker8.setMap(null);
+            busmarker9.setMap(null);
+            busmarker10.setMap(null);
+            busmarker11.setMap(null);
+            busmarker12.setMap(null);
+            ATMmarker.setMap(null);
+            ATMmarker1.setMap(null);
+            ATMmarker2.setMap(null);
+            ATMmarker3.setMap(null);
+            ATMmarker4.setMap(null);
+            ATMmarker5.setMap(null);
+            ATMmarker6.setMap(null);
+            ATMmarker7.setMap(null);
         }
         else {
-            overlay.setMap(map);
-            overlay1.setMap(map);
-            overlay2.setMap(map);
-            overlay3.setMap(map);
-            overlay4.setMap(map);
-            overlay5.setMap(map);
-            overlay6.setMap(map);
-            overlay7.setMap(map);
-            overlay8.setMap(map);
-            overlay9.setMap(map);
-            overlay10.setMap(map);
-            overlay11.setMap(map);
-            overlay12.setMap(map);
-            ATMoverlay.setMap(map);
-            ATMoverlay1.setMap(map);
-            ATMoverlay2.setMap(map);
-            ATMoverlay3.setMap(map);
-            ATMoverlay4.setMap(map);
-            ATMoverlay5.setMap(map);
-            ATMoverlay6.setMap(map);
-            ATMoverlay7.setMap(map);
+            busmarker.setMap(map);
+            busmarker1.setMap(map);
+            busmarker2.setMap(map);
+            busmarker3.setMap(map);
+            busmarker4.setMap(map);
+            busmarker5.setMap(map);
+            busmarker6.setMap(map);
+            busmarker7.setMap(map);
+            busmarker8.setMap(map);
+            busmarker9.setMap(map);
+            busmarker10.setMap(map);
+            busmarker11.setMap(map);
+            busmarker12.setMap(map);
+            ATMmarker.setMap(map);
+            ATMmarker1.setMap(map);
+            ATMmarker2.setMap(map);
+            ATMmarker3.setMap(map);
+            ATMmarker4.setMap(map);
+            ATMmarker5.setMap(map);
+            ATMmarker6.setMap(map);
+            ATMmarker7.setMap(map);
         }     
     });
