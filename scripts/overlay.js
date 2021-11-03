@@ -1,5 +1,9 @@
     //---------------------버스마커부분------------------------------
-    
+    function Moving2(a,b) { //지도 초점을 a,b로 이동
+        var moveLatLon = new kakao.maps.LatLng(a,b);
+        map.panTo(moveLatLon);
+    }
+
     var imageSrc = 'https://github.com/Jeju-owl/JNU-guide/blob/feature-3/images/busimage.png?raw=true', // 마커이미지의 주소입니다, remove.bg사이트에서 png 바깥배경 없앳음 
     imageSize = new kakao.maps.Size(28, 20), // 교내순환버스마커 이미지의 크기입니다
     imageOption = {offset: new kakao.maps.Point(11, 10)}; // 교내순환버스마커 이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
@@ -2609,8 +2613,8 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        Moving1(33.45965343928493, 126.56158159312466);
-        levelchange(4);
+        Moving2(33.45965343928493, 126.56158159312466);
+        map.setLevel(4);
     });
 
     kakao.maps.event.addListener(busmarker1, 'click', function() {
@@ -2635,8 +2639,8 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        Moving1(33.45755993777187, 126.56107582852171);
-        levelchange(4);
+        Moving2(33.45755993777187, 126.56107582852171);
+        map.setLevel(4);
     });
     kakao.maps.event.addListener(busmarker2, 'click', function() {
         overlay.setMap(null);
@@ -2660,8 +2664,8 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        Moving1(33.454610128657876, 126.56063087550932);
-        levelchange(4);
+        Moving2(33.454610128657876, 126.56063087550932);
+        map.setLevel(4);
     });
     kakao.maps.event.addListener(busmarker3, 'click', function() {
         overlay.setMap(null);
@@ -2685,8 +2689,8 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        Moving1(33.45323099738815, 126.5575509319587);
-        levelchange(4);
+        Moving2(33.45323099738815, 126.5575509319587);
+        map.setLevel(4);
     });
     kakao.maps.event.addListener(busmarker4, 'click', function() {
         overlay.setMap(null);
@@ -2710,8 +2714,8 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        Moving1(33.45149156127691, 126.55836642987437);
-        levelchange(4);
+        Moving2(33.45149156127691, 126.55836642987437);
+        map.setLevel(4);
     });
     kakao.maps.event.addListener(busmarker5, 'click', function() {
         overlay.setMap(null);
@@ -2735,8 +2739,8 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        Moving1(33.45305459367828, 126.5592834991402);
-        levelchange(4);
+        Moving2(33.45305459367828, 126.5592834991402);
+        map.setLevel(4);
     });
     kakao.maps.event.addListener(busmarker6, 'click', function() {
         overlay.setMap(null);
@@ -2760,8 +2764,8 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        Moving1(33.45311704756447, 126.56100410021769);
-        levelchange(4);
+        Moving2(33.45311704756447, 126.56100410021769);
+        map.setLevel(4);
     });
     kakao.maps.event.addListener(busmarker7, 'click', function() {
         overlay.setMap(null);
@@ -2785,8 +2789,8 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        Moving1(33.453057621098026, 126.56396491302868);
-        levelchange(4);
+        Moving2(33.453057621098026, 126.56396491302868);
+        map.setLevel(4);
     });
     kakao.maps.event.addListener(busmarker8, 'click', function() {
         overlay.setMap(null);
@@ -2810,8 +2814,8 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        Moving1(33.45474511612683, 126.56439208250133);
-        levelchange(4);
+        Moving2(33.45474511612683, 126.56439208250133);
+        map.setLevel(4);
     });
     kakao.maps.event.addListener(busmarker9, 'click', function() {
         overlay.setMap(null);
@@ -2835,8 +2839,8 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        Moving1(33.45523826971047, 126.56618586795527);
-        levelchange(4);
+        Moving2(33.45523826971047, 126.56618586795527);
+        map.setLevel(4);
     });
     kakao.maps.event.addListener(busmarker10, 'click', function() {
         overlay.setMap(null);
@@ -2860,8 +2864,8 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        Moving1(33.45562907037793, 126.56386061632756);
-        levelchange(4);
+        Moving2(33.45562907037793, 126.56386061632756);
+        map.setLevel(4);
     });
     kakao.maps.event.addListener(busmarker11, 'click', function() {
         overlay.setMap(null);
@@ -2885,8 +2889,8 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        Moving1(33.45627626917144, 126.56266613546954);
-        levelchange(4);
+        Moving2(33.45627626917144, 126.56266613546954);
+        map.setLevel(4);
     });
     kakao.maps.event.addListener(busmarker12, 'click', function() {
         overlay.setMap(null);
@@ -2910,8 +2914,8 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        Moving1(33.45731481654195, 126.56315033095102);
-        levelchange(4);
+        Moving2(33.45731481654195, 126.56315033095102);
+        map.setLevel(4);
     });
     kakao.maps.event.addListener(ATMmarker, 'click', function() {
         overlay.setMap(null);
@@ -2935,8 +2939,8 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        Moving1(33.45990676686699, 126.56183040828569);
-        levelchange(4);
+        Moving2(33.45990676686699, 126.56183040828569);
+        map.setLevel(4);
     });
     kakao.maps.event.addListener(ATMmarker1, 'click', function() {
         overlay.setMap(null);
@@ -2960,8 +2964,8 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        Moving1(33.45942039684082, 126.5613326772457);
-        levelchange(4);
+        Moving2(33.45942039684082, 126.5613326772457);
+        map.setLevel(4);
     });
     kakao.maps.event.addListener(ATMmarker2, 'click', function() {
         overlay.setMap(null);
@@ -2985,8 +2989,8 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        Moving1(33.45581863503511, 126.56136963794465);
-        levelchange(4);
+        Moving2(33.45581863503511, 126.56136963794465);
+        map.setLevel(4);
     });
     kakao.maps.event.addListener(ATMmarker3, 'click', function() {
         overlay.setMap(null);
@@ -3010,8 +3014,8 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        Moving1(33.452813988176864, 126.5607152235069);
-        levelchange(4);
+        Moving2(33.452813988176864, 126.5607152235069);
+        map.setLevel(4);
     });
     kakao.maps.event.addListener(ATMmarker4, 'click', function() {
         overlay.setMap(null);
@@ -3035,8 +3039,8 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        Moving1(33.45492583565361, 126.5606723070996);
-        levelchange(4);
+        Moving2(33.45492583565361, 126.5606723070996);
+        map.setLevel(4);
     });
     kakao.maps.event.addListener(ATMmarker5, 'click', function() {
         overlay.setMap(null);
@@ -3060,8 +3064,8 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(map);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        Moving1(33.45103031220647, 126.55670166961119);
-        levelchange(4);
+        Moving2(33.45103031220647, 126.55670166961119);
+        map.setLevel(4);
     });
     kakao.maps.event.addListener(ATMmarker6, 'click', function() {
         overlay.setMap(null);
@@ -3085,8 +3089,8 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(map);
         ATMoverlay7.setMap(null);
-        Moving1(33.4573112632239, 126.56406194105139);
-        levelchange(4);
+        Moving2(33.4573112632239, 126.56406194105139);
+        map.setLevel(4);
     });
     kakao.maps.event.addListener(ATMmarker7, 'click', function() {
         overlay.setMap(null);
@@ -3110,8 +3114,8 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(map);
-        Moving1(33.453723160973496, 126.55967270404226);
-        levelchange(4);
+        Moving2(33.453723160973496, 126.55967270404226);
+        map.setLevel(4);
     });
     // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다 
     function closeOverlay() {
@@ -3139,10 +3143,7 @@ var content12 ='<div class="wrap">'+
     }
     // 지도의 확대 축소 레벨이 바뀔때마다 실행되는 이벤트리스터입니다.
     kakao.maps.event.addListener(map, 'zoom_changed', function() {        
-        
-        // 지도의 현재 레벨을 얻어옵니다
-        var level = map.getLevel();
-        
+        var level = map.getLevel();// 지도의 현재 레벨을 얻어옵니다
         if (level >= 5) {
             busmarker.setMap(null);
             busmarker1.setMap(null);
