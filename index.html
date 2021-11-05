@@ -566,7 +566,7 @@
             $('#ABwrap').css('display','none');
         }, 
     );
-    $("#others>ul>li:first-child").click(
+    $("#others>ul>li:first-child").hover(
         function () {
             $('#restaurant').css('display','block');
         },
@@ -574,16 +574,16 @@
             $('#restaurant').css('display','none');
         },
     );
-    $("#others> ul > li:first-child > a").click(
-        function () {
-            $('#restaurant').css('display','block');
-        }
-    );
-    $("#restaurant > li:last-child").focusout(
-        function () {
-            $('#restaurant').css('display','none');
-        }
-    );
+    // $("#others> ul > li:first-child > a").click(
+    //     function () {
+    //         $('#restaurant').css('display','block');
+    //     }
+    // );
+    // $("#restaurant > li:last-child").focusout(
+    //     function () {
+    //         $('#restaurant').css('display','none');
+    //     }
+    // );
 </script>
 <script> //나중에 scripts파일 만들어서 옮기기
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
