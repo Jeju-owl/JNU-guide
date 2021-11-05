@@ -2609,7 +2609,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        map.setLevel(4).panTo(markerPosition);
+        map.setCenter(markerPosition);
     });
 
     kakao.maps.event.addListener(busmarker1, 'click', function() {
@@ -2634,7 +2634,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        map.setLevel(4).panTo(markerPosition1);
+        map.setCenter(markerPosition1);
     });
     kakao.maps.event.addListener(busmarker2, 'click', function() {
         overlay.setMap(null);
@@ -2658,7 +2658,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        map.setLevel(4).panTo(markerPosition2);
+        map.setCenter(markerPosition2);
     });
     kakao.maps.event.addListener(busmarker3, 'click', function() {
         overlay.setMap(null);
@@ -2682,7 +2682,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        map.setLevel(4).panTo(markerPosition3);
+        map.setCenter(markerPosition3);
     });
     kakao.maps.event.addListener(busmarker4, 'click', function() {
         overlay.setMap(null);
@@ -2706,7 +2706,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        map.setLevel(4).panTo(markerPosition4);
+        map.setCenter(markerPosition4);
     });
     kakao.maps.event.addListener(busmarker5, 'click', function() {
         overlay.setMap(null);
@@ -2730,7 +2730,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        map.setLevel(4).panTo(markerPosition5);
+        map.panTo(markerPosition5);
     });
     kakao.maps.event.addListener(busmarker6, 'click', function() {
         overlay.setMap(null);
@@ -2754,7 +2754,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        map.setLevel(4).panTo(markerPosition6);
+        map.setCenter(markerPosition6);
     });
     kakao.maps.event.addListener(busmarker7, 'click', function() {
         overlay.setMap(null);
@@ -2778,7 +2778,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        map.setLevel(4).panTo(markerPosition7);
+        map.setCenter(markerPosition7);
     });
     kakao.maps.event.addListener(busmarker8, 'click', function() {
         overlay.setMap(null);
@@ -2802,7 +2802,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        map.setLevel(4).panTo(markerPosition8);
+        map.setCenter(markerPosition8);
     });
     kakao.maps.event.addListener(busmarker9, 'click', function() {
         overlay.setMap(null);
@@ -2826,7 +2826,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        map.setLevel(4).panTo(markerPosition9);
+        map.setCenter(markerPosition9);
     });
     kakao.maps.event.addListener(busmarker10, 'click', function() {
         overlay.setMap(null);
@@ -2850,7 +2850,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        map.setLevel(4).panTo(markerPosition10);
+        map.setCenter(markerPosition10);
     });
     kakao.maps.event.addListener(busmarker11, 'click', function() {
         overlay.setMap(null);
@@ -2874,7 +2874,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        map.setLevel(4).panTo(markerPosition11);
+        map.setCenter(markerPosition11);
     });
     kakao.maps.event.addListener(busmarker12, 'click', function() {
         overlay.setMap(null);
@@ -2898,7 +2898,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        map.setLevel(4).panTo(markerPosition12);
+        map.setCenter(markerPosition12);
     });
     kakao.maps.event.addListener(ATMmarker, 'click', function() {
         overlay.setMap(null);
@@ -2922,7 +2922,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        map.setLevel(4).panTo(ATMmarkerPosition);
+        map.setCenter(ATMmarkerPosition);
     });
     kakao.maps.event.addListener(ATMmarker1, 'click', function() {
         overlay.setMap(null);
@@ -2946,7 +2946,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        map.setLevel(4).panTo(ATMmarkerPosition1);
+        map.setCenter(ATMmarkerPosition1);
     });
     kakao.maps.event.addListener(ATMmarker2, 'click', function() {
         overlay.setMap(null);
@@ -2970,7 +2970,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        map.setLevel(4).panTo(ATMmarkerPosition2);
+        map.setCenter(ATMmarkerPosition2);
     });
     kakao.maps.event.addListener(ATMmarker3, 'click', function() {
         overlay.setMap(null);
@@ -2994,7 +2994,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        map.setLevel(4).panTo(ATMmarkerPosition3);
+        map.setCenter(ATMmarkerPosition3);
     });
     kakao.maps.event.addListener(ATMmarker4, 'click', function() {
         overlay.setMap(null);
@@ -3018,7 +3018,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        map.setLevel(4).panTo(ATMmarkerPosition4);
+        map.setCenter(ATMmarkerPosition4);
     });
     kakao.maps.event.addListener(ATMmarker5, 'click', function() {
         overlay.setMap(null);
@@ -3042,7 +3042,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(map);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(null);
-        map.setLevel(4).panTo(ATMmarkerPosition5);
+        map.setCenter(ATMmarkerPosition5);
     });
     kakao.maps.event.addListener(ATMmarker6, 'click', function() {
         overlay.setMap(null);
@@ -3066,7 +3066,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(map);
         ATMoverlay7.setMap(null);
-        map.setLevel(4).panTo(ATMmarkerPosition6);
+        map.setCenter(ATMmarkerPosition6);
     });
     kakao.maps.event.addListener(ATMmarker7, 'click', function() {
         overlay.setMap(null);
@@ -3090,7 +3090,7 @@ var content12 ='<div class="wrap">'+
         ATMoverlay5.setMap(null);
         ATMoverlay6.setMap(null);
         ATMoverlay7.setMap(map);
-        map.setLevel(4).panTo(ATMmarkerPosition7);
+        map.setCenter(ATMmarkerPosition7);
     });
     // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다 
     function closeOverlay() {
