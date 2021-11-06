@@ -937,9 +937,10 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 
     //도형 지우는 함수
     function polygonLineX() {
-        for (var i = 0; i < polygonLines.length; i++) {
-            polygonLines[i].setMap(null);
-        }
+        // for (var i = 0; i < polygonLines.length; i++) {
+        //     polygonLines[i].setMap(null);
+        // }
+        polygon.setMap(null);
     }
 </script>
 <script src="scripts/overlay.js"></script>
