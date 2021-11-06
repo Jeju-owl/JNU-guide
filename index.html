@@ -490,7 +490,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li onmouseover="InnerBus(),RouteA(),RouteB(), Moving1(33.45594, 126.56203)" onmouseout="lineX(), PolygonLineX"><a href="#none" onfocus="InnerBus(),RouteA(),RouteB(), Moving1(33.45594, 126.56203)" onblur="lineX(), PolygonLineX">순환버스</a></li>
+                    <li onmouseover="InnerBus(),RouteA(),RouteB(), Moving1(33.45594, 126.56203)" onmouseout="lineX(), polygonLineX"><a href="#none" onfocus="InnerBus(),RouteA(),RouteB(), Moving1(33.45594, 126.56203)" onblur="lineX(), polygonLineX">순환버스</a></li>
                     <li class="nightbuslayer"><a href="#none">야간버스</a></li>
                 </ul>
             </div>
@@ -614,7 +614,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     var buildingmarkers = []; //markers배열 선언
     var usermarkers = []; //usermarkers배열 선언
     var lines = []; //lines배열 선언
-    var polygonLines = [] //polygonLines 배열 선언
+    var polygonLines = []; //polygonLines 배열 선언
 
     //geolocation JQuery를 이용하여 실시간(watchPosition)으로 위도 및 경도 값을 받아옴
     var options = {
@@ -936,7 +936,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     }
 
     //도형 지우는 함수
-    function PolygonLineX() {
+    function polygonLineX() {
         for (var i = 0; i < polygonLines.length; i++) {
             polygonLines[i].setMap(null);
         }
