@@ -490,7 +490,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li onmouseover="InnerBus(),RouteA(),RouteB(), Moving1(33.45594, 126.56203)" onmouseout="lineX()"><a href="#none" onfocus="InnerBus(),RouteA(),RouteB(), Moving1(33.45594, 126.56203)" onblur="lineX()">순환버스</a></li>
+                    <li onmouseover="InnerBus(),RouteA(),RouteB(), Moving1(33.45594, 126.56203)" onmouseout="lineX(), PolygonLineX"><a href="#none" onfocus="InnerBus(),RouteA(),RouteB(), Moving1(33.45594, 126.56203)" onblur="lineX(), PolygonLineX">순환버스</a></li>
                     <li class="nightbuslayer"><a href="#none">야간버스</a></li>
                 </ul>
             </div>
@@ -859,8 +859,8 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         // 지도에 다각형을 표시합니다
         polygon.setMap(map);
 
-        //lines배열에 push
-        //polygonLines.push(polygon);
+        //polygonLines배열에 push
+        polygonLines.push(polygon);
 
 
         //지도 확대 레벨 4
@@ -917,8 +917,8 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         polygon.setMap(map);
 
 
-        //lines배열에 push
-        //polygonLines.push(polygon);
+        // polygonLines배열에 push
+        polygonLines.push(polygon);
 
 
         //지도 확대 레벨 4
@@ -935,12 +935,12 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         map.setLevel(4);
     }
 
-    // //도형 지우는 함수
-    // function PolygonLineX() {
-    //     for (var i = 0; i < polygonLines.length; i++) {
-    //         polygonLines[i].setMap(null);
-    //     }
-    // }
+    //도형 지우는 함수
+    function PolygonLineX() {
+        for (var i = 0; i < polygonLines.length; i++) {
+            polygonLines[i].setMap(null);
+        }
+    }
 </script>
 <script src="scripts/overlay.js"></script>
 <!-- 
