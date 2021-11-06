@@ -3193,8 +3193,11 @@ var content12 ='<div class="wrap">'+
         }     
     });
 
-    $('.schoolbus').click(
-        function() {
+    var bustoggle = true;
+    var ATMtoggle = true;
+
+    function delBus() {
+        if (bustoggle == true) {
             busmarker.setMap(null);
             busmarker1.setMap(null);
             busmarker2.setMap(null);
@@ -3208,8 +3211,9 @@ var content12 ='<div class="wrap">'+
             busmarker10.setMap(null);
             busmarker11.setMap(null);
             busmarker12.setMap(null);
-        },
-        function() {
+            bustoggle = !bustoggle;
+        }
+        else {
             busmarker.setMap(map);
             busmarker1.setMap(map);
             busmarker2.setMap(map);
@@ -3223,5 +3227,30 @@ var content12 ='<div class="wrap">'+
             busmarker10.setMap(map);
             busmarker11.setMap(map);
             busmarker12.setMap(map);
+            bustoggle = !bustoggle;
+        }     
+    }
+    function delATM() {
+        if (ATMtoggle == true) {
+            ATMmarker.setMap(null);
+            ATMmarker1.setMap(null);
+            ATMmarker2.setMap(null);
+            ATMmarker3.setMap(null);
+            ATMmarker4.setMap(null);
+            ATMmarker5.setMap(null);
+            ATMmarker6.setMap(null);
+            ATMmarker7.setMap(null);
+            ATMtoggle = !ATMtoggle;
         }
-    );
+        else {
+            ATMmarker.setMap(map);
+            ATMmarker1.setMap(map);
+            ATMmarker2.setMap(map);
+            ATMmarker3.setMap(map);
+            ATMmarker4.setMap(map);
+            ATMmarker5.setMap(map);
+            ATMmarker6.setMap(map);
+            ATMmarker7.setMap(map);
+            ATMtoggle = !ATMtoggle;
+        }     
+    }

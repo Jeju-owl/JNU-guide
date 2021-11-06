@@ -513,8 +513,8 @@
             <p><a>---</a> B노선</p>
         </div>
         <div id="subbar">
-            <p class="schoolbus"><img src="images/busimage.png" alt="순환버스정류장" title="순환버스정류장"></p>
-            <p onclick="overlayMoving(33.455110128657876, 126.56063087550932);"><img src="images/ATM.png" alt="ATM" title="ATM"></p>
+            <p onclick="delBus()"><img src="images/busimage.png" alt="순환버스정류장" title="순환버스정류장"></p>
+            <p onclick="delATM()"><img src="images/ATM.png" alt="ATM" title="ATM"></p>
             <p><img src="images/parkinglot.png" alt="교내 주차장" title="교내 주차장"></p>
             <p><img src="images/settingimage.png" alt="설정" title="설정"></p>
         </div>
@@ -944,62 +944,6 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     }
 </script>
 <script src="scripts/overlay.js"></script>
-<script>
-    function delBus() {
-        if (busmarker.setMap(map)) {
-            busmarker.setMap(null);
-            busmarker1.setMap(null);
-            busmarker2.setMap(null);
-            busmarker3.setMap(null);
-            busmarker4.setMap(null);
-            busmarker5.setMap(null);
-            busmarker6.setMap(null);
-            busmarker7.setMap(null);
-            busmarker8.setMap(null);
-            busmarker9.setMap(null);
-            busmarker10.setMap(null);
-            busmarker11.setMap(null);
-            busmarker12.setMap(null);
-        }
-        else {
-            busmarker.setMap(map);
-            busmarker1.setMap(map);
-            busmarker2.setMap(map);
-            busmarker3.setMap(map);
-            busmarker4.setMap(map);
-            busmarker5.setMap(map);
-            busmarker6.setMap(map);
-            busmarker7.setMap(map);
-            busmarker8.setMap(map);
-            busmarker9.setMap(map);
-            busmarker10.setMap(map);
-            busmarker11.setMap(map);
-            busmarker12.setMap(map);
-        }     
-    }
-    function delATM() {
-        if (ATMmarker.setMap(map)) {
-            ATMmarker.setMap(null);
-            ATMmarker1.setMap(null);
-            ATMmarker2.setMap(null);
-            ATMmarker3.setMap(null);
-            ATMmarker4.setMap(null);
-            ATMmarker5.setMap(null);
-            ATMmarker6.setMap(null);
-            ATMmarker7.setMap(null);
-        }
-        else {
-            ATMmarker.setMap(map);
-            ATMmarker1.setMap(map);
-            ATMmarker2.setMap(map);
-            ATMmarker3.setMap(map);
-            ATMmarker4.setMap(map);
-            ATMmarker5.setMap(map);
-            ATMmarker6.setMap(map);
-            ATMmarker7.setMap(map);
-        }     
-    }
-</script>
 <!-- 
     메모장 (경범) 
     1. margin 과 padding은 생각하면서 쓰자 
