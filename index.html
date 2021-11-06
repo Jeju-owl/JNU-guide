@@ -114,8 +114,11 @@
             #ABwrap p a {color: red; font-weight: bold;}
             #ABwrap p:last-child a {color: blue;}
 
-            #subbar {position: absolute; width: 80px; top: 100px; right: 70px; background-color: rgb(231, 231, 225);}
+            #subbar {position: absolute; width: 80px; top: 100px; right: 15px; background-color: rgb(231, 231, 225); border-radius: 20px; border: 1px solid rgb(195, 197, 195);}
             #subbar > p {width: 80px; height: 70px;}
+            #subbar > p > a > img {width: 50px; height: 50px; padding-left: 15px;}
+            #subbar > p > a > img:hover {cursor: pointer;}
+            #subbar > p:first-child > a > img {width: 75px; padding-left: 3px; padding-top: 8px;}
         }
         /*------------------------------------------------------------598~767------------------------------------------------------------*/
         @media screen and (min-width : 598px) and (max-width : 767px){
@@ -209,10 +212,16 @@
             #nightbusclose {position: absolute; top: 15px; right: 15px; z-index: 6;}
             #nightbusclose > img:hover {cursor: pointer;}
             /*AB노선 구분표*/
-            #ABwrap {display: none; z-index: 7; position: absolute; top: 30px; right: 70px; width: 80px; height: 50px; background-color: rgb(255, 255, 137); line-height: 25px; border-radius: 10px; font-size: 14px; font-weight: bold; border: 1px solid #888;}
+            #ABwrap {display: none; z-index: 7; position: absolute; top: 30px; right: 15px; width: 80px; height: 50px; background-color: rgb(255, 255, 137); line-height: 25px; border-radius: 10px; font-size: 14px; font-weight: bold; border: 1px solid #888;}
             #ABwrap p {padding-left: 8px;}
             #ABwrap p a {color: red; font-weight: bold;}
             #ABwrap p:last-child a {color: blue;}
+
+            #subbar {position: absolute; width: 80px; top: 100px; right: 15px; background-color: rgb(231, 231, 225); border-radius: 20px; border: 1px solid rgb(195, 197, 195);}
+            #subbar > p {width: 80px; height: 70px;}
+            #subbar > p > a > img {width: 50px; height: 50px; padding-left: 15px;}
+            #subbar > p > a > img:hover {cursor: pointer;}
+            #subbar > p:first-child > a > img {width: 75px; padding-left: 3px; padding-top: 8px;}
         }
         /*------------------------------------------------------------0~597------------------------------------------------------------*/
         @media screen and (max-width : 597px) {
@@ -310,6 +319,14 @@
             #ABwrap p {padding-left: 8px;}
             #ABwrap p a {color: red; font-weight: bold;}
             #ABwrap p:last-child a {color: blue;}
+
+            #subbar {position: absolute; bottom: 30px; right: 22vw; background-color: rgb(231, 231, 225); border-radius: 20px; border: 1px solid rgb(195, 197, 195);}
+            #subbar > p {float: left; width: 70px; height: 45px;}
+            #subbar > p > a > img {width: 55px; height: 40px; padding-left: 15px; padding-top: 5px;}
+            #subbar > p > a > img:hover {cursor: pointer;}
+            #subbar > p:first-child > a > img {width: 70px; padding-left: 3px; }
+            #subbar > p:nth-child(2) { padding-left: 5px;}
+            #subbar > p:nth-child(3) { padding-left: 5px;}
         }
       
     </style>
@@ -496,10 +513,10 @@
             <p><a>---</a> B노선</p>
         </div>
         <div id="subbar">
-            <p><a><img src="" alt=""></a></p>
-            <p><a><img src="" alt=""></a></p>
-            <p><a><img src="" alt=""></a></p>
-            <p><a><img src="" alt=""></a></p>
+            <p><a><img src="images/busimage.png" alt="순환버스정류장" title="순환버스정류장"></a></p>
+            <p><a><img src="images/ATM.png" alt="ATM" title="ATM"></a></p>
+            <p><a><img src="images/parkinglot.png" alt="교내 주차장" title="교내 주차장"></a></p>
+            <p><a><img src="images/settingimage.png" alt="설정" title="설정"></a></p>
         </div>
 </div>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8cbc68a03b7f95264d7b3a4693745f96"></script> <!--카카오맵API호출-->
@@ -575,23 +592,13 @@
             $('#ABwrap').css('display','none');
         }, 
     );
-    $("#others>ul>li:first-child").click(
+    $("#others>ul>li:first-child").hover(
         function () {
             $('#restaurant').css('display','block');
         },
         function () {
             $('#restaurant').css('display','none');
         },
-    );
-    $("#others> ul > li:first-child > a").click(
-        function () {
-            $('#restaurant').css('display','block');
-        }
-    );
-    $("#restaurant > li:last-child").focusout(
-        function () {
-            $('#restaurant').css('display','none');
-        }
     );
 </script>
 <script> //나중에 scripts파일 만들어서 옮기기
