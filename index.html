@@ -64,13 +64,13 @@
             #level3button { position: fixed; bottom: 38px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black; z-index: 1; background-color: white}
             /*hover 테스트*/
             #level3button:hover { background-color: #888;}
-            #level3button > img {width: 35px; height: 35px; position: relative; left: 8px; top: 8px}
-            #level3button > img:hover {cursor: pointer;}
+            #level3button > a > img {position: relative; left: 5px; top: 5px; width: 40px; height: 40px;}
+            #level3button > a > img:hover {cursor: pointer;}
             #findme { position: fixed; bottom: 95px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black; z-index: 1; background-color: white}
             /*find me 호버하는 경우 색 변경*/
             #findme:hover {background-color: #888;}
-            #findme > img {width: 35px; height: 35px; position: relative; left: 8px; top: 8px}
-            #findme > img:hover {cursor: pointer;}
+            #findme > a > img {position: relative; left: 5px; top: 5px; width: 40px; height: 40px;}
+            #findme > a > img:hover {cursor: pointer;}
         
             /*버스노선시간표 스타일시트 모바일 버전까지 화면 적용 완료*/
             .wrap {position: absolute;left: -170px;bottom: 5px;width: 360px; height: 312px; text-align: left;overflow: hidden;font-size: 0.9rem;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;}
@@ -113,6 +113,9 @@
             #ABwrap p {padding-left: 8px;}
             #ABwrap p a {color: red; font-weight: bold;}
             #ABwrap p:last-child a {color: blue;}
+
+            #subbar {position: absolute; width: 80px; top: 100px; right: 70px; background-color: rgb(231, 231, 225);}
+            #subbar > p {width: 80px; height: 70px;}
         }
         /*------------------------------------------------------------598~767------------------------------------------------------------*/
         @media screen and (min-width : 598px) and (max-width : 767px){
@@ -162,13 +165,13 @@
             #level3button { position: fixed; bottom: 38px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black; z-index: 1; background-color: white}
             /*hover 테스트*/
             #level3button:hover { background-color: #888;}
-            #level3button > img {width: 35px; height: 35px; position: relative; left: 8px; top: 8px}
-            #level3button > img:hover {cursor: pointer;}
+            #level3button > a > img {position: relative; left: 5px; top: 5px; width: 40px; height: 40px;}
+            #level3button > a > img:hover {cursor: pointer;}
             #findme { position: fixed; bottom: 95px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black; z-index: 1; background-color: white}
             /*find me 호버하는 경우 색 변경*/
             #findme:hover {background-color: #888;}
-            #findme > img {width: 35px; height: 35px; position: relative; left: 8px; top: 8px}
-            #findme > img:hover {cursor: pointer;}
+            #findme > a > img {position: relative; left: 5px; top: 5px; width: 40px; height: 40px;}
+            #findme > a > img:hover {cursor: pointer;}
         
             .wrap {position: absolute;left: -170px;bottom: 5px;width: 360px; height: 312px; text-align: left;overflow: hidden;font-size: 0.9rem;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;}
             .wrap * {padding: 0;margin: 0;}
@@ -259,13 +262,13 @@
             #level3button {position: fixed; bottom: 38px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black; z-index: 1; background-color: white;}
             /*hover 테스트*/
             #level3button:active { background-color: #888;}
-            #level3button > img {width: 35px; height: 35px; position: relative; left: 5.5px; top: 6px}
-            #level3button > img:hover {cursor: pointer;}
+            #level3button > a > img {width: 35px; height: 35px; position: relative; left: 5.5px; top: 6px}
+            #level3button > a > img:hover {cursor: pointer;}
             #findme { position: fixed; bottom: 95px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black; z-index: 1; background-color: white}
             /*find me 호버하는 경우 색 변경*/
             #findme:active {background-color: #888;}
-            #findme > img {width: 35px; height: 35px; position: relative; left: 5.5px; top: 6px}
-            #findme > img:hover {cursor: pointer;}
+            #findme > a > img {width: 35px; height: 35px; position: relative; left: 5.5px; top: 6px}
+            #findme > a > img:hover {cursor: pointer;}
     
             .wrap {position: absolute;left: -170px;bottom: 5px;width: 355px; height: 312px; text-align: left;overflow: hidden;font-size: 0.9rem;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;}
             .wrap * {padding: 0;margin: 0;}
@@ -481,8 +484,8 @@
         </div>
         <div id="map"><!--지도API삽입--></div> 
         <div id="copyright"><a>Copyright 2021. Owl<br><span>All rights reserved</span></a></div>
-        <div id="level3button" onclick="levelchange(), Moving1(33.45594, 126.56203)"><img src="images/zoomreset.png" title="원래대로"></div>
-        <div id="findme"><img src="images/location.png" class="me" title="내 위치"></div>
+        <div id="findme"><a href="javascript:Moving1(latitude, longitude)"><img src="images/location.png" class="me" title="내 위치"></a></div>
+        <div id="level3button" onclick="levelchange(), Moving1(33.45594, 126.56203)"><a href="javascript:levelchange(), Moving1(33.45594, 126.56203)"><img src="images/zoomreset.png" title="원래대로"></a></div>
         <div id="nightbuswrap">
             <div id="nightbushead"></div>
             <div id="nightbusbody"></div>
@@ -491,6 +494,12 @@
         <div id="ABwrap">
             <p><a>---</a> A노선</p>
             <p><a>---</a> B노선</p>
+        </div>
+        <div id="subbar">
+            <p><a><img src="" alt=""></a></p>
+            <p><a><img src="" alt=""></a></p>
+            <p><a><img src="" alt=""></a></p>
+            <p><a><img src="" alt=""></a></p>
         </div>
 </div>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8cbc68a03b7f95264d7b3a4693745f96"></script> <!--카카오맵API호출-->
@@ -729,10 +738,8 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     $('.me').click(function(){
         Moving1(latitude, longitude);
     });
-
-    // 교내순환버스노선
-    function InnerBus() {
-
+    
+    // 
         // 선을 구성하는 좌표 배열입니다. 이 좌표들을 이어서 선을 표시합니다
         var linePath = [
             new kakao.maps.LatLng(33.459811596777094, 126.5616883626409),// 정문
