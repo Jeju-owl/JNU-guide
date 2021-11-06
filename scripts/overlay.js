@@ -119,56 +119,56 @@
         image: ATMmarkerImage,
         map: map
     });
-    ATMmarker.setMap(map);
+    ATMmarker.setMap(null);
     ATMmarkerPosition1 = new kakao.maps.LatLng(33.45942039684082, 126.5613326772457); //정문 농협은행
     var ATMmarker1 = new kakao.maps.Marker({
         position: ATMmarkerPosition1,
         image: ATMmarkerImage,
         map: map
     });
-    ATMmarker1.setMap(map);
+    ATMmarker1.setMap(null);
     ATMmarkerPosition2 = new kakao.maps.LatLng(33.45581863503511, 126.56136963794465); //본관
     var ATMmarker2 = new kakao.maps.Marker({
         position: ATMmarkerPosition2,
         image: ATMmarkerImage,
         map: map
     });
-    ATMmarker2.setMap(map);
+    ATMmarker2.setMap(null);
     ATMmarkerPosition3 = new kakao.maps.LatLng(33.452813988176864, 126.5607152235069); //중앙도서관
     var ATMmarker3 = new kakao.maps.Marker({
         position: ATMmarkerPosition3,
         image: ATMmarkerImage,
         map: map
     });
-    ATMmarker3.setMap(map);
+    ATMmarker3.setMap(null);
     ATMmarkerPosition4 = new kakao.maps.LatLng(33.45492583565361, 126.5606723070996); //학생회관
     var ATMmarker4 = new kakao.maps.Marker({
         position: ATMmarkerPosition4,
         image: ATMmarkerImage,
         map: map
     });
-    ATMmarker4.setMap(map);
+    ATMmarker4.setMap(null);
     ATMmarkerPosition5 = new kakao.maps.LatLng(33.45103031220647, 126.55670166961119); //학생생활관
     var ATMmarker5 = new kakao.maps.Marker({
         position: ATMmarkerPosition5,
         image: ATMmarkerImage,
         map: map
     });
-    ATMmarker5.setMap(map);
+    ATMmarker5.setMap(null);
     ATMmarkerPosition6 = new kakao.maps.LatLng(33.4573112632239, 126.56406194105139); //해양과학대학3호관
     var ATMmarker6 = new kakao.maps.Marker({
         position: ATMmarkerPosition6,
         image: ATMmarkerImage,
         map: map
     });
-    ATMmarker6.setMap(map);
+    ATMmarker6.setMap(null);
     ATMmarkerPosition7 = new kakao.maps.LatLng(33.453723160973496, 126.55967270404226); //아라뮤즈홀
     var ATMmarker7 = new kakao.maps.Marker({
         position: ATMmarkerPosition7,
         image: ATMmarkerImage,
         map: map
     });
-    ATMmarker7.setMap(map);
+    ATMmarker7.setMap(null);
 
     //--------------------정류장별 html파일---------------------------- 
     var content ='<div class="wrap">'+
