@@ -3192,3 +3192,36 @@ var content12 ='<div class="wrap">'+
             ATMmarker7.setMap(map);
         }     
     });
+
+    $('.schoolbus').click(
+        function() {
+            busmarker.setMap(null);
+            busmarker1.setMap(null);
+            busmarker2.setMap(null);
+            busmarker3.setMap(null);
+            busmarker4.setMap(null);
+            busmarker5.setMap(null);
+            busmarker6.setMap(null);
+            busmarker7.setMap(null);
+            busmarker8.setMap(null);
+            busmarker9.setMap(null);
+            busmarker10.setMap(null);
+            busmarker11.setMap(null);
+            busmarker12.setMap(null);
+        },
+        function() {
+            busmarker.setMap(map);
+            busmarker1.setMap(map);
+            busmarker2.setMap(map);
+            busmarker3.setMap(map);
+            busmarker4.setMap(map);
+            busmarker5.setMap(map);
+            busmarker6.setMap(map);
+            busmarker7.setMap(map);
+            busmarker8.setMap(map);
+            busmarker9.setMap(map);
+            busmarker10.setMap(map);
+            busmarker11.setMap(map);
+            busmarker12.setMap(map);
+        }
+    );
