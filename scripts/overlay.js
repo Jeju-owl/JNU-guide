@@ -3211,6 +3211,27 @@ var content12 ='<div class="wrap">'+
             busmarker10.setMap(null);
             busmarker11.setMap(null);
             busmarker12.setMap(null);
+            overlay.setMap(null);
+            overlay1.setMap(null);
+            overlay2.setMap(null);
+            overlay3.setMap(null);
+            overlay4.setMap(null);
+            overlay5.setMap(null);
+            overlay6.setMap(null);
+            overlay7.setMap(null);
+            overlay8.setMap(null);
+            overlay9.setMap(null);
+            overlay10.setMap(null);
+            overlay11.setMap(null);
+            overlay12.setMap(null);
+            ATMoverlay.setMap(null);
+            ATMoverlay1.setMap(null);
+            ATMoverlay2.setMap(null);
+            ATMoverlay3.setMap(null);
+            ATMoverlay4.setMap(null);
+            ATMoverlay5.setMap(null);
+            ATMoverlay6.setMap(null);
+            ATMoverlay7.setMap(null);
             bustoggle = !bustoggle;
         }
         else {
@@ -3227,6 +3248,27 @@ var content12 ='<div class="wrap">'+
             busmarker10.setMap(map);
             busmarker11.setMap(map);
             busmarker12.setMap(map);
+            overlay.setMap(null);
+            overlay1.setMap(null);
+            overlay2.setMap(null);
+            overlay3.setMap(null);
+            overlay4.setMap(null);
+            overlay5.setMap(null);
+            overlay6.setMap(null);
+            overlay7.setMap(null);
+            overlay8.setMap(null);
+            overlay9.setMap(null);
+            overlay10.setMap(null);
+            overlay11.setMap(null);
+            overlay12.setMap(null);
+            ATMoverlay.setMap(null);
+            ATMoverlay1.setMap(null);
+            ATMoverlay2.setMap(null);
+            ATMoverlay3.setMap(null);
+            ATMoverlay4.setMap(null);
+            ATMoverlay5.setMap(null);
+            ATMoverlay6.setMap(null);
+            ATMoverlay7.setMap(null);
             bustoggle = !bustoggle;
         }     
     }
@@ -3240,6 +3282,27 @@ var content12 ='<div class="wrap">'+
             ATMmarker5.setMap(null);
             ATMmarker6.setMap(null);
             ATMmarker7.setMap(null);
+            overlay.setMap(null);
+            overlay1.setMap(null);
+            overlay2.setMap(null);
+            overlay3.setMap(null);
+            overlay4.setMap(null);
+            overlay5.setMap(null);
+            overlay6.setMap(null);
+            overlay7.setMap(null);
+            overlay8.setMap(null);
+            overlay9.setMap(null);
+            overlay10.setMap(null);
+            overlay11.setMap(null);
+            overlay12.setMap(null);
+            ATMoverlay.setMap(null);
+            ATMoverlay1.setMap(null);
+            ATMoverlay2.setMap(null);
+            ATMoverlay3.setMap(null);
+            ATMoverlay4.setMap(null);
+            ATMoverlay5.setMap(null);
+            ATMoverlay6.setMap(null);
+            ATMoverlay7.setMap(null);
             ATMtoggle = !ATMtoggle;
         }
         else {
@@ -3251,6 +3314,27 @@ var content12 ='<div class="wrap">'+
             ATMmarker5.setMap(map);
             ATMmarker6.setMap(map);
             ATMmarker7.setMap(map);
+            overlay.setMap(null);
+            overlay1.setMap(null);
+            overlay2.setMap(null);
+            overlay3.setMap(null);
+            overlay4.setMap(null);
+            overlay5.setMap(null);
+            overlay6.setMap(null);
+            overlay7.setMap(null);
+            overlay8.setMap(null);
+            overlay9.setMap(null);
+            overlay10.setMap(null);
+            overlay11.setMap(null);
+            overlay12.setMap(null);
+            ATMoverlay.setMap(null);
+            ATMoverlay1.setMap(null);
+            ATMoverlay2.setMap(null);
+            ATMoverlay3.setMap(null);
+            ATMoverlay4.setMap(null);
+            ATMoverlay5.setMap(null);
+            ATMoverlay6.setMap(null);
+            ATMoverlay7.setMap(null);
             ATMtoggle = !ATMtoggle;
         }     
     }
