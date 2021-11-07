@@ -694,7 +694,6 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
             position: koreanmarkerPosition, 
             image: koreanmarkerImage // 마커이미지 설정 
         });
-        koreanmarker.setMap(map);
 
         // 지도의 확대 축소 레벨이 바뀔때마다 실행되는 이벤트리스터입니다.
         kakao.maps.event.addListener(map, 'zoom_changed', function() {        
