@@ -437,7 +437,7 @@
                                     <li >산아름국수</li>
                                     <li >상아탑</li>
                                     <li >와랑와랑</li>
-                                    <li onclick="Moving(33.460631922814564,126.56101463243778)">콘킹부대찌개</li>
+                                    <li onclick="levelchange1(), Moving1(33.460631922814564,126.56101463243778)">콘킹부대찌개</li>
                                     <li >토마토도시락</li>
                                     <li >통큰2층</li>
                                     <li >학교종이 땡땡땡</li>
@@ -655,7 +655,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
             userMarker(latitude,longitude);
         });
     }    
-
+        //건물마커 이미지 옵션 생성
         var buildingimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-6/images/buildinglocation.png', // 건물마커이미지의 주소입니다, remove.bg사이트에서 png 바깥배경 없앳음 
             buildingimageSize = new kakao.maps.Size(40, 40), // 건물마커 이미지의 크기입니다
             buildingimageOption = {offset: new kakao.maps.Point(20, 40)}; // 건물마커 이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
@@ -680,24 +680,50 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
                 buildingmarkers[i].setMap(null);
             }
         }
+        // 한식 이미지 옵션 생성
+        var koreanimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png', // 마커이미지의 주소입니다    
+            koreanimageSize = new kakao.maps.Size(20, 20), // 마커이미지의 크기입니다
+            koreanimageOption = {offset: new kakao.maps.Point(10, 20)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
 
-    function userMarker(x,y) {
-        // 사용자의 위치가 마커로 표시될 위치입니다 
-        var markerPosition  = new kakao.maps.LatLng(x, y); 
+        // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+        var koreanmarkerImage = new kakao.maps.MarkerImage(koreanimageSrc, koreanimageSize, koreanimageOption),
+            koreanmarkerPosition = new kakao.maps.LatLng(33.460629678377366, 126.5610173329148); // 콘킹부대찌개위치
 
-        // 사용자 위치 마커를 생성합니다
-        var usermarker = new kakao.maps.Marker({
-            position: markerPosition
+        // 마커를 생성합니다
+        var koreanmarker = new kakao.maps.Marker({
+            position: koreanmarkerPosition, 
+            image: koreanmarkerImage // 마커이미지 설정 
         });
-        // 사용자 위치 마커가 지도 위에 표시되도록 설정합니다
-        usermarker.setMap(map);
-        //markers배열에 marker푸쉬
-        usermarkers.push(usermarker);
-        //for문을 통해 사용자 이전 위치 마커들 다 삭제
-        for (var i = 0; i < usermarkers.length-1; i++) {
-            usermarkers[i].setMap(null);
+        koreanmarker.setMap(map);
+
+        // 지도의 확대 축소 레벨이 바뀔때마다 실행되는 이벤트리스터입니다.
+        kakao.maps.event.addListener(map, 'zoom_changed', function() {        
+            var level = map.getLevel();// 지도의 현재 레벨을 얻어옵니다
+            if (level >= 3) {
+                koreanmarker.setMap(null);
+            }
+            else {
+                koreanmarker.setMap(map);
+            }     
+        });
+    
+        function userMarker(x,y) {
+            // 사용자의 위치가 마커로 표시될 위치입니다 
+            var markerPosition  = new kakao.maps.LatLng(x, y); 
+
+            // 사용자 위치 마커를 생성합니다
+            var usermarker = new kakao.maps.Marker({
+                position: markerPosition
+            });
+            // 사용자 위치 마커가 지도 위에 표시되도록 설정합니다
+            usermarker.setMap(map);
+            //markers배열에 marker푸쉬
+            usermarkers.push(usermarker);
+            //for문을 통해 사용자 이전 위치 마커들 다 삭제
+            for (var i = 0; i < usermarkers.length-1; i++) {
+                usermarkers[i].setMap(null);
+            }
         }
-    }
     // var userimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-6/images/user.png', // 유저마커이미지의 주소입니다, remove.bg사이트에서 png 바깥배경 없앳음 
     //     userimageSize = new kakao.maps.Size(35, 20), // 유저마커 이미지의 크기입니다
     //     userimageOption = {offset: new kakao.maps.Point(14, 10)}; // 유저마커 이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
@@ -740,6 +766,9 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     
     function levelchange() {
         map.setLevel(4);
+    }
+    function levelchange1() {
+        map.setLevel(1);
     }
 
     //me클래스를 클릭했을 때 함수가 발생한다. 그로인해 함수안에 있는 2개의 다른 함수가 실행된다.
