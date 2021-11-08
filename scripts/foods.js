@@ -26,6 +26,50 @@ ddeokimageOption = {offset: new kakao.maps.Point(10, 20)};
 var toastimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png',  
 toastimageSize = new kakao.maps.Size(20, 20),
 toastimageOption = {offset: new kakao.maps.Point(10, 20)};
+// 양중일-돈까스 이미지 옵션 생성
+var ddonimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png',   
+ddonimageSize = new kakao.maps.Size(20, 20),
+ddonimageOption = {offset: new kakao.maps.Point(10, 20)};
+// 양중일-중식 이미지 옵션 생성
+var chinaimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png',   
+chinaimageSize = new kakao.maps.Size(20, 20),
+chinaimageOption = {offset: new kakao.maps.Point(10, 20)};
+// 양중일-우동 이미지 옵션 생성
+var udonimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png',   
+udonimageSize = new kakao.maps.Size(20, 20),
+udonimageOption = {offset: new kakao.maps.Point(10, 20)};
+// 양중일-텐동 이미지 옵션 생성
+var tendonimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png',   
+tendonimageSize = new kakao.maps.Size(20, 20),
+tendonimageOption = {offset: new kakao.maps.Point(10, 20)};
+// 양중일-마라탕 이미지 옵션 생성
+var maratangimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png',   
+maratangimageSize = new kakao.maps.Size(20, 20),
+maratangimageOption = {offset: new kakao.maps.Point(10, 20)};
+// 양중일-파스타 이미지 옵션 생성
+var pastaimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png',   
+pastaimageSize = new kakao.maps.Size(20, 20),
+pastaimageOption = {offset: new kakao.maps.Point(10, 20)};
+// 카페&디저트-커피 이미지 옵션 생성
+var coffeeimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png',   
+coffeeimageSize = new kakao.maps.Size(20, 20),
+coffeeimageOption = {offset: new kakao.maps.Point(10, 20)};
+// 살찌는- 버거 옵션 생성
+var burgerimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png',   
+burgerimageSize = new kakao.maps.Size(20, 20),
+burgerimageOption = {offset: new kakao.maps.Point(10, 20)};
+// 살찌는- 치킨 옵션 생성
+var chickenimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png',   
+chickenimageSize = new kakao.maps.Size(20, 20),
+chickenimageOption = {offset: new kakao.maps.Point(10, 20)};
+// 살찌는- 피자 옵션 생성
+var pizzaimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png',   
+pizzaimageSize = new kakao.maps.Size(20, 20),
+pizzaimageOption = {offset: new kakao.maps.Point(10, 20)};
+// 살찌는- 맥주 옵션 생성
+var beerimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png',   
+beerimageSize = new kakao.maps.Size(20, 20),
+beerimageOption = {offset: new kakao.maps.Point(10, 20)};
 
 // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
 var koreanmarkerImage = new kakao.maps.MarkerImage(koreanimageSrc, koreanimageSize, koreanimageOption);
@@ -35,6 +79,17 @@ var ricemarkerImage = new kakao.maps.MarkerImage(riceimageSrc, riceimageSize, ri
 var noodlemarkerImage = new kakao.maps.MarkerImage(noodleimageSrc, noodleimageSize, noodleimageOption);
 var ddeokmarkerImage = new kakao.maps.MarkerImage(ddeokimageSrc, ddeokimageSize, ddeokimageOption);
 var toastmarkerImage = new kakao.maps.MarkerImage(toastimageSrc, toastimageSize, toastimageOption);
+var ddonmarkerImage = new kakao.maps.MarkerImage(ddonimageSrc, ddonimageSize, ddonimageOption);
+var chinamarkerImage = new kakao.maps.MarkerImage(chinaimageSrc, chinaimageSize, chinaimageOption);
+var udontmarkerImage = new kakao.maps.MarkerImage(udonimageSrc, udonimageSize, udonimageOption);
+var tendonmarkerImage = new kakao.maps.MarkerImage(tendonimageSrc, tendonimageSize, tendonimageOption);
+var maratangmarkerImage = new kakao.maps.MarkerImage(maratangimageSrc, maratangimageSize, maratangimageOption);
+var pastamarkerImage = new kakao.maps.MarkerImage(pastaimageSrc, pastaimageSize, pastaimageOption);
+var coffeemarkerImage = new kakao.maps.MarkerImage(coffeeimageSrc, coffeeimageSize, coffeeimageOption);
+var burgermarkerImage = new kakao.maps.MarkerImage(burgerimageSrc, burgerimageSize, burgerimageOption);
+var chickenmarkerImage = new kakao.maps.MarkerImage(chickenimageSrc, chickenimageSize, chickenimageOption);
+var pizzamarkerImage = new kakao.maps.MarkerImage(pizzaimageSrc, pizzaimageSize, pizzaimageOption);
+var beermarkerImage = new kakao.maps.MarkerImage(beerimageSrc, beerimageSize, beerimageOption);
 
 // 식당 위치 정보
 var koreanmarkerPosition = new kakao.maps.LatLng(33.460629678377366, 126.5610173329148); // 콘킹부대찌개위치
@@ -56,13 +111,14 @@ var koreanmarkerPosition15 = new kakao.maps.LatLng(33.460629678377366, 126.56101
 var koreanmarkerPosition16 = new kakao.maps.LatLng(33.460629678377366, 126.5610173329148); // 매력식당
 var koreanmarkerPosition17 = new kakao.maps.LatLng(33.460629678377366, 126.5610173329148); // 봉구스밥버거
 var koreanmarkerPosition18 = new kakao.maps.LatLng(33.460629678377366, 126.5610173329148); // 신전떡볶이
-var koreanmarkerPosition19 = new kakao.maps.LatLng(33.460629678377366, 126.5610173329148); // 글로벌하우스
-var koreanmarkerPosition20 = new kakao.maps.LatLng(33.460629678377366, 126.5610173329148); // 옛날아우네 순대
-var koreanmarkerPosition21 = new kakao.maps.LatLng(33.460629678377366, 126.5610173329148); // 이삭토스트
-var koreanmarkerPosition22 = new kakao.maps.LatLng(33.460629678377366, 126.5610173329148); // 밀면한라마루
-var koreanmarkerPosition23 = new kakao.maps.LatLng(33.460629678377366, 126.5610173329148); // 엄마네
+var koreanmarkerPosition19 = new kakao.maps.LatLng(33.460629678377366, 126.5610173329148); // 신전떡볶이
+var koreanmarkerPosition20 = new kakao.maps.LatLng(33.460629678377366, 126.5610173329148); // 글로벌하우스
+var koreanmarkerPosition21 = new kakao.maps.LatLng(33.460629678377366, 126.5610173329148); // 옛날아우네 순대
+var koreanmarkerPosition22 = new kakao.maps.LatLng(33.460629678377366, 126.5610173329148); // 이삭토스트
+var koreanmarkerPosition23 = new kakao.maps.LatLng(33.460629678377366, 126.5610173329148); // 밀면한라마루
+var koreanmarkerPosition24 = new kakao.maps.LatLng(33.460629678377366, 126.5610173329148); // 엄마네
 
-// 마커를 생성합니다
+// 마커를 생성합니다 ------이부분부터 순서신경 잘해야됨------
 var koreanmarker = new kakao.maps.Marker({
     position: koreanmarkerPosition, 
     image: koreanmarkerImage // 마커이미지 설정 
@@ -157,6 +213,10 @@ var koreanmarker22 = new kakao.maps.Marker({
 });
 var koreanmarker23 = new kakao.maps.Marker({
     position: koreanmarkerPosition23, 
+    image: koreanmarkerImage // 마커이미지 설정 
+});
+var koreanmarker24 = new kakao.maps.Marker({
+    position: koreanmarkerPosition24, 
     image: koreanmarkerImage // 마커이미지 설정 
 });
 
