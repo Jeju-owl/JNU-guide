@@ -593,7 +593,7 @@
     );
     $("#others>ul>li:nth-last-child(2)").hover(
         function AB() {
-            $('#ABwrap').css('display','block');
+            document.querySelector("#ABwrap").style.display = "block" //$('#ABwrap').css('display','block');
         },
         function AB() {
             $('#ABwrap').css('display','none');
@@ -620,7 +620,7 @@
 </script>
 <script> //나중에 scripts파일 만들어서 옮기기
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-    mapOption = { 
+    mapOption = {
         center: new kakao.maps.LatLng(33.45594, 126.56203), // 지도의 중심좌표
         level: 4 // 지도의 확대 레벨
     };
@@ -654,8 +654,8 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         console.log('Geolocation is not supported for this Browser/OS.');
     
     // geolocation 요청이 실패하면 이 함수를 호출한다.
-    function error(e) {
-        // 오류 객체에는 수치 코드와 텍스트 메시지가 존재한다.
+    function error(e) {  
+        // 오류 객체에는 수치 코드와 텍스트 메시지가 존재한다.2
         // 코드 값은 다음과 같다.
         // 1: 사용자가 위치 정보를 공유 권한을 제공하지 않음.
         // 2: 브라우저가 위치를 가져올 수 없음.
