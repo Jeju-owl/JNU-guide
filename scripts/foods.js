@@ -3,71 +3,71 @@ var koreanimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/featu
 koreanimageSize = new kakao.maps.Size(20, 20), // 마커이미지의 크기입니다
 koreanimageOption = {offset: new kakao.maps.Point(10, 20)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
 // 한식-김밥 이미지 옵션 생성
-var gimbapimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png',  
+var gimbapimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/gimbap.png',  
 gimbapimageSize = new kakao.maps.Size(20, 20),
 gimbapimageOption = {offset: new kakao.maps.Point(10, 20)};
 // 한식-갈비 이미지 옵션 생성
-var galbiimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png',  
+var galbiimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/galbi.png',  
 galbiimageSize = new kakao.maps.Size(20, 20),
 galbiimageOption = {offset: new kakao.maps.Point(10, 20)};
 // 한식-덫밥 이미지 옵션 생성
-var riceimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png',  
+var riceimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/rice.png',  
 riceimageSize = new kakao.maps.Size(20, 20),
 riceimageOption = {offset: new kakao.maps.Point(10, 20)};
 // 한식-국수 이미지 옵션 생성
-var noodleimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png',  
+var noodleimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/noodle.png',  
 noodleimageSize = new kakao.maps.Size(20, 20),
 noodleimageOption = {offset: new kakao.maps.Point(10, 20)};
 // 한식-떡 이미지 옵션 생성
-var ddeokimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png',  
+var ddeokimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/ddeok.png',  
 ddeokimageSize = new kakao.maps.Size(20, 20),
 ddeokimageOption = {offset: new kakao.maps.Point(10, 20)};
 // 한식-토스트 이미지 옵션 생성
-var toastimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png',  
+var toastimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/toast.png',  
 toastimageSize = new kakao.maps.Size(20, 20),
 toastimageOption = {offset: new kakao.maps.Point(10, 20)};
 // 양중일-돈까스 이미지 옵션 생성
-var ddonimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png',   
+var ddonimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/ddon.png',   
 ddonimageSize = new kakao.maps.Size(20, 20),
 ddonimageOption = {offset: new kakao.maps.Point(10, 20)};
 // 양중일-중식 이미지 옵션 생성
-var chinaimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png',   
+var chinaimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/china.png',   
 chinaimageSize = new kakao.maps.Size(20, 20),
 chinaimageOption = {offset: new kakao.maps.Point(10, 20)};
 // 양중일-우동 이미지 옵션 생성
-var udonimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png',   
+var udonimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/udon.png',   
 udonimageSize = new kakao.maps.Size(20, 20),
 udonimageOption = {offset: new kakao.maps.Point(10, 20)};
 // 양중일-텐동 이미지 옵션 생성
-var tendonimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png',   
+var tendonimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/tendon.png',   
 tendonimageSize = new kakao.maps.Size(20, 20),
 tendonimageOption = {offset: new kakao.maps.Point(10, 20)};
 // 양중일-마라탕 이미지 옵션 생성
-var maratangimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png',   
+var maratangimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/maratang.png',   
 maratangimageSize = new kakao.maps.Size(20, 20),
 maratangimageOption = {offset: new kakao.maps.Point(10, 20)};
 // 양중일-파스타 이미지 옵션 생성
-var pastaimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png',   
+var pastaimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/pasta.png',   
 pastaimageSize = new kakao.maps.Size(20, 20),
 pastaimageOption = {offset: new kakao.maps.Point(10, 20)};
 // 카페&디저트-커피 이미지 옵션 생성
-var coffeeimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png',   
+var coffeeimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/coffee.png',   
 coffeeimageSize = new kakao.maps.Size(20, 20),
 coffeeimageOption = {offset: new kakao.maps.Point(10, 20)};
 // 살찌는- 버거 옵션 생성
-var burgerimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png',   
+var burgerimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/burger.png',   
 burgerimageSize = new kakao.maps.Size(20, 20),
 burgerimageOption = {offset: new kakao.maps.Point(10, 20)};
 // 살찌는- 치킨 옵션 생성
-var chickenimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png',   
+var chickenimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/chicken.png',   
 chickenimageSize = new kakao.maps.Size(20, 20),
 chickenimageOption = {offset: new kakao.maps.Point(10, 20)};
 // 살찌는- 피자 옵션 생성
-var pizzaimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png',   
+var pizzaimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/pizza.png',   
 pizzaimageSize = new kakao.maps.Size(20, 20),
 pizzaimageOption = {offset: new kakao.maps.Point(10, 20)};
 // 살찌는- 맥주 옵션 생성
-var beerimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png',   
+var beerimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/beer.png',   
 beerimageSize = new kakao.maps.Size(20, 20),
 beerimageOption = {offset: new kakao.maps.Point(10, 20)};
 
