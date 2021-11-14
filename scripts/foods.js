@@ -107,7 +107,6 @@ var koreanmarkerPosition1 = new kakao.maps.LatLng(33.460632008508654,126.5610388
 var koreanmarkerPosition2 = new kakao.maps.LatLng(33.46022359435553,126.5609145026397); // 김밥천구-김밥
 var koreanmarkerPosition3 = new kakao.maps.LatLng(33.460598037253035,126.56099328991274); // 맵수다-갈비
 var koreanmarkerPosition4 = new kakao.maps.LatLng(33.46033618927183,126.5615216842466); // 한솥도시락-덫밥
-// var koreanmarkerPosition5 = new kakao.maps.LatLng(33.460376608358665,126.56147845425443); // 밥먹젠-한식 지금 사라졋다고 함
 var koreanmarkerPosition6 = new kakao.maps.LatLng(33.46065412115623,126.56155504285272); // 산들애국수-국수
 var koreanmarkerPosition7 = new kakao.maps.LatLng(33.46067993195596,126.56184265374061); // 상아탑식당-한식
 var koreanmarkerPosition8 = new kakao.maps.LatLng(33.46036044935735,126.56200829947076); // 학교종이 땡땡땡-갈비
