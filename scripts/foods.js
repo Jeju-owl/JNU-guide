@@ -144,10 +144,6 @@ var koreanmarker4 = new kakao.maps.Marker({
     position: koreanmarkerPosition4, 
     image: lunchboxImage // 마커이미지 설정 
 });
-var koreanmarker5 = new kakao.maps.Marker({
-    position: koreanmarkerPosition5, 
-    image: koreanmarkerImage // 마커이미지 설정 
-});
 var koreanmarker6 = new kakao.maps.Marker({
     position: koreanmarkerPosition6, 
     image: noodlemarkerImage // 마커이미지 설정 
@@ -219,7 +215,6 @@ if (level >= 3) {
     koreanmarker2.setMap(null);
     koreanmarker3.setMap(null);
     koreanmarker4.setMap(null);
-    koreanmarker5.setMap(null);
     koreanmarker6.setMap(null);
     koreanmarker7.setMap(null);
     koreanmarker8.setMap(null);
@@ -242,7 +237,6 @@ else {
     koreanmarker2.setMap(map);
     koreanmarker3.setMap(map);
     koreanmarker4.setMap(map);
-    koreanmarker5.setMap(map);
     koreanmarker6.setMap(map);
     koreanmarker7.setMap(map);
     koreanmarker8.setMap(map);
