@@ -8,7 +8,7 @@ function entranceTimeA() {
 
 
 
-    if(nowHour>=19 || now.getDay()==0 || now.getDay()==6){
+    if(nowHour>=19 || now.getDay()==0 || now.getDay()==6 || nowHour<=6){
         document.querySelector("#Atime").innerHTML = "운행 없음";
     }
 
@@ -129,6 +129,14 @@ function entranceTimeA() {
             }
             else if(nowMinute<=5){
                 document.querySelector("#Atime").innerHTML = Number(5-nowMinute)+":"+Number(59-nowSecond);
+            }
+        }
+        else if(nowHour<=7){
+            if(nowMinute>30){ 
+                document.querySelector("#Atime").innerHTML = Number(60-nowMinute)+":"+Number(59-nowSecond);
+            }
+            else if(nowHour<=30){
+                document.querySelector("#Atime").innerHTML = "운행 없음";
             }
         }
     }
