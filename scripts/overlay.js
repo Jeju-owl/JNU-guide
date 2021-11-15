@@ -171,2255 +171,266 @@
     ATMmarker7.setMap(null);
 
     //--------------------정류장별 html파일---------------------------- 
-    var content ='<div class="wrap">'+
-    '<div class="head">'+
-        '<div class="title">제주대학교 정문' +
-            '<div class="close" onclick="closeOverlay()" title="닫기"></div>'+
-        '</div>'+
-        '<div class="body">'+
-            '<div class="leftside"></div>'+
-            '<div class="Abus">'+
-                '<table>'+
-                    '<caption>A노선 (<span style="font-weight: bold; color: red;">반시계</span>방향)</caption>'+
-                    '<thead>'+
-                        '<tr>'+
-                            '<th>횟수</th>'+
-                            '<th>출발시간</th>'+
-                            '<th>횟수</th>'+
-                            '<th>출발시간</th>'+
-                        '</tr>'+
-                    '</thead>'+
-                    '<tbody>'+
-                        '<tr>'+
-                            '<td>1회</td>'+
-                            '<td>08:05</td>'+
-                            '<td>12회</td>'+
-                            '<td>13:45</td>'+
-                        '</tr>'+
-                        '<tr>'+
-                            '<td>2회</td>'+
-                            '<td>08:25</td>'+
-                            '<td>13회</td>'+
-                            '<td>14:30</td>'+
-                        '</tr>'+
-                        '<tr>'+
-                            '<td>3회</td>'+
-                            '<td>08:45</td>'+
-                            '<td>14회</td>'+
-                            '<td>15:05</td>'+
-                        '</tr>'+
-                        '<tr>'+
-                            '<td>4회</td>'+
-                            '<td>09:30</td>'+
-                            '<td>15회</td>'+
-                            '<td>15:25</td>'+
-                        '</tr>'+
-                        '<tr>'+
-                            '<td>5회</td>'+
-                            '<td>10:05</td>'+
-                            '<td>16회</td>'+
-                            '<td>15:45</td>'+
-                        '</tr>'+
-                        '<tr>'+
-                            '<td>6회</td>'+
-                            '<td>10:25</td>'+
-                            '<td>17회</td>'+
-                            '<td>16:30</td>'+
-                        '</tr>'+
-                        '<tr>'+
-                            '<td>7회</td>'+
-                            '<td>10:45</td>'+
-                            '<td>18회</td>'+
-                            '<td>17:00</td>'+
-                        '</tr>'+
-                        '<tr>'+
-                            '<td>8회</td>'+
-                            '<td>11:20</td>'+
-                            '<td>19회</td>'+
-                            '<td>17:20</td>'+
-                        '</tr>'+
-                        '<tr>'+
-                            '<td>9회</td>'+
-                            '<td>12:40</td>'+
-                            '<td>20회</td>'+
-                            '<td>17:40</td>'+
-                        '</tr>'+
-                        '<tr>'+
-                            '<td>10회</td>'+
-                            '<td>13:05</td>'+
-                            '<td>21회</td>'+
-                            '<td>18:00</td>'+
-                        '</tr>'+
-                        '<tr>'+
-                            '<td>11회</td>'+
-                            '<td>13:25</td>'+
-                            '<td>22회</td>'+
-                            '<td>18:20</td>'+
-                        '</tr>'+
-                    '</tbody>'+
-                '</table>'+
+    var content =
+        '<div id="buswrap">'+
+            '<div id="bushead">'+
+                '<a>제주대학교 정문</a>'+
+                '<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeOverlay()" title="닫기">'+
             '</div>'+
-            '<div class="rightside"></div>'+
-            '<div class="Bbus">'+
-                '<table>'+
-                    '<caption>B노선 (<span style="font-weight: bold; color: blue;">시계</span>방향)</caption>'+
-                    '<thead>'+
-                        '<tr>'+
-                            '<th>횟수</th>'+
-                            '<th>출발시간</th>'+
-                            '<th>횟수</th>'+
-                            '<th>출발시간</th>'+
-                        '</tr>'+
-                    '</thead>'+
-                    '<tbody>'+
-                        '<tr>'+
-                            '<td>1회</td>'+
-                            '<td>08:10</td>'+
-                            '<td>12회</td>'+
-                            '<td>13:50</td>'+
-                        '</tr>'+
-                        '<tr>'+
-                            '<td>2회</td>'+
-                            '<td>08:30</td>'+
-                            '<td>13회</td>'+
-                            '<td>14:40</td>'+
-                        '</tr>'+
-                        '<tr>'+
-                            '<td>3회</td>'+
-                            '<td>08:50</td>'+
-                            '<td>14회</td>'+
-                            '<td>15:10</td>'+
-                        '</tr>'+
-                        '<tr>'+
-                            '<td>4회</td>'+
-                            '<td>09:40</td>'+
-                            '<td>15회</td>'+
-                            '<td>15:30</td>'+
-                        '</tr>'+
-                        '<tr>'+
-                            '<td>5회</td>'+
-                            '<td>10:10</td>'+
-                            '<td>16회</td>'+
-                            '<td>15:50</td>'+
-                        '</tr>'+
-                        '<tr>'+
-                            '<td>6회</td>'+
-                            '<td>10:30</td>'+
-                            '<td>17회</td>'+
-                            '<td>16:40</td>'+
-                        '</tr>'+
-                        '<tr>'+
-                            '<td>7회</td>'+
-                            '<td>10:50</td>'+
-                            '<td>18회</td>'+
-                            '<td>17:10</td>'+
-                        '</tr>'+
-                        '<tr>'+
-                            '<td>8회</td>'+
-                            '<td>11:30</td>'+
-                            '<td>19회</td>'+
-                            '<td>17:30</td>'+
-                        '</tr>'+
-                        '<tr>'+
-                            '<td>9회</td>'+
-                            '<td>12:50</td>'+
-                            '<td>20회</td>'+
-                            '<td>17:50</td>'+
-                        '</tr>'+
-                        '<tr>'+
-                            '<td>10회</td>'+
-                            '<td>13:10</td>'+
-                            '<td>21회</td>'+
-                            '<td>18:10</td>'+
-                        '</tr>'+
-                        '<tr>'+
-                            '<td>11회</td>'+
-                            '<td>13:30</td>'+
-                            '<td>22회</td>'+
-                            '<td>18:30</td>'+
-                        '</tr>'+
-                    '</tbody>'+
-                '</table>'+
+            '<div id="busbody">'+
+                '<div id="businfo" class="clearfix">'+
+                    '<div id="businfoleft">'+
+                        '<strong>A</strong><br>(<a>반시계</a> 방향)<br><p id="Atime">로딩 중</p>'+
+                    '</div>'+
+                    '<div id="businforight">'+
+                        '<strong>B</strong><br>(<a>시계</a> 방향)<br><p id="Btime">로딩 중</p>'+
+                    '</div>'
+                '</div>'
+                '<div id="busetc">'
+                    '• 운행시간 - 08:00 ~ 18:40 <span>(주말 및 공휴일 제외)</span><br>• 표시되는 시간은 버스시간표를 기준으로 안내<br><a>중이며 시간대 별로 상이할 수 있습니다.</a>'
+                '</div>'+
             '</div>'+
-        '</div>'+
-    '</div>'+  
-'</div>';
-var content1 ='<div class="wrap">'+
-'<div class="head">'+
-    '<div class="title">약학대학' +
-        '<div class="close" onclick="closeOverlay()" title="닫기"></div>'+
-    '</div>'+
-    '<div class="body">'+
-        '<div class="leftside"></div>'+
-        '<div class="Abus">'+
-            '<table>'+
-                '<caption>A노선 (<span style="font-weight: bold; color: red;">반시계</span>방향)</caption>'+
-                '<thead>'+
-                    '<tr>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                    '</tr>'+
-                '</thead>'+
-                '<tbody>'+
-                    '<tr>'+
-                        '<td>1회</td>'+
-                        '<td>08:06</td>'+
-                        '<td>12회</td>'+
-                        '<td>13:46</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>2회</td>'+
-                        '<td>08:26</td>'+
-                        '<td>13회</td>'+
-                        '<td>14:31</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>3회</td>'+
-                        '<td>08:46</td>'+
-                        '<td>14회</td>'+
-                        '<td>15:06</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>4회</td>'+
-                        '<td>09:31</td>'+
-                        '<td>15회</td>'+
-                        '<td>15:26</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>5회</td>'+
-                        '<td>10:06</td>'+
-                        '<td>16회</td>'+
-                        '<td>15:46</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>6회</td>'+
-                        '<td>10:26</td>'+
-                        '<td>17회</td>'+
-                        '<td>16:31</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>7회</td>'+
-                        '<td>10:46</td>'+
-                        '<td>18회</td>'+
-                        '<td>17:01</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>8회</td>'+
-                        '<td>11:21</td>'+
-                        '<td>19회</td>'+
-                        '<td>17:21</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>9회</td>'+
-                        '<td>12:41</td>'+
-                        '<td>20회</td>'+
-                        '<td>17:41</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>10회</td>'+
-                        '<td>13:06</td>'+
-                        '<td>21회</td>'+
-                        '<td>18:01</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>11회</td>'+
-                        '<td>13:26</td>'+
-                        '<td>22회</td>'+
-                        '<td>18:21</td>'+
-                    '</tr>'+
-                '</tbody>'+
-            '</table>'+
-        '</div>'+
-        '<div class="rightside"></div>'+
-        '<div class="Bbus">'+
-            '<table>'+
-                '<caption>B노선 (<span style="font-weight: bold; color: blue;">시계</span>방향)</caption>'+
-                '<thead>'+
-                    '<tr>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                    '</tr>'+
-                '</thead>'+
-                '<tbody>'+
-                    '<tr>'+
-                        '<td>1회</td>'+
-                        '<td>08:11</td>'+
-                        '<td>12회</td>'+
-                        '<td>13:51</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>2회</td>'+
-                        '<td>08:31</td>'+
-                        '<td>13회</td>'+
-                        '<td>14:41</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>3회</td>'+
-                        '<td>08:51</td>'+
-                        '<td>14회</td>'+
-                        '<td>15:11</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>4회</td>'+
-                        '<td>09:41</td>'+
-                        '<td>15회</td>'+
-                        '<td>15:31</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>5회</td>'+
-                        '<td>10:11</td>'+
-                        '<td>16회</td>'+
-                        '<td>15:51</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>6회</td>'+
-                        '<td>10:31</td>'+
-                        '<td>17회</td>'+
-                        '<td>16:41</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>7회</td>'+
-                        '<td>10:51</td>'+
-                        '<td>18회</td>'+
-                        '<td>17:11</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>8회</td>'+
-                        '<td>11:31</td>'+
-                        '<td>19회</td>'+
-                        '<td>17:31</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>9회</td>'+
-                        '<td>12:51</td>'+
-                        '<td>20회</td>'+
-                        '<td>17:51</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>10회</td>'+
-                        '<td>13:11</td>'+
-                        '<td>21회</td>'+
-                        '<td>18:11</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>11회</td>'+
-                        '<td>13:31</td>'+
-                        '<td>22회</td>'+
-                        '<td>18:31</td>'+
-                    '</tr>'+
-                '</tbody>'+
-            '</table>'+
-        '</div>'+
-    '</div>'+
-'</div>'+  
-'</div>';
-var content2 ='<div class="wrap">'+
-'<div class="head">'+
-    '<div class="title">학생회관' +
-        '<div class="close" onclick="closeOverlay()" title="닫기"></div>'+
-    '</div>'+
-    '<div class="body">'+
-        '<div class="leftside"></div>'+
-        '<div class="Abus">'+
-            '<table>'+
-                '<caption>A노선 (<span style="font-weight: bold; color: red;">반시계</span>방향)</caption>'+
-                '<thead>'+
-                    '<tr>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                    '</tr>'+
-                '</thead>'+
-                '<tbody>'+
-                    '<tr>'+
-                        '<td>1회</td>'+
-                        '<td>08:09</td>'+
-                        '<td>12회</td>'+
-                        '<td>13:49</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>2회</td>'+
-                        '<td>08:29</td>'+
-                        '<td>13회</td>'+
-                        '<td>14:34</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>3회</td>'+
-                        '<td>08:49</td>'+
-                        '<td>14회</td>'+
-                        '<td>15:09</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>4회</td>'+
-                        '<td>09:34</td>'+
-                        '<td>15회</td>'+
-                        '<td>15:29</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>5회</td>'+
-                        '<td>10:09</td>'+
-                        '<td>16회</td>'+
-                        '<td>15:49</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>6회</td>'+
-                        '<td>10:29</td>'+
-                        '<td>17회</td>'+
-                        '<td>16:34</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>7회</td>'+
-                        '<td>10:49</td>'+
-                        '<td>18회</td>'+
-                        '<td>17:04</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>8회</td>'+
-                        '<td>11:24</td>'+
-                        '<td>19회</td>'+
-                        '<td>17:24</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>9회</td>'+
-                        '<td>12:44</td>'+
-                        '<td>20회</td>'+
-                        '<td>17:44</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>10회</td>'+
-                        '<td>13:09</td>'+
-                        '<td>21회</td>'+
-                        '<td>18:04</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>11회</td>'+
-                        '<td>13:29</td>'+
-                        '<td>22회</td>'+
-                        '<td>18:24</td>'+
-                    '</tr>'+
-                '</tbody>'+
-            '</table>'+
-        '</div>'+
-        '<div class="rightside"></div>'+
-        '<div class="Bbus">'+
-            '<table>'+
-                '<caption>B노선 (<span style="font-weight: bold; color: blue;">시계</span>방향)</caption>'+
-                '<thead>'+
-                    '<tr>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                    '</tr>'+
-                '</thead>'+
-                '<tbody>'+
-                    '<tr>'+
-                        '<td>1회</td>'+
-                        '<td>08:20</td>'+
-                        '<td>12회</td>'+
-                        '<td>14:00</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>2회</td>'+
-                        '<td>08:40</td>'+
-                        '<td>13회</td>'+
-                        '<td>14:50</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>3회</td>'+
-                        '<td>09:00</td>'+
-                        '<td>14회</td>'+
-                        '<td>15:20</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>4회</td>'+
-                        '<td>09:50</td>'+
-                        '<td>15회</td>'+
-                        '<td>15:40</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>5회</td>'+
-                        '<td>10:20</td>'+
-                        '<td>16회</td>'+
-                        '<td>16:00</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>6회</td>'+
-                        '<td>10:40</td>'+
-                        '<td>17회</td>'+
-                        '<td>16:50</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>7회</td>'+
-                        '<td>11:00</td>'+
-                        '<td>18회</td>'+
-                        '<td>17:20</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>8회</td>'+
-                        '<td>11:40</td>'+
-                        '<td>19회</td>'+
-                        '<td>17:40</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>9회</td>'+
-                        '<td>13:00</td>'+
-                        '<td>20회</td>'+
-                        '<td>18:00</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>10회</td>'+
-                        '<td>13:20</td>'+
-                        '<td>21회</td>'+
-                        '<td>18:20</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>11회</td>'+
-                        '<td>13:40</td>'+
-                        '<td>22회</td>'+
-                        '<td>18:40</td>'+
-                    '</tr>'+
-                '</tbody>'+
-            '</table>'+
-        '</div>'+
-    '</div>'+
-'</div>'+  
-'</div>';
-var content3 ='<div class="wrap">'+
-'<div class="head">'+
-    '<div class="title">인문대학(서쪽)' +
-        '<div class="close" onclick="closeOverlay()" title="닫기"></div>'+
-    '</div>'+
-    '<div class="body">'+
-        '<div class="leftside"></div>'+
-        '<div class="Abus">'+
-            '<table>'+
-                '<caption>A노선 (<span style="font-weight: bold; color: red;">반시계</span>방향)</caption>'+
-                '<thead>'+
-                    '<tr>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                    '</tr>'+
-                '</thead>'+
-                '<tbody>'+
-                    '<tr>'+
-                        '<td>1회</td>'+
-                        '<td>08:10</td>'+
-                        '<td>12회</td>'+
-                        '<td>13:50</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>2회</td>'+
-                        '<td>08:30</td>'+
-                        '<td>13회</td>'+
-                        '<td>14:35</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>3회</td>'+
-                        '<td>08:50</td>'+
-                        '<td>14회</td>'+
-                        '<td>15:10</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>4회</td>'+
-                        '<td>09:35</td>'+
-                        '<td>15회</td>'+
-                        '<td>15:30</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>5회</td>'+
-                        '<td>10:10</td>'+
-                        '<td>16회</td>'+
-                        '<td>15:50</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>6회</td>'+
-                        '<td>10:30</td>'+
-                        '<td>17회</td>'+
-                        '<td>16:35</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>7회</td>'+
-                        '<td>10:50</td>'+
-                        '<td>18회</td>'+
-                        '<td>17:05</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>8회</td>'+
-                        '<td>11:25</td>'+
-                        '<td>19회</td>'+
-                        '<td>17:25</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>9회</td>'+
-                        '<td>12:45</td>'+
-                        '<td>20회</td>'+
-                        '<td>17:45</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>10회</td>'+
-                        '<td>13:10</td>'+
-                        '<td>21회</td>'+
-                        '<td>18:05</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>11회</td>'+
-                        '<td>13:30</td>'+
-                        '<td>22회</td>'+
-                        '<td>18:25</td>'+
-                    '</tr>'+
-                '</tbody>'+
-            '</table>'+
-        '</div>'+
-        '<div class="rightside"></div>'+
-        '<div class="Bbus">'+
-            '<table>'+
-                '<caption>B노선 (<span style="font-weight: bold; color: blue;">시계</span>방향)</caption>'+
-                '<thead>'+
-                    '<tr>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                    '</tr>'+
-                '</thead>'+
-                '<tbody>'+
-                    '<tr>'+
-                        '<td>1회</td>'+
-                        '<td>08:19</td>'+
-                        '<td>12회</td>'+
-                        '<td>13:59</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>2회</td>'+
-                        '<td>08:39</td>'+
-                        '<td>13회</td>'+
-                        '<td>14:49</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>3회</td>'+
-                        '<td>08:59</td>'+
-                        '<td>14회</td>'+
-                        '<td>15:19</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>4회</td>'+
-                        '<td>09:49</td>'+
-                        '<td>15회</td>'+
-                        '<td>15:39</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>5회</td>'+
-                        '<td>10:19</td>'+
-                        '<td>16회</td>'+
-                        '<td>15:59</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>6회</td>'+
-                        '<td>10:39</td>'+
-                        '<td>17회</td>'+
-                        '<td>16:49</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>7회</td>'+
-                        '<td>10:59</td>'+
-                        '<td>18회</td>'+
-                        '<td>17:19</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>8회</td>'+
-                        '<td>11:39</td>'+
-                        '<td>19회</td>'+
-                        '<td>17:39</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>9회</td>'+
-                        '<td>12:59</td>'+
-                        '<td>20회</td>'+
-                        '<td>17:59</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>10회</td>'+
-                        '<td>13:19</td>'+
-                        '<td>21회</td>'+
-                        '<td>18:19</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>11회</td>'+
-                        '<td>13:39</td>'+
-                        '<td>22회</td>'+
-                        '<td>18:39</td>'+
-                    '</tr>'+
-                '</tbody>'+
-            '</table>'+
-        '</div>'+
-    '</div>'+
-'</div>'+  
-'</div>';
-var content4 ='<div class="wrap">'+
-'<div class="head">'+
-    '<div class="title">학생생활관' +
-        '<div class="close" onclick="closeOverlay()" title="닫기"></div>'+
-    '</div>'+
-    '<div class="body">'+
-        '<div class="leftside"></div>'+
-        '<div class="Abus">'+
-            '<table>'+
-                '<caption>A노선 (<span style="font-weight: bold; color: red;">반시계</span>방향)</caption>'+
-                '<thead>'+
-                    '<tr>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                    '</tr>'+
-                '</thead>'+
-                '<tbody>'+
-                    '<tr>'+
-                        '<td>1회</td>'+
-                        '<td>08:11</td>'+
-                        '<td>12회</td>'+
-                        '<td>13:51</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>2회</td>'+
-                        '<td>08:31</td>'+
-                        '<td>13회</td>'+
-                        '<td>14:36</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>3회</td>'+
-                        '<td>08:51</td>'+
-                        '<td>14회</td>'+
-                        '<td>15:11</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>4회</td>'+
-                        '<td>09:36</td>'+
-                        '<td>15회</td>'+
-                        '<td>15:31</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>5회</td>'+
-                        '<td>10:11</td>'+
-                        '<td>16회</td>'+
-                        '<td>15:51</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>6회</td>'+
-                        '<td>10:31</td>'+
-                        '<td>17회</td>'+
-                        '<td>16:36</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>7회</td>'+
-                        '<td>10:51</td>'+
-                        '<td>18회</td>'+
-                        '<td>17:06</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>8회</td>'+
-                        '<td>11:26</td>'+
-                        '<td>19회</td>'+
-                        '<td>17:26</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>9회</td>'+
-                        '<td>12:46</td>'+
-                        '<td>20회</td>'+
-                        '<td>17:46</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>10회</td>'+
-                        '<td>13:11</td>'+
-                        '<td>21회</td>'+
-                        '<td>18:06</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>11회</td>'+
-                        '<td>13:31</td>'+
-                        '<td>22회</td>'+
-                        '<td>18:26</td>'+
-                    '</tr>'+
-                '</tbody>'+
-            '</table>'+
-        '</div>'+
-        '<div class="rightside"></div>'+
-        '<div class="Bbus">'+
-            '<table>'+
-                '<caption>B노선 (<span style="font-weight: bold; color: blue;">시계</span>방향)</caption>'+
-                '<thead>'+
-                    '<tr>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                    '</tr>'+
-                '</thead>'+
-                '<tbody>'+
-                    '<tr>'+
-                        '<td>1회</td>'+
-                        '<td>08:18</td>'+
-                        '<td>12회</td>'+
-                        '<td>13:58</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>2회</td>'+
-                        '<td>08:38</td>'+
-                        '<td>13회</td>'+
-                        '<td>14:48</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>3회</td>'+
-                        '<td>08:58</td>'+
-                        '<td>14회</td>'+
-                        '<td>15:18</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>4회</td>'+
-                        '<td>09:48</td>'+
-                        '<td>15회</td>'+
-                        '<td>15:38</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>5회</td>'+
-                        '<td>10:18</td>'+
-                        '<td>16회</td>'+
-                        '<td>15:58</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>6회</td>'+
-                        '<td>10:38</td>'+
-                        '<td>17회</td>'+
-                        '<td>16:48</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>7회</td>'+
-                        '<td>10:58</td>'+
-                        '<td>18회</td>'+
-                        '<td>17:18</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>8회</td>'+
-                        '<td>11:38</td>'+
-                        '<td>19회</td>'+
-                        '<td>17:38</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>9회</td>'+
-                        '<td>12:58</td>'+
-                        '<td>20회</td>'+
-                        '<td>17:58</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>10회</td>'+
-                        '<td>13:18</td>'+
-                        '<td>21회</td>'+
-                        '<td>18:18</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>11회</td>'+
-                        '<td>13:38</td>'+
-                        '<td>22회</td>'+
-                        '<td>18:38</td>'+
-                    '</tr>'+
-                '</tbody>'+
-            '</table>'+
-        '</div>'+
-    '</div>'+
-'</div>'+  
-'</div>';
-var content5 ='<div class="wrap">'+
-'<div class="head">'+
-    '<div class="title">인문대학(동쪽)' +
-        '<div class="close" onclick="closeOverlay()" title="닫기"></div>'+
-    '</div>'+
-    '<div class="body">'+
-        '<div class="leftside"></div>'+
-        '<div class="Abus">'+
-            '<table>'+
-                '<caption>A노선 (<span style="font-weight: bold; color: red;">반시계</span>방향)</caption>'+
-                '<thead>'+
-                    '<tr>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                    '</tr>'+
-                '</thead>'+
-                '<tbody>'+
-                    '<tr>'+
-                        '<td>1회</td>'+
-                        '<td>08:12</td>'+
-                        '<td>12회</td>'+
-                        '<td>13:52</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>2회</td>'+
-                        '<td>08:32</td>'+
-                        '<td>13회</td>'+
-                        '<td>14:37</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>3회</td>'+
-                        '<td>08:52</td>'+
-                        '<td>14회</td>'+
-                        '<td>15:12</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>4회</td>'+
-                        '<td>09:37</td>'+
-                        '<td>15회</td>'+
-                        '<td>15:32</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>5회</td>'+
-                        '<td>10:12</td>'+
-                        '<td>16회</td>'+
-                        '<td>15:52</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>6회</td>'+
-                        '<td>10:32</td>'+
-                        '<td>17회</td>'+
-                        '<td>16:37</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>7회</td>'+
-                        '<td>10:52</td>'+
-                        '<td>18회</td>'+
-                        '<td>17:07</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>8회</td>'+
-                        '<td>11:27</td>'+
-                        '<td>19회</td>'+
-                        '<td>17:27</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>9회</td>'+
-                        '<td>12:47</td>'+
-                        '<td>20회</td>'+
-                        '<td>17:47</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>10회</td>'+
-                        '<td>13:12</td>'+
-                        '<td>21회</td>'+
-                        '<td>18:07</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>11회</td>'+
-                        '<td>13:32</td>'+
-                        '<td>22회</td>'+
-                        '<td>18:27</td>'+
-                    '</tr>'+
-                '</tbody>'+
-            '</table>'+
-        '</div>'+
-        '<div class="rightside"></div>'+
-        '<div class="Bbus">'+
-            '<table>'+
-                '<caption>B노선 (<span style="font-weight: bold; color: blue;">시계</span>방향)</caption>'+
-                '<thead>'+
-                    '<tr>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                    '</tr>'+
-                '</thead>'+
-                '<tbody>'+
-                    '<tr>'+
-                        '<td>1회</td>'+
-                        '<td>08:17</td>'+
-                        '<td>12회</td>'+
-                        '<td>13:57</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>2회</td>'+
-                        '<td>08:37</td>'+
-                        '<td>13회</td>'+
-                        '<td>14:47</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>3회</td>'+
-                        '<td>08:57</td>'+
-                        '<td>14회</td>'+
-                        '<td>15:17</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>4회</td>'+
-                        '<td>09:47</td>'+
-                        '<td>15회</td>'+
-                        '<td>15:37</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>5회</td>'+
-                        '<td>10:17</td>'+
-                        '<td>16회</td>'+
-                        '<td>15:57</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>6회</td>'+
-                        '<td>10:37</td>'+
-                        '<td>17회</td>'+
-                        '<td>16:47</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>7회</td>'+
-                        '<td>10:57</td>'+
-                        '<td>18회</td>'+
-                        '<td>17:17</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>8회</td>'+
-                        '<td>11:37</td>'+
-                        '<td>19회</td>'+
-                        '<td>17:37</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>9회</td>'+
-                        '<td>12:57</td>'+
-                        '<td>20회</td>'+
-                        '<td>17:57</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>10회</td>'+
-                        '<td>13:17</td>'+
-                        '<td>21회</td>'+
-                        '<td>18:17</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>11회</td>'+
-                        '<td>13:37</td>'+
-                        '<td>22회</td>'+
-                        '<td>18:37</td>'+
-                    '</tr>'+
-                '</tbody>'+
-            '</table>'+
-        '</div>'+
-    '</div>'+
-'</div>'+  
-'</div>';
-var content6 ='<div class="wrap">'+
-'<div class="head">'+
-    '<div class="title">중앙도서관' +
-        '<div class="close" onclick="closeOverlay()" title="닫기"></div>'+
-    '</div>'+
-    '<div class="body">'+
-        '<div class="leftside"></div>'+
-        '<div class="Abus">'+
-            '<table>'+
-                '<caption>A노선 (<span style="font-weight: bold; color: red;">반시계</span>방향)</caption>'+
-                '<thead>'+
-                    '<tr>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                    '</tr>'+
-                '</thead>'+
-                '<tbody>'+
-                    '<tr>'+
-                        '<td>1회</td>'+
-                        '<td>08:13</td>'+
-                        '<td>12회</td>'+
-                        '<td>13:53</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>2회</td>'+
-                        '<td>08:33</td>'+
-                        '<td>13회</td>'+
-                        '<td>14:38</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>3회</td>'+
-                        '<td>08:53</td>'+
-                        '<td>14회</td>'+
-                        '<td>15:13</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>4회</td>'+
-                        '<td>09:38</td>'+
-                        '<td>15회</td>'+
-                        '<td>15:33</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>5회</td>'+
-                        '<td>10:13</td>'+
-                        '<td>16회</td>'+
-                        '<td>15:53</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>6회</td>'+
-                        '<td>10:33</td>'+
-                        '<td>17회</td>'+
-                        '<td>16:38</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>7회</td>'+
-                        '<td>10:53</td>'+
-                        '<td>18회</td>'+
-                        '<td>17:08</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>8회</td>'+
-                        '<td>11:28</td>'+
-                        '<td>19회</td>'+
-                        '<td>17:28</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>9회</td>'+
-                        '<td>12:48</td>'+
-                        '<td>20회</td>'+
-                        '<td>17:48</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>10회</td>'+
-                        '<td>13:13</td>'+
-                        '<td>21회</td>'+
-                        '<td>18:08</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>11회</td>'+
-                        '<td>13:33</td>'+
-                        '<td>22회</td>'+
-                        '<td>18:28</td>'+
-                    '</tr>'+
-                '</tbody>'+
-            '</table>'+
-        '</div>'+
-        '<div class="rightside"></div>'+
-        '<div class="Bbus">'+
-            '<table>'+
-                '<caption>B노선 (<span style="font-weight: bold; color: blue;">시계</span>방향)</caption>'+
-                '<thead>'+
-                    '<tr>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                    '</tr>'+
-                '</thead>'+
-                '<tbody>'+
-                    '<tr>'+
-                        '<td>1회</td>'+
-                        '<td>08:16</td>'+
-                        '<td>12회</td>'+
-                        '<td>13:56</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>2회</td>'+
-                        '<td>08:36</td>'+
-                        '<td>13회</td>'+
-                        '<td>14:46</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>3회</td>'+
-                        '<td>08:56</td>'+
-                        '<td>14회</td>'+
-                        '<td>15:16</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>4회</td>'+
-                        '<td>09:46</td>'+
-                        '<td>15회</td>'+
-                        '<td>15:36</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>5회</td>'+
-                        '<td>10:16</td>'+
-                        '<td>16회</td>'+
-                        '<td>15:56</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>6회</td>'+
-                        '<td>10:36</td>'+
-                        '<td>17회</td>'+
-                        '<td>16:46</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>7회</td>'+
-                        '<td>10:56</td>'+
-                        '<td>18회</td>'+
-                        '<td>17:16</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>8회</td>'+
-                        '<td>11:36</td>'+
-                        '<td>19회</td>'+
-                        '<td>17:36</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>9회</td>'+
-                        '<td>12:56</td>'+
-                        '<td>20회</td>'+
-                        '<td>17:56</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>10회</td>'+
-                        '<td>13:16</td>'+
-                        '<td>21회</td>'+
-                        '<td>18:16</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>11회</td>'+
-                        '<td>13:36</td>'+
-                        '<td>22회</td>'+
-                        '<td>18:36</td>'+
-                    '</tr>'+
-                '</tbody>'+
-            '</table>'+
-        '</div>'+
-    '</div>'+
-'</div>'+  
-'</div>';
-var content7 ='<div class="wrap">'+
-'<div class="head">'+
-    '<div class="title">의학전문대학원' +
-        '<div class="close" onclick="closeOverlay()" title="닫기"></div>'+
-    '</div>'+
-    '<div class="body">'+
-        '<div class="leftside"></div>'+
-        '<div class="Abus">'+
-            '<table>'+
-                '<caption>A노선 (<span style="font-weight: bold; color: red;">반시계</span>방향)</caption>'+
-                '<thead>'+
-                    '<tr>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                    '</tr>'+
-                '</thead>'+
-                '<tbody>'+
-                    '<tr>'+
-                        '<td>1회</td>'+
-                        '<td>08:14</td>'+
-                        '<td>12회</td>'+
-                        '<td>13:54</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>2회</td>'+
-                        '<td>08:34</td>'+
-                        '<td>13회</td>'+
-                        '<td>14:39</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>3회</td>'+
-                        '<td>08:54</td>'+
-                        '<td>14회</td>'+
-                        '<td>15:14</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>4회</td>'+
-                        '<td>09:39</td>'+
-                        '<td>15회</td>'+
-                        '<td>15:34</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>5회</td>'+
-                        '<td>10:14</td>'+
-                        '<td>16회</td>'+
-                        '<td>15:54</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>6회</td>'+
-                        '<td>10:34</td>'+
-                        '<td>17회</td>'+
-                        '<td>16:39</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>7회</td>'+
-                        '<td>10:54</td>'+
-                        '<td>18회</td>'+
-                        '<td>17:09</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>8회</td>'+
-                        '<td>11:29</td>'+
-                        '<td>19회</td>'+
-                        '<td>17:29</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>9회</td>'+
-                        '<td>12:49</td>'+
-                        '<td>20회</td>'+
-                        '<td>17:49</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>10회</td>'+
-                        '<td>13:14</td>'+
-                        '<td>21회</td>'+
-                        '<td>18:09</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>11회</td>'+
-                        '<td>13:34</td>'+
-                        '<td>22회</td>'+
-                        '<td>18:29</td>'+
-                    '</tr>'+
-                '</tbody>'+
-            '</table>'+
-        '</div>'+
-        '<div class="rightside"></div>'+
-        '<div class="Bbus">'+
-            '<table>'+
-                '<caption>B노선 (<span style="font-weight: bold; color: blue;">시계</span>방향)</caption>'+
-                '<thead>'+
-                    '<tr>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                    '</tr>'+
-                '</thead>'+
-                '<tbody>'+
-                    '<tr>'+
-                        '<td>1회</td>'+
-                        '<td>08:15</td>'+
-                        '<td>12회</td>'+
-                        '<td>13:55</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>2회</td>'+
-                        '<td>08:35</td>'+
-                        '<td>13회</td>'+
-                        '<td>14:45</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>3회</td>'+
-                        '<td>08:55</td>'+
-                        '<td>14회</td>'+
-                        '<td>15:15</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>4회</td>'+
-                        '<td>09:45</td>'+
-                        '<td>15회</td>'+
-                        '<td>15:35</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>5회</td>'+
-                        '<td>10:15</td>'+
-                        '<td>16회</td>'+
-                        '<td>15:55</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>6회</td>'+
-                        '<td>10:35</td>'+
-                        '<td>17회</td>'+
-                        '<td>16:45</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>7회</td>'+
-                        '<td>10:55</td>'+
-                        '<td>18회</td>'+
-                        '<td>17:15</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>8회</td>'+
-                        '<td>11:35</td>'+
-                        '<td>19회</td>'+
-                        '<td>17:35</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>9회</td>'+
-                        '<td>12:55</td>'+
-                        '<td>20회</td>'+
-                        '<td>17:55</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>10회</td>'+
-                        '<td>13:15</td>'+
-                        '<td>21회</td>'+
-                        '<td>18:15</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>11회</td>'+
-                        '<td>13:35</td>'+
-                        '<td>22회</td>'+
-                        '<td>18:35</td>'+
-                    '</tr>'+
-                '</tbody>'+
-            '</table>'+
-        '</div>'+
-    '</div>'+
-'</div>'+  
-'</div>';
-var content8 ='<div class="wrap">'+
-'<div class="head">'+
-    '<div class="title">공과대학 4호관' +
-        '<div class="close" onclick="closeOverlay()" title="닫기"></div>'+
-    '</div>'+
-    '<div class="body">'+
-        '<div class="leftside"></div>'+
-        '<div class="Abus">'+
-            '<table>'+
-                '<caption>A노선 (<span style="font-weight: bold; color: red;">반시계</span>방향)</caption>'+
-                '<thead>'+
-                    '<tr>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                    '</tr>'+
-                '</thead>'+
-                '<tbody>'+
-                    '<tr>'+
-                        '<td>1회</td>'+
-                        '<td>08:15</td>'+
-                        '<td>12회</td>'+
-                        '<td>13:55</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>2회</td>'+
-                        '<td>08:35</td>'+
-                        '<td>13회</td>'+
-                        '<td>14:40</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>3회</td>'+
-                        '<td>08:55</td>'+
-                        '<td>14회</td>'+
-                        '<td>15:15</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>4회</td>'+
-                        '<td>09:40</td>'+
-                        '<td>15회</td>'+
-                        '<td>15:35</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>5회</td>'+
-                        '<td>10:15</td>'+
-                        '<td>16회</td>'+
-                        '<td>15:55</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>6회</td>'+
-                        '<td>10:35</td>'+
-                        '<td>17회</td>'+
-                        '<td>16:40</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>7회</td>'+
-                        '<td>10:55</td>'+
-                        '<td>18회</td>'+
-                        '<td>17:10</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>8회</td>'+
-                        '<td>11:30</td>'+
-                        '<td>19회</td>'+
-                        '<td>17:30</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>9회</td>'+
-                        '<td>12:50</td>'+
-                        '<td>20회</td>'+
-                        '<td>17:50</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>10회</td>'+
-                        '<td>13:15</td>'+
-                        '<td>21회</td>'+
-                        '<td>18:10</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>11회</td>'+
-                        '<td>13:35</td>'+
-                        '<td>22회</td>'+
-                        '<td>18:30</td>'+
-                    '</tr>'+
-                '</tbody>'+
-            '</table>'+
-        '</div>'+
-        '<div class="rightside"></div>'+
-        '<div class="Bbus">'+
-            '<table>'+
-                '<caption>B노선 (<span style="font-weight: bold; color: blue;">시계</span>방향)</caption>'+
-                '<thead>'+
-                    '<tr>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                    '</tr>'+
-                '</thead>'+
-                '<tbody>'+
-                    '<tr>'+
-                        '<td>1회</td>'+
-                        '<td>08:14</td>'+
-                        '<td>12회</td>'+
-                        '<td>13:54</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>2회</td>'+
-                        '<td>08:34</td>'+
-                        '<td>13회</td>'+
-                        '<td>14:44</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>3회</td>'+
-                        '<td>08:54</td>'+
-                        '<td>14회</td>'+
-                        '<td>15:14</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>4회</td>'+
-                        '<td>09:44</td>'+
-                        '<td>15회</td>'+
-                        '<td>15:34</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>5회</td>'+
-                        '<td>10:14</td>'+
-                        '<td>16회</td>'+
-                        '<td>15:54</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>6회</td>'+
-                        '<td>10:34</td>'+
-                        '<td>17회</td>'+
-                        '<td>16:44</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>7회</td>'+
-                        '<td>10:54</td>'+
-                        '<td>18회</td>'+
-                        '<td>17:14</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>8회</td>'+
-                        '<td>11:34</td>'+
-                        '<td>19회</td>'+
-                        '<td>17:34</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>9회</td>'+
-                        '<td>12:54</td>'+
-                        '<td>20회</td>'+
-                        '<td>17:54</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>10회</td>'+
-                        '<td>13:14</td>'+
-                        '<td>21회</td>'+
-                        '<td>18:14</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>11회</td>'+
-                        '<td>13:34</td>'+
-                        '<td>22회</td>'+
-                        '<td>18:34</td>'+
-                    '</tr>'+
-                '</tbody>'+
-            '</table>'+
-        '</div>'+
-    '</div>'+
-'</div>'+  
-'</div>';
-var content9 ='<div class="wrap">'+
-'<div class="head">'+
-    '<div class="title">해양대학 4호관' +
-        '<div class="close" onclick="closeOverlay()" title="닫기"></div>'+
-    '</div>'+
-    '<div class="body">'+
-        '<div class="leftside"></div>'+
-        '<div class="Abus">'+
-            '<table>'+
-                '<caption>A노선 (<span style="font-weight: bold; color: red;">반시계</span>방향)</caption>'+
-                '<thead>'+
-                    '<tr>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                    '</tr>'+
-                '</thead>'+
-                '<tbody>'+
-                    '<tr>'+
-                        '<td>1회</td>'+
-                        '<td>08:16</td>'+
-                        '<td>12회</td>'+
-                        '<td>13:56</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>2회</td>'+
-                        '<td>08:36</td>'+
-                        '<td>13회</td>'+
-                        '<td>14:41</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>3회</td>'+
-                        '<td>08:56</td>'+
-                        '<td>14회</td>'+
-                        '<td>15:16</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>4회</td>'+
-                        '<td>09:41</td>'+
-                        '<td>15회</td>'+
-                        '<td>15:36</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>5회</td>'+
-                        '<td>10:16</td>'+
-                        '<td>16회</td>'+
-                        '<td>15:56</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>6회</td>'+
-                        '<td>10:36</td>'+
-                        '<td>17회</td>'+
-                        '<td>16:41</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>7회</td>'+
-                        '<td>10:56</td>'+
-                        '<td>18회</td>'+
-                        '<td>17:11</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>8회</td>'+
-                        '<td>11:31</td>'+
-                        '<td>19회</td>'+
-                        '<td>17:31</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>9회</td>'+
-                        '<td>12:51</td>'+
-                        '<td>20회</td>'+
-                        '<td>17:51</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>10회</td>'+
-                        '<td>13:16</td>'+
-                        '<td>21회</td>'+
-                        '<td>18:11</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>11회</td>'+
-                        '<td>13:36</td>'+
-                        '<td>22회</td>'+
-                        '<td>18:31</td>'+
-                    '</tr>'+
-                '</tbody>'+
-            '</table>'+
-        '</div>'+
-        '<div class="rightside"></div>'+
-        '<div class="Bbus">'+
-            '<table>'+
-                '<caption>B노선 (<span style="font-weight: bold; color: blue;">시계</span>방향)</caption>'+
-                '<thead>'+
-                    '<tr>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                    '</tr>'+
-                '</thead>'+
-                '<tbody>'+
-                    '<tr>'+
-                        '<td>1회</td>'+
-                        '<td>08:13</td>'+
-                        '<td>12회</td>'+
-                        '<td>13:53</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>2회</td>'+
-                        '<td>08:33</td>'+
-                        '<td>13회</td>'+
-                        '<td>14:43</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>3회</td>'+
-                        '<td>08:53</td>'+
-                        '<td>14회</td>'+
-                        '<td>15:13</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>4회</td>'+
-                        '<td>09:43</td>'+
-                        '<td>15회</td>'+
-                        '<td>15:33</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>5회</td>'+
-                        '<td>10:13</td>'+
-                        '<td>16회</td>'+
-                        '<td>15:53</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>6회</td>'+
-                        '<td>10:33</td>'+
-                        '<td>17회</td>'+
-                        '<td>16:43</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>7회</td>'+
-                        '<td>10:53</td>'+
-                        '<td>18회</td>'+
-                        '<td>17:13</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>8회</td>'+
-                        '<td>11:33</td>'+
-                        '<td>19회</td>'+
-                        '<td>17:33</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>9회</td>'+
-                        '<td>12:53</td>'+
-                        '<td>20회</td>'+
-                        '<td>17:53</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>10회</td>'+
-                        '<td>13:13</td>'+
-                        '<td>21회</td>'+
-                        '<td>18:13</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>11회</td>'+
-                        '<td>13:33</td>'+
-                        '<td>22회</td>'+
-                        '<td>18:33</td>'+
-                    '</tr>'+
-                '</tbody>'+
-            '</table>'+
-        '</div>'+
-    '</div>'+
-'</div>'+  
-'</div>';
-var content10 ='<div class="wrap">'+
-'<div class="head">'+
-    '<div class="title">교양강의동' +
-        '<div class="close" onclick="closeOverlay()" title="닫기"></div>'+
-    '</div>'+
-    '<div class="body">'+
-        '<div class="leftside"></div>'+
-        '<div class="Abus">'+
-            '<table>'+
-                '<caption>A노선 (<span style="font-weight: bold; color: red;">반시계</span>방향)</caption>'+
-                '<thead>'+
-                    '<tr>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                    '</tr>'+
-                '</thead>'+
-                '<tbody>'+
-                    '<tr>'+
-                        '<td>1회</td>'+
-                        '<td>08:16</td>'+
-                        '<td>12회</td>'+
-                        '<td>13:56</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>2회</td>'+
-                        '<td>08:36</td>'+
-                        '<td>13회</td>'+
-                        '<td>14:41</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>3회</td>'+
-                        '<td>08:56</td>'+
-                        '<td>14회</td>'+
-                        '<td>15:16</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>4회</td>'+
-                        '<td>09:41</td>'+
-                        '<td>15회</td>'+
-                        '<td>15:36</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>5회</td>'+
-                        '<td>10:16</td>'+
-                        '<td>16회</td>'+
-                        '<td>15:56</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>6회</td>'+
-                        '<td>10:36</td>'+
-                        '<td>17회</td>'+
-                        '<td>16:41</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>7회</td>'+
-                        '<td>10:56</td>'+
-                        '<td>18회</td>'+
-                        '<td>17:11</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>8회</td>'+
-                        '<td>11:31</td>'+
-                        '<td>19회</td>'+
-                        '<td>17:31</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>9회</td>'+
-                        '<td>12:51</td>'+
-                        '<td>20회</td>'+
-                        '<td>17:51</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>10회</td>'+
-                        '<td>13:16</td>'+
-                        '<td>21회</td>'+
-                        '<td>18:11</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>11회</td>'+
-                        '<td>13:36</td>'+
-                        '<td>22회</td>'+
-                        '<td>18:31</td>'+
-                    '</tr>'+
-                '</tbody>'+
-            '</table>'+
-        '</div>'+
-        '<div class="rightside"></div>'+
-        '<div class="Bbus">'+
-            '<table>'+
-                '<caption>B노선 (<span style="font-weight: bold; color: blue;">시계</span>방향)</caption>'+
-                '<thead>'+
-                    '<tr>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                    '</tr>'+
-                '</thead>'+
-                '<tbody>'+
-                    '<tr>'+
-                        '<td>1회</td>'+
-                        '<td>08:13</td>'+
-                        '<td>12회</td>'+
-                        '<td>13:53</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>2회</td>'+
-                        '<td>08:33</td>'+
-                        '<td>13회</td>'+
-                        '<td>14:43</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>3회</td>'+
-                        '<td>08:53</td>'+
-                        '<td>14회</td>'+
-                        '<td>15:13</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>4회</td>'+
-                        '<td>09:43</td>'+
-                        '<td>15회</td>'+
-                        '<td>15:33</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>5회</td>'+
-                        '<td>10:13</td>'+
-                        '<td>16회</td>'+
-                        '<td>15:53</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>6회</td>'+
-                        '<td>10:33</td>'+
-                        '<td>17회</td>'+
-                        '<td>16:43</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>7회</td>'+
-                        '<td>10:53</td>'+
-                        '<td>18회</td>'+
-                        '<td>17:13</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>8회</td>'+
-                        '<td>11:33</td>'+
-                        '<td>19회</td>'+
-                        '<td>17:33</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>9회</td>'+
-                        '<td>12:53</td>'+
-                        '<td>20회</td>'+
-                        '<td>17:53</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>10회</td>'+
-                        '<td>13:13</td>'+
-                        '<td>21회</td>'+
-                        '<td>18:13</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>11회</td>'+
-                        '<td>13:33</td>'+
-                        '<td>22회</td>'+
-                        '<td>18:33</td>'+
-                    '</tr>'+
-                '</tbody>'+
-            '</table>'+
-        '</div>'+
-    '</div>'+
-'</div>'+  
-'</div>';
-var content11 ='<div class="wrap">'+
-'<div class="head">'+
-    '<div class="title">본관' +
-        '<div class="close" onclick="closeOverlay()" title="닫기"></div>'+
-    '</div>'+
-    '<div class="body">'+
-        '<div class="leftside"></div>'+
-        '<div class="Abus">'+
-            '<table>'+
-                '<caption>A노선 (<span style="font-weight: bold; color: red;">반시계</span>방향)</caption>'+
-                '<thead>'+
-                    '<tr>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                    '</tr>'+
-                '</thead>'+
-                '<tbody>'+
-                    '<tr>'+
-                        '<td>1회</td>'+
-                        '<td>08:08</td>'+
-                        '<td>12회</td>'+
-                        '<td>13:48</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>2회</td>'+
-                        '<td>08:28</td>'+
-                        '<td>13회</td>'+
-                        '<td>14:33</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>3회</td>'+
-                        '<td>08:48</td>'+
-                        '<td>14회</td>'+
-                        '<td>15:28</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>4회</td>'+
-                        '<td>09:33</td>'+
-                        '<td>15회</td>'+
-                        '<td>15:28</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>5회</td>'+
-                        '<td>10:08</td>'+
-                        '<td>16회</td>'+
-                        '<td>15:48</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>6회</td>'+
-                        '<td>10:28</td>'+
-                        '<td>17회</td>'+
-                        '<td>16:33</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>7회</td>'+
-                        '<td>10:48</td>'+
-                        '<td>18회</td>'+
-                        '<td>17:03</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>8회</td>'+
-                        '<td>11:23</td>'+
-                        '<td>19회</td>'+
-                        '<td>17:23</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>9회</td>'+
-                        '<td>12:43</td>'+
-                        '<td>20회</td>'+
-                        '<td>17:43</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>10회</td>'+
-                        '<td>13:08</td>'+
-                        '<td>21회</td>'+
-                        '<td>18:03</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>11회</td>'+
-                        '<td>13:28</td>'+
-                        '<td>22회</td>'+
-                        '<td>18:23</td>'+
-                    '</tr>'+
-                '</tbody>'+
-            '</table>'+
-        '</div>'+
-        '<div class="rightside"></div>'+
-        '<div class="Bbus">'+
-            '<table>'+
-                '<caption>B노선 (<span style="font-weight: bold; color: blue;">시계</span>방향)</caption>'+
-                '<thead>'+
-                    '<tr>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                    '</tr>'+
-                '</thead>'+
-                '<tbody>'+
-                    '<tr>'+
-                        '<td>1회</td>'+
-                        '<td>08:21</td>'+
-                        '<td>12회</td>'+
-                        '<td>14:01</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>2회</td>'+
-                        '<td>08:41</td>'+
-                        '<td>13회</td>'+
-                        '<td>14:51</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>3회</td>'+
-                        '<td>09:01</td>'+
-                        '<td>14회</td>'+
-                        '<td>15:21</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>4회</td>'+
-                        '<td>09:51</td>'+
-                        '<td>15회</td>'+
-                        '<td>15:41</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>5회</td>'+
-                        '<td>10:21</td>'+
-                        '<td>16회</td>'+
-                        '<td>16:01</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>6회</td>'+
-                        '<td>10:41</td>'+
-                        '<td>17회</td>'+
-                        '<td>16:51</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>7회</td>'+
-                        '<td>11:01</td>'+
-                        '<td>18회</td>'+
-                        '<td>17:21</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>8회</td>'+
-                        '<td>11:41</td>'+
-                        '<td>19회</td>'+
-                        '<td>17:41</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>9회</td>'+
-                        '<td>13:01</td>'+
-                        '<td>20회</td>'+
-                        '<td>18:01</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>10회</td>'+
-                        '<td>13:21</td>'+
-                        '<td>21회</td>'+
-                        '<td>18:21</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>11회</td>'+
-                        '<td>13:41</td>'+
-                        '<td>22회</td>'+
-                        '<td>18:41</td>'+
-                    '</tr>'+
-                '</tbody>'+
-            '</table>'+
-        '</div>'+
-    '</div>'+
-'</div>'+  
-'</div>';
-var content12 ='<div class="wrap">'+
-'<div class="head">'+
-    '<div class="title">해양대학 1호관' +
-        '<div class="close" onclick="closeOverlay()" title="닫기"></div>'+
-    '</div>'+
-    '<div class="body">'+
-        '<div class="leftside"></div>'+
-        '<div class="Abus">'+
-            '<table>'+
-                '<caption>A노선 (<span style="font-weight: bold; color: red;">반시계</span>방향)</caption>'+
-                '<thead>'+
-                    '<tr>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                    '</tr>'+
-                '</thead>'+
-                '<tbody>'+
-                    '<tr>'+
-                        '<td>1회</td>'+
-                        '<td>08:07</td>'+
-                        '<td>12회</td>'+
-                        '<td>13:47</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>2회</td>'+
-                        '<td>08:27</td>'+
-                        '<td>13회</td>'+
-                        '<td>14:32</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>3회</td>'+
-                        '<td>08:47</td>'+
-                        '<td>14회</td>'+
-                        '<td>15:07</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>4회</td>'+
-                        '<td>09:32</td>'+
-                        '<td>15회</td>'+
-                        '<td>15:27</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>5회</td>'+
-                        '<td>10:07</td>'+
-                        '<td>16회</td>'+
-                        '<td>15:47</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>6회</td>'+
-                        '<td>10:27</td>'+
-                        '<td>17회</td>'+
-                        '<td>16:32</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>7회</td>'+
-                        '<td>10:47</td>'+
-                        '<td>18회</td>'+
-                        '<td>17:02</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>8회</td>'+
-                        '<td>11:22</td>'+
-                        '<td>19회</td>'+
-                        '<td>17:22</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>9회</td>'+
-                        '<td>12:42</td>'+
-                        '<td>20회</td>'+
-                        '<td>17:42</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>10회</td>'+
-                        '<td>13:07</td>'+
-                        '<td>21회</td>'+
-                        '<td>18:02</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>11회</td>'+
-                        '<td>13:27</td>'+
-                        '<td>22회</td>'+
-                        '<td>18:22</td>'+
-                    '</tr>'+
-                '</tbody>'+
-            '</table>'+
-        '</div>'+
-        '<div class="rightside"></div>'+
-        '<div class="Bbus">'+
-            '<table>'+
-                '<caption>B노선 (<span style="font-weight: bold; color: blue;">시계</span>방향)</caption>'+
-                '<thead>'+
-                    '<tr>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                        '<th>횟수</th>'+
-                        '<th>출발시간</th>'+
-                    '</tr>'+
-                '</thead>'+
-                '<tbody>'+
-                    '<tr>'+
-                        '<td>1회</td>'+
-                        '<td>08:12</td>'+
-                        '<td>12회</td>'+
-                        '<td>13:52</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>2회</td>'+
-                        '<td>08:32</td>'+
-                        '<td>13회</td>'+
-                        '<td>14:42</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>3회</td>'+
-                        '<td>08:52</td>'+
-                        '<td>14회</td>'+
-                        '<td>15:12</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>4회</td>'+
-                        '<td>09:42</td>'+
-                        '<td>15회</td>'+
-                        '<td>15:32</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>5회</td>'+
-                        '<td>10:12</td>'+
-                        '<td>16회</td>'+
-                        '<td>15:52</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>6회</td>'+
-                        '<td>10:32</td>'+
-                        '<td>17회</td>'+
-                        '<td>16:42</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>7회</td>'+
-                        '<td>10:52</td>'+
-                        '<td>18회</td>'+
-                        '<td>17:12</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>8회</td>'+
-                        '<td>11:32</td>'+
-                        '<td>19회</td>'+
-                        '<td>17:32</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>9회</td>'+
-                        '<td>12:52</td>'+
-                        '<td>20회</td>'+
-                        '<td>17:52</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>10회</td>'+
-                        '<td>13:12</td>'+
-                        '<td>21회</td>'+
-                        '<td>18:12</td>'+
-                    '</tr>'+
-                    '<tr>'+
-                        '<td>11회</td>'+
-                        '<td>13:32</td>'+
-                        '<td>22회</td>'+
-                        '<td>18:32</td>'+
-                    '</tr>'+
-                '</tbody>'+
-            '</table>'+
-        '</div>'+
-    '</div>'+
-'</div>'+  
-'</div>';
+        '</div>';
+        var content1 =
+        '<div id="buswrap">'+
+            '<div id="bushead">'+
+                '<a>약학대학</a>'+
+                '<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeOverlay()" title="닫기">'+
+            '</div>'+
+            '<div id="busbody">'+
+                '<div id="businfo" class="clearfix">'+
+                    '<div id="businfoleft">'+
+                        '<strong>A</strong><br>(<a>반시계</a> 방향)<br><p id="Atime">로딩 중</p>'+
+                    '</div>'+
+                    '<div id="businforight">'+
+                        '<strong>B</strong><br>(<a>시계</a> 방향)<br><p id="Btime">로딩 중</p>'+
+                    '</div>'
+                '</div>'
+                '<div id="busetc">'
+                    '• 운행시간 - 08:00 ~ 18:40 <span>(주말 및 공휴일 제외)</span><br>• 표시되는 시간은 버스시간표를 기준으로 안내<br><a>중이며 시간대 별로 상이할 수 있습니다.</a>'
+                '</div>'+
+            '</div>'+
+        '</div>';
+        var content2 =
+        '<div id="buswrap">'+
+            '<div id="bushead">'+
+                '<a>학생회관</a>'+
+                '<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeOverlay()" title="닫기">'+
+            '</div>'+
+            '<div id="busbody">'+
+                '<div id="businfo" class="clearfix">'+
+                    '<div id="businfoleft">'+
+                        '<strong>A</strong><br>(<a>반시계</a> 방향)<br><p id="Atime">로딩 중</p>'+
+                    '</div>'+
+                    '<div id="businforight">'+
+                        '<strong>B</strong><br>(<a>시계</a> 방향)<br><p id="Btime">로딩 중</p>'+
+                    '</div>'
+                '</div>'
+                '<div id="busetc">'
+                    '• 운행시간 - 08:00 ~ 18:40 <span>(주말 및 공휴일 제외)</span><br>• 표시되는 시간은 버스시간표를 기준으로 안내<br><a>중이며 시간대 별로 상이할 수 있습니다.</a>'
+                '</div>'+
+            '</div>'+
+        '</div>';
+        var content3 =
+        '<div id="buswrap">'+
+            '<div id="bushead">'+
+                '<a>인문대학(서쪽)</a>'+
+                '<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeOverlay()" title="닫기">'+
+            '</div>'+
+            '<div id="busbody">'+
+                '<div id="businfo" class="clearfix">'+
+                    '<div id="businfoleft">'+
+                        '<strong>A</strong><br>(<a>반시계</a> 방향)<br><p id="Atime">로딩 중</p>'+
+                    '</div>'+
+                    '<div id="businforight">'+
+                        '<strong>B</strong><br>(<a>시계</a> 방향)<br><p id="Btime">로딩 중</p>'+
+                    '</div>'
+                '</div>'
+                '<div id="busetc">'
+                    '• 운행시간 - 08:00 ~ 18:40 <span>(주말 및 공휴일 제외)</span><br>• 표시되는 시간은 버스시간표를 기준으로 안내<br><a>중이며 시간대 별로 상이할 수 있습니다.</a>'
+                '</div>'+
+            '</div>'+
+        '</div>';
+        var content4 =
+        '<div id="buswrap">'+
+            '<div id="bushead">'+
+                '<a>학생생활관</a>'+
+                '<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeOverlay()" title="닫기">'+
+            '</div>'+
+            '<div id="busbody">'+
+                '<div id="businfo" class="clearfix">'+
+                    '<div id="businfoleft">'+
+                        '<strong>A</strong><br>(<a>반시계</a> 방향)<br><p id="Atime">로딩 중</p>'+
+                    '</div>'+
+                    '<div id="businforight">'+
+                        '<strong>B</strong><br>(<a>시계</a> 방향)<br><p id="Btime">로딩 중</p>'+
+                    '</div>'
+                '</div>'
+                '<div id="busetc">'
+                    '• 운행시간 - 08:00 ~ 18:40 <span>(주말 및 공휴일 제외)</span><br>• 표시되는 시간은 버스시간표를 기준으로 안내<br><a>중이며 시간대 별로 상이할 수 있습니다.</a>'
+                '</div>'+
+            '</div>'+
+        '</div>';
+        var content5 =
+        '<div id="buswrap">'+
+            '<div id="bushead">'+
+                '<a>인문대학(동쪽)</a>'+
+                '<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeOverlay()" title="닫기">'+
+            '</div>'+
+            '<div id="busbody">'+
+                '<div id="businfo" class="clearfix">'+
+                    '<div id="businfoleft">'+
+                        '<strong>A</strong><br>(<a>반시계</a> 방향)<br><p id="Atime">로딩 중</p>'+
+                    '</div>'+
+                    '<div id="businforight">'+
+                        '<strong>B</strong><br>(<a>시계</a> 방향)<br><p id="Btime">로딩 중</p>'+
+                    '</div>'
+                '</div>'
+                '<div id="busetc">'
+                    '• 운행시간 - 08:00 ~ 18:40 <span>(주말 및 공휴일 제외)</span><br>• 표시되는 시간은 버스시간표를 기준으로 안내<br><a>중이며 시간대 별로 상이할 수 있습니다.</a>'
+                '</div>'+
+            '</div>'+
+        '</div>';
+        var content6 =
+        '<div id="buswrap">'+
+            '<div id="bushead">'+
+                '<a>중앙도서관</a>'+
+                '<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeOverlay()" title="닫기">'+
+            '</div>'+
+            '<div id="busbody">'+
+                '<div id="businfo" class="clearfix">'+
+                    '<div id="businfoleft">'+
+                        '<strong>A</strong><br>(<a>반시계</a> 방향)<br><p id="Atime">로딩 중</p>'+
+                    '</div>'+
+                    '<div id="businforight">'+
+                        '<strong>B</strong><br>(<a>시계</a> 방향)<br><p id="Btime">로딩 중</p>'+
+                    '</div>'
+                '</div>'
+                '<div id="busetc">'
+                    '• 운행시간 - 08:00 ~ 18:40 <span>(주말 및 공휴일 제외)</span><br>• 표시되는 시간은 버스시간표를 기준으로 안내<br><a>중이며 시간대 별로 상이할 수 있습니다.</a>'
+                '</div>'+
+            '</div>'+
+        '</div>';
+        var content7 =
+        '<div id="buswrap">'+
+            '<div id="bushead">'+
+                '<a>의학전문대학원</a>'+
+                '<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeOverlay()" title="닫기">'+
+            '</div>'+
+            '<div id="busbody">'+
+                '<div id="businfo" class="clearfix">'+
+                    '<div id="businfoleft">'+
+                        '<strong>A</strong><br>(<a>반시계</a> 방향)<br><p id="Atime">로딩 중</p>'+
+                    '</div>'+
+                    '<div id="businforight">'+
+                        '<strong>B</strong><br>(<a>시계</a> 방향)<br><p id="Btime">로딩 중</p>'+
+                    '</div>'
+                '</div>'
+                '<div id="busetc">'
+                    '• 운행시간 - 08:00 ~ 18:40 <span>(주말 및 공휴일 제외)</span><br>• 표시되는 시간은 버스시간표를 기준으로 안내<br><a>중이며 시간대 별로 상이할 수 있습니다.</a>'
+                '</div>'+
+            '</div>'+
+        '</div>';
+        var content8 =
+        '<div id="buswrap">'+
+            '<div id="bushead">'+
+                '<a>공과대학 4호관</a>'+
+                '<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeOverlay()" title="닫기">'+
+            '</div>'+
+            '<div id="busbody">'+
+                '<div id="businfo" class="clearfix">'+
+                    '<div id="businfoleft">'+
+                        '<strong>A</strong><br>(<a>반시계</a> 방향)<br><p id="Atime">로딩 중</p>'+
+                    '</div>'+
+                    '<div id="businforight">'+
+                        '<strong>B</strong><br>(<a>시계</a> 방향)<br><p id="Btime">로딩 중</p>'+
+                    '</div>'
+                '</div>'
+                '<div id="busetc">'
+                    '• 운행시간 - 08:00 ~ 18:40 <span>(주말 및 공휴일 제외)</span><br>• 표시되는 시간은 버스시간표를 기준으로 안내<br><a>중이며 시간대 별로 상이할 수 있습니다.</a>'
+                '</div>'+
+            '</div>'+
+        '</div>';
+        var content9 =
+        '<div id="buswrap">'+
+            '<div id="bushead">'+
+                '<a>해양과학대학 4호관</a>'+
+                '<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeOverlay()" title="닫기">'+
+            '</div>'+
+            '<div id="busbody">'+
+                '<div id="businfo" class="clearfix">'+
+                    '<div id="businfoleft">'+
+                        '<strong>A</strong><br>(<a>반시계</a> 방향)<br><p id="Atime">로딩 중</p>'+
+                    '</div>'+
+                    '<div id="businforight">'+
+                        '<strong>B</strong><br>(<a>시계</a> 방향)<br><p id="Btime">로딩 중</p>'+
+                    '</div>'
+                '</div>'
+                '<div id="busetc">'
+                    '• 운행시간 - 08:00 ~ 18:40 <span>(주말 및 공휴일 제외)</span><br>• 표시되는 시간은 버스시간표를 기준으로 안내<br><a>중이며 시간대 별로 상이할 수 있습니다.</a>'
+                '</div>'+
+            '</div>'+
+        '</div>';
+        var content10 =
+        '<div id="buswrap">'+
+            '<div id="bushead">'+
+                '<a>교양강의동</a>'+
+                '<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeOverlay()" title="닫기">'+
+            '</div>'+
+            '<div id="busbody">'+
+                '<div id="businfo" class="clearfix">'+
+                    '<div id="businfoleft">'+
+                        '<strong>A</strong><br>(<a>반시계</a> 방향)<br><p id="Atime">로딩 중</p>'+
+                    '</div>'+
+                    '<div id="businforight">'+
+                        '<strong>B</strong><br>(<a>시계</a> 방향)<br><p id="Btime">로딩 중</p>'+
+                    '</div>'
+                '</div>'
+                '<div id="busetc">'
+                    '• 운행시간 - 08:00 ~ 18:40 <span>(주말 및 공휴일 제외)</span><br>• 표시되는 시간은 버스시간표를 기준으로 안내<br><a>중이며 시간대 별로 상이할 수 있습니다.</a>'
+                '</div>'+
+            '</div>'+
+        '</div>';
+        var content11 =
+        '<div id="buswrap">'+
+            '<div id="bushead">'+
+                '<a>본관</a>'+
+                '<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeOverlay()" title="닫기">'+
+            '</div>'+
+            '<div id="busbody">'+
+                '<div id="businfo" class="clearfix">'+
+                    '<div id="businfoleft">'+
+                        '<strong>A</strong><br>(<a>반시계</a> 방향)<br><p id="Atime">로딩 중</p>'+
+                    '</div>'+
+                    '<div id="businforight">'+
+                        '<strong>B</strong><br>(<a>시계</a> 방향)<br><p id="Btime">로딩 중</p>'+
+                    '</div>'
+                '</div>'
+                '<div id="busetc">'
+                    '• 운행시간 - 08:00 ~ 18:40 <span>(주말 및 공휴일 제외)</span><br>• 표시되는 시간은 버스시간표를 기준으로 안내<br><a>중이며 시간대 별로 상이할 수 있습니다.</a>'
+                '</div>'+
+            '</div>'+
+        '</div>';
+        var content12 =
+        '<div id="buswrap">'+
+            '<div id="bushead">'+
+                '<a>해양과학대학 1호관</a>'+
+                '<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closeOverlay()" title="닫기">'+
+            '</div>'+
+            '<div id="busbody">'+
+                '<div id="businfo" class="clearfix">'+
+                    '<div id="businfoleft">'+
+                        '<strong>A</strong><br>(<a>반시계</a> 방향)<br><p id="Atime">로딩 중</p>'+
+                    '</div>'+
+                    '<div id="businforight">'+
+                        '<strong>B</strong><br>(<a>시계</a> 방향)<br><p id="Btime">로딩 중</p>'+
+                    '</div>'
+                '</div>'
+                '<div id="busetc">'
+                    '• 운행시간 - 08:00 ~ 18:40 <span>(주말 및 공휴일 제외)</span><br>• 표시되는 시간은 버스시간표를 기준으로 안내<br><a>중이며 시간대 별로 상이할 수 있습니다.</a>'
+                '</div>'+
+            '</div>'+
+        '</div>';
 
 //--------------------정류장별 html파일----------------------------
     var markercontent = 

@@ -72,23 +72,25 @@
             #findme > img {width: 35px; height: 35px; position: relative; left: 8px; top: 8px}
             #findme > img:hover {cursor: pointer;}
         
-            /*버스노선시간표 스타일시트 모바일 버전까지 화면 적용 완료*/
-            .wrap {position: absolute;left: -170px;bottom: 5px;width: 360px; height: 312px; text-align: left;overflow: hidden;font-size: 0.9rem;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif; z-index: 6;}
-            .wrap * {padding: 0;margin: 0;}
-            .wrap .head {width: 360px;height: 300px;border-radius: 5px; border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}
-            .wrap .head:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}
-            .head .title {padding: 5px 0 0 5px;height: 25px;background: #eee;border-bottom: 1px solid #ddd;font-size: 1.1rem; font-weight: bold;}
-            .head .close {position: absolute;top: 5px;right: 10px;color: #888;width: 17px;height: 17px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');}
-            .head .close:hover {cursor: pointer;}
-            .head:after {content: '';position: absolute;margin-left: -12px;left: 49%;bottom: 0;width: 22px;height: 12px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
-            .body { width: 360px; height: 265px;}
-            .leftside { float: left; width: 5px; height: 265px;}
-            .rightside {float: left; width: 27px; height: 265px;}
-            .Abus { float: left; width: 150px; height: 265px;}
-            .Bbus { float: left; width: 150px; height: 265px;}
-            table {border-collapse: collapse;}
-            th {border: 1px solid gray;}
-            td {border: 1px solid gray; text-align: center;}
+            /*순환버스 오버레이 스타일*/
+            #buswrap {position: absolute; left: -90px; top: -120px; width: 360px; border: 1px solid #ddd; border-radius: 10px;}
+            #buswrap:after {border-bottom: 15px solid transparent;border-left: 15px solid transparent;border-right: 15px solid transparent; border-top: 15px solid #eee;content: "";position: absolute;top: 196px;left: 164px;}
+            #bushead {height: 30px; background-color: #eee; border-top-left-radius: 10px; border-top-right-radius: 10px; padding-left: 10px; padding-top: 5px; font-weight: 900; border-bottom: 1px solid #ddd;}
+            #bushead > img {float: right; padding-right: 10px; padding-top: 3px;}
+            #bushead > img:hover {cursor: pointer;}
+            #businfo {font-size: 18px;}
+            #businfoleft {float: left; width: 178px; height: 100px; border-right: 1px solid #ddd; text-align: center;}
+            #businfoleft > strong {font-size: 25px;}
+            #businfoleft > a {color: red;}
+            #businfoleft > p {padding-top: 7px;}
+            #businforight {float: left; width: 180px; height: 100px; text-align: center;}
+            #businforight > strong {font-size: 25px;}
+            #businforight > a {color: blue;}
+            #businforight > p {padding-top: 7px;}
+            #busetc {height: 60px; background-color: #eee; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; padding-left: 10px; font-size: 13px;}
+            #busetc > span {font-size: 10px;}
+            #busetc > a {padding-left: 11px;}
+
             /*ATM마커별 커스텀오버레이*/
             .ATM {position: absolute; left: -90px; top: -120px;/*left: -170px; bottom: 5px;*/ width: 180px; height: 100px; border: 1px solid #fff; border-radius: 10px; z-index: 6;}
             .ATM::after {border-top: 15px solid #eee; border-bottom: 15px solid transparent;border-left: 15px solid transparent;border-right: 15px solid transparent; content: "";position: absolute; left: 75px; top:100px;}
@@ -176,22 +178,25 @@
             #findme > img {width: 35px; height: 35px; position: relative; left: 8px; top: 8px}
             #findme > img:hover {cursor: pointer;}
         
-            .wrap {position: absolute;left: -170px;bottom: 5px;width: 360px; height: 312px; text-align: left;overflow: hidden;font-size: 0.9rem;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif; z-index: 6;}
-            .wrap * {padding: 0;margin: 0;}
-            .wrap .head {width: 360px;height: 300px;border-radius: 5px; border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}
-            .wrap .head:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}
-            .head .title {padding: 5px 0 0 5px;height: 25px;background: #eee;border-bottom: 1px solid #ddd;font-size: 1.1rem; font-weight: bold;}
-            .head .close {position: absolute;top: 5px;right: 10px;color: #888;width: 17px;height: 17px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');}
-            .head .close:hover {cursor: pointer;}
-            .head:after {content: '';position: absolute;margin-left: -12px;left: 49%;bottom: 0;width: 22px;height: 12px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
-            .body { width: 360px; height: 265px;}
-            .leftside { float: left; width: 5px; height: 265px;}
-            .rightside {float: left; width: 27px; height: 265px;}
-            .Abus { float: left; width: 150px; height: 265px;}
-            .Bbus { float: left; width: 150px; height: 265px;}
-            table {border-collapse: collapse;}
-            th {border: 1px solid gray;}
-            td {border: 1px solid gray; text-align: center;}
+            /*순환버스 오버레이 스타일*/
+            #buswrap {position: absolute; left: -90px; top: -120px; width: 360px; border: 1px solid #ddd; border-radius: 10px;}
+            #buswrap:after {border-bottom: 15px solid transparent;border-left: 15px solid transparent;border-right: 15px solid transparent; border-top: 15px solid #eee;content: "";position: absolute;top: 196px;left: 164px;}
+            #bushead {height: 30px; background-color: #eee; border-top-left-radius: 10px; border-top-right-radius: 10px; padding-left: 10px; padding-top: 5px; font-weight: 900; border-bottom: 1px solid #ddd;}
+            #bushead > img {float: right; padding-right: 10px; padding-top: 3px;}
+            #bushead > img:hover {cursor: pointer;}
+            #businfo {font-size: 18px;}
+            #businfoleft {float: left; width: 178px; height: 100px; border-right: 1px solid #ddd; text-align: center;}
+            #businfoleft > strong {font-size: 25px;}
+            #businfoleft > a {color: red;}
+            #businfoleft > p {padding-top: 7px;}
+            #businforight {float: left; width: 180px; height: 100px; text-align: center;}
+            #businforight > strong {font-size: 25px;}
+            #businforight > a {color: blue;}
+            #businforight > p {padding-top: 7px;}
+            #busetc {height: 60px; background-color: #eee; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; padding-left: 10px; font-size: 13px;}
+            #busetc > span {font-size: 10px;}
+            #busetc > a {padding-left: 11px;}
+
             /*ATM마커별 커스텀오버레이*/
             .ATM {position: absolute; left: -90px; top: -120px;/*left: -170px; bottom: 5px;*/ width: 180px; height: 100px; border: 1px solid #fff; border-radius: 10px; z-index: 6;}
             .ATM::after {border-top: 15px solid #eee; border-bottom: 15px solid transparent;border-left: 15px solid transparent;border-right: 15px solid transparent; content: "";position: absolute; left: 75px; top:100px;}
@@ -278,23 +283,26 @@
             #findme:active {background-color: #888;}
             #findme > img {width: 35px; height: 35px; position: relative; left: 5.5px; top: 6px}
             #findme > img:hover {cursor: pointer;}
-    
-            .wrap {position: absolute;left: -170px;bottom: 5px;width: 355px; height: 312px; text-align: left;overflow: hidden;font-size: 0.9rem;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif; z-index: 6;}
-            .wrap * {padding: 0;margin: 0;}
-            .wrap .head {width: 355px;height: 300px;border-radius: 5px; border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}
-            .wrap .head:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}
-            .head .title {padding: 5px 0 0 5px;height: 25px;background: #eee;border-bottom: 1px solid #ddd;font-size: 1.1rem; font-weight: bold;}
-            .head .close {position: absolute;top: 5px;right: 10px;color: #888;width: 17px;height: 17px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');}
-            .head .close:hover {cursor: pointer;}
-            .head:after {content: '';position: absolute;margin-left: -12px;left: 49%;bottom: 0;width: 22px;height: 12px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
-            .body { width: 355px; height: 265px;}
-            .leftside { float: left; width: 10px; height: 265px;}
-            .rightside {float: left; width: 25px; height: 265px;}
-            .Abus { float: left; width: 150px; height: 265px;}
-            .Bbus { float: left; width: 150px; height: 265px;}
-            table {border-collapse: collapse;}
-            th {border: 1px solid gray;}
-            td {border: 1px solid gray; text-align: center;}
+            
+            /*순환버스 오버레이 스타일*/
+            #buswrap {position: absolute; left: -90px; top: -120px; width: 360px; border: 1px solid #ddd; border-radius: 10px;}
+            #buswrap:after {border-bottom: 15px solid transparent;border-left: 15px solid transparent;border-right: 15px solid transparent; border-top: 15px solid #eee;content: "";position: absolute;top: 196px;left: 164px;}
+            #bushead {height: 30px; background-color: #eee; border-top-left-radius: 10px; border-top-right-radius: 10px; padding-left: 10px; padding-top: 5px; font-weight: 900; border-bottom: 1px solid #ddd;}
+            #bushead > img {float: right; padding-right: 10px; padding-top: 3px;}
+            #bushead > img:hover {cursor: pointer;}
+            #businfo {font-size: 18px;}
+            #businfoleft {float: left; width: 178px; height: 100px; border-right: 1px solid #ddd; text-align: center;}
+            #businfoleft > strong {font-size: 25px;}
+            #businfoleft > a {color: red;}
+            #businfoleft > p {padding-top: 7px;}
+            #businforight {float: left; width: 180px; height: 100px; text-align: center;}
+            #businforight > strong {font-size: 25px;}
+            #businforight > a {color: blue;}
+            #businforight > p {padding-top: 7px;}
+            #busetc {height: 60px; background-color: #eee; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; padding-left: 10px; font-size: 13px;}
+            #busetc > span {font-size: 10px;}
+            #busetc > a {padding-left: 11px;}
+
             /*ATM마커별 커스텀오버레이*/
             .ATM {position: absolute; left: -90px; top: -120px; width: 180px; height: 100px; border: 1px solid #fff; border-radius: 10px; z-index: 6;}
             .ATM::after {border-top: 15px solid #eee; border-bottom: 15px solid transparent;border-left: 15px solid transparent;border-right: 15px solid transparent; content: "";position: absolute; left: 75px; top:100px;}
@@ -975,6 +983,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 </script>
 <script src="scripts/overlay.js"></script>
 <script src="scripts/foods.js"></script>
+<script src="scripts/entranceTimeA.js"></script>
 <!-- 
     메모장 (경범) 
     1. margin 과 padding은 생각하면서 쓰자 
