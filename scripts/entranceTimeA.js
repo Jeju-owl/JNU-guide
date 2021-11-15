@@ -88,8 +88,13 @@ function entranceTimeA() {
             }
         }
         else if(nowHour==11){
-            if(nowMinute>20){ 
-                document.querySelector("#Atime").innerHTML = "1:" + Number(40-nowMinute)+":"+Number(59-nowSecond);
+            if(nowMinute>20){
+                if(nowMinute<=40 && nowMinute>20){
+                    document.querySelector("#Atime").innerHTML = Number(12-nowHour) + ":" + Number(40-nowMinute)+":"+Number(59-nowSecond);
+                }
+                else if(nowMinute>40){
+                    document.querySelector("#Atime").innerHTML = Number(100-nowMinute)+":"+Number(59-nowSecond);
+                }
             }
             else if(nowMinute<=20){
                 document.querySelector("#Atime").innerHTML = Number(20-nowMinute)+":"+Number(59-nowSecond);
