@@ -1,4 +1,4 @@
-function studentTimeA() {
+function humanWestTimeA() {
     var now = new Date();
 
 
@@ -153,7 +153,7 @@ function studentTimeA() {
     }
 }
 
-//매 초(600)마다 불러오는 함수
-setInterval(function() {
-    studentTimeA();
-},600);
+// //매 초(600)마다 불러오는 함수
+// setInterval(function() {
+//     humanWestTimeA();
+// },600);
