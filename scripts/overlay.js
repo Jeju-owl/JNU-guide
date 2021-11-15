@@ -420,7 +420,7 @@
             '<div id="busbody">'+
                 '<div id="businfo" class="clearfix">'+
                     '<div id="businfoleft">'+
-                        '<strong>A</strong><br>(<a>반시계</a> 방향)<br><p id="AtimeMarine">로딩 중</p>'+
+                        '<strong>A</strong><br>(<a>반시계</a> 방향)<br><p id="AtimeMarine1">로딩 중</p>'+
                     '</div>'+
                     '<div id="businforight">'+
                         '<strong>B</strong><br>(<a>시계</a> 방향)<br><p id="Btime">로딩 중</p>'+
