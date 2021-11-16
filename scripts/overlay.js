@@ -1209,7 +1209,7 @@
             ATMoverlay6.setMap(null);
             ATMoverlay7.setMap(null);
         }
-        else {
+        /*else {
             busmarker.setMap(map);
             busmarker1.setMap(map);
             busmarker2.setMap(map);
@@ -1234,7 +1234,7 @@
             printmarker.setMap(map);
             printmarker1.setMap(map);
             printmarker2.setMap(map);
-        }     
+        }*/  
     });
 
     var bustoggle = true;
