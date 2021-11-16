@@ -134,9 +134,18 @@ var globalmarkerPosition4 = new kakao.maps.LatLng(33.46081208717441,126.56097069
 var globalmarkerPosition5 = new kakao.maps.LatLng(33.46034104904847,126.56162115855453); // 진성반점-중식
 var globalmarkerPosition6 = new kakao.maps.LatLng(33.449145761342194,126.55853964800833); // 챨리스-파스타
 var globalmarkerPosition7 = new kakao.maps.LatLng(33.45015712971724,126.55834899395188); // 신룽푸마라탕-마라탕
-var globalmarkerPosition8 = new kakao.maps.LatLng(33.45052453509078,126.55834982053025); // 꽁양꽁양-돈까스
-var globalmarkerPosition9 = new kakao.maps.LatLng(33.449161733799315,126.55922790259172); // 월궁-중식
-var globalmarkerPosition10 = new kakao.maps.LatLng(33.449788475616835,126.55863050082576); // 우향-우동
+var globalmarkerPosition8 = new kakao.maps.LatLng(33.449161733799315,126.55922790259172); // 꽁양꽁양-돈까스
+var globalmarkerPosition9 = new kakao.maps.LatLng(33.449788475616835,126.55863050082576); // 월궁-중식
+var globalmarkerPosition10 = new kakao.maps.LatLng(33.44918949026898,126.55816030406514); // 우향-우동
+    //카페&디저트
+var cafemarkerPosition = new kakao.maps.LatLng(33.45969153491956,126.55834368193693); // 제대가는길-커피
+var cafemarkerPosition1 = new kakao.maps.LatLng(33.46030574609194,126.56119913891474); // 봄봄(정문)-커피
+var cafemarkerPosition2 = new kakao.maps.LatLng(33.46032466266394,126.56144913507515); // 메가커피-커피
+var cafemarkerPosition3 = new kakao.maps.LatLng(33.460349922250025,126.56158077655049); // 카페띠아모-커피
+var cafemarkerPosition4 = new kakao.maps.LatLng(33.46098765787753,126.56090258327433); // 파이브엠커피-커피
+var cafemarkerPosition5 = new kakao.maps.LatLng(33.460974390581576,126.5622499271286); // 테라피쉬-커피
+var cafemarkerPosition6 = new kakao.maps.LatLng(33.45052211831002,126.55830412228833); // 봄봄(후문)-커피
+var cafemarkerPosition7 = new kakao.maps.LatLng(33.44931698590149,126.55851727000919); // 에이바우트-커피
 
 // 마커를 생성합니다 ------이부분부터 순서신경 잘해야됨------
     //한식
@@ -273,7 +282,39 @@ var globalmarker10 = new kakao.maps.Marker({
     position: globalmarkerPosition10, 
     image: udonmarkerImage // 마커이미지 설정 
 });
-
+    //카페&디저트
+var cafemarker = new kakao.maps.Marker({
+    position: cafemarkerPosition, 
+    image: coffeemarkerImage // 마커이미지 설정 
+});
+var cafemarker1 = new kakao.maps.Marker({
+    position: cafemarkerPosition1, 
+    image: coffeemarkerImage // 마커이미지 설정 
+});
+var cafemarker2 = new kakao.maps.Marker({
+    position: cafemarkerPosition2, 
+    image: coffeemarkerImage // 마커이미지 설정 
+});
+var cafemarker3 = new kakao.maps.Marker({
+    position: cafemarkerPosition3, 
+    image: coffeemarkerImage // 마커이미지 설정 
+});
+var cafemarker4 = new kakao.maps.Marker({
+    position: cafemarkerPosition4, 
+    image: coffeemarkerImage // 마커이미지 설정 
+});
+var cafemarker5 = new kakao.maps.Marker({
+    position: cafemarkerPosition5, 
+    image: coffeemarkerImage // 마커이미지 설정 
+});
+var cafemarker6 = new kakao.maps.Marker({
+    position: cafemarkerPosition6, 
+    image: coffeemarkerImage // 마커이미지 설정 
+});
+var cafemarker7 = new kakao.maps.Marker({
+    position: cafemarkerPosition7, 
+    image: coffeemarkerImage // 마커이미지 설정 
+});
 
 
 // 지도의 확대 축소 레벨이 바뀔때마다 실행되는 이벤트리스터입니다.
@@ -313,6 +354,14 @@ if (level >= 3) {
         globalmarker8.setMap(null);
         globalmarker9.setMap(null);
         globalmarker10.setMap(null);
+        cafemarker.setMap(null);
+        cafemarker1.setMap(null);
+        cafemarker2.setMap(null);
+        cafemarker3.setMap(null);
+        cafemarker4.setMap(null);
+        cafemarker5.setMap(null);
+        cafemarker6.setMap(null);
+        cafemarker7.setMap(null);
     }
     else {
         koreanmarker.setMap(map);
@@ -347,5 +396,13 @@ if (level >= 3) {
         globalmarker8.setMap(map);
         globalmarker9.setMap(map);
         globalmarker10.setMap(map);
+        cafemarker.setMap(map);
+        cafemarker1.setMap(map);
+        cafemarker2.setMap(map);
+        cafemarker3.setMap(map);
+        cafemarker4.setMap(map);
+        cafemarker5.setMap(map);
+        cafemarker6.setMap(map);
+        cafemarker7.setMap(map);
     }     
 });
