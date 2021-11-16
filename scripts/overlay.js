@@ -195,7 +195,7 @@
         image: printmarkerImage,
         map: map
     });
-    printmarker1.setMap(null);
+    printmarker2.setMap(null);
 
     //--------------------정류장별 html파일---------------------------- 
     var content =
@@ -1233,6 +1233,7 @@
 
     var bustoggle = true;
     var ATMtoggle = true;
+    var printtoggle = true;
 
     function delBus() {
         if (bustoggle == true) {
@@ -1374,5 +1375,77 @@
             ATMoverlay6.setMap(null);
             ATMoverlay7.setMap(null);
             ATMtoggle = !ATMtoggle;
+        }     
+    }
+    function delprint() {
+        if (printtoggle == true) {
+            printmarker.setMap(null);
+            printmarker1.setMap(null);
+            printmarker2.setMap(null);
+            ATMmarker.setMap(null);
+            ATMmarker1.setMap(null);
+            ATMmarker2.setMap(null);
+            ATMmarker3.setMap(null);
+            ATMmarker4.setMap(null);
+            ATMmarker5.setMap(null);
+            ATMmarker6.setMap(null);
+            ATMmarker7.setMap(null);
+            overlay.setMap(null);
+            overlay1.setMap(null);
+            overlay2.setMap(null);
+            overlay3.setMap(null);
+            overlay4.setMap(null);
+            overlay5.setMap(null);
+            overlay6.setMap(null);
+            overlay7.setMap(null);
+            overlay8.setMap(null);
+            overlay9.setMap(null);
+            overlay10.setMap(null);
+            overlay11.setMap(null);
+            overlay12.setMap(null);
+            ATMoverlay.setMap(null);
+            ATMoverlay1.setMap(null);
+            ATMoverlay2.setMap(null);
+            ATMoverlay3.setMap(null);
+            ATMoverlay4.setMap(null);
+            ATMoverlay5.setMap(null);
+            ATMoverlay6.setMap(null);
+            ATMoverlay7.setMap(null);
+            printtoggle = !printtoggle;
+        }
+        else {
+            printmarker.setMap(map);
+            printmarker1.setMap(map);
+            printmarker2.setMap(map);
+            ATMmarker.setMap(map);
+            ATMmarker1.setMap(map);
+            ATMmarker2.setMap(map);
+            ATMmarker3.setMap(map);
+            ATMmarker4.setMap(map);
+            ATMmarker5.setMap(map);
+            ATMmarker6.setMap(map);
+            ATMmarker7.setMap(map);
+            overlay.setMap(null);
+            overlay1.setMap(null);
+            overlay2.setMap(null);
+            overlay3.setMap(null);
+            overlay4.setMap(null);
+            overlay5.setMap(null);
+            overlay6.setMap(null);
+            overlay7.setMap(null);
+            overlay8.setMap(null);
+            overlay9.setMap(null);
+            overlay10.setMap(null);
+            overlay11.setMap(null);
+            overlay12.setMap(null);
+            ATMoverlay.setMap(null);
+            ATMoverlay1.setMap(null);
+            ATMoverlay2.setMap(null);
+            ATMoverlay3.setMap(null);
+            ATMoverlay4.setMap(null);
+            ATMoverlay5.setMap(null);
+            ATMoverlay6.setMap(null);
+            ATMoverlay7.setMap(null);
+            printtoggle = !printtoggle;
         }     
     }
