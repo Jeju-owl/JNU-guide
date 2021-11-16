@@ -107,7 +107,6 @@
     busmarker12.setMap(map);
     
     //ATM마커부분
-
     var imageSrc1 = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-5/images/ATM.png',
     imageSize1 = new kakao.maps.Size(20, 20),
     imageOption1 = {offset: new kakao.maps.Point(9, 10)};
@@ -169,6 +168,34 @@
         map: map
     });
     ATMmarker7.setMap(null);
+
+    // 프린터 마커 부분
+    var imageSrc2 = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/printer.png',
+    imageSize2 = new kakao.maps.Size(20, 20),
+    imageOption2 = {offset: new kakao.maps.Point(9, 10)};
+    var printmarkerImage = new kakao.maps.MarkerImage(imageSrc2, imageSize2, imageOption2),
+
+    printmarkerPosition = new kakao.maps.LatLng(33.460359812712554, 126.56182812917618); //CNP
+    var printmarker = new kakao.maps.Marker({
+        position: printmarkerPosition,
+        image: printmarkerImage,
+        map: map
+    });
+    printmarker.setMap(null);
+    printmarkerPosition1 = new kakao.maps.LatLng(33.45404773480004, 126.56158022632219); //경상대 1호관
+    var printmarker1 = new kakao.maps.Marker({
+        position: printmarkerPosition1,
+        image: printmarkerImage,
+        map: map
+    });
+    printmarker1.setMap(null);
+    printmarkerPosition2 = new kakao.maps.LatLng(33.45495494657786, 126.56061838050307); //학생회관
+    var printmarker2 = new kakao.maps.Marker({
+        position: printmarkerPosition2,
+        image: printmarkerImage,
+        map: map
+    });
+    printmarker1.setMap(null);
 
     //--------------------정류장별 html파일---------------------------- 
     var content =
