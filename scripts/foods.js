@@ -146,7 +146,19 @@ var cafemarkerPosition4 = new kakao.maps.LatLng(33.46098765787753,126.5609025832
 var cafemarkerPosition5 = new kakao.maps.LatLng(33.460974390581576,126.5622499271286); // 테라피쉬-커피
 var cafemarkerPosition6 = new kakao.maps.LatLng(33.45052211831002,126.55830412228833); // 봄봄(후문)-커피
 var cafemarkerPosition7 = new kakao.maps.LatLng(33.44931698590149,126.55851727000919); // 에이바우트-커피
-
+    //살찌는 음식
+var beermarkerPosition = new kakao.maps.LatLng(33.46032680146112,126.56205418431942); // 써브웨이-버거
+var beermarkerPosition1 = new kakao.maps.LatLng(33.46039764282094,126.56232812222402); // 맘스터치-버거
+var beermarkerPosition2 = new kakao.maps.LatLng(33.45046575968514,126.55830171913358); // 명품치킨-치킨
+var beermarkerPosition3 = new kakao.maps.LatLng(33.44902694256404,126.55872040000347); // 엄마치킨-치킨
+var beermarkerPosition4 = new kakao.maps.LatLng(33.44893132297017,126.5590865615084); // 푸라닭치킨-치킨
+var beermarkerPosition5 = new kakao.maps.LatLng(33.448087102058174,126.55747756676168); // 불닭공장-치킨
+var beermarkerPosition6 = new kakao.maps.LatLng(33.450585449522706,126.55836564489735); // 잇마이피자-피자
+var beermarkerPosition7 = new kakao.maps.LatLng(33.448784109493,126.55952289183492); // 봉수아피자-피자
+var beermarkerPosition8 = new kakao.maps.LatLng(33.44906631212997,126.5590159694662); // 숲노을-맥주
+var beermarkerPosition9 = new kakao.maps.LatLng(33.4489060482672,126.55768582324136); // 와랑와랑-맥주
+var beermarkerPosition10 = new kakao.maps.LatLng(33.44813731606957,126.55891849722681); // 노가리앤비어-맥주
+var beermarkerPosition11 = new kakao.maps.LatLng(33.44869642018224,126.55768419852062); // 09학번-맥주
 // 마커를 생성합니다 ------이부분부터 순서신경 잘해야됨------
     //한식
 var koreanmarker = new kakao.maps.Marker({
@@ -282,7 +294,7 @@ var globalmarker10 = new kakao.maps.Marker({
     position: globalmarkerPosition10, 
     image: udonmarkerImage // 마커이미지 설정 
 });
-    //카페&디저트
+    //카페&디저트cafe
 var cafemarker = new kakao.maps.Marker({
     position: cafemarkerPosition, 
     image: coffeemarkerImage // 마커이미지 설정 
@@ -314,6 +326,55 @@ var cafemarker6 = new kakao.maps.Marker({
 var cafemarker7 = new kakao.maps.Marker({
     position: cafemarkerPosition7, 
     image: coffeemarkerImage // 마커이미지 설정 
+});
+    //살찌는 음식beer
+var beermarker = new kakao.maps.Marker({
+    position: beermarkerPosition, 
+    image: burgermarkerImage // 마커이미지 설정 
+});
+var beermarker1 = new kakao.maps.Marker({
+    position: beermarkerPosition1, 
+    image: burgermarkerImage // 마커이미지 설정 
+});
+var beermarker2 = new kakao.maps.Marker({
+    position: beermarkerPosition2, 
+    image: chickenmarkerImage // 마커이미지 설정 
+});
+var beermarker3 = new kakao.maps.Marker({
+    position: beermarkerPosition3, 
+    image: chickenmarkerImage // 마커이미지 설정 
+});
+var beermarker4 = new kakao.maps.Marker({
+    position: beermarkerPosition4, 
+    image: chickenmarkerImage // 마커이미지 설정 
+});
+var beermarker5 = new kakao.maps.Marker({
+    position: beermarkerPosition5, 
+    image: chickenmarkerImage // 마커이미지 설정 
+});
+var beermarker6 = new kakao.maps.Marker({
+    position: beermarkerPosition6, 
+    image: pizzamarkerImage // 마커이미지 설정 
+});
+var beermarker7 = new kakao.maps.Marker({
+    position: beermarkerPosition7, 
+    image: pizzamarkerImage // 마커이미지 설정 
+});
+var beermarker8 = new kakao.maps.Marker({
+    position: beermarkerPosition8, 
+    image: beermarkerImage // 마커이미지 설정 
+});
+var beermarker9 = new kakao.maps.Marker({
+    position: beermarkerPosition9, 
+    image: beermarkerImage // 마커이미지 설정 
+});
+var beermarker10 = new kakao.maps.Marker({
+    position: beermarkerPosition10, 
+    image: beermarkerImage // 마커이미지 설정 
+});
+var beermarker11 = new kakao.maps.Marker({
+    position: beermarkerPosition11, 
+    image: beermarkerImage // 마커이미지 설정 
 });
 
 
@@ -362,6 +423,18 @@ if (level >= 3) {
         cafemarker5.setMap(null);
         cafemarker6.setMap(null);
         cafemarker7.setMap(null);
+        beermarker.setMap(null);
+        beermarker1.setMap(null);
+        beermarker2.setMap(null);
+        beermarker3.setMap(null);
+        beermarker4.setMap(null);
+        beermarker5.setMap(null);
+        beermarker6.setMap(null);
+        beermarker7.setMap(null);
+        beermarker8.setMap(null);
+        beermarker9.setMap(null);
+        beermarker10.setMap(null);
+        beermarker11.setMap(null);
     }
     else {
         koreanmarker.setMap(map);
@@ -404,5 +477,17 @@ if (level >= 3) {
         cafemarker5.setMap(map);
         cafemarker6.setMap(map);
         cafemarker7.setMap(map);
+        beermarker.setMap(map);
+        beermarker1.setMap(map);
+        beermarker2.setMap(map);
+        beermarker3.setMap(map);
+        beermarker4.setMap(map);
+        beermarker5.setMap(map);
+        beermarker6.setMap(map);
+        beermarker7.setMap(map);
+        beermarker8.setMap(map);
+        beermarker9.setMap(map);
+        beermarker10.setMap(map);
+        beermarker11.setMap(map);
     }     
 });
