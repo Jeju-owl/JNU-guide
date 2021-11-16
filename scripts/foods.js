@@ -91,7 +91,7 @@ var ddonmarkerImage = new kakao.maps.MarkerImage(ddonimageSrc, ddonimageSize, dd
 var lunchboxImage = new kakao.maps.MarkerImage(lunchboximageSrc, lunchboximageSize, lunchboximageOption);
 var jjigaeImage = new kakao.maps.MarkerImage(jjigaeimageSrc, jjigaeimageSize, jjigaeimageOption);
 var chinamarkerImage = new kakao.maps.MarkerImage(chinaimageSrc, chinaimageSize, chinaimageOption);
-var udontmarkerImage = new kakao.maps.MarkerImage(udonimageSrc, udonimageSize, udonimageOption);
+var udonmarkerImage = new kakao.maps.MarkerImage(udonimageSrc, udonimageSize, udonimageOption);
 var tendonmarkerImage = new kakao.maps.MarkerImage(tendonimageSrc, tendonimageSize, tendonimageOption);
 var maratangmarkerImage = new kakao.maps.MarkerImage(maratangimageSrc, maratangimageSize, maratangimageOption);
 var pastamarkerImage = new kakao.maps.MarkerImage(pastaimageSrc, pastaimageSize, pastaimageOption);
@@ -102,6 +102,7 @@ var pizzamarkerImage = new kakao.maps.MarkerImage(pizzaimageSrc, pizzaimageSize,
 var beermarkerImage = new kakao.maps.MarkerImage(beerimageSrc, beerimageSize, beerimageOption);
 
 // 식당 위치 정보
+    //한식
 var koreanmarkerPosition = new kakao.maps.LatLng(33.45916954797216,126.5579752302018); // 이삭토스트-토스트
 var koreanmarkerPosition1 = new kakao.maps.LatLng(33.460632008508654,126.56103883449029); // 콘킹부대찌개-찌개
 var koreanmarkerPosition2 = new kakao.maps.LatLng(33.46022359435553,126.5609145026397); // 김밥천구-김밥
@@ -122,8 +123,23 @@ var koreanmarkerPosition17 = new kakao.maps.LatLng(33.4489502053445,126.55932576
 var koreanmarkerPosition18 = new kakao.maps.LatLng(33.44929790080385,126.55822159708907); // 옛날아우네 순대-한식
 var koreanmarkerPosition19 = new kakao.maps.LatLng(33.44898577786935,126.55855390255299); // 엄마네 정식-한식
 var koreanmarkerPosition20 = new kakao.maps.LatLng(33.456795261451575,126.55964373072615); // 글로벌하우스-한식
+var koreanmarkerPosition21 = new kakao.maps.LatLng(33.44855668844978,126.55958857243469); // 제대로 떡볶이
+var koreanmarkerPosition22 = new kakao.maps.LatLng(33.460357435194794,126.56179318210137); // 위드미트
+    //양중일
+var globalmarkerPosition = new kakao.maps.LatLng(33.46033910884118,126.56170991046712); // 오니기리-우동
+var globalmarkerPosition1 = new kakao.maps.LatLng(33.46043357326079,126.56229029344895); // 서유기 마라탕-마라탕
+var globalmarkerPosition2 = new kakao.maps.LatLng(33.460717611343064,126.56102495722958); // 텐동아우라-텐동
+var globalmarkerPosition3 = new kakao.maps.LatLng(33.460733217657044,126.56097647354895); // 이왕돈까스-돈까스
+var globalmarkerPosition4 = new kakao.maps.LatLng(33.46081208717441,126.56097069766193); // 다채움-우동
+var globalmarkerPosition5 = new kakao.maps.LatLng(33.46034104904847,126.56162115855453); // 진성반점-중식
+var globalmarkerPosition6 = new kakao.maps.LatLng(33.449145761342194,126.55853964800833); // 챨리스-파스타
+var globalmarkerPosition7 = new kakao.maps.LatLng(33.45015712971724,126.55834899395188); // 신룽푸마라탕-마라탕
+var globalmarkerPosition8 = new kakao.maps.LatLng(33.45052453509078,126.55834982053025); // 꽁양꽁양-돈까스
+var globalmarkerPosition9 = new kakao.maps.LatLng(33.449161733799315,126.55922790259172); // 월궁-중식
+var globalmarkerPosition10 = new kakao.maps.LatLng(33.449788475616835,126.55863050082576); // 우향-우동
 
 // 마커를 생성합니다 ------이부분부터 순서신경 잘해야됨------
+    //한식
 var koreanmarker = new kakao.maps.Marker({
     position: koreanmarkerPosition, 
     image: toastmarkerImage // 마커이미지 설정 
@@ -204,53 +220,132 @@ var koreanmarker20 = new kakao.maps.Marker({
     position: koreanmarkerPosition20, 
     image: koreanmarkerImage // 마커이미지 설정 
 });
+var koreanmarker21 = new kakao.maps.Marker({
+    position: koreanmarkerPosition21, 
+    image: ddeokmarkerImage // 마커이미지 설정 
+});
+var koreanmarker22 = new kakao.maps.Marker({
+    position: koreanmarkerPosition22, 
+    image: galbimarkerImage // 마커이미지 설정 
+});
+    //양중일
+var globalmarker = new kakao.maps.Marker({
+    position: globalmarkerPosition, 
+    image: udonmarkerImage // 마커이미지 설정 
+});
+var globalmarker1 = new kakao.maps.Marker({
+    position: globalmarkerPosition1, 
+    image: maratangmarkerImage // 마커이미지 설정 
+});
+var globalmarker2 = new kakao.maps.Marker({
+    position: globalmarkerPosition2, 
+    image: tendonmarkerImage // 마커이미지 설정 
+});
+var globalmarker3 = new kakao.maps.Marker({
+    position: globalmarkerPosition3, 
+    image: ddonmarkerImage // 마커이미지 설정 
+});
+var globalmarker4 = new kakao.maps.Marker({
+    position: globalmarkerPosition4, 
+    image: udonmarkerImage // 마커이미지 설정 
+});
+var globalmarker5 = new kakao.maps.Marker({
+    position: globalmarkerPosition5, 
+    image: chinamarkerImage // 마커이미지 설정 
+});
+var globalmarker6 = new kakao.maps.Marker({
+    position: globalmarkerPosition6, 
+    image: pastamarkerImage // 마커이미지 설정 
+});
+var globalmarker7 = new kakao.maps.Marker({
+    position: globalmarkerPosition7, 
+    image: maratangmarkerImage // 마커이미지 설정 
+});
+var globalmarker8 = new kakao.maps.Marker({
+    position: globalmarkerPosition8, 
+    image: ddonmarkerImage // 마커이미지 설정 
+});
+var globalmarker9 = new kakao.maps.Marker({
+    position: globalmarkerPosition9, 
+    image: chinamarkerImage // 마커이미지 설정 
+});
+var globalmarker10 = new kakao.maps.Marker({
+    position: globalmarkerPosition10, 
+    image: udonmarkerImage // 마커이미지 설정 
+});
+
 
 
 // 지도의 확대 축소 레벨이 바뀔때마다 실행되는 이벤트리스터입니다.
 kakao.maps.event.addListener(map, 'zoom_changed', function() {        
 var level = map.getLevel();// 지도의 현재 레벨을 얻어옵니다
 if (level >= 3) {
-    koreanmarker.setMap(null);
-    koreanmarker1.setMap(null);
-    koreanmarker2.setMap(null);
-    koreanmarker3.setMap(null);
-    koreanmarker4.setMap(null);
-    koreanmarker6.setMap(null);
-    koreanmarker7.setMap(null);
-    koreanmarker8.setMap(null);
-    koreanmarker9.setMap(null);
-    koreanmarker10.setMap(null);
-    koreanmarker11.setMap(null);
-    koreanmarker12.setMap(null);
-    koreanmarker13.setMap(null);
-    koreanmarker14.setMap(null);
-    koreanmarker15.setMap(null);
-    koreanmarker16.setMap(null);
-    koreanmarker17.setMap(null);
-    koreanmarker18.setMap(null);
-    koreanmarker19.setMap(null);
-    koreanmarker20.setMap(null);
-}
-else {
-    koreanmarker.setMap(map);
-    koreanmarker1.setMap(map);
-    koreanmarker2.setMap(map);
-    koreanmarker3.setMap(map);
-    koreanmarker4.setMap(map);
-    koreanmarker6.setMap(map);
-    koreanmarker7.setMap(map);
-    koreanmarker8.setMap(map);
-    koreanmarker9.setMap(map);
-    koreanmarker10.setMap(map);
-    koreanmarker11.setMap(map);
-    koreanmarker12.setMap(map);
-    koreanmarker13.setMap(map);
-    koreanmarker14.setMap(map);
-    koreanmarker15.setMap(map);
-    koreanmarker16.setMap(map);
-    koreanmarker17.setMap(map);
-    koreanmarker18.setMap(map);
-    koreanmarker19.setMap(map);
-    koreanmarker20.setMap(map);
-}     
+        koreanmarker.setMap(null);
+        koreanmarker1.setMap(null);
+        koreanmarker2.setMap(null);
+        koreanmarker3.setMap(null);
+        koreanmarker4.setMap(null);
+        koreanmarker6.setMap(null);
+        koreanmarker7.setMap(null);
+        koreanmarker8.setMap(null);
+        koreanmarker9.setMap(null);
+        koreanmarker10.setMap(null);
+        koreanmarker11.setMap(null);
+        koreanmarker12.setMap(null);
+        koreanmarker13.setMap(null);
+        koreanmarker14.setMap(null);
+        koreanmarker15.setMap(null);
+        koreanmarker16.setMap(null);
+        koreanmarker17.setMap(null);
+        koreanmarker18.setMap(null);
+        koreanmarker19.setMap(null);
+        koreanmarker20.setMap(null);
+        koreanmarker21.setMap(null);
+        koreanmarker22.setMap(null);
+        globalmarker.setMap(null);
+        globalmarker1.setMap(null);
+        globalmarker2.setMap(null);
+        globalmarker3.setMap(null);
+        globalmarker4.setMap(null);
+        globalmarker5.setMap(null);
+        globalmarker6.setMap(null);
+        globalmarker7.setMap(null);
+        globalmarker8.setMap(null);
+        globalmarker9.setMap(null);
+        globalmarker10.setMap(null);
+    }
+    else {
+        koreanmarker.setMap(map);
+        koreanmarker1.setMap(map);
+        koreanmarker2.setMap(map);
+        koreanmarker3.setMap(map);
+        koreanmarker4.setMap(map);
+        koreanmarker6.setMap(map);
+        koreanmarker7.setMap(map);
+        koreanmarker8.setMap(map);
+        koreanmarker9.setMap(map);
+        koreanmarker10.setMap(map);
+        koreanmarker11.setMap(map);
+        koreanmarker12.setMap(map);
+        koreanmarker13.setMap(map);
+        koreanmarker14.setMap(map);
+        koreanmarker15.setMap(map);
+        koreanmarker16.setMap(map);
+        koreanmarker17.setMap(map);
+        koreanmarker18.setMap(map);
+        koreanmarker19.setMap(map);
+        koreanmarker20.setMap(map);
+        koreanmarker21.setMap(map);
+        globalmarker.setMap(map);
+        globalmarker1.setMap(map);
+        globalmarker2.setMap(map);
+        globalmarker3.setMap(map);
+        globalmarker4.setMap(map);
+        globalmarker5.setMap(map);
+        globalmarker6.setMap(map);
+        globalmarker7.setMap(map);
+        globalmarker8.setMap(map);
+        globalmarker9.setMap(map);
+        globalmarker10.setMap(map);
+    }     
 });
