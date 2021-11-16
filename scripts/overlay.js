@@ -1184,6 +1184,9 @@
             ATMmarker5.setMap(null);
             ATMmarker6.setMap(null);
             ATMmarker7.setMap(null);
+            printmarker.setMap(null);
+            printmarker1.setMap(null);
+            printmarker2.setMap(null);
             overlay.setMap(null);
             overlay1.setMap(null);
             overlay2.setMap(null);
@@ -1228,6 +1231,9 @@
             ATMmarker5.setMap(map);
             ATMmarker6.setMap(map);
             ATMmarker7.setMap(map);
+            printmarker.setMap(map);
+            printmarker1.setMap(map);
+            printmarker2.setMap(map);
         }     
     });
 
@@ -1382,14 +1388,6 @@
             printmarker.setMap(null);
             printmarker1.setMap(null);
             printmarker2.setMap(null);
-            ATMmarker.setMap(null);
-            ATMmarker1.setMap(null);
-            ATMmarker2.setMap(null);
-            ATMmarker3.setMap(null);
-            ATMmarker4.setMap(null);
-            ATMmarker5.setMap(null);
-            ATMmarker6.setMap(null);
-            ATMmarker7.setMap(null);
             overlay.setMap(null);
             overlay1.setMap(null);
             overlay2.setMap(null);
@@ -1417,14 +1415,6 @@
             printmarker.setMap(map);
             printmarker1.setMap(map);
             printmarker2.setMap(map);
-            ATMmarker.setMap(map);
-            ATMmarker1.setMap(map);
-            ATMmarker2.setMap(map);
-            ATMmarker3.setMap(map);
-            ATMmarker4.setMap(map);
-            ATMmarker5.setMap(map);
-            ATMmarker6.setMap(map);
-            ATMmarker7.setMap(map);
             overlay.setMap(null);
             overlay1.setMap(null);
             overlay2.setMap(null);
