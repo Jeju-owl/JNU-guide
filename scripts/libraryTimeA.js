@@ -23,135 +23,135 @@ function libraryTimeA() {
                 document.querySelector("#AtimeLib").innerHTML = "운행 없음";
             }
             else if(nowMinute<=48 && nowMinute>28){
-                document.querySelector("#AtimeLib").innerHTML = Number(47-nowMinute)+":"+Number(59-nowSecond);
+                document.querySelector("#AtimeLib").innerHTML = Number(48-nowMinute)+":"+Number(59-nowSecond);
             }
             else if(nowMinute<=28 && nowMinute>8){
-                document.querySelector("#AtimeLib").innerHTML = Number(27-nowMinute)+":"+Number(59-nowSecond);
+                document.querySelector("#AtimeLib").innerHTML = Number(28-nowMinute)+":"+Number(59-nowSecond);
             }
             else if(nowMinute<=8){
-                document.querySelector("#AtimeLib").innerHTML = Number(7-nowMinute)+":"+Number(59-nowSecond);
+                document.querySelector("#AtimeLib").innerHTML = Number(8-nowMinute)+":"+Number(59-nowSecond);
             }
         }
         else if(nowHour==17){
-            if(nowMinute>47){
-                document.querySelector("#AtimeLib").innerHTML = Number(67-nowMinute)+":"+Number(59-nowSecond);
+            if(nowMinute>48){
+                document.querySelector("#AtimeLib").innerHTML = Number(68-nowMinute)+":"+Number(59-nowSecond);
             }
-            else if(nowMinute<=47 && nowMinute>27){
-                document.querySelector("#AtimeLib").innerHTML = Number(47-nowMinute)+":"+Number(59-nowSecond);
+            else if(nowMinute<=48 && nowMinute>28){
+                document.querySelector("#AtimeLib").innerHTML = Number(48-nowMinute)+":"+Number(59-nowSecond);
             }
-            else if(nowMinute<=27 && nowMinute>7){
-                document.querySelector("#AtimeLib").innerHTML = Number(27-nowMinute)+":"+Number(59-nowSecond);
+            else if(nowMinute<=28 && nowMinute>8){
+                document.querySelector("#AtimeLib").innerHTML = Number(28-nowMinute)+":"+Number(59-nowSecond);
             }
-            else if(nowMinute<=7){
-                document.querySelector("#AtimeLib").innerHTML = Number(7-nowMinute)+":"+Number(59-nowSecond);
+            else if(nowMinute<=8){
+                document.querySelector("#AtimeLib").innerHTML = Number(8-nowMinute)+":"+Number(59-nowSecond);
             }
         }
         else if(nowHour==16){
-            if(nowMinute>37){ 
-                document.querySelector("#AtimeLib").innerHTML = Number(67-nowMinute)+":"+Number(59-nowSecond);
+            if(nowMinute>38){ 
+                document.querySelector("#AtimeLib").innerHTML = Number(68-nowMinute)+":"+Number(59-nowSecond);
             }
-            else if(nowMinute<=37){
-                document.querySelector("#AtimeLib").innerHTML = Number(37-nowMinute)+":"+Number(59-nowSecond);
+            else if(nowMinute<=38){
+                document.querySelector("#AtimeLib").innerHTML = Number(38-nowMinute)+":"+Number(59-nowSecond);
             }
         }
         else if(nowHour==15){
-            if(nowMinute>52){ 
-                document.querySelector("#AtimeLib").innerHTML = Number(97-nowMinute)+":"+Number(59-nowSecond);
+            if(nowMinute>53){ 
+                document.querySelector("#AtimeLib").innerHTML = Number(98-nowMinute)+":"+Number(59-nowSecond);
             }
-            else if(nowMinute<=52 && nowMinute>32){
-                document.querySelector("#AtimeLib").innerHTML = Number(52-nowMinute)+":"+Number(59-nowSecond);
+            else if(nowMinute<=53 && nowMinute>33){
+                document.querySelector("#AtimeLib").innerHTML = Number(53-nowMinute)+":"+Number(59-nowSecond);
             }
-            else if(nowMinute<=32 && nowMinute>12){
-                document.querySelector("#AtimeLib").innerHTML = Number(32-nowMinute)+":"+Number(59-nowSecond);
+            else if(nowMinute<=33 && nowMinute>13){
+                document.querySelector("#AtimeLib").innerHTML = Number(33-nowMinute)+":"+Number(59-nowSecond);
             }
-            else if(nowMinute<=12){
-                document.querySelector("#AtimeLib").innerHTML = Number(12-nowMinute)+":"+Number(59-nowSecond);
+            else if(nowMinute<=13){
+                document.querySelector("#AtimeLib").innerHTML = Number(13-nowMinute)+":"+Number(59-nowSecond);
             }
         }
         else if(nowHour==14){
-            if(nowMinute>37){ 
-                document.querySelector("#AtimeLib").innerHTML = Number(72-nowMinute)+":"+Number(59-nowSecond);
+            if(nowMinute>38){ 
+                document.querySelector("#AtimeLib").innerHTML = Number(73-nowMinute)+":"+Number(59-nowSecond);
             }
-            else if(nowMinute<=37){
-                document.querySelector("#AtimeLib").innerHTML = Number(37-nowMinute)+":"+Number(59-nowSecond);
+            else if(nowMinute<=38){
+                document.querySelector("#AtimeLib").innerHTML = Number(38-nowMinute)+":"+Number(59-nowSecond);
             }
         }
         else if(nowHour==13){
-            if(nowMinute>52){ 
-                document.querySelector("#AtimeLib").innerHTML = Number(97-nowMinute)+":"+Number(59-nowSecond);
+            if(nowMinute>53){ 
+                document.querySelector("#AtimeLib").innerHTML = Number(98-nowMinute)+":"+Number(59-nowSecond);
             }
-            else if(nowMinute<=52 && nowMinute>32){
-                document.querySelector("#AtimeLib").innerHTML = Number(52-nowMinute)+":"+Number(59-nowSecond);
+            else if(nowMinute<=53 && nowMinute>33){
+                document.querySelector("#AtimeLib").innerHTML = Number(53-nowMinute)+":"+Number(59-nowSecond);
             }
-            else if(nowMinute<=32 && nowMinute>12){
-                document.querySelector("#AtimeLib").innerHTML = Number(32-nowMinute)+":"+Number(59-nowSecond);
+            else if(nowMinute<=33 && nowMinute>13){
+                document.querySelector("#AtimeLib").innerHTML = Number(33-nowMinute)+":"+Number(59-nowSecond);
             }
-            else if(nowMinute<=12){
-                document.querySelector("#AtimeLib").innerHTML = Number(12-nowMinute)+":"+Number(59-nowSecond);
+            else if(nowMinute<=13){
+                document.querySelector("#AtimeLib").innerHTML = Number(13-nowMinute)+":"+Number(59-nowSecond);
             }
         }
         else if(nowHour==12){
-            if(nowMinute>47){ 
-                document.querySelector("#AtimeLib").innerHTML = Number(72-nowMinute)+":"+Number(59-nowSecond);
+            if(nowMinute>48){ 
+                document.querySelector("#AtimeLib").innerHTML = Number(73-nowMinute)+":"+Number(59-nowSecond);
             }
-            else if(nowMinute<=47){
-                document.querySelector("#AtimeLib").innerHTML = Number(47-nowMinute)+":"+Number(59-nowSecond);
+            else if(nowMinute<=48){
+                document.querySelector("#AtimeLib").innerHTML = Number(48-nowMinute)+":"+Number(59-nowSecond);
             }
         }
         else if(nowHour==11){
-            if(nowMinute>27){
-                if(nowMinute<=47 && nowMinute>27){
-                    document.querySelector("#AtimeLib").innerHTML = Number(12-nowHour) + ":" + Number(47-nowMinute)+":"+Number(59-nowSecond);
+            if(nowMinute>28){
+                if(nowMinute<=48 && nowMinute>28){
+                    document.querySelector("#AtimeLib").innerHTML = Number(12-nowHour) + ":" + Number(48-nowMinute)+":"+Number(59-nowSecond);
                 }
-                else if(nowMinute>47){
-                    document.querySelector("#AtimeLib").innerHTML = Number(107-nowMinute)+":"+Number(59-nowSecond);
+                else if(nowMinute>48){
+                    document.querySelector("#AtimeLib").innerHTML = Number(108-nowMinute)+":"+Number(59-nowSecond);
                 }
             }
-            else if(nowMinute<=27){
-                document.querySelector("#AtimeLib").innerHTML = Number(27-nowMinute)+":"+Number(59-nowSecond);
+            else if(nowMinute<=28){
+                document.querySelector("#AtimeLib").innerHTML = Number(28-nowMinute)+":"+Number(59-nowSecond);
             }
         }
         else if(nowHour==10){
-            if(nowMinute>52){ 
-                document.querySelector("#AtimeLib").innerHTML = Number(87-nowMinute)+":"+Number(59-nowSecond);
+            if(nowMinute>53){ 
+                document.querySelector("#AtimeLib").innerHTML = Number(88-nowMinute)+":"+Number(59-nowSecond);
             }
-            else if(nowMinute<=52 && nowMinute>32){
-                document.querySelector("#AtimeLib").innerHTML = Number(52-nowMinute)+":"+Number(59-nowSecond);
+            else if(nowMinute<=53 && nowMinute>33){
+                document.querySelector("#AtimeLib").innerHTML = Number(53-nowMinute)+":"+Number(59-nowSecond);
             }
-            else if(nowMinute<=32 && nowMinute>12){
-                document.querySelector("#AtimeLib").innerHTML = Number(32-nowMinute)+":"+Number(59-nowSecond);
+            else if(nowMinute<=33 && nowMinute>13){
+                document.querySelector("#AtimeLib").innerHTML = Number(33-nowMinute)+":"+Number(59-nowSecond);
             }
-            else if(nowMinute<=12){
-                document.querySelector("#AtimeLib").innerHTML = Number(12-nowMinute)+":"+Number(59-nowSecond);
+            else if(nowMinute<=13){
+                document.querySelector("#AtimeLib").innerHTML = Number(13-nowMinute)+":"+Number(59-nowSecond);
             }
         }
         else if(nowHour==9){
-            if(nowMinute>37){ 
-                document.querySelector("#AtimeLib").innerHTML = Number(72-nowMinute)+":"+Number(59-nowSecond);
+            if(nowMinute>38){ 
+                document.querySelector("#AtimeLib").innerHTML = Number(73-nowMinute)+":"+Number(59-nowSecond);
             }
-            else if(nowMinute<=37){
-                document.querySelector("#AtimeLib").innerHTML = Number(42-nowMinute)+":"+Number(59-nowSecond);
+            else if(nowMinute<=38){
+                document.querySelector("#AtimeLib").innerHTML = Number(43-nowMinute)+":"+Number(59-nowSecond);
             }
         }
         else if(nowHour==8){
-            if(nowMinute>52){ 
-                document.querySelector("#AtimeLib").innerHTML = Number(97-nowMinute)+":"+Number(59-nowSecond);
+            if(nowMinute>53){ 
+                document.querySelector("#AtimeLib").innerHTML = Number(98-nowMinute)+":"+Number(59-nowSecond);
             }
-            else if(nowMinute<=52 && nowMinute>32){
-                document.querySelector("#AtimeLib").innerHTML = Number(52-nowMinute)+":"+Number(59-nowSecond);
+            else if(nowMinute<=53 && nowMinute>33){
+                document.querySelector("#AtimeLib").innerHTML = Number(53-nowMinute)+":"+Number(59-nowSecond);
             }
-            else if(nowMinute<=32 && nowMinute>12){
-                document.querySelector("#AtimeLib").innerHTML = Number(32-nowMinute)+":"+Number(59-nowSecond);
+            else if(nowMinute<=33 && nowMinute>13){
+                document.querySelector("#AtimeLib").innerHTML = Number(33-nowMinute)+":"+Number(59-nowSecond);
             }
-            else if(nowMinute<=12){
-                document.querySelector("#AtimeLib").innerHTML = Number(12-nowMinute)+":"+Number(59-nowSecond);
+            else if(nowMinute<=13){
+                document.querySelector("#AtimeLib").innerHTML = Number(13-nowMinute)+":"+Number(59-nowSecond);
             }
         }
         else if(nowHour==7){
-            if(nowMinute>37){ 
-                document.querySelector("#AtimeLib").innerHTML = Number(72-nowMinute)+":"+Number(59-nowSecond);
+            if(nowMinute>38){ 
+                document.querySelector("#AtimeLib").innerHTML = Number(73-nowMinute)+":"+Number(59-nowSecond);
             }
-            else if(nowHour<=37){
+            else if(nowHour<=38){
                 document.querySelector("#AtimeLib").innerHTML = "운행 없음";
             }
         }
