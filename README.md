@@ -9,7 +9,8 @@
 - 주변 식당 정보 확인
 - 실시간 순환 버스 도착 시간 제공
 - 야간 버스 시간표 제공
-- ATM 위치 제공
+- 교내 ATM 위치 제공
+- 교내 인쇄기 위치 제공
 
 ## 🛠Development Environment
 - Front-End
