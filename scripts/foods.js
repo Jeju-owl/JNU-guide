@@ -458,6 +458,7 @@ if (level >= 3) {
         koreanmarker19.setMap(map);
         koreanmarker20.setMap(map);
         koreanmarker21.setMap(map);
+        koreanmarker22.setMap(map);
         globalmarker.setMap(map);
         globalmarker1.setMap(map);
         globalmarker2.setMap(map);
