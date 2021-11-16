@@ -1162,7 +1162,7 @@
     // 지도의 확대 축소 레벨이 바뀔때마다 실행되는 이벤트리스터입니다.
     kakao.maps.event.addListener(map, 'zoom_changed', function() {        
         var level = map.getLevel();// 지도의 현재 레벨을 얻어옵니다
-        if (level >= 5) {
+        if (level >= 6) {
             busmarker.setMap(null);
             busmarker1.setMap(null);
             busmarker2.setMap(null);
