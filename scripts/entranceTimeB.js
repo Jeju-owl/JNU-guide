@@ -28,7 +28,10 @@ function entranceTimeB() {
             if(nowMinute>50){
                 document.querySelector("#Btime").innerHTML = Number(70-nowMinute)+":"+Number(59-nowSecond);
             }
-            else if(nowMinute<=30 && nowMinute>50){
+            else if(nowMinute<=50 && nowMinute>30){
+                document.querySelector("#Btime").innerHTML = Number(50-nowMinute)+":"+Number(59-nowSecond);
+            }
+            else if(nowMinute<=30 && nowMinute>10){
                 document.querySelector("#Btime").innerHTML = Number(30-nowMinute)+":"+Number(59-nowSecond);
             }
             else if(nowMinute<=10){
