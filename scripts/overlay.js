@@ -230,7 +230,7 @@
                         '<strong>A</strong><br>(<a>반시계</a> 방향)<br><p id="AtimePharm">로딩 중</p>'+
                     '</div>'+
                     '<div id="businforight">'+
-                        '<strong>B</strong><br>(<a>시계</a> 방향)<br><p id="Btime">로딩 중</p>'+
+                        '<strong>B</strong><br>(<a>시계</a> 방향)<br><p id="BtimePharm">로딩 중</p>'+
                     '</div>'+
                 '</div>'+
                 '<div id="busetc">'+
@@ -370,7 +370,7 @@
                         '<strong>A</strong><br>(<a>반시계</a> 방향)<br><p id="AtimeEngine4">로딩 중</p>'+
                     '</div>'+
                     '<div id="businforight">'+
-                        '<strong>B</strong><br>(<a>시계</a> 방향)<br><p id="Btime">로딩 중</p>'+
+                        '<strong>B</strong><br>(<a>시계</a> 방향)<br><p id="BtimeEngine4">로딩 중</p>'+
                     '</div>'+
                 '</div>'+
                 '<div id="busetc">'+
@@ -410,7 +410,7 @@
                         '<strong>A</strong><br>(<a>반시계</a> 방향)<br><p id="AtimeLiberal">로딩 중</p>'+
                     '</div>'+
                     '<div id="businforight">'+
-                        '<strong>B</strong><br>(<a>시계</a> 방향)<br><p id="Btime">로딩 중</p>'+
+                        '<strong>B</strong><br>(<a>시계</a> 방향)<br><p id="BtimeLiberal">로딩 중</p>'+
                     '</div>'+
                 '</div>'+
                 '<div id="busetc">'+
@@ -450,7 +450,7 @@
                         '<strong>A</strong><br>(<a>반시계</a> 방향)<br><p id="AtimeMarine1">로딩 중</p>'+
                     '</div>'+
                     '<div id="businforight">'+
-                        '<strong>B</strong><br>(<a>시계</a> 방향)<br><p id="Btime">로딩 중</p>'+
+                        '<strong>B</strong><br>(<a>시계</a> 방향)<br><p id="BtimeMarine1">로딩 중</p>'+
                     '</div>'+
                 '</div>'+
                 '<div id="busetc">'+
