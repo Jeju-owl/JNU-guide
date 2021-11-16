@@ -1,12 +1,9 @@
 function mainTimeA() {
     var now = new Date();
 
-
     var nowHour = now.getHours();
     var nowMinute = now.getMinutes();
     var nowSecond = now.getSeconds();
-
-
 
     if(nowHour>=19 || now.getDay()==0 || now.getDay()==6 || nowHour<=6){
         document.querySelector("#AtimeMain").innerHTML = "운행 없음";
@@ -153,7 +150,7 @@ function mainTimeA() {
     }
 }
 
-// //매 초(600)마다 불러오는 함수
-// setInterval(function() {
-//     mainTimeA();
-// },600);
+//매 초(600)마다 불러오는 함수
+setInterval(function() {
+    mainTimeA();
+},600);

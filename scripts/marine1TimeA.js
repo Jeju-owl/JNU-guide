@@ -153,7 +153,7 @@ function marine1TimeA() {
     }
 }
 
-//매 초(600)마다 불러오는 함수
-// setInterval(function() {
-//     marine1TimeA();
-// },600);
+// 매 초(600)마다 불러오는 함수
+setInterval(function() {
+    marine1TimeA();
+},600);

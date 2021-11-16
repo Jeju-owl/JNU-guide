@@ -154,6 +154,6 @@ function pharmacyTimeA() {
 }
 
 // //매 초(600)마다 불러오는 함수
-// setInterval(function() {
-//     pharmacyTimeA();
-// },600);
+setInterval(function() {
+    pharmacyTimeA();
+},600);
