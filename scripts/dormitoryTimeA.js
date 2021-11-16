@@ -1,12 +1,8 @@
 function dormitoryTimeA() {
     var now = new Date();
-
-
     var nowHour = now.getHours();
     var nowMinute = now.getMinutes();
     var nowSecond = now.getSeconds();
-
-
 
     if(nowHour>=19 || now.getDay()==0 || now.getDay()==6 || nowHour<=6){
         document.querySelector("#AtimeDrom").innerHTML = "운행 없음";
