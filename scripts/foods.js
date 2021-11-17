@@ -379,20 +379,30 @@ var beermarker11 = new kakao.maps.Marker({
 
 // 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
 var koreancontent = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-20px; border-radius:10px; font-size:13px; font-weight:bolder;">이삭토스트</div>';
-
-// 커스텀 오버레이가 표시될 위치입니다 
-var koreanposition = new kakao.maps.LatLng(33.45916954797216,126.5579752302018);  
+var koreancontent1 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-20px; border-radius:10px; font-size:13px; font-weight:bolder;">콘킹부대찌개</div>';
 
 // 커스텀 오버레이를 생성합니다
 var koreancustomOverlay = new kakao.maps.CustomOverlay({
-    position: koreanposition,
+    position: koreanmarkerPosition,
     content: koreancontent,
     yAnchor: 1 
 });
+var koreancustomOverlay1 = new kakao.maps.CustomOverlay({
+    position: koreanmarkerPosition1,
+    content: koreancontent1,
+    yAnchor: 1 
+});
+
 function koreanNameOn() {
     koreancustomOverlay.setMap(map);
 }
 function koreanNameOff() {
+    koreancustomOverlay.setMap(null);
+}
+function koreanNameOn1() {
+    koreancustomOverlay.setMap(map);
+}
+function koreanNameOff1() {
     koreancustomOverlay.setMap(null);
 }
 
