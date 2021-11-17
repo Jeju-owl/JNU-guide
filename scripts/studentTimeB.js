@@ -17,7 +17,7 @@ function studentTimeB() {
 
     if(nowHour<20){
         if(nowHour==19){
-            if(nowMinute>0){
+            if(nowMinute>=0){
                 document.querySelector("#BtimeStud").innerHTML = "운행 없음";
             }
         }
@@ -82,64 +82,56 @@ function studentTimeB() {
             }
         }
         else if(nowHour==12){
-            if(nowMinute>0){ 
-                document.querySelector("#BtimeStud").innerHTML = Number(59-nowMinute)+":"+Number(59-nowSecond);
+            if(nowMinute==0){
+                document.querySelector("#BtimeStud").innerHTML = Number(13-nowHour) + ":" + Number(0-nowMinute)+":"+Number(59-nowSecond);
+            }
+            else if(nowMinute>0){ 
+                document.querySelector("#BtimeStud").innerHTML = Number(60-nowMinute)+":"+Number(59-nowSecond);
             }
         }
         else if(nowHour==11){
-            if(nowMinute>40){
-                if(nowMinute<=59 && nowMinute>39){
-                    document.querySelector("#BtimeStud").innerHTML = Number(12-nowHour) + ":" + Number(59-nowMinute)+":"+Number(59-nowSecond);
-                }
-                else if(nowMinute>59){
-                    document.querySelector("#BtimeStud").innerHTML = Number(119-nowMinute)+":"+Number(59-nowSecond);
-                }
+            if(nowMinute>40){   
+                document.querySelector("#BtimeStud").innerHTML = Number(12-nowHour) + ":" + Number(60-nowMinute)+":"+Number(59-nowSecond);            
             }
             else if(nowMinute<=40){
                 document.querySelector("#BtimeStud").innerHTML = Number(40-nowMinute)+":"+Number(59-nowSecond);
             }
         }
         else if(nowHour==10){
-            if(nowMinute>59){ 
-                document.querySelector("#BtimeStud").innerHTML = Number(99-nowMinute)+":"+Number(59-nowSecond);
+            if(nowMinute>40){ 
+                document.querySelector("#BtimeStud").innerHTML = Number(60-nowMinute)+":"+Number(59-nowSecond);
             }
-            else if(nowMinute<=59 && nowMinute>39){
-                document.querySelector("#BtimeStud").innerHTML = Number(59-nowMinute)+":"+Number(59-nowSecond);
+            else if(nowMinute<=40 && nowMinute>20){
+                document.querySelector("#BtimeStud").innerHTML = Number(40-nowMinute)+":"+Number(59-nowSecond);
             }
-            else if(nowMinute<=39 && nowMinute>19){
-                document.querySelector("#BtimeStud").innerHTML = Number(39-nowMinute)+":"+Number(59-nowSecond);
-            }
-            else if(nowMinute<=19){
-                document.querySelector("#BtimeStud").innerHTML = Number(19-nowMinute)+":"+Number(59-nowSecond);
+            else if(nowMinute<=20){
+                document.querySelector("#BtimeStud").innerHTML = Number(20-nowMinute)+":"+Number(59-nowSecond);
             }
         }
         else if(nowHour==9){
-            if(nowMinute>49){ 
-                document.querySelector("#BtimeStud").innerHTML = Number(79-nowMinute)+":"+Number(59-nowSecond);
+            if(nowMinute>50){ 
+                document.querySelector("#BtimeStud").innerHTML = Number(80-nowMinute)+":"+Number(59-nowSecond);
             }
-            else if(nowMinute<=49){
-                document.querySelector("#BtimeStud").innerHTML = Number(49-nowMinute)+":"+Number(59-nowSecond);
+            else if(nowMinute<=50){
+                document.querySelector("#BtimeStud").innerHTML = Number(50-nowMinute)+":"+Number(59-nowSecond);
             }
         }
         else if(nowHour==8){
-            if(nowMinute>59){ 
-                document.querySelector("#BtimeStud").innerHTML = Number(109-nowMinute)+":"+Number(59-nowSecond);
+            if(nowMinute>40){ 
+                document.querySelector("#BtimeStud").innerHTML = Number(60-nowMinute)+":"+Number(59-nowSecond);
             }
-            else if(nowMinute<=59 && nowMinute>39){
-                document.querySelector("#BtimeStud").innerHTML = Number(59-nowMinute)+":"+Number(59-nowSecond);
+            else if(nowMinute<=40 && nowMinute>20){
+                document.querySelector("#BtimeStud").innerHTML = Number(40-nowMinute)+":"+Number(59-nowSecond);
             }
-            else if(nowMinute<=39 && nowMinute>19){
-                document.querySelector("#BtimeStud").innerHTML = Number(39-nowMinute)+":"+Number(59-nowSecond);
-            }
-            else if(nowMinute<=19){
-                document.querySelector("#BtimeStud").innerHTML = Number(19-nowMinute)+":"+Number(59-nowSecond);
+            else if(nowMinute<=20){
+                document.querySelector("#BtimeStud").innerHTML = Number(20-nowMinute)+":"+Number(59-nowSecond);
             }
         }
         else if(nowHour==7){
-            if(nowMinute>39){ 
-                document.querySelector("#BtimeStud").innerHTML = Number(79-nowMinute)+":"+Number(59-nowSecond);
+            if(nowMinute>40){ 
+                document.querySelector("#BtimeStud").innerHTML = Number(80-nowMinute)+":"+Number(59-nowSecond);
             }
-            else if(nowHour<=39){
+            else if(nowHour<=40){
                 document.querySelector("#BtimeStud").innerHTML = "운행 없음";
             }
         }
