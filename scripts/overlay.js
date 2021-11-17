@@ -28,21 +28,21 @@
         map: map
     });
     busmarker1.setMap(map);
-    markerPosition2 = new kakao.maps.LatLng(33.454610128657876, 126.56063087550932); //학생회관
+    markerPosition2 = new kakao.maps.LatLng(33.454489677429514, 126.56035182955948); //학생회관
     var busmarker2 = new kakao.maps.Marker({
         position: markerPosition2,
         image: markerImage,
         map: map
     });
     busmarker2.setMap(map);
-    markerPosition3 = new kakao.maps.LatLng(33.45323099738815, 126.5575509319587); //인문대학(서)
+    markerPosition3 = new kakao.maps.LatLng(33.45273961475774, 126.55754804953665); //인문대학(서)
     var busmarker3 = new kakao.maps.Marker({
         position: markerPosition3,
         image: markerImage,
         map: map
     });
     busmarker3.setMap(map);
-    markerPosition4 = new kakao.maps.LatLng(33.45149156127691, 126.55836642987437); //학생생활관
+    markerPosition4 = new kakao.maps.LatLng(33.45154488042596, 126.55814836000798); //학생생활관
     var busmarker4 = new kakao.maps.Marker({
         position: markerPosition4,
         image: markerImage,
@@ -84,7 +84,7 @@
         map: map
     });
     busmarker9.setMap(map);
-    markerPosition10 = new kakao.maps.LatLng(33.45562907037793, 126.56386061632756); //교양강의동
+    markerPosition10 = new kakao.maps.LatLng(33.45565077738891, 126.56362387463729); //교양강의동
     var busmarker10 = new kakao.maps.Marker({
         position: markerPosition10,
         image: markerImage,
