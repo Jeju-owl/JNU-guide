@@ -378,28 +378,28 @@ var beermarker11 = new kakao.maps.Marker({
 });
 
 // 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-var koreancontent = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">이삭토스트</div>';
-var koreancontent1 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">콘킹부대찌개</div>';
-var koreancontent2 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">김밥천국</div>';
-var koreancontent3 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">맵수다</div>';
-var koreancontent4 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">한솥도시락</div>';
-var koreancontent6 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">산들애국수</div>';
-var koreancontent7 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">상아탑식당</div>';
-var koreancontent8 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">학교종이 땡땡땡</div>';
-var koreancontent9 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">봉구스밥버거</div>';
-var koreancontent10 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">신전떡볶이</div>';
-var koreancontent11 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">황칠해장국</div>';
-var koreancontent12 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">매력식당</div>';
-var koreancontent13 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">통큰이층</div>';
-var koreancontent14 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">산아름국수</div>';
-var koreancontent15 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">불노리왕막창</div>';
-var koreancontent16 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">개미와 베짱이</div>';
-var koreancontent17 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">흥부네</div>';
-var koreancontent18 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">옛날아우네 순대</div>';
-var koreancontent19 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">엄마네 정식</div>';
-var koreancontent20 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">글로벌하우스</div>';
-var koreancontent21 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">제대로 떡볶이</div>';
-var koreancontent22 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">위드미트</div>';
+var koreancontent = '<div style="border: 2px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">이삭토스트</div>';
+var koreancontent1 = '<div style="border: 2px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">콘킹부대찌개</div>';
+var koreancontent2 = '<div style="border: 2px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">김밥천국</div>';
+var koreancontent3 = '<div style="border: 2px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">맵수다</div>';
+var koreancontent4 = '<div style="border: 2px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">한솥도시락</div>';
+var koreancontent6 = '<div style="border: 2px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">산들애국수</div>';
+var koreancontent7 = '<div style="border: 2px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">상아탑식당</div>';
+var koreancontent8 = '<div style="border: 2px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">학교종이 땡땡땡</div>';
+var koreancontent9 = '<div style="border: 2px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">봉구스밥버거</div>';
+var koreancontent10 = '<div style="border: 2px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">신전떡볶이</div>';
+var koreancontent11 = '<div style="border: 2px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">황칠해장국</div>';
+var koreancontent12 = '<div style="border: 2px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">매력식당</div>';
+var koreancontent13 = '<div style="border: 2px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">통큰이층</div>';
+var koreancontent14 = '<div style="border: 2px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">산아름국수</div>';
+var koreancontent15 = '<div style="border: 2px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">불노리왕막창</div>';
+var koreancontent16 = '<div style="border: 2px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">개미와 베짱이</div>';
+var koreancontent17 = '<div style="border: 2px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">흥부네</div>';
+var koreancontent18 = '<div style="border: 2px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">옛날아우네 순대</div>';
+var koreancontent19 = '<div style="border: 2px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">엄마네 정식</div>';
+var koreancontent20 = '<div style="border: 2px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">글로벌하우스</div>';
+var koreancontent21 = '<div style="border: 2px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">제대로 떡볶이</div>';
+var koreancontent22 = '<div style="border: 2px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">위드미트</div>';
 
 
 
