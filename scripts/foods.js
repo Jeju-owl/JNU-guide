@@ -380,6 +380,28 @@ var beermarker11 = new kakao.maps.Marker({
 // 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
 var koreancontent = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">이삭토스트</div>';
 var koreancontent1 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">콘킹부대찌개</div>';
+var koreancontent2 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">김밥천국</div>';
+var koreancontent3 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">맵수다/div>';
+var koreancontent4 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">한솥도시락</div>';
+var koreancontent6 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">산들애국수</div>';
+var koreancontent7 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">상아탑식당</div>';
+var koreancontent8 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">학교종이 땡땡땡</div>';
+var koreancontent9 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">봉구스밥버거</div>';
+var koreancontent10 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">신전떡볶이</div>';
+var koreancontent11 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">황칠해장국</div>';
+var koreancontent12 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">매력식당</div>';
+var koreancontent13 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">통큰이층</div>';
+var koreancontent14 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">산아름국수</div>';
+var koreancontent15 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">불노리왕막창</div>';
+var koreancontent16 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">개미와 베짱이</div>';
+var koreancontent17 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">흥부네</div>';
+var koreancontent18 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">옛날아우네 순대</div>';
+var koreancontent19 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">엄마네 정식</div>';
+var koreancontent20 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">글로벌하우스</div>';
+var koreancontent21 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">제대로 떡볶이</div>';
+var koreancontent22 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">위드미트</div>';
+
+
 
 // 커스텀 오버레이를 생성합니다
 var koreancustomOverlay = new kakao.maps.CustomOverlay({
@@ -392,19 +414,200 @@ var koreancustomOverlay1 = new kakao.maps.CustomOverlay({
     content: koreancontent1,
     yAnchor: 1 
 });
+var koreancustomOverlay2 = new kakao.maps.CustomOverlay({
+    position: koreanmarkerPosition2,
+    content: koreancontent2,
+    yAnchor: 1 
+});
+var koreancustomOverlay3 = new kakao.maps.CustomOverlay({
+    position: koreanmarkerPosition3,
+    content: koreancontent3,
+    yAnchor: 1 
+});
+var koreancustomOverlay4 = new kakao.maps.CustomOverlay({
+    position: koreanmarkerPosition4,
+    content: koreancontent4,
+    yAnchor: 1 
+});
+var koreancustomOverlay6 = new kakao.maps.CustomOverlay({
+    position: koreanmarkerPosition6,
+    content: koreancontent6,
+    yAnchor: 1 
+});
+var koreancustomOverlay7 = new kakao.maps.CustomOverlay({
+    position: koreanmarkerPosition7,
+    content: koreancontent7,
+    yAnchor: 1 
+});
+var koreancustomOverlay8 = new kakao.maps.CustomOverlay({
+    position: koreanmarkerPosition8,
+    content: koreancontent8,
+    yAnchor: 1 
+});
+var koreancustomOverlay9 = new kakao.maps.CustomOverlay({
+    position: koreanmarkerPosition9,
+    content: koreancontent9,
+    yAnchor: 1 
+});
+var koreancustomOverlay10 = new kakao.maps.CustomOverlay({
+    position: koreanmarkerPosition10,
+    content: koreancontent10,
+    yAnchor: 1 
+});
+var koreancustomOverlay11 = new kakao.maps.CustomOverlay({
+    position: koreanmarkerPosition11,
+    content: koreancontent11,
+    yAnchor: 1 
+});
+var koreancustomOverlay12 = new kakao.maps.CustomOverlay({
+    position: koreanmarkerPosition12,
+    content: koreancontent12,
+    yAnchor: 1 
+});
+var koreancustomOverlay13 = new kakao.maps.CustomOverlay({
+    position: koreanmarkerPosition13,
+    content: koreancontent13,
+    yAnchor: 1 
+});
+var koreancustomOverlay14 = new kakao.maps.CustomOverlay({
+    position: koreanmarkerPosition14,
+    content: koreancontent14,
+    yAnchor: 1 
+});
+var koreancustomOverlay15 = new kakao.maps.CustomOverlay({
+    position: koreanmarkerPosition15,
+    content: koreancontent15,
+    yAnchor: 1 
+});
+var koreancustomOverlay16 = new kakao.maps.CustomOverlay({
+    position: koreanmarkerPosition16,
+    content: koreancontent16,
+    yAnchor: 1 
+});
+var koreancustomOverlay17 = new kakao.maps.CustomOverlay({
+    position: koreanmarkerPosition17,
+    content: koreancontent17,
+    yAnchor: 1 
+});
+var koreancustomOverlay18 = new kakao.maps.CustomOverlay({
+    position: koreanmarkerPosition18,
+    content: koreancontent18,
+    yAnchor: 1 
+});
+var koreancustomOverlay19 = new kakao.maps.CustomOverlay({
+    position: koreanmarkerPosition19,
+    content: koreancontent19,
+    yAnchor: 1 
+});
+var koreancustomOverlay20 = new kakao.maps.CustomOverlay({
+    position: koreanmarkerPosition20,
+    content: koreancontent20,
+    yAnchor: 1 
+});
+var koreancustomOverlay21 = new kakao.maps.CustomOverlay({
+    position: koreanmarkerPosition21,
+    content: koreancontent21,
+    yAnchor: 1 
+});
+var koreancustomOverlay22 = new kakao.maps.CustomOverlay({
+    position: koreanmarkerPosition22,
+    content: koreancontent22,
+    yAnchor: 1 
+});
 
 function koreanNameOn() {
     koreancustomOverlay.setMap(map);
 }
-function koreanNameOff() {
-    koreancustomOverlay.setMap(null);
-}
 function koreanNameOn1() {
     koreancustomOverlay1.setMap(map);
 }
-function koreanNameOff1() {
-    koreancustomOverlay1.setMap(null);
+function koreanNameOn2() {
+    koreancustomOverlay2.setMap(map);
 }
+function koreanNameOn3() {
+    koreancustomOverlay3.setMap(map);
+}
+function koreanNameOn4() {
+    koreancustomOverlay4.setMap(map);
+}
+function koreanNameOn6() {
+    koreancustomOverlay6.setMap(map);
+}
+function koreanNameOn7() {
+    koreancustomOverlay7.setMap(map);
+}
+function koreanNameOn8() {
+    koreancustomOverlay8.setMap(map);
+}
+function koreanNameOn9() {
+    koreancustomOverlay9.setMap(map);
+}
+function koreanNameOn10() {
+    koreancustomOverlay10.setMap(map);
+}
+function koreanNameOn11() {
+    koreancustomOverlay11.setMap(map);
+}
+function koreanNameOn12() {
+    koreancustomOverlay12.setMap(map);
+}
+function koreanNameOn13() {
+    koreancustomOverlay13.setMap(map);
+}
+function koreanNameOn14() {
+    koreancustomOverlay14.setMap(map);
+}
+function koreanNameOn15() {
+    koreancustomOverlay15.setMap(map);
+}
+function koreanNameOn16() {
+    koreancustomOverlay16.setMap(map);
+}
+function koreanNameOn17() {
+    koreancustomOverlay17.setMap(map);
+}
+function koreanNameOn18() {
+    koreancustomOverlay18.setMap(map);
+}
+function koreanNameOn19() {
+    koreancustomOverlay19.setMap(map);
+}
+function koreanNameOn20() {
+    koreancustomOverlay20.setMap(map);
+}
+function koreanNameOn21() {
+    koreancustomOverlay21.setMap(map);
+}
+function koreanNameOn22() {
+    koreancustomOverlay22.setMap(map);
+}
+
+function NameOff() {
+    koreancustomOverlay.setMap(null);
+    koreancustomOverlay1.setMap(null);
+    koreancustomOverlay2.setMap(null);
+    koreancustomOverlay3.setMap(null);
+    koreancustomOverlay4.setMap(null);
+    koreancustomOverlay6.setMap(null);
+    koreancustomOverlay7.setMap(null);
+    koreancustomOverlay8.setMap(null);
+    koreancustomOverlay9.setMap(null);
+    koreancustomOverlay10.setMap(null);
+    koreancustomOverlay11.setMap(null);
+    koreancustomOverlay12.setMap(null);
+    koreancustomOverlay13.setMap(null);
+    koreancustomOverlay14.setMap(null);
+    koreancustomOverlay15.setMap(null);
+    koreancustomOverlay16.setMap(null);
+    koreancustomOverlay17.setMap(null);
+    koreancustomOverlay18.setMap(null);
+    koreancustomOverlay19.setMap(null);
+    koreancustomOverlay20.setMap(null);
+    koreancustomOverlay21.setMap(null);
+    koreancustomOverlay22.setMap(null);
+}
+
+
 
 
 // 지도의 확대 축소 레벨이 바뀔때마다 실행되는 이벤트리스터입니다.
