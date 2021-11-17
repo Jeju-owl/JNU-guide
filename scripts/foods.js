@@ -400,10 +400,10 @@ function koreanNameOff() {
     koreancustomOverlay.setMap(null);
 }
 function koreanNameOn1() {
-    koreancustomOverlay.setMap(map);
+    koreancustomOverlay1.setMap(map);
 }
 function koreanNameOff1() {
-    koreancustomOverlay.setMap(null);
+    koreancustomOverlay1.setMap(null);
 }
 
 
