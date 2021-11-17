@@ -381,7 +381,7 @@ var beermarker11 = new kakao.maps.Marker({
 var koreancontent = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">이삭토스트</div>';
 var koreancontent1 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">콘킹부대찌개</div>';
 var koreancontent2 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">김밥천국</div>';
-var koreancontent3 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">맵수다/div>';
+var koreancontent3 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">맵수다</div>';
 var koreancontent4 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">한솥도시락</div>';
 var koreancontent6 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">산들애국수</div>';
 var koreancontent7 = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">상아탑식당</div>';
