@@ -377,6 +377,25 @@ var beermarker11 = new kakao.maps.Marker({
     image: beermarkerImage // 마커이미지 설정 
 });
 
+// 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+var koreancontent = '<div style="border: 1px solid #ddd; background-color: #eee; position:relative; top:10px; border-radius:10px; font-size:10px;">이삭토스트</div>';
+
+// 커스텀 오버레이가 표시될 위치입니다 
+var koreanposition = new kakao.maps.LatLng(33.45916954797216,126.5579752302018);  
+
+// 커스텀 오버레이를 생성합니다
+var koreancustomOverlay = new kakao.maps.CustomOverlay({
+    position: koreanposition,
+    content: koreancontent,
+    yAnchor: 1 
+});
+function koreanNameOn() {
+    koreancustomOverlay.setMap(map);
+}
+function koreanNameOff() {
+    koreancustomOverlay.setMap(null);
+}
+
 
 // 지도의 확대 축소 레벨이 바뀔때마다 실행되는 이벤트리스터입니다.
 kakao.maps.event.addListener(map, 'zoom_changed', function() {        

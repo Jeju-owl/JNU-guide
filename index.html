@@ -436,7 +436,7 @@
                             <li><a href="#none">한식·분식 🍱 </a>
                                 <ul id="kfood">
                                     <!--제대입구-->
-                                    <li onclick="levelchange1(), Moving1(33.45916954797216,126.5579752302018)">이삭토스트</li><!--토스트-->
+                                    <li onclick="levelchange1(), Moving1(33.45916954797216,126.5579752302018), koreanNameOn()" onmouseout="koreanNameOff()">이삭토스트</li><!--토스트-->
                                     <!--정문-->
                                     <li onclick="levelchange1(), Moving1(33.460632008508654,126.56103883449029)">콘킹부대찌개</li><!--한식-->
                                     <li onclick="levelchange1(), Moving1(33.46022359435553,126.5609145026397)">김밥천국</li><!--김밥-->
@@ -984,6 +984,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 <script src="scripts/entranceTimeA.js"></script>
 <script src="scripts/pharmacyTimeA.js"></script>
 <script src="scripts/marine1TimeA.js"></script>
+<script src="scripts/entranceTimeB.js"></script>
 <script src="scripts/mainTimeA.js"></script>
 <script src="scripts/studentTimeA.js"></script>
 <script src="scripts/dormitoryTimeA.js"></script>
@@ -994,7 +995,6 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 <script src="scripts/engine4TimeA.js"></script>
 <script src="scripts/liberalTimeA.js"></script>
 <script src="scripts/marine4TimeA.js"></script>
-<script src="scripts/entranceTimeB.js"></script>
 <script src="scripts/pharmacyTimeB.js"></script>
 <script src="scripts/marine1TimeB.js"></script>
 <script src="scripts/liberalTimeB.js"></script>
@@ -1002,9 +1002,6 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 <script src="scripts/medicineTimeB.js"></script>
 <script src="scripts/libraryTimeB.js"></script>
 <script src="scripts/humanEastTimeB.js"></script>
-<script src="scripts/dormitoryTimeB.js"></script>
-<script src="scripts/humanWestTimeB.js"></script>
-<!-- 학생회관B, 본관B, 해양대4호관B 아직 연동안함. -->
 <!-- <script>
     setInterval(function() {
         studentTimeA();
