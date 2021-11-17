@@ -378,7 +378,7 @@ var beermarker11 = new kakao.maps.Marker({
 });
 
 // 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-var koreancontent = '<div id="marketInfo" style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-24px; border-radius:10px; font-size:13px; font-weight:bolder;">이삭토스트</div>';
+var koreancontent = '<div style="border: 2px solid #aaa; background-color: #eee; position:relative; top:-20px; border-radius:10px; font-size:13px; font-weight:bolder;">이삭토스트</div>';
 
 // 커스텀 오버레이가 표시될 위치입니다 
 var koreanposition = new kakao.maps.LatLng(33.45916954797216,126.5579752302018);  
