@@ -81,12 +81,12 @@ function studentTimeB() {
                 document.querySelector("#BtimeStud").innerHTML = Number(20-nowMinute)+":"+Number(59-nowSecond);
             }
         }
-        // else if(nowHour==12){
-        //     if(nowMinute>0){ 
-        //         document.querySelector("#BtimeStud").innerHTML = Number(59-nowMinute)+":"+Number(59-nowSecond);
-        //     }
-        // }
-        else if(nowHour==11 || nowHour==12){
+        else if(nowHour==12){
+            if(nowMinute>0){ 
+                document.querySelector("#BtimeStud").innerHTML = Number(59-nowMinute)+":"+Number(59-nowSecond);
+            }
+        }
+        else if(nowHour==11){
             if(nowMinute>40){
                 if(nowMinute<=59 && nowMinute>39){
                     document.querySelector("#BtimeStud").innerHTML = Number(12-nowHour) + ":" + Number(59-nowMinute)+":"+Number(59-nowSecond);
