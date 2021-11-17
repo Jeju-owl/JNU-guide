@@ -1,3 +1,5 @@
+// 학생회관 버스 시간
+
 function studentTimeA() {
     var now = new Date();
 
