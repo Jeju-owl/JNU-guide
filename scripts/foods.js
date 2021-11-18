@@ -413,7 +413,28 @@ var globalcontent7 = '<div style="border: 3px solid #1b1b1b; background-color: #
 var globalcontent8 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">꽁양꽁양</div>';
 var globalcontent9 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">월궁</div>';
 var globalcontent10 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">우향</div>';
-
+    //카페
+var cafecontent = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">제대가는길</div>';
+var cafecontent1 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">봄봄(정문)</div>';
+var cafecontent2 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">메가커피</div>';
+var cafecontent3 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">카페띠아모</div>';
+var cafecontent4 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">파이브엠커피</div>';
+var cafecontent5 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">테라피쉬</div>';
+var cafecontent6 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">봄봄(후문)</div>';
+var cafecontent7 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">에이바우트</div>';
+    //살찌는 음식
+var beercontent = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">써브웨이</div>';
+var beercontent1 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">맘스터치</div>';
+var beercontent2 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">명품치킨</div>';
+var beercontent3 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">엄마치킨</div>';
+var beercontent4 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">푸라닭치킨</div>';
+var beercontent5 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">불닭공장</div>';
+var beercontent6 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">잇 마이 피자</div>';
+var beercontent7 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">봉수아피자</div>';
+var beercontent8 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">숲노을</div>';
+var beercontent9 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">와랑와랑</div>';
+var beercontent10 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">노가리앤비어</div>';
+var beercontent11 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">09 학번</div>';
 
 
 // 커스텀 오버레이를 생성합니다
@@ -584,6 +605,109 @@ var globalcustomOverlay10 = new kakao.maps.CustomOverlay({
     content: globalcontent10,
     yAnchor: 1 
 });
+    //카페
+var cafecustomOverlay = new kakao.maps.CustomOverlay({
+    position: cafemarkerPosition,
+    content: cafecontent,
+    yAnchor: 1 
+});
+var cafecustomOverlay1 = new kakao.maps.CustomOverlay({
+    position: cafemarkerPosition1,
+    content: cafecontent1,
+    yAnchor: 1 
+});
+var cafecustomOverlay2 = new kakao.maps.CustomOverlay({
+    position: cafemarkerPosition2,
+    content: cafecontent2,
+    yAnchor: 1 
+});
+var cafecustomOverlay3 = new kakao.maps.CustomOverlay({
+    position: cafemarkerPosition3,
+    content: cafecontent3,
+    yAnchor: 1 
+});
+var cafecustomOverlay4 = new kakao.maps.CustomOverlay({
+    position: cafemarkerPosition4,
+    content: cafecontent4,
+    yAnchor: 1 
+});
+var cafecustomOverlay5 = new kakao.maps.CustomOverlay({
+    position: cafemarkerPosition5,
+    content: cafecontent5,
+    yAnchor: 1 
+});
+var cafecustomOverlay6 = new kakao.maps.CustomOverlay({
+    position: cafemarkerPosition6,
+    content: cafecontent6,
+    yAnchor: 1 
+});
+var cafecustomOverlay7 = new kakao.maps.CustomOverlay({
+    position: cafemarkerPosition7,
+    content: cafecontent7,
+    yAnchor: 1 
+});
+    //살찌는음식
+var beercustomOverlay = new kakao.maps.CustomOverlay({
+    position: beermarkerPosition,
+    content: beercontent,
+    yAnchor: 1 
+});
+var beercustomOverlay1 = new kakao.maps.CustomOverlay({
+    position: beermarkerPosition1,
+    content: beercontent1,
+    yAnchor: 1 
+});
+var beercustomOverlay2 = new kakao.maps.CustomOverlay({
+    position: beermarkerPosition2,
+    content: beercontent2,
+    yAnchor: 1 
+});
+var beercustomOverlay3 = new kakao.maps.CustomOverlay({
+    position: beermarkerPosition3,
+    content: beercontent3,
+    yAnchor: 1 
+});
+var beercustomOverlay4 = new kakao.maps.CustomOverlay({
+    position: beermarkerPosition4,
+    content: beercontent4,
+    yAnchor: 1 
+});
+var beercustomOverlay5 = new kakao.maps.CustomOverlay({
+    position: beermarkerPosition5,
+    content: beercontent5,
+    yAnchor: 1 
+});
+var beercustomOverlay6 = new kakao.maps.CustomOverlay({
+    position: beermarkerPosition6,
+    content: beercontent6,
+    yAnchor: 1 
+});
+var beercustomOverlay7 = new kakao.maps.CustomOverlay({
+    position: beermarkerPosition7,
+    content: beercontent7,
+    yAnchor: 1 
+});
+var beercustomOverlay8 = new kakao.maps.CustomOverlay({
+    position: beermarkerPosition8,
+    content: beercontent8,
+    yAnchor: 1 
+});
+var beercustomOverlay9 = new kakao.maps.CustomOverlay({
+    position: beermarkerPosition9,
+    content: beercontent9,
+    yAnchor: 1 
+});
+var beercustomOverlay10 = new kakao.maps.CustomOverlay({
+    position: beermarkerPosition10,
+    content: beercontent10,
+    yAnchor: 1 
+});
+var beercustomOverlay11 = new kakao.maps.CustomOverlay({
+    position: beermarkerPosition11,
+    content: beercontent11,
+    yAnchor: 1 
+});
+
 
     //한식
 function koreanNameOn() {
@@ -686,6 +810,68 @@ function globalNameOn9() {
 function globalNameOn10() {
     globalcustomOverlay10.setMap(map);
 }
+    //양중일
+function cafeNameOn() {
+    cafecustomOverlay.setMap(map);
+}
+function cafeNameOn1() {
+    cafecustomOverlay1.setMap(map);
+}
+function cafeNameOn2() {
+    cafecustomOverlay2.setMap(map);
+}
+function cafeNameOn3() {
+    cafecustomOverlay3.setMap(map);
+}
+function cafeNameOn4() {
+    cafecustomOverlay4.setMap(map);
+}
+function cafeNameOn5() {
+    cafecustomOverlay5.setMap(map);
+}
+function cafeNameOn6() {
+    cafecustomOverlay6.setMap(map);
+}
+function cafeNameOn7() {
+    cafecustomOverlay7.setMap(map);
+}
+    //살찌는 음식
+function beerNameOn() {
+    beercustomOverlay.setMap(map);
+}
+function beerNameOn1() {
+    beercustomOverlay1.setMap(map);
+}
+function beerNameOn2() {
+    beercustomOverlay2.setMap(map);
+}
+function beerNameOn3() {
+    beercustomOverlay3.setMap(map);
+}
+function beerNameOn4() {
+    beercustomOverlay4.setMap(map);
+}
+function beerNameOn5() {
+    beercustomOverlay5.setMap(map);
+}
+function beerNameOn6() {
+    beercustomOverlay6.setMap(map);
+}
+function beerNameOn7() {
+    beercustomOverlay7.setMap(map);
+}
+function beerNameOn8() {
+    beercustomOverlay8.setMap(map);
+}
+function beerNameOn9() {
+    beercustomOverlay9.setMap(map);
+}
+function beerNameOn10() {
+    beercustomOverlay10.setMap(map);
+}
+function beerNameOn11() {
+    beercustomOverlay11.setMap(map);
+}
 
 
 function NameOff() {
@@ -722,10 +908,27 @@ function NameOff() {
     globalcustomOverlay8.setMap(null);
     globalcustomOverlay9.setMap(null);
     globalcustomOverlay10.setMap(null);
+    cafecustomOverlay.setMap(null);
+    cafecustomOverlay1.setMap(null);
+    cafecustomOverlay2.setMap(null);
+    cafecustomOverlay3.setMap(null);
+    cafecustomOverlay4.setMap(null);
+    cafecustomOverlay5.setMap(null);
+    cafecustomOverlay6.setMap(null);
+    cafecustomOverlay7.setMap(null);
+    beercustomOverlay.setMap(null);
+    beercustomOverlay1.setMap(null);
+    beercustomOverlay2.setMap(null);
+    beercustomOverlay3.setMap(null);
+    beercustomOverlay4.setMap(null);
+    beercustomOverlay5.setMap(null);
+    beercustomOverlay6.setMap(null);
+    beercustomOverlay7.setMap(null);
+    beercustomOverlay8.setMap(null);
+    beercustomOverlay9.setMap(null);
+    beercustomOverlay10.setMap(null);
+    beercustomOverlay11.setMap(null);
 }
-
-
-
 
 // 지도의 확대 축소 레벨이 바뀔때마다 실행되는 이벤트리스터입니다.
 kakao.maps.event.addListener(map, 'zoom_changed', function() {        
