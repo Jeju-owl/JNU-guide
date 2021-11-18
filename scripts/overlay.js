@@ -390,7 +390,7 @@
                         '<strong>A</strong><br>(<a>반시계</a> 방향)<br><p id="AtimeMarine4">로딩 중</p>'+
                     '</div>'+
                     '<div id="businforight">'+
-                        '<strong>B</strong><br>(<a>시계</a> 방향)<br><p id="Btime">로딩 중</p>'+
+                        '<strong>B</strong><br>(<a>시계</a> 방향)<br><p id="BtimeMarine4">로딩 중</p>'+
                     '</div>'+
                 '</div>'+
                 '<div id="busetc">'+
