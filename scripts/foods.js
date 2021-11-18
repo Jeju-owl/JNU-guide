@@ -378,6 +378,7 @@ var beermarker11 = new kakao.maps.Marker({
 });
 
 // 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+    //한식
 var koreancontent = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">이삭토스트</div>';
 var koreancontent1 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">콘킹부대찌개</div>';
 var koreancontent2 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">김밥천국</div>';
@@ -400,10 +401,23 @@ var koreancontent19 = '<div style="border: 3px solid #1b1b1b; background-color: 
 var koreancontent20 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">글로벌하우스</div>';
 var koreancontent21 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">제대로 떡볶이</div>';
 var koreancontent22 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">위드미트</div>';
+    //양중일
+var globalcontent = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">오니기리 이규동</div>';
+var globalcontent1 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">서유기 마라탕</div>';
+var globalcontent2 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">텐동 아우라</div>';
+var globalcontent3 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">이왕 돈까스</div>';
+var globalcontent4 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">다채움</div>';
+var globalcontent5 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">진성반점</div>';
+var globalcontent6 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">챨리스</div>';
+var globalcontent7 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">신룽푸 마라탕</div>';
+var globalcontent8 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">꽁양꽁양</div>';
+var globalcontent9 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">월궁</div>';
+var globalcontent10 = '<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">우향</div>';
 
 
 
 // 커스텀 오버레이를 생성합니다
+    //한식
 var koreancustomOverlay = new kakao.maps.CustomOverlay({
     position: koreanmarkerPosition,
     content: koreancontent,
@@ -514,7 +528,64 @@ var koreancustomOverlay22 = new kakao.maps.CustomOverlay({
     content: koreancontent22,
     yAnchor: 1 
 });
+    //양중일
+var globalcustomOverlay = new kakao.maps.CustomOverlay({
+    position: globalmarkerPosition,
+    content: globalcontent,
+    yAnchor: 1 
+});
+var globalcustomOverlay1 = new kakao.maps.CustomOverlay({
+    position: globalmarkerPosition1,
+    content: globalcontent1,
+    yAnchor: 1 
+});
+var globalcustomOverlay2 = new kakao.maps.CustomOverlay({
+    position: globalmarkerPosition2,
+    content: globalcontent2,
+    yAnchor: 1 
+});
+var globalcustomOverlay3 = new kakao.maps.CustomOverlay({
+    position: globalmarkerPosition3,
+    content: globalcontent3,
+    yAnchor: 1 
+});
+var globalcustomOverlay4 = new kakao.maps.CustomOverlay({
+    position: globalmarkerPosition4,
+    content: globalcontent4,
+    yAnchor: 1 
+});
+var globalcustomOverlay5 = new kakao.maps.CustomOverlay({
+    position: globalmarkerPosition5,
+    content: globalcontent5,
+    yAnchor: 1 
+});
+var globalcustomOverlay6 = new kakao.maps.CustomOverlay({
+    position: globalmarkerPosition6,
+    content: globalcontent6,
+    yAnchor: 1 
+});
+var globalcustomOverlay7 = new kakao.maps.CustomOverlay({
+    position: globalmarkerPosition7,
+    content: globalcontent7,
+    yAnchor: 1 
+});
+var globalcustomOverlay8 = new kakao.maps.CustomOverlay({
+    position: globalmarkerPosition8,
+    content: globalcontent8,
+    yAnchor: 1 
+});
+var globalcustomOverlay9 = new kakao.maps.CustomOverlay({
+    position: globalmarkerPosition9,
+    content: globalcontent9,
+    yAnchor: 1 
+});
+var globalcustomOverlay10 = new kakao.maps.CustomOverlay({
+    position: globalmarkerPosition10,
+    content: globalcontent10,
+    yAnchor: 1 
+});
 
+    //한식
 function koreanNameOn() {
     koreancustomOverlay.setMap(map);
 }
@@ -581,6 +652,41 @@ function koreanNameOn21() {
 function koreanNameOn22() {
     koreancustomOverlay22.setMap(map);
 }
+    //양중일
+function globalNameOn() {
+    globalcustomOverlay.setMap(map);
+}
+function globalNameOn1() {
+    globalcustomOverlay1.setMap(map);
+}
+function globalNameOn2() {
+    globalcustomOverlay2.setMap(map);
+}
+function globalNameOn3() {
+    globalcustomOverlay3.setMap(map);
+}
+function globalNameOn4() {
+    globalcustomOverlay4.setMap(map);
+}
+function globalNameOn5() {
+    globalcustomOverlay5.setMap(map);
+}
+function globalNameOn6() {
+    globalcustomOverlay6.setMap(map);
+}
+function globalNameOn7() {
+    globalcustomOverlay7.setMap(map);
+}
+function globalNameOn8() {
+    globalcustomOverlay8.setMap(map);
+}
+function globalNameOn9() {
+    globalcustomOverlay9.setMap(map);
+}
+function globalNameOn10() {
+    globalcustomOverlay10.setMap(map);
+}
+
 
 function NameOff() {
     koreancustomOverlay.setMap(null);
@@ -605,6 +711,17 @@ function NameOff() {
     koreancustomOverlay20.setMap(null);
     koreancustomOverlay21.setMap(null);
     koreancustomOverlay22.setMap(null);
+    globalcustomOverlay.setMap(null);
+    globalcustomOverlay1.setMap(null);
+    globalcustomOverlay2.setMap(null);
+    globalcustomOverlay3.setMap(null);
+    globalcustomOverlay4.setMap(null);
+    globalcustomOverlay5.setMap(null);
+    globalcustomOverlay6.setMap(null);
+    globalcustomOverlay7.setMap(null);
+    globalcustomOverlay8.setMap(null);
+    globalcustomOverlay9.setMap(null);
+    globalcustomOverlay10.setMap(null);
 }
 
 
