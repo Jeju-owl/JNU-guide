@@ -14,7 +14,7 @@ function marine4TimeB() {
         document.querySelector("#BtimeMarine4").innerHTML = "운행 없음";
     }
 
-    if(nowHour<19){
+    else if(nowHour<19){
         if(nowHour==18){
             if(nowMinute>54){
                 document.querySelector("#BtimeMarine4").innerHTML = "운행 없음";

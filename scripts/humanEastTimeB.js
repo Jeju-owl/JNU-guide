@@ -14,7 +14,7 @@ function humanEastTimeB() {
         document.querySelector("#BtimeHumanE").innerHTML = "운행 없음";
     }
 
-    if(nowHour<19){
+    else if(nowHour<19){
         if(nowHour==18){
             if(nowMinute>57){
                 document.querySelector("#BtimeHumanE").innerHTML = "운행 없음";

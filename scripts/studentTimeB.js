@@ -15,7 +15,7 @@ function studentTimeB() {
         document.querySelector("#BtimeStud").innerHTML = "운행 없음";
     }
 
-    if(nowHour<20){
+    else if(nowHour<20){
         if(nowHour==19){
             if(nowMinute>=0){
                 document.querySelector("#BtimeStud").innerHTML = "운행 없음";

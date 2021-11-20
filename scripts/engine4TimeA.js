@@ -15,7 +15,7 @@ function engine4TimeA() {
         document.querySelector("#AtimeEngine4").innerHTML = "운행 없음";
     }
 
-    if(nowHour<19){
+    else if(nowHour<19){
         if(nowHour==18){
             if(nowMinute>50){
                 document.querySelector("#AtimeEngine4").innerHTML = "운행 없음";

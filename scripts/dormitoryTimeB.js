@@ -14,7 +14,7 @@ function dormitoryTimeB() {
         document.querySelector("#BtimeDrom").innerHTML = "운행 없음";
     }
 
-    if(nowHour<19){
+    else if(nowHour<19){
         if(nowHour==18){
             if(nowMinute>58){
                 document.querySelector("#BtimeDrom").innerHTML = "운행 없음";

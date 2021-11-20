@@ -12,7 +12,7 @@ function marine1TimeA() {
         document.querySelector("#AtimeMarine1").innerHTML = "운행 없음";
     }
 
-    if(nowHour<19){
+    else if(nowHour<19){
         if(nowHour==18){
             if(nowMinute>42){
                 document.querySelector("#AtimeMarine1").innerHTML = "운행 없음";
