@@ -875,14 +875,14 @@ function beerNameOn11() {
 
 //--------------------식당별 html파일----------------------------
 var globalInfotcontent10 =
-'<div id="markerwrap">'+
+'<div id="marketwrap">'+
         '<div id="markethead">우향<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closemarket()" title="닫기"></div>'+
         '<div id="marketmenu"></div>'+
         '<div id="marketinfo">'+
             '<p><i class="icon-calendar"></i><b> 영업일</b><br>월,화,수,목,금<a> (휴일 및 공휴일 제외)</a></p>'+
             '<p><i class="icon-clock"></i><b> 영업시간</b><br>08:00 ~ 16:00</p>'+
-            '<div onclick="globalcalling10()" id="callbutton">전화걸기</div>'+
         '</div>'+
+        '<div id="callbutton" onclick="globalcalling10()">전화걸기</div>'+
     '</div>';
 
 var globalInfoOverlay10 = new kakao.maps.CustomOverlay({ //우향
@@ -904,7 +904,7 @@ function closemarket() {
 }
 
 //전화번호 함수들
-function globalCalling10(){
+function globalcalling10(){
     location.href = "tel:010-3091-6080";
 }
 
