@@ -893,7 +893,7 @@ var globalInfoOverlay10 = new kakao.maps.CustomOverlay({ //우향
     globalInfoOverlay10.setMap(null);
 
 //마커 눌렀을 때 오버레이 뜨는 이벤트
-kakao.maps.event.addListener(globalmarker10, 'mouseover', function() {
+kakao.maps.event.addListener(globalmarker10, 'click', function() {
     document.querySelector("#subbar").style.display = "none"
     document.querySelector("#copyright").style.display = "none"
     document.querySelector("#findme").style.display = "none"
@@ -901,17 +901,13 @@ kakao.maps.event.addListener(globalmarker10, 'mouseover', function() {
     globalInfoOverlay10.setMap(map);
     map.setCenter(globalmarkerPosition10);
 });
-kakao.maps.event.addListener(globalmarker10, 'mouseout', function() {
+
+//닫기버튼 이벤트
+function closemarket() {
     document.querySelector("#subbar").style.display = "block"
     document.querySelector("#copyright").style.display = "block"
     document.querySelector("#findme").style.display = "block"
     document.querySelector("#level3button").style.display = "block"
-    globalInfoOverlay10.setMap(null);
-    map.setCenter(globalmarkerPosition10);
-});
-
-//닫기버튼 이벤트
-function closemarket() {
     globalInfoOverlay10.setMap(null);
 }
 

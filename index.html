@@ -802,6 +802,8 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         
         //Marker()함수 실행
         buildingMarker(a,b);
+        
+        closemarket();
     }
     
     function Moving1(a,b) { //지도 초점을 a,b로 이동
@@ -824,6 +826,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     
     // 교내순환버스노선
     function InnerBus() {
+        closemarket()
         // 선을 구성하는 좌표 배열입니다. 이 좌표들을 이어서 선을 표시합니다
         var linePath = [
             new kakao.maps.LatLng(33.459811596777094, 126.5616883626409),// 정문
