@@ -873,6 +873,43 @@ function beerNameOn11() {
     beercustomOverlay11.setMap(map);
 }
 
+//--------------------식당별 html파일----------------------------
+var globalInfotcontent10 =
+    '<div id="markerwrap">'+
+    '<div id="markethead">우향<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closemarket()" title="닫기"></div>'+
+    '<div id="marketmenu"></div>'+
+    '<div id="marketinfo">'+
+        '<p><i class="bi bi-calendar2"></i><b> 영업일</b><br>월,화,수,목,금<a> (휴일 및 공휴일 제외)</a></p>'+
+        '<p><i class="bi bi-stopwatch"></i><b> 영업시간</b><br>08:00 ~ 16:00</p>'+
+    '</div>'+
+    '<div class="d-grid gap-2">'+
+        '<button onclick = "globalCalling10()" class="btn btn-primary" type="button">전화걸기</button>'+
+    '</div>'+
+    '</div>';
+
+var globalInfoOverlay10 = new kakao.maps.CustomOverlay({ //우향
+        content: globalInfotcontent10,
+        map: map,
+        position: globalmarkerPosition10
+    });
+    globalInfoOverlay10.setMap(null);
+
+
+//마커 눌렀을 때 오버레이 뜨는 이벤트
+kakao.maps.event.addListener(globalmarker10, 'click', function() {
+    globalInfoOverlay10.setMap(map);
+    map.setCenter(globalmarkerPosition10);
+});
+
+//닫기버튼 이벤트
+function closemarket() {
+    globalInfoOverlay10.setMap(null);
+}
+
+//전화번호 함수들
+function globalCalling10(){
+    location.href = "tel:010-3091-6080";
+}
 
 function NameOff() {
     koreancustomOverlay.setMap(null);
