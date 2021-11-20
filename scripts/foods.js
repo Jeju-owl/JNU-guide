@@ -890,10 +890,9 @@ var globalInfotcontent10 =
 var globalInfoOverlay10 = new kakao.maps.CustomOverlay({ //우향
         content: globalInfotcontent10,
         map: map,
-        position: globalmarkerPosition10
+        position: globalmarker10.getPosition()
     });
     globalInfoOverlay10.setMap(null);
-
 
 //마커 눌렀을 때 오버레이 뜨는 이벤트
 kakao.maps.event.addListener(globalmarker10, 'click', function() {
