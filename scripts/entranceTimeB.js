@@ -9,7 +9,7 @@ function entranceTimeB() {
         document.querySelector("#Btime").innerHTML = "운행 없음";
     }
 
-    if(nowHour<19){
+    else if(nowHour<19){
         if(nowHour==18){
             if(nowMinute>50){
                 document.querySelector("#Btime").innerHTML = "운행 없음";
