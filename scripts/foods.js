@@ -894,7 +894,19 @@ var globalInfoOverlay10 = new kakao.maps.CustomOverlay({ //우향
 
 //마커 눌렀을 때 오버레이 뜨는 이벤트
 kakao.maps.event.addListener(globalmarker10, 'click', function() {
+    document.querySelector("#subbar").style.display = "none"
+    document.querySelector("#copyright").style.display = "none"
+    document.querySelector("#findme").style.display = "none"
+    document.querySelector("#level3button").style.display = "none"
     globalInfoOverlay10.setMap(map);
+    map.setCenter(globalmarkerPosition10);
+});
+kakao.maps.event.addListener(globalmarker10, 'auxclick', function() {
+    document.querySelector("#subbar").style.display = "block"
+    document.querySelector("#copyright").style.display = "block"
+    document.querySelector("#findme").style.display = "block"
+    document.querySelector("#level3button").style.display = "block"
+    globalInfoOverlay10.setMap(null);
     map.setCenter(globalmarkerPosition10);
 });
 
