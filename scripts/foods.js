@@ -875,17 +875,7 @@ function beerNameOn11() {
 
 //--------------------식당별 html파일----------------------------
 var globalInfotcontent10 =
-    '<div id="markerwrap">'+
-    '<div id="markethead">우향<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closemarket()" title="닫기"></div>'+
-    '<div id="marketmenu"></div>'+
-    '<div id="marketinfo">'+
-        '<p><i class="bi bi-calendar2"></i><b> 영업일</b><br>월,화,수,목,금<a> (휴일 및 공휴일 제외)</a></p>'+
-        '<p><i class="bi bi-stopwatch"></i><b> 영업시간</b><br>08:00 ~ 16:00</p>'+
-    '</div>'+
-    '<div class="d-grid gap-2">'+
-        '<button onclick = "globalCalling10()" class="btn btn-primary" type="button">전화걸기</button>'+
-    '</div>'+
-    '</div>';
+'<div style="border: 3px solid #1b1b1b; background-color: #eee; position:relative; top:-15px; border-radius:10px; font-size:13px; font-weight:bolder;">학교종이 땡땡땡</div>';
 
 var globalInfoOverlay10 = new kakao.maps.CustomOverlay({ //우향
         content: globalInfotcontent10,
