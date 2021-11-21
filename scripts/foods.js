@@ -877,7 +877,7 @@ function beerNameOn11() {
 var globalInfotcontent6 =
 '<div id="marketwrap">'+
         '<div id="markethead">챨리스<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closemarket()" title="닫기"></div>'+
-        '<div id="marketmenu" style="background-image: url("images/챨리스.jpg"); background-size: 100% 100%;"></div>'+
+        '<div id="marketmenu" style="background-image: url("./images/챨리스.jpg"); background-size: 100% 100%;"></div>'+
         '<div id="marketinfo">'+
             '<p><i class="icon-calendar"></i><b> 영업일</b><br>월,화,수,목,금<a> (휴일 및 공휴일 제외)</a></p>'+
             '<p><i class="icon-clock"></i><b> 영업시간</b><br>08:00 ~ 16:00</p>'+
@@ -888,7 +888,7 @@ var globalInfotcontent6 =
 var globalInfotcontent10 =
 '<div id="marketwrap">'+
         '<div id="markethead">우향<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closemarket()" title="닫기"></div>'+
-        '<div id="marketmenu" style="background-image: url("images/우향.jpg"); background-size: 100% 100%;"></div>'+
+        '<div id="marketmenu" style="background-image: url("./images/우향.jpg"); background-size: 100% 100%;"></div>'+
         '<div id="marketinfo">'+
             '<p><i class="icon-calendar"></i><b> 영업일</b><br>월,화,수,목,금<a> (휴일 및 공휴일 제외)</a></p>'+
             '<p><i class="icon-clock"></i><b> 영업시간</b><br>08:00 ~ 16:00</p>'+
