@@ -898,8 +898,10 @@ kakao.maps.event.addListener(globalmarker10, 'click', function() {
     document.querySelector("#copyright").style.display = "none"
     document.querySelector("#findme").style.display = "none"
     document.querySelector("#level3button").style.display = "none"
-    globalInfoOverlay10.setMap(map);
+    map.setDraggable(false);
+    map.setZoomable(false);
     map.setCenter(globalmarkerPosition10);
+    globalInfoOverlay10.setMap(map);
 });
 
 //닫기버튼 이벤트
@@ -908,6 +910,8 @@ function closemarket() {
     document.querySelector("#copyright").style.display = "block"
     document.querySelector("#findme").style.display = "block"
     document.querySelector("#level3button").style.display = "block"
+    map.setDraggable(true);
+    map.setZoomable(true);
     globalInfoOverlay10.setMap(null);
 }
 
