@@ -874,6 +874,17 @@ function beerNameOn11() {
 }
 
 //--------------------식당별 html파일----------------------------
+var globalInfotcontent1 =
+'<div id="marketwrap">'+
+        '<div id="markethead">서유기 마라탕<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closemarket()" title="닫기"></div>'+
+        '<div id="globalmarketmenu1"></div>'+
+        '<div id="marketinfo">'+
+            '<p><i class="icon-calendar"></i><b> 영업일</b><br>월,화,수,목,금,토<a> (휴일 및 공휴일 제외)</a></p>'+
+            '<p><i class="icon-clock"></i><b> 영업시간</b><br>11:00 ~ 16:00</p>'+
+        '</div>'+
+        '<div id="callbutton" onclick="globalcalling1()">전화걸기</div>'+
+    '</div>';
+
 var globalInfotcontent2 =
 '<div id="marketwrap">'+
         '<div id="markethead">텐동 아우라<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closemarket()" title="닫기"></div>'+
@@ -909,6 +920,13 @@ var globalInfotcontent10 =
 
 
 //--------------------------식당정보 오버레이 객체 ---------------------------------------
+var globalInfoOverlay1 = new kakao.maps.CustomOverlay({ //텐동 아우라
+    content: globalInfotcontent1,
+    map: map,
+    position: globalmarker1.getPosition()
+    });
+    globalInfoOverlay1.setMap(null);
+
 var globalInfoOverlay2 = new kakao.maps.CustomOverlay({ //텐동 아우라
     content: globalInfotcontent2,
     map: map,
@@ -916,7 +934,7 @@ var globalInfoOverlay2 = new kakao.maps.CustomOverlay({ //텐동 아우라
     });
     globalInfoOverlay2.setMap(null);
 
-var globalInfoOverlay6 = new kakao.maps.CustomOverlay({ //우향
+var globalInfoOverlay6 = new kakao.maps.CustomOverlay({ //챨리스
         content: globalInfotcontent6,
         map: map,
         position: globalmarker6.getPosition()
@@ -969,20 +987,24 @@ function closemarket() {
     document.querySelector("#level3button").style.display = "block"
     map.setDraggable(true);
     map.setZoomable(true);
+    globalInfoOverlay1.setMap(null);
     globalInfoOverlay2.setMap(null);
     globalInfoOverlay6.setMap(null);
     globalInfoOverlay10.setMap(null);
 }
 
 //전화번호 함수들
-function globalcalling2(){
+function globalcalling(){ // 서유기 마라탕
+    location.href = "tel:064-723-5688";
+}
+function globalcalling2(){ // 텐동 아우라
     location.href = "tel:010-8610-3774";
 }
-function globalcalling6(){
-    location.href = "tel:010-5689-4844";
+function globalcalling6(){ //챨리스
+    location.href = "tel:010-4844-0057";
 }
-function globalcalling10(){
-    location.href = "tel:010-3091-6080";
+function globalcalling10(){ //우향
+    location.href = "tel:064-727-7892";
 }
 
 function NameOff() {
