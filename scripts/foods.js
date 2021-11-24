@@ -920,7 +920,7 @@ var globalInfotcontent10 =
 
 
 //--------------------------식당정보 오버레이 객체 ---------------------------------------
-var globalInfoOverlay1 = new kakao.maps.CustomOverlay({ //텐동 아우라
+var globalInfoOverlay1 = new kakao.maps.CustomOverlay({ //서유기 마라탕
     content: globalInfotcontent1,
     map: map,
     position: globalmarker1.getPosition()
@@ -948,6 +948,16 @@ var globalInfoOverlay10 = new kakao.maps.CustomOverlay({ //우향
     globalInfoOverlay10.setMap(null);
 
 //마커 눌렀을 때 오버레이 뜨는 이벤트
+kakao.maps.event.addListener(globalmarker1, 'click', function() {
+    document.querySelector("#subbar").style.display = "none"
+    document.querySelector("#copyright").style.display = "none"
+    document.querySelector("#findme").style.display = "none"
+    document.querySelector("#level3button").style.display = "none"
+    map.setDraggable(false);
+    map.setZoomable(false);
+    map.setCenter(globalmarkerPosition1);
+    globalInfoOverlay1.setMap(map);
+});
 kakao.maps.event.addListener(globalmarker2, 'click', function() {
     document.querySelector("#subbar").style.display = "none"
     document.querySelector("#copyright").style.display = "none"
