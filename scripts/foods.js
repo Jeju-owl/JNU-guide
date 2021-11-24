@@ -874,6 +874,17 @@ function beerNameOn11() {
 }
 
 //--------------------식당별 html파일----------------------------
+var globalInfotcontent2 =
+'<div id="marketwrap">'+
+        '<div id="markethead">텐동 아우라<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closemarket()" title="닫기"></div>'+
+        '<div id="globalmarketmenu2"></div>'+
+        '<div id="marketinfo">'+
+            '<p><i class="icon-calendar"></i><b> 영업일</b><br>월,화,수,목,금,토<a> (휴일 및 공휴일 제외)</a></p>'+
+            '<p><i class="icon-clock"></i><b> 영업시간</b><br>11:00 ~ 16:00</p>'+
+        '</div>'+
+        '<div id="callbutton" onclick="globalcalling2()">전화걸기</div>'+
+    '</div>';
+
 var globalInfotcontent6 =
 '<div id="marketwrap">'+
         '<div id="markethead">챨리스<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closemarket()" title="닫기"></div>'+
@@ -898,6 +909,12 @@ var globalInfotcontent10 =
 
 
 //--------------------------식당정보 오버레이 객체 ---------------------------------------
+var globalInfoOverlay6 = new kakao.maps.CustomOverlay({ //텐동 아우라
+    content: globalInfotcontent2,
+    map: map,
+    position: globalmarker2.getPosition()
+    });
+    globalInfoOverlay6.setMap(null);
 var globalInfoOverlay6 = new kakao.maps.CustomOverlay({ //우향
         content: globalInfotcontent6,
         map: map,
@@ -912,6 +929,16 @@ var globalInfoOverlay10 = new kakao.maps.CustomOverlay({ //우향
     globalInfoOverlay10.setMap(null);
 
 //마커 눌렀을 때 오버레이 뜨는 이벤트
+kakao.maps.event.addListener(globalmarker2, 'click', function() {
+    document.querySelector("#subbar").style.display = "none"
+    document.querySelector("#copyright").style.display = "none"
+    document.querySelector("#findme").style.display = "none"
+    document.querySelector("#level3button").style.display = "none"
+    map.setDraggable(false);
+    map.setZoomable(false);
+    map.setCenter(globalmarkerPosition2);
+    globalInfoOverlay2.setMap(map);
+});
 kakao.maps.event.addListener(globalmarker6, 'click', function() {
     document.querySelector("#subbar").style.display = "none"
     document.querySelector("#copyright").style.display = "none"
@@ -946,6 +973,9 @@ function closemarket() {
 }
 
 //전화번호 함수들
+function globalcalling2(){
+    location.href = "tel:010-8610-3774";
+}
 function globalcalling6(){
     location.href = "tel:010-5689-4844";
 }
