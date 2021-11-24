@@ -880,7 +880,7 @@ var globalInfotcontent1 =
         '<div id="globalmarketmenu1"></div>'+
         '<div id="marketinfo">'+
             '<p><i class="icon-calendar"></i><b> 영업일</b><br>월,화,수,목,금,토<a> (휴일 및 공휴일 제외)</a></p>'+
-            '<p><i class="icon-clock"></i><b> 영업시간</b><br>11:00 ~ 16:00</p>'+
+            '<p><i class="icon-clock"></i><b> 영업시간</b><br>10:00 ~ 22:00</p>'+
         '</div>'+
         '<div id="callbutton" onclick="globalcalling1()">전화걸기</div>'+
     '</div>';
@@ -1004,7 +1004,7 @@ function closemarket() {
 }
 
 //전화번호 함수들
-function globalcalling(){ // 서유기 마라탕
+function globalcalling1(){ // 서유기 마라탕
     location.href = "tel:064-723-5688";
 }
 function globalcalling2(){ // 텐동 아우라
