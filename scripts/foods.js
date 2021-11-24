@@ -909,12 +909,12 @@ var globalInfotcontent10 =
 
 
 //--------------------------식당정보 오버레이 객체 ---------------------------------------
-var globalInfoOverlay6 = new kakao.maps.CustomOverlay({ //텐동 아우라
+var globalInfoOverlay2 = new kakao.maps.CustomOverlay({ //텐동 아우라
     content: globalInfotcontent2,
     map: map,
     position: globalmarker2.getPosition()
     });
-    globalInfoOverlay6.setMap(null);
+    globalInfoOverlay2.setMap(null);
 var globalInfoOverlay6 = new kakao.maps.CustomOverlay({ //우향
         content: globalInfotcontent6,
         map: map,
