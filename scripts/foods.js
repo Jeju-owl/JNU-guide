@@ -915,6 +915,7 @@ var globalInfoOverlay2 = new kakao.maps.CustomOverlay({ //텐동 아우라
     position: globalmarker2.getPosition()
     });
     globalInfoOverlay2.setMap(null);
+
 var globalInfoOverlay6 = new kakao.maps.CustomOverlay({ //우향
         content: globalInfotcontent6,
         map: map,
@@ -968,6 +969,7 @@ function closemarket() {
     document.querySelector("#level3button").style.display = "block"
     map.setDraggable(true);
     map.setZoomable(true);
+    globalInfoOverlay2.setMap(null);
     globalInfoOverlay6.setMap(null);
     globalInfoOverlay10.setMap(null);
 }
