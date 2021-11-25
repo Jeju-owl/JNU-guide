@@ -1,5 +1,3 @@
-<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-
 // 한식-기본 이미지 옵션 생성
 var koreanimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png', // 마커이미지의 주소입니다    
 koreanimageSize = new kakao.maps.Size(20, 20), // 마커이미지의 크기입니다
@@ -879,21 +877,7 @@ function beerNameOn11() {
 var globalInfotcontent1 =
 '<div id="marketwrap">'+
         '<div id="markethead">서유기 마라탕<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closemarket()" title="닫기"></div>'+
-        '<div id="globalmarketmenu1" class="mySwiper">'+
-            '<div class="swiper-wrapper">'+
-                '<div class="swiper-slide"></div>'+
-                '<div class="swiper-slide"></div>'+
-                '<div class="swiper-slide">x</div>'+
-                '<div class="swiper-slide">x</div>'+
-                '<div class="swiper-slide">x</div>'+
-                '<div class="swiper-slide">x</div>'+
-                '<div class="swiper-slide">x</div>'+
-                '<div class="swiper-slide">x</div>'+
-                '<div class="swiper-slide">x</div>'+
-            '</div>'+
-            '<div class="swiper-button-next"></div>'+
-            '<div class="swiper-button-prev"></div>'+
-        '</div>'+
+        '<div id="globalmarketmenu1"></div>'+
         '<div id="marketinfo">'+
             '<p><i class="icon-calendar"></i><b> 영업일</b><br>월,화,수,목,금,토<a> (휴일 및 공휴일 제외)</a></p>'+
             '<p><i class="icon-clock"></i><b> 영업시간</b><br>10:00 ~ 22:00</p>'+
@@ -1203,9 +1187,3 @@ if (level >= 3) {
         beermarker11.setMap(map);
     }     
 });
-    var swiper = new Swiper(".mySwiper", {
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      }
-    });
