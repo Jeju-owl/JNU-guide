@@ -874,6 +874,17 @@ function beerNameOn11() {
 }
 
 //--------------------식당별 html파일----------------------------
+var globalInfotcontent =
+'<div id="marketwrap">'+
+        '<div id="markethead">서유기 마라탕<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closemarket()" title="닫기"></div>'+
+        '<div id="globalmarketmenu"></div>'+
+        '<div id="marketinfo">'+
+            '<p><i class="icon-calendar"></i><b> 영업일</b><br>월,화,수,목,금,토<a> (휴일 및 공휴일 제외)</a></p>'+
+            '<p><i class="icon-clock"></i><b> 영업시간</b><br>10:00 ~ 22:00</p>'+
+        '</div>'+
+        '<div id="callbutton" onclick="globalcalling()">전화걸기</div>'+
+    '</div>';
+
 var globalInfotcontent1 =
 '<div id="marketwrap">'+
         '<div id="markethead">서유기 마라탕<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closemarket()" title="닫기"></div>'+
@@ -896,6 +907,37 @@ var globalInfotcontent2 =
         '<div id="callbutton" onclick="globalcalling2()">전화걸기</div>'+
     '</div>';
 
+var globalInfotcontent3 =
+    '<div id="marketwrap">'+
+            '<div id="markethead">이왕돈까스<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closemarket()" title="닫기"></div>'+
+            '<div id="globalmarketmenu3"></div>'+
+            '<div id="marketinfo">'+
+                '<p><i class="icon-calendar"></i><b> 영업일</b><br>월,화,수,목,금,토<a> (휴일 및 공휴일 제외)</a></p>'+
+                '<p><i class="icon-clock"></i><b> 영업시간</b><br>11:00 ~ 16:00</p>'+
+            '</div>'+
+            '<div id="callbutton" onclick="globalcalling3()">전화걸기</div>'+
+        '</div>';
+
+var globalInfotcontent4 =
+    '<div id="marketwrap">'+
+            '<div id="markethead">다채움<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closemarket()" title="닫기"></div>'+
+            '<div id="globalmarketmenu4"></div>'+
+            '<div id="marketinfo">'+
+                '<p><i class="icon-calendar"></i><b> 영업일</b><br>월,화,수,목,금,토<a> (휴일 및 공휴일 제외)</a></p>'+
+                '<p><i class="icon-clock"></i><b> 영업시간</b><br>11:00 ~ 16:00</p>'+
+            '</div>'+
+            '<div id="callbutton" onclick="globalcalling4()">전화걸기</div>'+
+        '</div>';
+var globalInfotcontent5 =
+    '<div id="marketwrap">'+
+            '<div id="markethead">진성반점<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closemarket()" title="닫기"></div>'+
+            '<div id="globalmarketmenu5"></div>'+
+            '<div id="marketinfo">'+
+                '<p><i class="icon-calendar"></i><b> 영업일</b><br>월,화,수,목,금,토<a> (휴일 및 공휴일 제외)</a></p>'+
+                '<p><i class="icon-clock"></i><b> 영업시간</b><br>11:00 ~ 16:00</p>'+
+            '</div>'+
+            '<div id="callbutton" onclick="globalcalling5()">전화걸기</div>'+
+        '</div>';        
 var globalInfotcontent6 =
 '<div id="marketwrap">'+
         '<div id="markethead">챨리스<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closemarket()" title="닫기"></div>'+
@@ -904,9 +946,38 @@ var globalInfotcontent6 =
             '<p><i class="icon-calendar"></i><b> 영업일</b><br>월,화,수,목,금<a> (휴일 및 공휴일 제외)</a></p>'+
             '<p><i class="icon-clock"></i><b> 영업시간</b><br>08:00 ~ 16:00</p>'+
         '</div>'+
-        '<div id="callbutton" onclick="globalcalling10()">전화걸기</div>'+
+        '<div id="callbutton" onclick="globalcalling6()">전화걸기</div>'+
     '</div>';
-
+var globalInfotcontent7 =
+    '<div id="marketwrap">'+
+            '<div id="markethead">신룽푸마라탕<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closemarket()" title="닫기"></div>'+
+            '<div id="globalmarketmenu7"></div>'+
+            '<div id="marketinfo">'+
+                '<p><i class="icon-calendar"></i><b> 영업일</b><br>월,화,수,목,금<a> (휴일 및 공휴일 제외)</a></p>'+
+                '<p><i class="icon-clock"></i><b> 영업시간</b><br>08:00 ~ 16:00</p>'+
+            '</div>'+
+            '<div id="callbutton" onclick="globalcalling7()">전화걸기</div>'+
+        '</div>';
+var globalInfotcontent8 =
+    '<div id="marketwrap">'+
+            '<div id="markethead">꽁양꽁양<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closemarket()" title="닫기"></div>'+
+            '<div id="globalmarketmenu8"></div>'+
+            '<div id="marketinfo">'+
+                '<p><i class="icon-calendar"></i><b> 영업일</b><br>월,화,수,목,금<a> (휴일 및 공휴일 제외)</a></p>'+
+                '<p><i class="icon-clock"></i><b> 영업시간</b><br>08:00 ~ 16:00</p>'+
+            '</div>'+
+            '<div id="callbutton" onclick="globalcalling8()">전화걸기</div>'+
+        '</div>';
+ var globalInfotcontent9 =
+    '<div id="marketwrap">'+
+            '<div id="markethead">월궁<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closemarket()" title="닫기"></div>'+
+            '<div id="globalmarketmenu9"></div>'+
+            '<div id="marketinfo">'+
+                '<p><i class="icon-calendar"></i><b> 영업일</b><br>월,화,수,목,금<a> (휴일 및 공휴일 제외)</a></p>'+
+                '<p><i class="icon-clock"></i><b> 영업시간</b><br>08:00 ~ 16:00</p>'+
+            '</div>'+
+            '<div id="callbutton" onclick="globalcalling9()">전화걸기</div>'+
+        '</div>';
 var globalInfotcontent10 =
 '<div id="marketwrap">'+
         '<div id="markethead">우향<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closemarket()" title="닫기"></div>'+
@@ -920,6 +991,13 @@ var globalInfotcontent10 =
 
 
 //--------------------------식당정보 오버레이 객체 ---------------------------------------
+var globalInfoOverlay = new kakao.maps.CustomOverlay({ //서유기 마라탕
+    content: globalInfotcontent,
+    map: map,
+    position: globalmarker.getPosition()
+    });
+    globalInfoOverlay.setMap(null);
+
 var globalInfoOverlay1 = new kakao.maps.CustomOverlay({ //서유기 마라탕
     content: globalInfotcontent1,
     map: map,
@@ -934,20 +1012,73 @@ var globalInfoOverlay2 = new kakao.maps.CustomOverlay({ //텐동 아우라
     });
     globalInfoOverlay2.setMap(null);
 
+var globalInfoOverlay3 = new kakao.maps.CustomOverlay({ //이왕 돈까스
+    content: globalInfotcontent3,
+    map: map,
+    position: globalmarker3.getPosition()
+    });
+    globalInfoOverlay3.setMap(null);
+
+var globalInfoOverlay4 = new kakao.maps.CustomOverlay({ 
+    content: globalInfotcontent4,
+    map: map,
+    position: globalmarker4.getPosition()
+    });
+    globalInfoOverlay4.setMap(null);
+
+var globalInfoOverlay5 = new kakao.maps.CustomOverlay({ 
+    content: globalInfotcontent5,
+    map: map,
+    position: globalmarker5.getPosition()
+    });
+    globalInfoOverlay5.setMap(null);
+
 var globalInfoOverlay6 = new kakao.maps.CustomOverlay({ //챨리스
-        content: globalInfotcontent6,
-        map: map,
-        position: globalmarker6.getPosition()
+    content: globalInfotcontent6,
+    map: map,
+    position: globalmarker6.getPosition()
     });
     globalInfoOverlay6.setMap(null);
+
+var globalInfoOverlay7 = new kakao.maps.CustomOverlay({ //챨리스
+    content: globalInfotcontent7,
+    map: map,
+    position: globalmarker7.getPosition()
+    });
+    globalInfoOverlay7.setMap(null);    
+
+var globalInfoOverlay8 = new kakao.maps.CustomOverlay({ //챨리스
+    content: globalInfotcontent8,
+    map: map,
+    position: globalmarker8.getPosition()
+    });
+    globalInfoOverlay8.setMap(null);  
+
+var globalInfoOverlay9 = new kakao.maps.CustomOverlay({ //챨리스
+    content: globalInfotcontent9,
+    map: map,
+    position: globalmarker9.getPosition()
+    });
+    globalInfoOverlay9.setMap(null);       
+
 var globalInfoOverlay10 = new kakao.maps.CustomOverlay({ //우향
-        content: globalInfotcontent10,
-        map: map,
-        position: globalmarker10.getPosition()
+    content: globalInfotcontent10,
+    map: map,
+    position: globalmarker10.getPosition()
     });
     globalInfoOverlay10.setMap(null);
 
 //마커 눌렀을 때 오버레이 뜨는 이벤트
+kakao.maps.event.addListener(globalmarker, 'click', function() {
+    document.querySelector("#subbar").style.display = "none"
+    document.querySelector("#copyright").style.display = "none"
+    document.querySelector("#findme").style.display = "none"
+    document.querySelector("#level3button").style.display = "none"
+    map.setDraggable(false);
+    map.setZoomable(false);
+    map.setCenter(globalmarkerPosition);
+    globalInfoOverlay.setMap(map);
+});
 kakao.maps.event.addListener(globalmarker1, 'click', function() {
     document.querySelector("#subbar").style.display = "none"
     document.querySelector("#copyright").style.display = "none"
@@ -968,6 +1099,36 @@ kakao.maps.event.addListener(globalmarker2, 'click', function() {
     map.setCenter(globalmarkerPosition2);
     globalInfoOverlay2.setMap(map);
 });
+kakao.maps.event.addListener(globalmarker3, 'click', function() {
+    document.querySelector("#subbar").style.display = "none"
+    document.querySelector("#copyright").style.display = "none"
+    document.querySelector("#findme").style.display = "none"
+    document.querySelector("#level3button").style.display = "none"
+    map.setDraggable(false);
+    map.setZoomable(false);
+    map.setCenter(globalmarkerPosition3);
+    globalInfoOverlay3.setMap(map);
+});
+kakao.maps.event.addListener(globalmarker4, 'click', function() {
+    document.querySelector("#subbar").style.display = "none"
+    document.querySelector("#copyright").style.display = "none"
+    document.querySelector("#findme").style.display = "none"
+    document.querySelector("#level3button").style.display = "none"
+    map.setDraggable(false);
+    map.setZoomable(false);
+    map.setCenter(globalmarkerPosition4);
+    globalInfoOverlay4.setMap(map);
+});
+kakao.maps.event.addListener(globalmarker5, 'click', function() {
+    document.querySelector("#subbar").style.display = "none"
+    document.querySelector("#copyright").style.display = "none"
+    document.querySelector("#findme").style.display = "none"
+    document.querySelector("#level3button").style.display = "none"
+    map.setDraggable(false);
+    map.setZoomable(false);
+    map.setCenter(globalmarkerPosition5);
+    globalInfoOverlay5.setMap(map);
+});
 kakao.maps.event.addListener(globalmarker6, 'click', function() {
     document.querySelector("#subbar").style.display = "none"
     document.querySelector("#copyright").style.display = "none"
@@ -977,6 +1138,36 @@ kakao.maps.event.addListener(globalmarker6, 'click', function() {
     map.setZoomable(false);
     map.setCenter(globalmarkerPosition6);
     globalInfoOverlay6.setMap(map);
+});
+kakao.maps.event.addListener(globalmarker7, 'click', function() {
+    document.querySelector("#subbar").style.display = "none"
+    document.querySelector("#copyright").style.display = "none"
+    document.querySelector("#findme").style.display = "none"
+    document.querySelector("#level3button").style.display = "none"
+    map.setDraggable(false);
+    map.setZoomable(false);
+    map.setCenter(globalmarkerPosition7);
+    globalInfoOverlay7.setMap(map);
+});
+kakao.maps.event.addListener(globalmarker8, 'click', function() {
+    document.querySelector("#subbar").style.display = "none"
+    document.querySelector("#copyright").style.display = "none"
+    document.querySelector("#findme").style.display = "none"
+    document.querySelector("#level3button").style.display = "none"
+    map.setDraggable(false);
+    map.setZoomable(false);
+    map.setCenter(globalmarkerPosition8);
+    globalInfoOverlay8.setMap(map);
+});
+kakao.maps.event.addListener(globalmarker9, 'click', function() {
+    document.querySelector("#subbar").style.display = "none"
+    document.querySelector("#copyright").style.display = "none"
+    document.querySelector("#findme").style.display = "none"
+    document.querySelector("#level3button").style.display = "none"
+    map.setDraggable(false);
+    map.setZoomable(false);
+    map.setCenter(globalmarkerPosition9);
+    globalInfoOverlay9.setMap(map);
 });
 kakao.maps.event.addListener(globalmarker10, 'click', function() {
     document.querySelector("#subbar").style.display = "none"
@@ -997,20 +1188,48 @@ function closemarket() {
     document.querySelector("#level3button").style.display = "block"
     map.setDraggable(true);
     map.setZoomable(true);
+    globalInfoOverlay.setMap(null);
     globalInfoOverlay1.setMap(null);
     globalInfoOverlay2.setMap(null);
+    globalInfoOverlay3.setMap(null);
+    globalInfoOverlay4.setMap(null);
+    globalInfoOverlay5.setMap(null);
     globalInfoOverlay6.setMap(null);
+    globalInfoOverlay7.setMap(null);
+    globalInfoOverlay8.setMap(null);
+    globalInfoOverlay9.setMap(null);
     globalInfoOverlay10.setMap(null);
 }
 
 //전화번호 함수들
+function globalcalling0(){ // 서유기 마라탕
+    location.href = "tel:064-723-5688";
+}
 function globalcalling1(){ // 서유기 마라탕
     location.href = "tel:064-723-5688";
 }
 function globalcalling2(){ // 텐동 아우라
     location.href = "tel:010-8610-3774";
 }
+function globalcalling3(){ // 이왕 돈까스
+    location.href = "tel:010-8610-3774";
+}
+function globalcalling4(){ // 텐동 아우라
+    location.href = "tel:010-8610-3774";
+}
+function globalcalling5(){ // 텐동 아우라
+    location.href = "tel:010-8610-3774";
+}
 function globalcalling6(){ //챨리스
+    location.href = "tel:010-4844-0057";
+}
+function globalcalling7(){ //챨리스
+    location.href = "tel:010-4844-0057";
+}
+function globalcalling8(){ //챨리스
+    location.href = "tel:010-4844-0057";
+}
+function globalcalling9(){ //챨리스
     location.href = "tel:010-4844-0057";
 }
 function globalcalling10(){ //우향
