@@ -877,7 +877,21 @@ function beerNameOn11() {
 var globalInfotcontent1 =
 '<div id="marketwrap">'+
         '<div id="markethead">서유기 마라탕<img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png" onclick="closemarket()" title="닫기"></div>'+
-        '<div id="globalmarketmenu1"></div>'+
+        '<div id="globalmarketmenu1" class="mySwiper">'+
+            '<div class="swiper-wrapper">'+
+                '<div class="swiper-slide"></div>'+
+                '<div class="swiper-slide"></div>'+
+                '<div class="swiper-slide">x</div>'+
+                '<div class="swiper-slide">x</div>'+
+                '<div class="swiper-slide">x</div>'+
+                '<div class="swiper-slide">x</div>'+
+                '<div class="swiper-slide">x</div>'+
+                '<div class="swiper-slide">x</div>'+
+                '<div class="swiper-slide">x</div>'+
+            '</div>'+
+            '<div class="swiper-button-next"></div>'+
+            '<div class="swiper-button-prev"></div>'+
+        '</div>'+
         '<div id="marketinfo">'+
             '<p><i class="icon-calendar"></i><b> 영업일</b><br>월,화,수,목,금,토<a> (휴일 및 공휴일 제외)</a></p>'+
             '<p><i class="icon-clock"></i><b> 영업시간</b><br>10:00 ~ 22:00</p>'+
