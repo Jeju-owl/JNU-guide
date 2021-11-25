@@ -762,13 +762,6 @@
     function closeLicense() {
         document.querySelector("#licenseWrapper").style.display = "none";
     }
-    //뒤로가기버튼방지
-    $(window).bind("pageshow", function(event) {
-        if (event.originalEvent.persisted) {
-            document.location.reload();
-        }
-    });
-</script>
 <script> //나중에 scripts파일 만들어서 옮기기
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = {
