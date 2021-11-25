@@ -1,3 +1,5 @@
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
 // 한식-기본 이미지 옵션 생성
 var koreanimageSrc = 'https://raw.githubusercontent.com/Jeju-owl/JNU-guide/feature-7/images/bibimbap.png', // 마커이미지의 주소입니다    
 koreanimageSize = new kakao.maps.Size(20, 20), // 마커이미지의 크기입니다
@@ -1201,3 +1203,9 @@ if (level >= 3) {
         beermarker11.setMap(map);
     }     
 });
+    var swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      }
+    });
