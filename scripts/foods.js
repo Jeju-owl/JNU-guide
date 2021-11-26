@@ -1209,7 +1209,7 @@ function globalcalling1(){ // 서유기 마라탕
     location.href = "tel:064-723-5688";
 }
 function globalcalling2(){ // 텐동 아우라
-    location.href = "tel:010-5689-4844";
+    location.href = "tel:010-8610-3774";
 }
 function globalcalling3(){ // 이왕 돈까스
     location.href = "tel:010-8610-3774";
@@ -1221,7 +1221,7 @@ function globalcalling5(){ // 텐동 아우라
     location.href = "tel:010-8610-3774";
 }
 function globalcalling6(){ //챨리스
-    location.href = "tel:010-3091-6080";
+    location.href = "tel:010-4844-0057";
 }
 function globalcalling7(){ //챨리스
     location.href = "tel:010-4844-0057";
