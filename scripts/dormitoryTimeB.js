@@ -4,6 +4,7 @@
 // 3. index.html에 js파일 연동
 // 4. overlay.js에 바뀐 id 이름 기입하기.
 function dormitoryTimeB() {
+    if(document.querySelector("#AtimeDrom")?.innerHTML === undefined) return;
     var now = new Date();
 
     var nowHour = now.getHours();
