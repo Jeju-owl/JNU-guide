@@ -1,4 +1,5 @@
 function dormitoryTimeA() {
+    if(document.querySelector("#AtimeDrom")?.innerHTML === undefined) return;
     var now = new Date();
     var nowHour = now.getHours();
     var nowMinute = now.getMinutes();
