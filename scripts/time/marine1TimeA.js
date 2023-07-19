@@ -1,8 +1,6 @@
 function marine1TimeA() {
   if (document.querySelector("#AtimeMarine1")?.innerHTML === undefined) return;
-
   var now = new Date();
-
   var nowHour = now.getHours();
   var nowMinute = now.getMinutes();
   var nowSecond = now.getSeconds();

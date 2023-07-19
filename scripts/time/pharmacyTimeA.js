@@ -1,8 +1,6 @@
 function pharmacyTimeA() {
   if (document.querySelector("#AtimePharm")?.innerHTML === undefined) return;
-
   var now = new Date();
-
   var nowHour = now.getHours();
   var nowMinute = now.getMinutes();
   var nowSecond = now.getSeconds();

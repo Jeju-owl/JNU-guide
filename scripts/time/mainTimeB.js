@@ -1,14 +1,6 @@
-// 학생회관B -> 오류 있을수있음
-// 코드 적기 전 체크리스트
-// 1. 함수 이름 변경
-// 2. id 이름 변경
-// 3. index.html에 js파일 연동
-// 4. overlay.js에 바뀐 id 이름 기입하기.
 function mainTimeB() {
   if (document.querySelector("#BtimeMain")?.innerHTML === undefined) return;
-
   var now = new Date();
-
   var nowHour = now.getHours();
   var nowMinute = now.getMinutes();
   var nowSecond = now.getSeconds();

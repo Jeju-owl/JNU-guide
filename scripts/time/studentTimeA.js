@@ -1,10 +1,6 @@
-// 학생회관 버스 시간
-
 function studentTimeA() {
   if (document.querySelector("#AtimeStud")?.innerHTML === undefined) return;
-
   var now = new Date();
-
   var nowHour = now.getHours();
   var nowMinute = now.getMinutes();
   var nowSecond = now.getSeconds();
