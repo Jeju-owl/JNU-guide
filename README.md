@@ -1,29 +1,41 @@
 # JNU-guide
-## 📌Outline
+
+## 📌 Outline
+
+```shell
 카카오 맵 API를 사용해 제주대학교 내 시설 정보와 주변 정보를 알려주는 반응형 웹 서비스입니다.
+```
 
+## 🔎 Features
 
-## 🔎Features
-- 학교 내 시설 위치 정보 제공
-- 실시간 현재 위치 정보 제공
-- 주변 식당 정보 제공
-- 실시간 순환 버스 도착 시간 제공
-- 야간 버스 시간표 제공
-- 교내 ATM 위치 제공
-- 교내 인쇄기 위치 제공
+```javascript
+const features = [
+  "학교 내 시설 위치 정보 제공",
+  "실시간 현재 위치 정보 제공",
+  "실시간 순환 버스 도착 시간 제공",
+  "주변 식당 정보 제공",
+  "야간 버스 시간표 제공",
+  "교내 ATM 위치 제공",
+  "교내 인쇄기 위치 제공",
+];
+```
 
-## 🛠Development Environment
-- Front-End
-1. HTML5, CSS3, Javascript
-2. JQuery
-- Open API
-1. kakaomap API 
+## 🛠 Development Environment
 
-## 👨‍💻Developers
-- 김승덕
->- GitHub : https://github.com/kimseungdeok
->- Email : tmdejr1117@gmail.com
+```json
+{
+  "frontEnd": ["HTML5", "CSS3", "JavaScript"],
+  "openAPI": ["kakaoAPI"]
+}
+```
 
-- 김경범
->- GitHub : https://github.com/Kimkyeongbeom4844
->- Email : bibix321@naver.com
+## 👨‍💻 Developers
+
+- ### 김승덕
+
+  > - GitHub : https://github.com/kimseungdeok
+  > - Email : tmdejr1117@gmail.com
+
+- ### 김경범
+  > - GitHub : https://github.com/Kimkyeongbeom4844
+  > - Email : bibix321@naver.com
