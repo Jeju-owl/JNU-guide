@@ -24,8 +24,9 @@ const features = [
 
 ```json
 {
-  "frontEnd": ["HTML5", "CSS3", "JavaScript"],
-  "openAPI": ["kakaoAPI"]
+  "frontEnd": ["Html5", "Css3", "JavaScript","JQuery"],
+  "openAPI": ["kakaoAPI"],
+  "distribution" : ["Github Hosting"],
 }
 ```
 
